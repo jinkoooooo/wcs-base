@@ -1,0 +1,19 @@
+:root {
+  /* Color Palette */
+  --color-primary: #001529;   /* 메뉴바 배경색 (blue 계열) */
+  --color-secondary: #F0F2F5; /* 화면 배경색 (gray 계열) */
+  --color-teriary: #FFFFFF;   /* 검색 폼, 그리드 배경 (white 계열) */
+
+  /* Button */
+  --color-btn-primary: #0960bd; /* 조회/추가/수정/내보내기 버튼 (blue계열) */
+  --color-btn-secondary: #ed6f6f; /* 삭제 버튼 (red계열) */
+
+  /* Tui-grid */
+  --color-grid-primary: #F4F4F4;    /* 그리드 배경색 (gray 계열) */
+
+  /** Ant-Desing-Vue */
+  --color-ant-primary: #1677FF; /** (blue 계열) **/
+  --color-ant-success: #7cb305; /** (green 계열) **/
+  --color-ant-danger: #f5222d;  /** (red 계열) **/
+  --color-ant-warning: #d48806; /** (orange 계열) **/
+}

@@ -1,0 +1,41 @@
+{
+  "communicationType": "BINARY",
+  "connection": {
+    "defaultIp": "192.168.1.100",
+    "defaultPort": 5001,
+    "timeout": 5000
+  },
+  "memoryMap": {
+    "baseAddress": 1000,
+    "deviceCode": "D",
+    "addresses": {
+      "workNumber": 1051,
+      "workType": 1052,
+      "direction": 1053,
+      "steps": 1054,
+      "speedMode": 1055,
+      "emergencyStop": 1056,
+      "priority": 1057,
+      "executeOptions": 1058,
+      "operationMode": 1100,
+      "modeChangeRequest": 1101,
+      "alarmReset": 1110,
+      "alarmAck": 1111,
+      "buzzerMuteOn": 1112,
+      "buzzerMuteOff": 1113,
+      "status": 2000,
+      "xPosition": 2001,
+      "yPosition": 2002,
+      "battery": 2010,
+      "error": 2020,
+      "currentWorkNumber": 2030,
+      "currentOperationMode": 2040,
+      "alarmStatus": 2050
+    }
+  },
+  "timeout": {
+    "commandTimeout": 5000,
+    "statusPollingInterval": 1000,
+    "responseTimeout": 3000
+  }
+}

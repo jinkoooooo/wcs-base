@@ -1,0 +1,33 @@
+plugins {
+    id 'java-library'
+}
+
+
+
+jar {
+    manifest {
+        attributes(
+            'Implementation-Title': 'Next-Core',
+            'Implementation-Version': '3.0.0'
+        )
+    }
+}
+repositories {
+    mavenCentral() // Maven 중앙 저장소 사용
+        // 필요시 사설 Nexus 리포지토리 추가
+    maven {
+        url "http://repo.hatiolab.com/nexus/content/groups/elidom-repository/"
+        allowInsecureProtocol = true
+    }
+}
+
+dependencies {
+    // Spring Boot 관련 의존성
+    api "org.springframework.boot:spring-boot-starter-test:3.4.0"
+    api "org.springframework.boot:spring-boot-starter-web:3.4.0"
+    
+    api project(':next-sys')
+
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+}

@@ -1,0 +1,2513 @@
+/**
+ * dashboard.scss
+ * 대시보드 2D 공통 스타일 정의
+ *
+ * ============================================
+ * 파일 구조
+ * ============================================
+ * 1. CSS 변수 (색상, 크기, 애니메이션)
+ * 2. 컨테이너 및 레이아웃
+ * 3. 설비 오브젝트 스타일
+ * 4. 셔틀 스타일
+ * 5. 화물 스타일
+ * 6. 애니메이션 keyframes
+ * 7. 로딩 및 상태 오버레이
+ *
+ * ============================================
+ * 색상 팔레트 (Element Plus 기반)
+ * ============================================
+ * - Primary (파란색): #409eff
+ * - Success (녹색): #67c23a
+ * - Warning (주황색): #e6a23c
+ * - Danger (빨간색): #f56c6c
+ * - Info (회색): #909399
+ * - Purple (보라색): #9b59b6
+ * - Gold (황금색): #f0c14b
+ */
+
+// ============================================
+// 1. CSS 변수 정의
+// ============================================
+@use './tokens' as *;
+@use './panels' as *;
+
+// tokens.scss: tspg-4way-shuttle 단일 디자인 토큰 (색상/크기/그림자) — 모든 화면 공유
+@import '../../styles/tokens.scss';
+
+// cell-state.scss: Rack 재고/금지 축 단일 소스 (--cs-* CSS 변수 + 공용 클래스)
+// Dashboard2D 의 랙 셀 렌더에서 .rack-state-tint / .rack-locked-overlay /
+// .rack-forbid-badge 를 그대로 재사용한다.
+@import '../../cell_state_2d/styles/cell-state.scss';
+
+:root {
+  // 기본 색상
+  --dashboard-bg: #1a1d24;
+  --dashboard-bg-secondary: #2a2d36;
+  --dashboard-header-bg: rgba(30, 34, 45, 0.95);
+  --dashboard-border: rgba(255, 255, 255, 0.1);
+  --dashboard-text: #e5eaf3;
+  --dashboard-text-secondary: #c0c4cc;
+  --dashboard-text-muted: #909399;
+
+  // 상태 색상
+  --color-primary: #409eff;
+  --color-success: #67c23a;
+  --color-warning: #e6a23c;
+  --color-danger: #f56c6c;
+  --color-info: #909399;
+  --color-purple: #9b59b6;
+  --color-gold: #f0c14b;
+  --color-skyblue: #5bcefa;
+
+  // 투명도 변형
+  --color-primary-light: rgba(64, 158, 255, 0.2);
+  --color-success-light: rgba(103, 194, 58, 0.2);
+  --color-warning-light: rgba(230, 162, 60, 0.2);
+  --color-danger-light: rgba(245, 108, 108, 0.2);
+
+  // rack tag 공통 크기
+  --rack-tag-font-size: 10px;
+  --rack-tag-font-weight: 800;
+  --rack-tag-padding: 3px 7px;
+  --rack-tag-radius: 7px;
+
+  // z-index 레이어
+  --z-static-equipment: 10;
+  --z-conveyor-cargo: 75;
+  --z-rack-inventory: 80;
+  --z-moving-cargo: 110;
+  --z-shuttle: 100;
+  --z-controls: 600;
+  --z-toast: 9999;
+}
+
+// ============================================
+// 2. 컨테이너 및 레이아웃
+// ============================================
+
+.dashboard-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background-color: var(--dashboard-bg);
+  overflow: hidden;
+}
+
+.dashboard-shell {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  height: 0;
+}
+
+.dashboard-content {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-body {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  background-color: var(--dashboard-bg-secondary);
+  overflow: hidden;
+}
+
+// 스테이지 래퍼 (줌/팬 컨테이너)
+.stage-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.stage {
+  background: transparent;
+  box-shadow: none;
+  will-change: transform;
+}
+
+// ============================================
+// 3. 설비 오브젝트 스타일
+// ============================================
+
+// 정적 설비 레이어
+.static-equipment-layer {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-static-equipment);
+}
+
+// 설비 오브젝트 공통
+.equipment-object {
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: filter 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    filter: brightness(1.12) drop-shadow(0 0 6px rgba(64, 158, 255, 0.35));
+  }
+
+  &.selected {
+    filter: brightness(1.18) drop-shadow(0 0 8px var(--color-primary));
+  }
+
+  // 상태별 스타일
+  &.status-normal .object-content {
+    filter: drop-shadow(0 0 4px rgba(103, 194, 58, 0.6));
+  }
+
+  &.status-working .object-content {
+    filter: sepia(0.3) saturate(150%) hue-rotate(10deg) drop-shadow(0 0 6px rgba(230, 162, 60, 0.8));
+    animation: pulse-working 1.5s infinite;
+  }
+
+  &.status-error .object-content {
+    filter: sepia(1) saturate(400%) hue-rotate(-50deg) drop-shadow(0 0 8px rgba(245, 108, 108, 0.9));
+    animation: pulse-error 0.8s infinite;
+  }
+
+  // 재고가 있는 랙
+  &.has-inventory .object-content {
+    filter: drop-shadow(0 0 4px rgba(240, 193, 75, 0.6));
+  }
+}
+
+// 컨베이어 상태별 색상은 섹션 "8. 정규화 상태" 의 .conveyor-state-* 에서 관리
+// (구 .cv-status-* 규칙은 제거됨 — 대신 pallet-state-* / conveyor-state-* 사용)
+.equipment-object {
+  // 컨베이어 동작중 (moving/runYn = true) — legend 비표기 펄스 피드백
+  &.cv-moving {
+    .object-content {
+      filter: none !important;
+    }
+
+    .object-svg {
+      color: var(--op-state-active);
+      animation: cv-running-color-pulse 1s ease-in-out infinite;
+    }
+
+    .object-image {
+      filter: brightness(1.15) saturate(1.25);
+      animation: cv-running-image-pulse 1s ease-in-out infinite;
+    }
+
+    .object-label {
+      color: #dff6ff;
+      background-color: rgba(20, 52, 72, 0.92);
+      box-shadow: 0 0 8px var(--op-state-active-glow);
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+// 오브젝트 내용
+.object-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+// 모든 정적 SVG 아이콘을 박스 크기에 맞춰 stretch.
+// 각 아이콘 SVG에 preserveAspectRatio="none"이 박혀 있어 inline SVG는 자동 stretch,
+// img 경로는 object-fit: fill로 IMG-level letterbox도 제거.
+.object-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.object-placeholder {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(64, 158, 255, 0.2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed rgba(64, 158, 255, 0.4);
+}
+
+// Phase D — type-specific colored placeholders for PILLAR / BCR / STV / CRANE
+.pillar-placeholder,
+.bcr-placeholder,
+.stv-placeholder,
+.crane-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  user-select: none;
+  border-radius: 2px;
+}
+.pillar-placeholder {
+  background: #555;
+  color: #fff;
+  flex-direction: column;
+  gap: 2px;
+}
+.pillar-placeholder .pillar-label {
+  font-size: 11px;
+}
+.bcr-placeholder {
+  background: #2563eb;
+  color: #fff;
+  flex-direction: column;
+  gap: 2px;
+}
+.bcr-placeholder .bcr-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+.stv-placeholder {
+  background: #d97706;
+  color: #fff;
+}
+.crane-placeholder {
+  background: #7c3aed;
+  color: #fff;
+}
+
+.object-label {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  color: var(--dashboard-text);
+  background-color: rgba(30, 34, 45, 0.9);
+  padding: 2px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+// SVG 스타일
+.object-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: var(--dashboard-text-secondary);
+
+  :deep(svg) {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: currentColor;
+    stroke: currentColor;
+  }
+}
+
+// ============================================
+// 4. 셔틀 스타일
+// ============================================
+
+.shuttle-layer {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-shuttle);
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
+}
+
+.shuttle-object {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s, filter 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+    filter: brightness(1.15);
+  }
+
+  &.selected {
+    filter: brightness(1.2) drop-shadow(0 0 12px var(--color-primary));
+  }
+}
+
+.shuttle-icon {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+  transition: color 0.3s;
+  z-index: 1;
+  position: relative;
+
+  :deep(svg) {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: currentColor;
+    stroke: currentColor;
+  }
+}
+
+// 셔틀 상태별 색상은 섹션 "8. 정규화 상태" 의 .shuttle-state-* 에서 관리
+// (구 .status-idle / -has-job / -loaded / -moving / -working / -emr-stop / -charging 규칙은 제거됨)
+
+// 셔틀 라벨
+.shuttle-label {
+  position: absolute;
+  bottom: -18px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgba(64, 158, 255, 0.9);
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+// 셔틀 위에 적재된 화물
+.shuttle-carried-cargo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // 셔틀 크기의 35% 정도로 표시 (인라인 스타일로 동적 설정)
+  width: 35%;
+  height: 35%;
+  max-width: 20px;
+  max-height: 20px;
+  color: var(--color-gold);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  z-index: 2;
+  pointer-events: none;
+
+  :deep(svg) {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: currentColor;
+    stroke: currentColor;
+  }
+}
+
+// 배터리 부족 경고
+.shuttle-object.low-battery::after,
+.equipment-object.low-battery::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 14px;
+  background: linear-gradient(to top, var(--color-danger) 30%, transparent 30%);
+  border: 1px solid var(--color-danger);
+  border-radius: 2px;
+  animation: blink-battery 1s infinite;
+}
+
+.shuttle-object.low-battery::after {
+  top: -4px;
+  left: -4px;
+}
+
+.equipment-object.low-battery::before {
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 12px;
+}
+
+// ============================================
+// 5. 화물 스타일
+// ============================================
+
+.cargo-layer {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-moving-cargo);
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
+}
+
+.cargo-object {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s, filter 0.2s;
+
+  &:hover {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+  }
+}
+
+.cargo-icon {
+  width: 100%;
+  height: 100%;
+  color: var(--color-info);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+
+  :deep(svg) {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: currentColor;
+    stroke: currentColor;
+  }
+}
+
+.cargo-label {
+  position: absolute;
+  bottom: -14px;
+  font-size: 9px;
+  color: var(--dashboard-text);
+  background-color: rgba(30, 34, 45, 0.9);
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+// 화물 상태별 색상
+.cargo-object {
+  &.cargo-pending .cargo-icon { color: var(--color-info); }
+
+  &.cargo-moving .cargo-icon {
+    color: var(--color-primary);
+    animation: cargo-pulse 0.8s infinite;
+  }
+
+  &.cargo-stored .cargo-icon {
+    color: var(--color-gold);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+  }
+
+  &.cargo-picking .cargo-icon {
+    color: var(--color-warning);
+    animation: cargo-pulse 1s infinite;
+  }
+
+  &.cargo-error .cargo-icon {
+    color: var(--color-danger);
+    animation: cargo-blink 0.5s infinite;
+  }
+}
+
+// 컨베이어 화물 스타일
+.conveyor-cargo-layer {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-conveyor-cargo);
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
+}
+
+.conveyor-cargo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+}
+
+.conveyor-cargo-icon {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+
+  :deep(svg) {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: currentColor;
+    stroke: currentColor;
+  }
+}
+
+// 컨베이어 Pallet 색은 섹션 "8. 정규화 상태" 의 .pallet-state-* 에서 관리
+// (구 .cv-cargo-* 규칙은 제거됨)
+
+// ============================================
+// 5.5. 랙 재고 스타일 (TB_EQ_RACK_MST 기반)
+// ============================================
+
+.rack-inventory-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-rack-inventory);
+  pointer-events: none;
+  width: 70%;
+  height: 70%;
+}
+
+.rack-inventory-icon {
+  width: 100%;
+  height: 100%;
+  color: var(--color-gold);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  opacity: 0.9;
+
+  :deep(svg) {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: currentColor;
+    stroke: currentColor;
+  }
+}
+
+.rack-inventory-qty {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  background: var(--color-danger);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+// 랙 재고 있음 상태
+.equipment-object.has-inventory {
+  .equipment-border-overlay {
+    border-color: var(--color-gold) !important;
+  }
+}
+
+// ============================================
+// 5.6. 랙 타입별 스타일
+// - 전부 테두리 제거
+// - 포트 라벨은 pseudo(::after) 말고 실제 DOM(.rack-type-badge)로 표시
+// - drive_only_yn=true 이면 주행 경로 배경은 별도로 rack-drive-only 가 담당
+// ============================================
+// 1. 비가동(잠금) 상태 시각화
+.equipment-object.status-error,
+.equipment-object.is-locked {
+  .object-content {
+    background-color: rgba(245, 108, 108, 0.15) !important;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 5px,
+          rgba(245, 108, 108, 0.1) 5px,
+          rgba(245, 108, 108, 0.1) 10px
+      );
+      z-index: 1; // 빗금이 배경 위에 오도록
+    }
+  }
+  outline: 1.5px solid var(--color-danger) !important;
+  outline-offset: -1.5px;
+}
+
+// 2. 화물 있음(재고) 시각화 강조
+.equipment-object.has-inventory {
+  .object-content {
+    box-shadow: inset 0 0 10px rgba(240, 193, 75, 0.5);
+  }
+  .rack-inventory-indicator {
+    display: flex !important;
+    opacity: 1 !important;
+    z-index: var(--z-rack-inventory); // 아이콘이 빗금보다 위로 오게 함
+  }
+}
+
+.equipment-object.rack-type-inbound {
+  .object-content {
+    filter: brightness(0.96);
+  }
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.equipment-object.rack-type-outbound {
+  .object-content {
+    filter: brightness(0.96);
+  }
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.equipment-object.rack-type-inout {
+  .object-content {
+    filter: brightness(0.96);
+  }
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.equipment-object.rack-type-charge {
+  .object-content {
+    filter: brightness(0.96);
+  }
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.equipment-object.rack-type-charge-enter {
+  .object-content {
+    filter: brightness(0.96);
+  }
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+/* 공통 포트 라벨 */
+.rack-type-badge {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  font-size: var(--rack-tag-font-size);
+  font-weight: var(--rack-tag-font-weight);
+  line-height: 1;
+  padding: var(--rack-tag-padding);
+  border-radius: var(--rack-tag-radius);
+  white-space: nowrap;
+  box-shadow: none;
+}
+
+/* 포트별 위치/색상 */
+.rack-type-badge.badge-inbound {
+  left: 6px;
+  top: 6px;
+  color: rgba(245, 252, 245, 0.96);
+  background: rgba(66, 110, 70, 0.74);
+}
+
+.rack-type-badge.badge-outbound {
+  left: 6px;
+  bottom: 6px;
+  color: rgba(255, 248, 240, 0.96);
+  background: rgba(152, 102, 48, 0.76);
+}
+
+.rack-type-badge.badge-inout {
+  right: 6px;
+  top: 6px;
+  color: rgba(245, 248, 252, 0.96);
+  background: rgba(76, 98, 124, 0.72);
+}
+
+.rack-type-badge.badge-charge {
+  right: 6px;
+  bottom: 6px;
+  color: rgba(248, 245, 252, 0.96);
+  background: rgba(92, 72, 104, 0.72);
+}
+
+.rack-type-badge.badge-charge-enter {
+  top: 6px;
+  right: 6px;
+  color: rgba(245, 245, 245, 0.92);
+  background: rgba(96, 76, 108, 0.62);
+}
+
+// ============================================
+// 포트 운영 모드 배지 (입고/출고/유휴) — prominently 노출
+// 셀 중앙 상단에 큼직하게 표시되어 사용자가 한눈에 파악 가능
+// ============================================
+.port-mode-badge-overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25), inset 0 0 0 1.5px rgba(255, 255, 255, 0.18);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.port-mode-badge-overlay .port-mode-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.port-mode-badge-overlay .port-mode-text {
+  letter-spacing: 0.5px;
+}
+
+.port-mode-badge-overlay.port-mode--in {
+  background: var(--tspg-port-in-bg);
+  color: var(--tspg-port-in-fg);
+}
+
+.port-mode-badge-overlay.port-mode--out {
+  background: var(--tspg-port-out-bg);
+  color: var(--tspg-port-out-fg);
+}
+
+.port-mode-badge-overlay.port-mode--idle {
+  background: var(--tspg-port-idle-bg);
+  color: var(--tspg-port-idle-fg);
+}
+
+.port-mode-badge-overlay.port-mode--switching {
+  background: var(--tspg-port-switching-bg);
+  color: var(--tspg-port-switching-fg);
+  animation: port-mode-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes port-mode-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.55; }
+}
+
+// ============================================
+// 5.7. 주행 전용 구역 스타일
+// - drive_only_yn = true 이면 무조건 이 스타일 우선
+// - PATH 라벨은 제거
+// - 어떤 포트이든 drive_only_yn=true 이면 무조건 주행 경로 배경 적용
+// ============================================
+
+.equipment-object.rack-drive-only {
+  position: relative;
+  overflow: visible;
+
+  .object-content {
+    filter: brightness(0.78) saturate(0.55) contrast(1.02) !important;
+    position: relative;
+    z-index: 1;
+  }
+
+  .rack-drive-overlay {
+    position: absolute;
+    inset: 5px;
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      linear-gradient(
+          180deg,
+          rgba(170, 176, 186, 0.18) 0%,
+          rgba(128, 136, 148, 0.26) 100%
+      ),
+      linear-gradient(
+          90deg,
+          transparent 0%,
+          transparent 28%,
+          rgba(210, 216, 224, 0.16) 28%,
+          rgba(210, 216, 224, 0.16) 40%,
+          transparent 40%,
+          transparent 60%,
+          rgba(210, 216, 224, 0.16) 60%,
+          rgba(210, 216, 224, 0.16) 72%,
+          transparent 72%,
+          transparent 100%
+      );
+  }
+
+  .drive-only-badge,
+  .path-badge {
+    display: none !important;
+  }
+
+  .rack-type-badge {
+    z-index: 2;
+  }
+
+  &.has-inventory {
+    .rack-inventory-indicator {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .rack-drive-overlay {
+      background:
+        linear-gradient(
+            180deg,
+            rgba(184, 190, 200, 0.22) 0%,
+            rgba(140, 148, 160, 0.32) 100%
+        ),
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            transparent 28%,
+            rgba(220, 226, 234, 0.20) 28%,
+            rgba(220, 226, 234, 0.20) 40%,
+            transparent 40%,
+            transparent 60%,
+            rgba(220, 226, 234, 0.20) 60%,
+            rgba(220, 226, 234, 0.20) 72%,
+            transparent 72%,
+            transparent 100%
+        );
+    }
+  }
+}
+
+// ============================================
+// 5.8. WCS 재고 정합성 오류 상태 스타일
+// - rack-empty-pick   : 공출고 (시스템 재고O + 실물X) → 빨간 테두리 + 점멸
+// - rack-double-entry : 이중입고 (실물O + 시스템 재고X) → 주황 테두리 + 점멸
+// ============================================
+
+.equipment-object.rack-empty-pick {
+  outline: 2px solid #f56c6c !important;
+  outline-offset: 1px;
+  animation: blink-empty-pick 1.2s ease-in-out infinite;
+
+  .object-content {
+    background-color: rgba(245, 108, 108, 0.22) !important;
+  }
+
+  // 기존 has-inventory 테두리와 충돌 방지
+  &.has-inventory .object-content {
+    background-color: rgba(245, 108, 108, 0.22) !important;
+  }
+}
+
+.equipment-object.rack-double-entry {
+  outline: 2px solid #e6a23c !important;
+  outline-offset: 1px;
+  animation: blink-double-entry 1.2s ease-in-out infinite;
+
+  .object-content {
+    background-color: rgba(230, 162, 60, 0.22) !important;
+  }
+}
+
+@keyframes blink-empty-pick {
+  0%, 100% { outline-color: #f56c6c; outline-width: 2px; }
+  50%       { outline-color: rgba(245, 108, 108, 0.4); outline-width: 3px; }
+}
+
+@keyframes blink-double-entry {
+  0%, 100% { outline-color: #e6a23c; outline-width: 2px; }
+  50%       { outline-color: rgba(230, 162, 60, 0.4); outline-width: 3px; }
+}
+
+// 랙 타입 애니메이션 (호환성 유지)
+@keyframes inbound-arrow-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+@keyframes outbound-arrow-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+@keyframes inout-pulse {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+@keyframes charge-port-glow {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+@keyframes charge-icon-pulse {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+// ============================================
+// 6. 애니메이션 keyframes
+// ============================================
+
+@keyframes pulse-working {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes pulse-error {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes shuttle-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 3px 10px rgba(64, 158, 255, 0.6));
+  }
+}
+
+@keyframes shuttle-error-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes shuttle-charging {
+  0%, 100% {
+    filter: drop-shadow(0 3px 6px rgba(155, 89, 182, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 3px 12px rgba(155, 89, 182, 0.8));
+  }
+}
+
+@keyframes shuttle-radar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes cargo-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes cargo-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes conveyor-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes blink-battery {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+// ============================================
+// 7. 로딩 및 상태 오버레이
+// ============================================
+
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(26, 29, 36, 0.9);
+  z-index: 10;
+  color: var(--dashboard-text-secondary);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(64, 158, 255, 0.2);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.no-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #606266;
+  font-size: 16px;
+}
+
+// ============================================
+// 8. 작업 패널 리사이저
+// ============================================
+
+.task-resizer {
+  flex-shrink: 0;
+  height: 8px;
+  cursor: ns-resize;
+  background: rgba(255, 255, 255, 0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 56px;
+    height: 2px;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  &:hover::after,
+  &.dragging::after {
+    background: rgba(64, 158, 255, 0.8);
+  }
+}
+
+// ============================================
+// 9. ECS 실시간 상태 스타일
+// ============================================
+
+// ECS 작업 진행 중 설비 (컨베이어/리프터)
+.equipment-object.ecs-active-job {
+  position: relative;
+
+  // 작업 진행 중 표시 (테두리 펄스)
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border: 2px solid var(--color-primary);
+    border-radius: 6px;
+    animation: ecs-job-pulse 1.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  // 작업 중 배지
+  &::after {
+    content: '작업중';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--color-primary);
+    color: white;
+    font-size: 9px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    animation: badge-pulse 2s ease-in-out infinite;
+  }
+}
+
+// 입고 작업
+.equipment-object.ecs-job-inbound::before {
+  border-color: var(--color-success);
+}
+.equipment-object.ecs-job-inbound::after {
+  content: '입고';
+  background: var(--color-success);
+}
+
+// 출고 작업
+.equipment-object.ecs-job-outbound::before {
+  border-color: var(--color-warning);
+}
+.equipment-object.ecs-job-outbound::after {
+  content: '출고';
+  background: var(--color-warning);
+}
+
+// 리프터 셔틀 운반 중
+.equipment-object.lifter-has-shuttle {
+  position: relative;
+
+  // 셔틀 아이콘 표시
+  &::after {
+    content: '🚗';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+    animation: shuttle-bounce 0.8s ease-in-out infinite;
+  }
+}
+
+// 리프터 이동 중
+.equipment-object.lifter-moving {
+  .object-content {
+    animation: lifter-move 0.6s ease-in-out infinite;
+  }
+}
+
+// 리프터 화물 적재
+.equipment-object.lifter-has-cargo {
+  .object-content {
+    filter: drop-shadow(0 2px 8px rgba(240, 193, 75, 0.6));
+  }
+}
+
+// 설비 동작 중
+.equipment-object.status-running {
+  .object-content {
+    animation: equipment-running 1s linear infinite;
+  }
+}
+
+// 설비 에러
+.equipment-object.status-error {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border: 2px solid var(--color-danger);
+    border-radius: 4px;
+    animation: error-blink 0.5s infinite;
+    pointer-events: none;
+  }
+
+  .object-content {
+    filter: hue-rotate(-30deg) saturate(1.5);
+  }
+}
+
+.equipment-object.status-error,
+.equipment-object.is-locked { // '비가동'이나 '수동잠금' 시 적용될 클래스
+  .object-content {
+    background-color: rgba(245, 108, 108, 0.15) !important; // 연한 빨강 배경
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      // 비가동임을 알리는 빗금 패턴
+      background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 5px,
+          rgba(245, 108, 108, 0.1) 5px,
+          rgba(245, 108, 108, 0.1) 10px
+      );
+    }
+  }
+  // 테두리 강조
+  outline: 1px solid var(--color-danger) !important;
+}
+
+// ============================================
+// 10. ECS 작업 목록 스타일
+// ============================================
+
+// 작업 레벨 배지
+.job-level-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &.level-wcs {
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+  }
+
+  &.level-ecs-rack {
+    background: var(--color-success-light);
+    color: var(--color-success);
+    border: 1px solid var(--color-success);
+  }
+
+  &.level-ecs-route {
+    background: var(--color-warning-light);
+    color: var(--color-warning);
+    border: 1px solid var(--color-warning);
+  }
+}
+
+// 작업 상태 배지
+.job-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+
+  &.status-ready { background: var(--color-info); color: white; }
+  &.status-eq-send { background: var(--color-primary); color: white; }
+  &.status-working { background: var(--color-warning); color: white; }
+  &.status-complete { background: var(--color-success); color: white; }
+  &.status-cancel { background: #6c757d; color: white; }
+  &.status-error { background: var(--color-danger); color: white; }
+}
+
+// ============================================
+// 11. 알람 타입 스타일
+// ============================================
+
+.alarm-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+
+  &.type-equipment {
+    background: rgba(144, 147, 153, 0.2);
+    color: var(--color-info);
+    border: 1px solid var(--color-info);
+
+    &::before {
+      content: '⚙️';
+    }
+  }
+
+  &.type-job-error {
+    background: rgba(245, 108, 108, 0.2);
+    color: var(--color-danger);
+    border: 1px solid var(--color-danger);
+
+    &::before {
+      content: '⚠️';
+    }
+  }
+}
+
+// ============================================
+// 12. ECS 애니메이션 keyframes
+// ============================================
+
+@keyframes ecs-job-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes badge-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shuttle-bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-3px);
+  }
+}
+
+@keyframes lifter-move {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes equipment-running {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.1);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes error-blink {
+  0%, 100% {
+    opacity: 1;
+    border-color: var(--color-danger);
+  }
+  50% {
+    opacity: 0.5;
+    border-color: transparent;
+  }
+}
+
+// ============================================
+// 12.5. 공통 에러 표시 스타일 (셔틀, 컨베이어, 리프터 공통)
+// ============================================
+
+// 공통 에러 배지
+.equipment-error-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-danger);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(245, 108, 108, 0.6);
+  animation: error-badge-blink 0.5s ease-in-out infinite;
+  white-space: nowrap;
+  z-index: 20;
+  pointer-events: none;
+}
+
+// 셔틀 에러 상태
+.shuttle-object.has-error {
+  position: relative;
+
+  // 에러 테두리 (깜빡임)
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 2px solid var(--color-danger);
+    border-radius: 8px;
+    animation: error-blink 0.5s infinite;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .shuttle-icon {
+    color: var(--color-danger);
+    animation: shuttle-error-blink 0.5s infinite;
+  }
+
+  // 에러 배지 위치 조정
+  .equipment-error-badge {
+    top: -18px;
+  }
+}
+
+// 컨베이어/정적 설비 에러 상태
+.equipment-object.has-error {
+  position: relative;
+
+  // 에러 테두리 (깜빡임)
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border: 2px solid var(--color-danger);
+    border-radius: 4px;
+    animation: error-blink 0.5s infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .object-content {
+    filter: hue-rotate(-30deg) saturate(1.5);
+    animation: pulse-error 0.8s infinite;
+  }
+
+  // 에러 배지 위치 조정
+  .equipment-error-badge {
+    top: -14px;
+    z-index: 30;
+  }
+}
+
+// ============================================
+// 12.6. 팝업 공통 에러 표시 스타일
+// ============================================
+
+.error-section {
+  background: rgba(245, 108, 108, 0.1);
+  border: 1px solid rgba(245, 108, 108, 0.3);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.error-badge {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--color-danger);
+  margin-bottom: 8px;
+}
+
+.status-error {
+  color: var(--color-danger);
+  font-weight: 600;
+}
+
+// ============================================
+// 13. 리프터 오버레이 레이어 (개선된 버전)
+// ============================================
+
+.lifter-overlay-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 95;
+  pointer-events: none;
+}
+
+.lifter-overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(30, 34, 45, 0.85);
+  border: 2px solid rgba(64, 158, 255, 0.4);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--color-primary);
+    box-shadow:
+      0 6px 25px rgba(0, 0, 0, 0.6),
+      0 0 20px rgba(64, 158, 255, 0.3);
+    transform: scale(1.02);
+  }
+
+  // 기본 대기 상태
+  &:not(.is-running):not(.has-error) {
+    border-color: rgba(144, 147, 153, 0.5);
+
+    .lifter-status-card {
+      background: linear-gradient(135deg, rgba(144, 147, 153, 0.3) 0%, rgba(96, 98, 102, 0.2) 100%);
+    }
+  }
+
+  // 동작 중 (run_yn = true)
+  &.is-running {
+    border-color: var(--color-primary);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.5),
+      0 0 30px rgba(64, 158, 255, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    animation: lifter-running-glow 1.5s ease-in-out infinite;
+
+    .lifter-status-card {
+      background: linear-gradient(135deg, rgba(64, 158, 255, 0.4) 0%, rgba(64, 158, 255, 0.15) 100%);
+    }
+
+    .run-status {
+      animation: run-indicator-pulse 0.6s ease-in-out infinite;
+    }
+  }
+
+  // 상승 중
+  &.is-going-up {
+    border-color: var(--color-success);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.5),
+      0 0 30px rgba(103, 194, 58, 0.5);
+
+    .lifter-status-card {
+      background: linear-gradient(0deg, rgba(64, 158, 255, 0.3) 0%, rgba(103, 194, 58, 0.4) 100%);
+    }
+
+    .floor-arrow {
+      color: var(--color-success);
+      animation: arrow-up-bounce 0.4s ease-in-out infinite;
+      text-shadow: 0 0 10px var(--color-success);
+    }
+  }
+
+  // 하강 중
+  &.is-going-down {
+    border-color: var(--color-warning);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.5),
+      0 0 30px rgba(230, 162, 60, 0.5);
+
+    .lifter-status-card {
+      background: linear-gradient(180deg, rgba(64, 158, 255, 0.3) 0%, rgba(230, 162, 60, 0.4) 100%);
+    }
+
+    .floor-arrow {
+      color: var(--color-warning);
+      animation: arrow-down-bounce 0.4s ease-in-out infinite;
+      text-shadow: 0 0 10px var(--color-warning);
+    }
+  }
+
+  // 셔틀 운반 중
+  &.has-shuttle {
+    border-width: 3px;
+    border-color: var(--color-gold);
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border: 2px dashed var(--color-gold);
+      border-radius: 16px;
+      animation: shuttle-transport-rotate 3s linear infinite;
+      pointer-events: none;
+    }
+  }
+
+  // 화물 적재 (cargo_yn = true)
+  &.has-cargo {
+    .cargo-status {
+      animation: cargo-indicator-glow 1s ease-in-out infinite;
+    }
+
+    .lifter-cargo-indicator {
+      animation: cargo-bounce 0.8s ease-in-out infinite;
+    }
+  }
+
+  // 에러 상태
+  &.has-error {
+    border-color: var(--color-danger);
+    background: rgba(245, 108, 108, 0.15);
+    animation: lifter-error-shake 0.5s ease-in-out infinite;
+
+    .lifter-status-card {
+      background: linear-gradient(135deg, rgba(245, 108, 108, 0.4) 0%, rgba(245, 108, 108, 0.2) 100%);
+    }
+  }
+
+  // 작업 진행 중
+  &.has-active-job {
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border: 2px solid var(--color-primary);
+      border-radius: 14px;
+      animation: job-pulse-ring 2s ease-in-out infinite;
+      pointer-events: none;
+    }
+  }
+
+  // 스토퍼 열림 (stopper_open = true)
+  &.stopper-open {
+    .stopper-status {
+      background: var(--color-gold) !important;
+      color: #1a1d24 !important;
+      animation: stopper-open-flash 0.8s ease-in-out infinite;
+    }
+
+    &::before {
+      content: 'OPEN';
+      position: absolute;
+      top: -24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-gold);
+      color: #1a1d24;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 2px 10px;
+      border-radius: 10px;
+      animation: stopper-label-pulse 0.8s ease-in-out infinite;
+      box-shadow: 0 2px 8px rgba(240, 193, 75, 0.6);
+    }
+  }
+}
+
+// 리프터 상태 카드
+.lifter-status-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(64, 158, 255, 0.3) 0%, rgba(64, 158, 255, 0.1) 100%);
+  min-width: 80px;
+}
+
+// 층 표시 영역
+.lifter-floor-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.floor-current {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.floor-arrow {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-primary);
+  text-shadow: 0 0 8px currentColor;
+}
+
+.floor-target {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  opacity: 0.9;
+}
+
+// 상태 아이콘 영역
+.lifter-status-icons {
+  display: flex;
+  gap: 6px;
+}
+
+.status-indicator {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+
+  .indicator-icon {
+    font-size: 14px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+
+  // 동작 상태 (run_yn)
+  &.run-status.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 12px rgba(64, 158, 255, 0.6);
+
+    .indicator-icon {
+      opacity: 1;
+      filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.8));
+    }
+  }
+
+  // 화물 상태 (cargo_yn)
+  &.cargo-status.active {
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+    box-shadow: 0 0 12px rgba(240, 193, 75, 0.6);
+
+    .indicator-icon {
+      opacity: 1;
+    }
+  }
+
+  // 스토퍼 상태
+  &.stopper-status.open {
+    background: var(--color-warning);
+    border-color: var(--color-warning);
+    box-shadow: 0 0 12px rgba(230, 162, 60, 0.6);
+
+    .indicator-icon {
+      opacity: 1;
+    }
+  }
+}
+
+// 셔틀 적재 인디케이터
+.lifter-shuttle-indicator {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--color-gold);
+  color: #1a1d24;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(240, 193, 75, 0.5);
+  animation: shuttle-badge-bounce 0.8s ease-in-out infinite;
+
+  .shuttle-icon-mini {
+    font-size: 14px;
+  }
+
+  .shuttle-label-mini {
+    font-size: 10px;
+  }
+}
+
+// 화물 적재 인디케이터
+.lifter-cargo-indicator {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(240, 193, 75, 0.95);
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 0 2px 10px rgba(240, 193, 75, 0.6);
+
+  .lifter-cargo-icon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    :deep(svg) {
+      width: 100%;
+      height: 100%;
+      fill: #1a1d24;
+    }
+  }
+}
+
+// 에러 배지
+.lifter-error-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-danger);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(245, 108, 108, 0.6);
+  animation: error-badge-blink 0.5s ease-in-out infinite;
+}
+
+// 리프터 애니메이션
+@keyframes lifter-running-glow {
+  0%, 100% {
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.5),
+      0 0 30px rgba(64, 158, 255, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 4px 25px rgba(0, 0, 0, 0.6),
+      0 0 50px rgba(64, 158, 255, 0.6);
+  }
+}
+
+@keyframes run-indicator-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 12px rgba(64, 158, 255, 0.6);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(64, 158, 255, 0.9);
+  }
+}
+
+@keyframes cargo-indicator-glow {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(240, 193, 75, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(240, 193, 75, 0.9);
+  }
+}
+
+@keyframes arrow-up-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes arrow-down-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+@keyframes shuttle-transport-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes cargo-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-3px) scale(1.05); }
+}
+
+@keyframes lifter-error-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+@keyframes job-pulse-ring {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes stopper-open-flash {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes stopper-label-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateX(-50%) scale(1.05);
+  }
+}
+
+@keyframes shuttle-badge-bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-4px);
+  }
+}
+
+@keyframes error-badge-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+// 기존 호환성 유지
+@keyframes lifter-indicator-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(64, 158, 255, 0.6);
+  }
+}
+
+@keyframes arrow-bounce-up {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes arrow-bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(2px); }
+}
+
+// 컨베이어 애니메이션
+
+@keyframes cv-running-color-pulse {
+  0%, 100% {
+    color: var(--op-state-active);
+    filter: drop-shadow(0 0 4px var(--op-state-active-glow-sm));
+  }
+  50% {
+    color: var(--op-state-active-bright);
+    filter:
+      drop-shadow(0 0 8px var(--op-state-active-glow-md))
+      drop-shadow(0 0 14px var(--op-state-active-glow-lg));
+  }
+}
+
+@keyframes cv-running-image-pulse {
+  0%, 100% {
+    filter: brightness(1.12) saturate(1.18);
+  }
+  50% {
+    filter:
+      brightness(1.22)
+      saturate(1.35)
+      drop-shadow(0 0 8px var(--op-state-active-glow-xs));
+  }
+}
+
+// ============================================
+// 14. 셔틀/화물 Fade In/Out 애니메이션
+// ============================================
+
+.shuttle-object,
+.cargo-object {
+  // 진입 애니메이션
+  &.is-entering {
+    animation: fade-scale-in 0.3s ease-out forwards;
+  }
+
+  // 퇴장 애니메이션
+  &.is-leaving {
+    animation: fade-scale-out 0.4s ease-in forwards;
+  }
+}
+
+@keyframes fade-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-scale-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+// ============================================
+// 15. 셔틀 배터리 인디케이터
+// ============================================
+
+.shuttle-battery {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+
+  .battery-fill {
+    height: 100%;
+    transition: width 0.3s ease, background-color 0.3s ease;
+  }
+
+  // 배터리 레벨별 색상
+  &.battery-high .battery-fill {
+    background: var(--color-success);
+  }
+
+  &.battery-medium .battery-fill {
+    background: var(--color-warning);
+  }
+
+  &.battery-low .battery-fill {
+    background: var(--color-danger);
+    animation: battery-low-pulse 1s ease-in-out infinite;
+  }
+
+  &.battery-critical .battery-fill {
+    background: var(--color-danger);
+    animation: battery-critical-blink 0.5s infinite;
+  }
+}
+
+@keyframes battery-low-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes battery-critical-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+// ============================================
+// 16. 셔틀 이동 경로 표시 (선택적)
+// ============================================
+
+.shuttle-object {
+  &.status-moving {
+    // 이동 방향 화살표 효과
+    &::after {
+      content: '';
+      position: absolute;
+      width: 40%;
+      height: 40%;
+      background: radial-gradient(
+          ellipse at center,
+          rgba(64, 158, 255, 0.6) 0%,
+          transparent 70%
+      );
+      animation: movement-trail 0.8s ease-out infinite;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+}
+
+@keyframes stopper-open-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes movement-trail {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+// ============================================
+// 17. 팝업 활성 대상 강조
+// ============================================
+
+.equipment-object.popup-active,
+.shuttle-object.popup-active,
+.lifter-overlay.popup-active {
+  position: relative;
+  z-index: 1000;
+}
+
+.equipment-object.popup-active {
+  box-shadow:
+    inset 0 0 0 2px rgba(120, 210, 255, 0.95),
+    0 0 0 1px rgba(255, 255, 255, 0.28),
+    0 0 14px rgba(64, 158, 255, 0.38);
+  border-radius: 6px;
+  filter: brightness(1.05);
+}
+
+.equipment-object.popup-active::after {
+  display: none !important;
+  content: none !important;
+}
+
+.shuttle-object.popup-active::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 12px;
+  border: 2px solid rgba(120, 210, 255, 0.95);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.35),
+    0 0 0 4px rgba(64, 158, 255, 0.22),
+    0 0 14px rgba(64, 158, 255, 0.45),
+    0 0 28px rgba(64, 158, 255, 0.22);
+  pointer-events: none;
+  animation: popup-focus-ring 1.2s ease-in-out infinite;
+}
+
+.equipment-object.popup-active {
+  filter: brightness(1.08);
+}
+
+.shuttle-object.popup-active {
+  filter: brightness(1.1);
+}
+
+.lifter-overlay.popup-active {
+  border-color: rgba(120, 210, 255, 1) !important;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.28),
+    0 0 0 5px rgba(64, 158, 255, 0.22),
+    0 0 18px rgba(64, 158, 255, 0.5),
+    0 0 34px rgba(64, 158, 255, 0.25),
+    0 8px 22px rgba(0, 0, 0, 0.35);
+  animation: popup-focus-lifter 1.2s ease-in-out infinite;
+}
+
+@keyframes popup-focus-ring {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.35),
+      0 0 0 4px rgba(64, 158, 255, 0.22),
+      0 0 14px rgba(64, 158, 255, 0.45),
+      0 0 28px rgba(64, 158, 255, 0.22);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.015);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.45),
+      0 0 0 5px rgba(64, 158, 255, 0.28),
+      0 0 18px rgba(64, 158, 255, 0.58),
+      0 0 36px rgba(64, 158, 255, 0.3);
+  }
+}
+
+@keyframes popup-focus-lifter {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1.02);
+  }
+  50% {
+    transform: scale(1.015);
+    filter: brightness(1.08);
+  }
+}
+
+// ============================================
+// 18. 하이라이트 모드 - Dimmed 상태
+// ============================================
+// 에러 하이라이트 모드 활성화 시 에러가 아닌
+// 설비/셔틀/화물은 dim 처리하여 에러에 집중
+
+.equipment-object.is-dimmed,
+.shuttle-object.is-dimmed,
+.cargo-object.is-dimmed,
+.lifter-overlay.is-dimmed,
+.conveyor-cargo.is-dimmed,
+.rack-inventory.is-dimmed {
+  opacity: 0.18;
+  filter: saturate(0.15) brightness(0.5);
+  pointer-events: none;
+  transition: opacity 0.4s ease, filter 0.4s ease;
+}
+
+// 에러 상태 강조 (dimmed에서 제외)
+.equipment-object.has-error:not(.is-dimmed),
+.shuttle-object.has-error:not(.is-dimmed),
+.lifter-overlay.has-error:not(.is-dimmed) {
+  filter: none !important;
+  opacity: 1 !important;
+  z-index: calc(var(--z-shuttle) + 100) !important;
+
+  // 에러 링 강조 효과
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border-radius: 14px;
+    border: 2px solid var(--color-danger);
+    box-shadow:
+      0 0 0 4px rgba(245, 108, 108, 0.2),
+      0 0 20px rgba(245, 108, 108, 0.4);
+    animation: error-highlight-ring 1.2s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+// 에러 상태 배지 (에러 아이콘)
+.equipment-object.has-error:not(.is-dimmed)::after,
+.shuttle-object.has-error:not(.is-dimmed) .error-badge,
+.lifter-overlay.has-error:not(.is-dimmed) .error-badge {
+  content: '⚠';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-danger);
+  color: white;
+  font-size: 11px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(245, 108, 108, 0.5);
+  animation: error-badge-pulse 1s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes error-highlight-ring {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow:
+      0 0 0 4px rgba(245, 108, 108, 0.2),
+      0 0 20px rgba(245, 108, 108, 0.4);
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 0.85;
+    box-shadow:
+      0 0 0 6px rgba(245, 108, 108, 0.25),
+      0 0 30px rgba(245, 108, 108, 0.5);
+  }
+}
+
+@keyframes error-badge-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+// ============================================
+// 19. 하이라이트 모드 전환 애니메이션
+// ============================================
+
+.highlight-mode-active {
+  // 하이라이트 모드 활성화 시 전체 배경 살짝 어둡게
+  .dashboard-body {
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.1);
+      pointer-events: none;
+      z-index: 1;
+      animation: highlight-overlay-in 0.3s ease forwards;
+    }
+  }
+}
+
+@keyframes highlight-overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// ============================================
+// 20. 작업중 상태 강조
+// ============================================
+
+.shuttle-object.status-working:not(.is-dimmed),
+.equipment-object.status-working:not(.is-dimmed) {
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 10px;
+    border: 2px solid var(--color-warning);
+    opacity: 0;
+    animation: working-pulse-border 2s ease-in-out infinite;
+    pointer-events: none;
+  }
+}
+
+@keyframes working-pulse-border {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+}
+
+
+// ============================================
+// 8. 정규화 상태 (legend-spec 의 코드값과 1:1 매칭)
+// ============================================
+//
+// 백엔드 EquipmentStateClassifier 에서 결정된 shuttleState / conveyorState /
+// palletState 를 그대로 CSS 클래스로 매핑한다. 색/라벨/우선순위 변경은
+// legend-spec.ts + EquipmentStateClassifier.java 에서만 이뤄진다.
+//
+// 주의:
+//  - cv-moving 은 "모터 가동 펄스" 시각 피드백용으로 별도 유지 (Q3 범례엔 표기 없음).
+//  - DISABLED 는 진한 그레이 + 빗금 오버레이 (`--cs-locked-*` 재사용).
+
+// ----- Shuttle -----
+.shuttle-object.shuttle-state-IDLE     { color: #3B82F6; }
+.shuttle-object.shuttle-state-RUNNING  {
+  color: #22C55E;
+  filter: drop-shadow(0 0 6px rgba(34, 197, 94, 0.55));
+}
+.shuttle-object.shuttle-state-CHARGING {
+  color: #A855F7;
+  filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.55));
+  animation: shuttle-charging 2s ease-in-out infinite;
+}
+.shuttle-object.shuttle-state-MANUAL   { color: #6B7280; }
+.shuttle-object.shuttle-state-ERROR    {
+  color: #EF4444;
+  filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.65));
+  animation: shuttle-error-blink 0.5s ease-in-out infinite;
+}
+.shuttle-object.shuttle-state-DISABLED {
+  color: #4B5563;
+  position: relative;
+  opacity: 0.75;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background:
+      linear-gradient(var(--cs-locked-tint), var(--cs-locked-tint)),
+      repeating-linear-gradient(
+        45deg,
+        transparent 0,
+        transparent 4px,
+        var(--cs-locked-stripe) 4px,
+        var(--cs-locked-stripe) 6px
+      );
+    box-shadow: inset 0 0 0 1px var(--cs-locked-border);
+  }
+}
+
+// ----- Conveyor -----
+.equipment-object.conveyor-state-AUTO     { --cv-state-color: #22C55E; }
+.equipment-object.conveyor-state-MANUAL   { --cv-state-color: #6B7280; }
+.equipment-object.conveyor-state-ERROR    {
+  --cv-state-color: #EF4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.6) inset;
+}
+.equipment-object.conveyor-state-DISABLED {
+  --cv-state-color: #4B5563;
+  opacity: 0.75;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: inherit;
+    background:
+      linear-gradient(var(--cs-locked-tint), var(--cs-locked-tint)),
+      repeating-linear-gradient(
+        45deg,
+        transparent 0,
+        transparent 4px,
+        var(--cs-locked-stripe) 4px,
+        var(--cs-locked-stripe) 6px
+      );
+    box-shadow: inset 0 0 0 1px var(--cs-locked-border);
+  }
+}
+.equipment-object.conveyor-state-AUTO,
+.equipment-object.conveyor-state-MANUAL,
+.equipment-object.conveyor-state-ERROR,
+.equipment-object.conveyor-state-DISABLED {
+  .object-svg  { color: var(--cv-state-color); }
+  .object-image { filter: drop-shadow(0 0 3px var(--cv-state-color)); }
+}
+
+// ----- Conveyor Pallet (3-way) -----
+.conveyor-cargo.pallet-state-DATA_AND_PHY .conveyor-cargo-icon { color: #22C55E; }
+.conveyor-cargo.pallet-state-PHY_ONLY     .conveyor-cargo-icon { color: #F59E0B; }
+.conveyor-cargo.pallet-state-DATA_ONLY    .conveyor-cargo-icon { color: #3B82F6; }
+
+
+// ============================================
+// 21. 좌표 눈금 (ROW / BAY)
+// ============================================
+// stage transform 안에서 랙과 동일한 좌표계로 배치.
+// 줌/팬 시 랙과 함께 자동으로 이동/확대/축소되므로 수동 좌표 변환 불필요.
+// 별도 고정 띠 영역 없음 — 월드좌표 직접 사용.
+
+.bay-labels-layer,
+.row-labels-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 85;
+}
+
+.bay-label,
+.row-label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto Mono', Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  color: rgba(211, 209, 199, 0.85);
+  pointer-events: none;
+  // transform 은 각 label 의 정렬을 위해 인라인으로 덧붙여짐
+}
+
+// 5의 배수 강조
+.bay-label.label-major,
+.row-label.label-major {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 0 6px rgba(64, 158, 255, 0.5);
+}

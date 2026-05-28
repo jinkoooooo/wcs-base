@@ -1,0 +1,153 @@
+.top-bar {
+  flex: 1;
+  display: flex;
+}
+
+.top-bar span#header {
+  flex: 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.menu-btn {
+  display: grid;
+  grid-template-columns: auto auto;
+  font-family: "Verdana", "Helvetica";
+}
+
+.menu-btn img,
+.menu-btn span {
+  margin: auto;
+  padding: 0 7px 0 0;
+}
+
+span.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: auto 0;
+  border-left: 1px dotted rgba(255, 255, 255, 0.2);
+  padding: 0 0 0 7px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.input-container,
+.buttons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 7px;
+}
+
+.buttons {
+  margin-left: 7px;
+}
+
+.input-container span {
+  margin: auto;
+  font-size: 0.8rem;
+}
+
+.buttons ion-icon {
+  margin: auto;
+  fill: rgba(255, 255, 255, 0.4);
+}
+
+.buttons ion-icon:active {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+  fill: #f9a21f;
+}
+
+input,
+select {
+  /* background-color: rgba(0, 0, 0, 0.25); */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  outline: none;
+  height: 1.2rem;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 0.5rem;
+  padding: 0 10px;
+  outline: none;
+  margin: auto 200px auto 15px;
+  width: auto;
+}
+
+input[type="date"] {
+  border-radius: unset;
+  outline: none;
+}
+
+button {
+  background: #626262;
+  border: none;
+  border-radius: 12px;
+  margin: 0;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: var(--button-min-width);
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: "Noto Sans KR";
+  outline: none;
+  margin-right: 2px;
+  font-family: "Noto Sans KR";
+}
+
+button:active {
+  background: #626262;
+  border: none;
+  border-radius: 12px;
+  margin: 0;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: var(--button-min-width);
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: "Noto Sans KR";
+  outline: none;
+  margin-right: 2px;
+}
+
+button[active] {
+  background: #565555;
+  text-shadow: 0.11rem 0rem 0.11rem rgba(0, 0, 0, 0.4);
+}
+button:focus {
+  outline: none;
+}
+button.warn {
+  background: #e54646;
+  border-radius: 12px;
+  margin: 0;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: var(--button-min-width);
+  color: #fff;
+  text-shadow: 0px 0.11rem 0.11rem rgba(0, 0, 0, 0.4);
+  font-size: 0.8rem;
+  font-family: "Noto Sans KR";
+  outline: none;
+}
+button.warn:active {
+  background: #d13939;
+  text-shadow: 0.11rem 0rem 0.11rem rgba(0, 0, 0, 0.4);
+}
+button.warn:focus {
+  outline: none;
+}
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("/images/icon-downarrow.png");
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+}

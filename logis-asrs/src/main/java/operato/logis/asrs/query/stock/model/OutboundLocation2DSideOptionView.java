@@ -1,0 +1,12 @@
+package operato.logis.asrs.query.stock.model;
+
+import lombok.Data;
+
+/**
+ * 2D 출고 화면용 side 옵션 조회 모델.
+ */
+@Data
+public class OutboundLocation2DSideOptionView {
+
+    private String sideCode;
+}

@@ -1,0 +1,45 @@
+/**
+ * @description
+  바코드 스캔을 사용하는 화면의 공통 기능 Directive
+  1. 바코드 스캔을 통해 값을 입력 받을 input element에 v-barcode 이라는 attribute를 추가
+  2. 대상 input element를 조회하여 모바일 환경에서 softkeyboard가 나타나지 않도록 focus 이벤트 리스너 등록
+  3. 대상 input element를 조회하여 화면 진입시 포커스 자동 이동하도록 이벤트 등록
+  4. _initialSetup 호출을 통한 초기 포커스 이동을 수행함
+*/
+import { nextTick, type App } from "vue";
+
+/**
+ * 초기 셋업
+ ************
+ */
+const setup = {
+  mounted: (barcodeInput: InputElement, binding) => {
+    if (barcodeInput) {
+      barcodeInput.addEventListener("focus", hideKeyboard);
+      setTimeout(() => {
+        if (barcodeInput.value && barcodeInput.value.length > 0) {
+          barcodeInput.select();
+        } else {
+          barcodeInput.focus();
+        }
+      }, 500);
+    }
+  },
+};
+/**
+ * 시스템 적으로(사용자의 터치가 아닌 javascript를 통한) 포커스가 해당 input으로 이동하면
+ * 모바일 환경에서의 soft-keyboard를 표시하지 않음
+ ************
+ * @param Object on-focus event
+ */
+const hideKeyboard = (event) => {
+  const inputElement = event.currentTarget;
+  inputElement.setAttribute("readonly", "");
+  setTimeout(() => {
+    inputElement.removeAttribute("readonly");
+  }, 100);
+};
+
+export const setupVBarcodeFocus = (app: App<Element>) => {
+  app.directive("barcode", setup);
+};

@@ -1,0 +1,23 @@
+<!-- pillar.svg (rack.svg와 동일한 프레임 크기/모서리, 전체가 기둥으로 보이게) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" shape-rendering="geometricPrecision">
+  <!-- Outer frame: SAME as rack.svg (stroke won't clip) -->
+  <rect x="2" y="2" width="96" height="96" rx="4"
+        fill="none" stroke="#5E6F85" stroke-width="2" opacity="0.35"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Pillar body (fills the whole cell area, slightly darker) -->
+  <rect x="8" y="8" width="84" height="84" rx="6" fill="#3B4656"/>
+
+  <!-- Inner hollow -->
+  <rect x="20" y="20" width="60" height="60" rx="4" fill="#222B36"/>
+
+  <!-- Reinforcement cross -->
+  <line x1="8" y1="50" x2="92" y2="50" stroke="#7E8FA6" stroke-width="2" opacity="0.35" stroke-linecap="round"/>
+  <line x1="50" y1="8" x2="50" y2="92" stroke="#7E8FA6" stroke-width="2" opacity="0.35" stroke-linecap="round"/>
+
+  <!-- Corner bolts -->
+  <circle cx="18" cy="18" r="3" fill="#AEBBCC" opacity="0.55"/>
+  <circle cx="82" cy="18" r="3" fill="#AEBBCC" opacity="0.55"/>
+  <circle cx="18" cy="82" r="3" fill="#AEBBCC" opacity="0.55"/>
+  <circle cx="82" cy="82" r="3" fill="#AEBBCC" opacity="0.55"/>
+</svg>

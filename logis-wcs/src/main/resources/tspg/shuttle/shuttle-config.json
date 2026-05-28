@@ -1,0 +1,27 @@
+{
+  "projectInfo": {
+    "projectId": "TEST_PROJECT2",
+    "projectName": "테스트 프로젝트2",
+    "description": "ECS 모듈 테스트용2"
+  },
+  "shuttles": [
+    {
+      "shuttleId": "SHUTTLE_001",
+      "shuttleName": "테스트 1호기",
+      "ip": "192.168.1.10",
+      "port": 5001,
+      "priority": 5,
+      "enabled": true,
+      "memoryOffset": 0
+    },
+    {
+      "shuttleId": "SHUTTLE_002",
+      "shuttleName": "테스트 2호기",
+      "ip": "192.168.1.12",
+      "port": 5001,
+      "priority": 5,
+      "enabled": true,
+      "memoryOffset": 0
+    }
+  ]
+}

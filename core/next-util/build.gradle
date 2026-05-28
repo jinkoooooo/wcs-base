@@ -1,0 +1,46 @@
+plugins {
+    id 'java-library'
+}
+
+
+
+jar {
+    manifest {
+        attributes(
+            'Implementation-Title': 'Next-Util',
+            'Implementation-Version': '3.0.0'
+        )
+    }
+}
+
+
+repositories {
+    mavenCentral() // Maven 중앙 저장소 사용
+    // 필요시 사설 Nexus 리포지토리 추가
+    maven {
+        url "http://repo.hatiolab.com/nexus/content/groups/elidom-repository/"
+        allowInsecureProtocol = true
+    }
+}
+
+dependencies {
+    // Utilities
+    api "com.google.code.gson:gson:2.10.1"
+    api "com.googlecode.json-simple:json-simple:1.1.1"
+    api "net.sf.common-util:common-util:1.0.17"
+    //api "org.apache.httpcomponents:httpclient:4.5.14"
+//    api("org.apache.httpcomponents:httpclient:4.5.14") {
+//	    exclude group: "commons-logging", module: "commons-logging"
+//	}
+    api 'org.apache.httpcomponents.client5:httpclient5:5.2.1'
+    api 'org.apache.httpcomponents.core5:httpcore5:5.2.1'
+	
+    api 'org.springframework:spring-context-support:6.1.15'
+
+    // Log4j 2.17.1로 업그레이드
+    api "org.apache.logging.log4j:log4j-core:2.17.1"
+    api "org.apache.logging.log4j:log4j-api:2.17.1"
+    api "jakarta.servlet:jakarta.servlet-api:5.0.0"
+
+    api project(':next-exception')
+}

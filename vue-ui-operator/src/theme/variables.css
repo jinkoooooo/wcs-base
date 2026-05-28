@@ -1,0 +1,149 @@
+/* Ionic Variables and Theming. For more info, please see:
+http://ionicframework.com/docs/theming/ */
+
+/** Ionic CSS Variables **/
+body {
+  --side-max-width: 140px;
+  --side-min-width: 140px;
+  --default-border-radius: 0.4rem;
+  --dark-text-color: #585858;
+  --button-min-width: 140px;
+
+  --primary-background-color: #252222;
+  --secondary-background-color: #f7af01;
+  --primary-color: #e6b84b;
+  --secondary-color: #f7af01;
+  --focus-background-color: #f7af01;
+  --whitegrey-background-color: #3c3c3c;
+  --lightgrey-background-color: rgba(0, 0, 0, 0.1);
+  --white-background-color: #fff;
+  --white-opacity-background-color: rgba(255, 255, 255, 0.1);
+  --error-color: var(--deep-orange-700);
+  --primary-text-color: #fff;
+  --dark-text-color: #585858;
+  --sidebar-background-color: #555c6b;
+  --slide-height: auto;
+  --toast-background-color: rgba(109, 107, 171, 0.8);
+  --toast-color: var(--white-background-color);
+  --input-container-color: rgba(0, 0, 0, 0.2);
+  --checkbox-unchecked-color: rgba(119, 125, 142, 0.7);
+  --checkbox-unchecked-ink-color: rgba(119, 125, 142, 0.7);
+  --checkbox-checked-color: #716fb3;
+  --checkbox-size: 16px;
+  --radio-button-unchecked-color: rgba(119, 125, 142, 0.7);
+  --radio-button-unchecked-ink-color: rgba(119, 125, 142, 0.7);
+  --radio-button-checked-color: #716fb3;
+  --radio-button-checked-ink-color: #716fb3;
+  --radio-button-label-color: var(--primary-text-color);
+  --radio-button-label-spacing: 5px;
+  --fab-background: var(--primary-background-color);
+  --fab-keyboard-focus-background: var(--focus-background-color);
+  --chartcolor-type1: rgba(237, 70, 83, 1);
+  --chartcolor-type2: rgba(255, 128, 51, 1);
+  --chartcolor-type3: rgba(230, 184, 75, 1);
+  --chartcolor-type4: rgba(29, 193, 94, 1);
+  --chartcolor-type5: rgba(54, 162, 235, 1);
+  --chartcolor-type6: rgba(113, 111, 179, 1);
+  --chartcolor-type7: rgba(170, 170, 170, 1);
+  --chartcolor-type1-background: rgba(237, 70, 83, 0.4);
+  --chartcolor-type2-background: rgba(255, 128, 51, 0.4);
+  --chartcolor-type3-background: rgba(230, 184, 75, 0.4);
+  --chartcolor-type4-background: rgba(29, 193, 94, 0.4);
+  --chartcolor-type5-background: rgba(54, 162, 235, 0.4);
+  --chartcolor-type6-background: rgba(113, 111, 179, 0.4);
+  --chartcolor-type7-background: rgba(170, 170, 170, 0.4);
+
+  --ion-overlay-background-color: var(--ion-color-step-300);
+  --ion-background-color: var(--ion-color-step-100);
+  --ion-toolbar-background: var(--ion-color-step-150);
+  --ion-toolbar-border-color: var(--ion-color-step-250);
+
+  /** primary **/
+  --ion-color-primary: #3880ff;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #3171e0;
+  --ion-color-primary-tint: #4c8dff;
+
+  /** secondary **/
+  --ion-color-secondary: #3dc2ff;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-shade: #36abe0;
+  --ion-color-secondary-tint: #50c8ff;
+
+  /** tertiary **/
+  --ion-color-tertiary: #5260ff;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-shade: #4854e0;
+  --ion-color-tertiary-tint: #6370ff;
+
+  /** success **/
+  --ion-color-success: #2dd36f;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-shade: #28ba62;
+  --ion-color-success-tint: #42d77d;
+
+  /** warning **/
+  --ion-color-warning: #ffc409;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-shade: #e0ac08;
+  --ion-color-warning-tint: #ffca22;
+
+  /** danger **/
+  --ion-color-danger: #eb445a;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-shade: #cf3c4f;
+  --ion-color-danger-tint: #ed576b;
+
+  /** dark **/
+  --ion-color-dark: #222428;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  /** medium **/
+  --ion-color-medium: #92949c;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-shade: #808289;
+  --ion-color-medium-tint: #9d9fa6;
+
+  /** light **/
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+
+  --ion-item-background: #1e1e1e;
+  --ion-toolbar-background: #1f1f1f;
+  --ion-tab-bar-background: #1f1f1f;
+  --ion-text-color: #ffffff;
+  --ion-color-step-50: #1e1e1e;
+  --ion-color-step-100: #2a2a2a;
+  --ion-color-step-150: #363636;
+  --ion-color-step-200: #414141;
+  --ion-color-step-250: #4d4d4d;
+  --ion-color-step-300: #595959;
+  --ion-color-step-350: #656565;
+  --ion-color-step-400: #717171;
+  --ion-color-step-450: #7d7d7d;
+  --ion-color-step-500: #898989;
+  --ion-color-step-550: #949494;
+  --ion-color-step-600: #a0a0a0;
+  --ion-color-step-650: #acacac;
+  --ion-color-step-700: #b8b8b8;
+  --ion-color-step-750: #c4c4c4;
+  --ion-color-step-800: #d0d0d0;
+  --ion-color-step-850: #dbdbdb;
+  --ion-color-step-900: #e7e7e7;
+  --ion-color-step-950: #f3f3f3;
+  --ion-default-dynamic-font: 35px "Noto Sans KR";
+}
+
+html {
+  /* For more information on dynamic font scaling, visit the documentation: 
+  https://ionicframework.com/docs/layout/dynamic-font-scaling */
+  --ion-default-font: "Noto Sans KR" !important;
+  font-size: 32px;
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "functionName": "ZWM_WES_MARA_SEND",
+  "isSend": false,
+  "importParams": {
+    "I_ZWERKS": "2009",
+    "I_MATNR": null
+  },
+  "exportParams": {
+    "O_MSGTY": "",
+    "O_MSGLIN": "",
+    "E_XC_E_TIME": ""
+  },
+  "tableDataMap": {
+    "GT_TAB": []
+  },
+  "fieldsMap": {
+    "GT_TAB": [
+      "COM_CD",
+      "SKU_CD",
+      "SKU_NAME",
+      "SKU_LEN",
+      "SKU_WD",
+      "SKU_HT",
+      "SERIAL_REQUIRED",
+      "SKU_WT",
+      "SKU_UNIT",
+      "BOX_IN_QTY",
+      "PLT_IN_BOX",
+      "PLT_IN_QTY"
+    ]
+  },
+  "mappingMap": {
+    "GT_TAB": {
+      "COM_CD": "ZWERKS",
+      "SKU_CD": "MATNR",
+      "SKU_NAME": "MAKTX",
+      "SKU_LEN": "WIDTH_CM",
+      "SKU_WD": "LENGTH_CM",
+      "SKU_HT": "HEIGHT_CM",
+      "SERIAL_REQUIRED": "SERNP",
+      "SKU_WT": "WEIGHT_KG",
+      "SKU_UNIT": "WEIGHT_UNIT",
+      "BOX_IN_QTY": "BOX_PCS",
+      "PLT_IN_BOX": "MSGTY",
+      "PLT_IN_QTY": "MSGLIN"
+    }
+  },
+  "typeMap": {
+    "GT_TAB": {
+      "ZWERKS": "CHAR",
+      "MATNR": "CHAR",
+      "MAKTX": "CHAR",
+      "WIDTH_CM": "DEC",
+      "LENGTH_CM": "DEC",
+      "HEIGHT_CM": "DEC",
+      "SERNP": "CHAR",
+      "WEIGHT_KG": "DEC",
+      "WEIGHT_UNIT": "CHAR",
+      "BOX_PCS": "DEC",
+      "MSGTY": "CHAR",
+      "MSGLIN": "CHAR"
+    }
+  },
+  "enDecryptFields": ["COM_CD", "SKU_CD"]
+}

@@ -1,0 +1,78 @@
+{
+  "functionName": "ZWM_WES_ORDER_TOTSUM_SEND",
+  "isSend": false,
+  "importParams": {
+    "I_ZWERKS": "2009",
+    "I_RSDAT": "2025.04.07",
+    "I_SEQ": "01"
+  },
+  "exportParams": {
+    "O_MSGTY": "",
+    "O_MSGLIN": "",
+    "E_XC_E_TIME": ""
+  },
+  "tableDataMap": {
+    "GT_TAB": []
+  },
+  "fieldsMap": {
+    "GT_TAB": [
+      "MANDT",
+      "COM_CD",
+      "RELEASE_DATE",
+      "ORDER_DATE",
+      "TOTAL_RECORDS",
+      "TOTAL_DLV_STATION_CNT",
+      "RELEASE_DOC_COUNT",
+      "TOTAL_SKU",
+      "TOTAL_PCS",
+      "TOTAL_COORDINATORS",
+      "TOTAL_ORDERS",
+      "ERFME",
+      "RFCDATE",
+      "RFCTIME",
+      "MSGTY",
+      "MSGLIN"
+    ]
+  },
+  "mappingMap": {
+    "GT_TAB": {
+      "MANDT": "MANDT",
+      "COM_CD": "ZWERKS",
+      "RELEASE_DATE": "ERDAT",
+      "ORDER_DATE": "RSDAT",
+      "TOTAL_RECORDS": "TOT_CNT",
+      "TOTAL_DLV_STATION_CNT": "TOT_UMLGO_CNT",
+      "RELEASE_DOC_COUNT": "TOT_RSNUM_CNT",
+      "TOTAL_SKU": "TOT_MATNR_CNT",
+      "TOTAL_PCS": "TOT_ERFMG_CNT",
+      "TOTAL_COORDINATORS": "TOT_WEMPF_CNT",
+      "TOTAL_ORDERS": "TOT_TO_CNT",
+      "ERFME": "ERFME",
+      "RFCDATE": "RFCDATE",
+      "RFCTIME": "RFCTIME",
+      "MSGTY": "MSGTY",
+      "MSGLIN": "MSGLIN"
+    }
+  },
+  "typeMap": {
+    "GT_TAB": {
+      "MANDT": "CHAR",
+      "ZWERKS": "CHAR",
+      "ERDAT": "DATS",
+      "RSDAT": "DATS",
+      "TOT_CNT": "NUMC",
+      "TOT_UMLGO_CNT": "NUMC",
+      "TOT_RSNUM_CNT": "NUMC",
+      "TOT_MATNR_CNT": "NUMC",
+      "TOT_ERFMG_CNT": "NUMC",
+      "TOT_WEMPF_CNT": "NUMC",
+      "TOT_TO_CNT": "NUMC",
+      "ERFME": "CHAR",
+      "RFCDATE": "DATS",
+      "RFCTIME": "TIMS",
+      "MSGTY": "CHAR",
+      "MSGLIN": "CHAR"
+    }
+  },
+  "enDecryptFields": []
+}

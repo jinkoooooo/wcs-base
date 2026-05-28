@@ -1,0 +1,236 @@
+[
+  {
+    "pointId": "P001",
+    "x": 0,
+    "y": 0,
+    "type": "NORMAL",
+    "connectedPoints": ["P002", "P006"],
+    "description": "Entry Point",
+    "blocked": false
+  },
+  {
+    "pointId": "P002",
+    "x": 1,
+    "y": 0,
+    "type": "NORMAL",
+    "connectedPoints": ["P001", "P003"],
+    "description": "Main Corridor 1",
+    "blocked": false
+  },
+  {
+    "pointId": "P003",
+    "x": 2,
+    "y": 0,
+    "type": "NORMAL",
+    "connectedPoints": ["P002", "P004", "P008"],
+    "description": "Junction Point A",
+    "blocked": false
+  },
+  {
+    "pointId": "P004",
+    "x": 3,
+    "y": 0,
+    "type": "PICKUP",
+    "connectedPoints": ["P003", "P005"],
+    "description": "Pickup Station 1",
+    "blocked": false
+  },
+  {
+    "pointId": "P005",
+    "x": 4,
+    "y": 0,
+    "type": "STORAGE",
+    "connectedPoints": ["P004", "P010"],
+    "description": "Storage Area A",
+    "blocked": false
+  },
+  {
+    "pointId": "P006",
+    "x": 0,
+    "y": 1,
+    "type": "NORMAL",
+    "connectedPoints": ["P001", "P007"],
+    "description": "Side Corridor 1",
+    "blocked": false
+  },
+  {
+    "pointId": "P007",
+    "x": 0,
+    "y": 2,
+    "type": "CHARGE",
+    "connectedPoints": ["P006", "P012"],
+    "description": "Charging Station 1",
+    "blocked": false
+  },
+  {
+    "pointId": "P008",
+    "x": 2,
+    "y": 1,
+    "type": "NORMAL",
+    "connectedPoints": ["P003", "P009", "P013"],
+    "description": "Central Hub",
+    "blocked": false
+  },
+  {
+    "pointId": "P009",
+    "x": 2,
+    "y": 2,
+    "type": "PICKUP",
+    "connectedPoints": ["P008", "P014"],
+    "description": "Pickup Station 2",
+    "blocked": false
+  },
+  {
+    "pointId": "P010",
+    "x": 4,
+    "y": 1,
+    "type": "NORMAL",
+    "connectedPoints": ["P005", "P011", "P015"],
+    "description": "Junction Point B",
+    "blocked": false
+  },
+  {
+    "pointId": "P011",
+    "x": 4,
+    "y": 2,
+    "type": "STORAGE",
+    "connectedPoints": ["P010", "P016"],
+    "description": "Storage Area B",
+    "blocked": false
+  },
+  {
+    "pointId": "P012",
+    "x": 0,
+    "y": 3,
+    "type": "MAINTENANCE",
+    "connectedPoints": ["P007", "P017"],
+    "description": "Maintenance Zone",
+    "blocked": false
+  },
+  {
+    "pointId": "P013",
+    "x": 3,
+    "y": 1,
+    "type": "NORMAL",
+    "connectedPoints": ["P008", "P010", "P014"],
+    "description": "Crossroad 1",
+    "blocked": false
+  },
+  {
+    "pointId": "P014",
+    "x": 3,
+    "y": 2,
+    "type": "NORMAL",
+    "connectedPoints": ["P009", "P013", "P015"],
+    "description": "Crossroad 2",
+    "blocked": false
+  },
+  {
+    "pointId": "P015",
+    "x": 4,
+    "y": 2,
+    "type": "NORMAL",
+    "connectedPoints": ["P010", "P014", "P016"],
+    "description": "Distribution Point",
+    "blocked": false
+  },
+  {
+    "pointId": "P016",
+    "x": 5,
+    "y": 2,
+    "type": "STORAGE",
+    "connectedPoints": ["P011", "P015", "P021"],
+    "description": "Storage Area C",
+    "blocked": false
+  },
+  {
+    "pointId": "P017",
+    "x": 1,
+    "y": 3,
+    "type": "NORMAL",
+    "connectedPoints": ["P012", "P018"],
+    "description": "Service Corridor",
+    "blocked": false
+  },
+  {
+    "pointId": "P018",
+    "x": 2,
+    "y": 3,
+    "type": "CHARGE",
+    "connectedPoints": ["P017", "P019"],
+    "description": "Charging Station 2",
+    "blocked": false
+  },
+  {
+    "pointId": "P019",
+    "x": 3,
+    "y": 3,
+    "type": "NORMAL",
+    "connectedPoints": ["P018", "P020"],
+    "description": "Back Corridor",
+    "blocked": false
+  },
+  {
+    "pointId": "P020",
+    "x": 4,
+    "y": 3,
+    "type": "PICKUP",
+    "connectedPoints": ["P019", "P021"],
+    "description": "Pickup Station 3",
+    "blocked": false
+  },
+  {
+    "pointId": "P021",
+    "x": 5,
+    "y": 3,
+    "type": "NORMAL",
+    "connectedPoints": ["P016", "P020", "P022"],
+    "description": "End Junction",
+    "blocked": false
+  },
+  {
+    "pointId": "P022",
+    "x": 6,
+    "y": 3,
+    "type": "STORAGE",
+    "connectedPoints": ["P021"],
+    "description": "Final Storage",
+    "blocked": false
+  },
+  {
+    "pointId": "P023",
+    "x": 1,
+    "y": 1,
+    "type": "NORMAL",
+    "connectedPoints": ["P024", "P008"],
+    "description": "Intermediate Point",
+    "blocked": false
+  },
+  {
+    "pointId": "P024",
+    "x": 1,
+    "y": 2,
+    "type": "NORMAL",
+    "connectedPoints": ["P023", "P009"],
+    "description": "Connection Hub",
+    "blocked": false
+  },
+  {
+    "pointId": "P025",
+    "x": 5,
+    "y": 0,
+    "type": "CHARGE",
+    "connectedPoints": ["P005", "P026"],
+    "description": "Express Charging",
+    "blocked": false
+  },
+  {
+    "pointId": "P026",
+    "x": 5,
+    "y": 1,
+    "type": "NORMAL",
+    "connectedPoints": ["P025", "P016"],
+    "description": "Express Lane",
+    "blocked": false
+  }
+]

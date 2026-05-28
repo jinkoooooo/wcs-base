@@ -1,0 +1,14 @@
+{
+  "mapInfo": {
+    "mapId": "TEST_MAP2",
+    "mapName": "테스트 맵2",
+    "coordinateSystem": "CARTESIAN"
+  },
+  "dimensions": {
+    "maxX": 50,
+    "maxY": 30,
+    "gridSize": 1.0
+  },
+  "mapFilePath": "test-map.json"
+}
+

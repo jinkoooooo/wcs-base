@@ -1,0 +1,4266 @@
+[
+  {
+    "id": "075bd50e-1d26-41f7-aff0-7c62b541b98b",
+    "name": "USER_REQUEST",
+    "locale": "ko-KR",
+    "display": "시스템 계정 등록 요청.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "8eb43c52-9204-49d9-972a-b0b57712eabf",
+    "name": "CREATE_FILE_ERROR",
+    "locale": "ko-KR",
+    "display": "File 생성 중 에러가 발생하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "31576c77-56f0-4971-afca-c3d40f70cdd6",
+    "name": "FILE_ROOT_PATH_NOT_EXIST",
+    "locale": "ko-KR",
+    "display": "Root path가 올바르지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "ba6c26da-f6b4-4f42-a610-22c1764a0ef0",
+    "name": "UPLOAD_FILE_SIZE_LIMIT_ERROR",
+    "locale": "ko-KR",
+    "display": "업로드 가능한 파일 용량을 초과하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "5210191b-7abb-4af3-b32e-b717a8c1c85e",
+    "name": "TABLE_DOES_NOT_EXIST",
+    "locale": "ko-KR",
+    "display": "Table이 존재하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "758149a9-ff0f-4184-aeb9-680af0ec417b",
+    "name": "USER_REJECT",
+    "locale": "ko-KR",
+    "display": "계정 신청이 반려되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "0c6865a9-88ff-4c87-b7b6-64ea714d0306",
+    "name": "NOT_AUTHORIZED_USER",
+    "locale": "ko-KR",
+    "display": "인증되지 않은 사용자 입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "84fe26b1-3d4c-4125-87ad-0fa096a5db9c",
+    "name": "USER_APPROVAL",
+    "locale": "ko-KR",
+    "display": "계정 신청이 승인되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "bd6fbcb7-1837-425e-ac45-701f62048c0e",
+    "name": "USER_COMPLETE_INIT_PASS",
+    "locale": "ko-KR",
+    "display": "비밀번호 초기화가 완료되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "36890212-41ed-4f9c-87df-b8250f04c0af",
+    "name": "USER_REQUEST_INIT_PASS",
+    "locale": "ko-KR",
+    "display": "비밀번호 초기화 요청드립니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "77a1b332-2517-4645-b668-581cd097ec49",
+    "name": "FILE_DOWNLOAD_ERROR",
+    "locale": "ko-KR",
+    "display": "File Download 실행 중, 에러가 발생하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "f857f8dc-3b2b-4c1f-ab39-c2971482caca",
+    "name": "NOT_SUPPORTED_TYPE",
+    "locale": "ko-KR",
+    "display": "지원되지 않는 {0} Type입니다. [{1}]",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "9594fd05-cec2-4316-ac32-e5dab4b7ef50",
+    "name": "UNKNOWN_TYPE",
+    "locale": "ko-KR",
+    "display": "알 수 없는 타입 형식입니다. [{0}]",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "89925db7-b35b-47fb-a0b4-0106fb101435",
+    "name": "IS_NOT_ENTITY",
+    "locale": "ko-KR",
+    "display": "엔티티 이름이 올바르지 않습니다. [{0}]",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "724f79ef-4ad7-40d8-9f88-bb48fa7f7bdb",
+    "name": "USER_NOT_EXIST",
+    "locale": "ko-KR",
+    "display": "사용자가 존재하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "3eb8bd7a-69cc-4446-9b2e-f26c0bef6003",
+    "name": "USER_INVALID_ID_OR_PASS",
+    "locale": "ko-KR",
+    "display": "ID 또는 비밀번호가 올바르지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "c7aa81be-0bd1-48c3-afc4-617da9dfe46d",
+    "name": "DOMAIN_NOT_EXIST",
+    "locale": "ko-KR",
+    "display": "요청한 서버 정보 ({0})로 Domain 정보를 찾을 수 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "69d0b62f-6a0f-4dc9-9a10-cf515368af0e",
+    "name": "FILE_DEFAULT_PATH_IS_EMPTY",
+    "locale": "en-US",
+    "display": "Default Path is empty.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "a643f63a-f84a-4462-96ce-587647393e13",
+    "name": "NOT_SUPPORTED_YET",
+    "locale": "en-US",
+    "display": "Not Supported Yet!",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "ba5d83dc-ce8a-4ea2-812e-4730959b9bc3",
+    "name": "HAS_ONE_OR_MORE_DATA",
+    "locale": "en-US",
+    "display": "Can not delete it, It Has one or more data.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "bb88267d-6eb2-4dbd-bc71-1cc0539bd070",
+    "name": "FILE_NOT_FOUND",
+    "locale": "en-US",
+    "display": "File({0}) Not Found.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "67ad4966-4c7a-4061-b403-8760875b961d",
+    "name": "USER_NOT_EXIST",
+    "locale": "en-US",
+    "display": "User does not exist",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "f08846fe-fd76-4065-ad36-82327076d974",
+    "name": "NEED_OPTION",
+    "locale": "ko-KR",
+    "display": "이 타입은 반드시 [{0}] 옵션이 필요합니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2b9543a4-7af1-47cd-85cc-f8a6a17b53a6",
+    "name": "FILE_NOT_FOUND",
+    "locale": "ko-KR",
+    "display": "파일({0})을 찾을수가 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "8895e003-0985-4108-97a0-83a87e6a1a21",
+    "name": "NOT_SUPPORTED_YET",
+    "locale": "ko-KR",
+    "display": "아직 지원되지 않는 기능입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "1d9ff7e6-c37a-4c84-9c54-c82a24eae4bf",
+    "name": "TC-WIP-001",
+    "locale": "ko-KR",
+    "display": "{0}이(가) 존재하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "873bf183-52f6-49a9-8203-f79c30eb8021",
+    "name": "TC-WIP-001",
+    "locale": "zh-CN",
+    "display": "{0} 不存在。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "0b418674-b75c-48e0-b9f2-12f6baab2e35",
+    "name": "TC-WIP-001",
+    "locale": "en-US",
+    "display": "{0} does not exist",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "db82462f-e704-4939-b8f6-16a12f9309cf",
+    "name": "TC-WIP-002",
+    "locale": "en-US",
+    "display": "{0} is not {1} state.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "d322e761-10dd-4e51-930e-02528a105f3f",
+    "name": "TC-WIP-002",
+    "locale": "ko-KR",
+    "display": "{0}이(가) {1} 상태가 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "f7016a35-0f94-4dfd-ad52-4f5dcdaeace6",
+    "name": "TC-WIP-002",
+    "locale": "zh-CN",
+    "display": "{0} 不是 {1} 状态。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "8608ad99-8823-40dd-88f8-7f9369b16f7f",
+    "name": "TC-WIP-003",
+    "locale": "ko-KR",
+    "display": "{0} 상태가 {1} 입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e3f98382-dbc5-43ea-a7c3-42fad36b04da",
+    "name": "TC-WIP-003",
+    "locale": "zh-CN",
+    "display": "{0}的状态是 {1}。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "dc8eebbb-bc1e-4227-8042-e6353812748d",
+    "name": "TC-WIP-003",
+    "locale": "en-US",
+    "display": "State of {0} is {1} state.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "cdf0a33a-0c70-4560-832d-34cd72f3d110",
+    "name": "TC-WIP-004",
+    "locale": "zh-CN",
+    "display": "{0} 和 {1}失配",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "d6398eae-3004-4250-9f40-c0508835f064",
+    "name": "TC-WIP-004",
+    "locale": "ko-KR",
+    "display": "{0}와(과) {1}이(가) 맞지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "1782c4f6-294c-4158-b31c-6b0480bb165a",
+    "name": "TC-WIP-004",
+    "locale": "en-US",
+    "display": "Mismatch {0} and {1}.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "ce04670d-6638-44e5-9d72-00eaff02dcb5",
+    "name": "BAD_REQUEST",
+    "locale": "en-US",
+    "display": "Bad Request.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e243ea35-2601-4668-939f-c2d34b109535",
+    "name": "BAD_REQUEST",
+    "locale": "ko-KR",
+    "display": "잘못된 요청입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "c40e0cd2-bbeb-4338-90a6-3b32d85a9887",
+    "name": "TITLE_INVALID_PARAM",
+    "locale": "en-US",
+    "display": "Invalid Parameter Error",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7611a1ab-8d1d-4650-a49b-d10272e80e57",
+    "name": "TITLE_DATA_BASE_ERROR",
+    "locale": "en-US",
+    "display": "Database Error",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "51a03338-313f-41d1-895a-4b4850219650",
+    "name": "RECORD_NOT_FOUND",
+    "locale": "en-US",
+    "display": "Record not found.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e8526d8a-c208-480d-ad95-411f452a332b",
+    "name": "PARSE_INPUT_ERROR",
+    "locale": "en-US",
+    "display": "Error occured at converting input Data.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "0b75d3af-8abd-4f19-a296-f7ed2829e7c6",
+    "name": "INVALID_PARAM",
+    "locale": "en-US",
+    "display": "Parameter (name : {0}, value : {1}) is not valid.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "c153c7ed-c261-4563-a722-f4c840571013",
+    "name": "EMPTY_PARAM",
+    "locale": "en-US",
+    "display": "Empty {0} is not allowed!",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "64c1fc88-9738-4cdc-a532-f34c232d9102",
+    "name": "TITLE_VALIDATION_ERROR",
+    "locale": "en-US",
+    "display": "Validation Error",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4a3ff1f8-111a-43ca-8960-181ceb997bae",
+    "name": "TITLE_SERVICE_ERROR",
+    "locale": "en-US",
+    "display": "Service Error",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "65e3c8fc-4476-4da0-81bc-b3efec12ceb1",
+    "name": "TITLE_SCRIPT_RUNTIME_ERROR",
+    "locale": "en-US",
+    "display": "Script Error",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "23ef0831-d3f3-48b4-b64a-26c9d02cc402",
+    "name": "TITLE_RUNTIME_ERROR",
+    "locale": "en-US",
+    "display": "Runtime Error",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "5fe9a258-c359-4b52-9864-c9227c748ab1",
+    "name": "TITLE_INVALID_STATUS",
+    "locale": "en-US",
+    "display": "Service Invalid Status Error",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "f762d48c-cbef-4b68-b706-c647bff2ff0d",
+    "name": "TITLE_ALREADY_EXIST",
+    "locale": "en-US",
+    "display": "Record Already Exist Error",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "5d6bbd97-06c3-49b9-a6a7-2de0041c7a86",
+    "name": "TITLE_SERVICE_NOT_FOUND",
+    "locale": "en-US",
+    "display": "Service Not Found Error",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "6ffc7cd8-b889-4182-b6dc-b1737b09956d",
+    "name": "TITLE_RECORD_NOT_FOUND",
+    "locale": "en-US",
+    "display": "Record Not Found Error",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7ae064c0-4180-41a3-907d-7f1860b32495",
+    "name": "TITLE_PARSE_INPUT_ERROR",
+    "locale": "en-US",
+    "display": "Converting (Input Parameters) Error",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "117d4743-ebdd-4644-b7db-2457b119e93f",
+    "name": "TITLE_BAD_REQUEST",
+    "locale": "en-US",
+    "display": "Bad Request",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "551f625e-01de-48fa-b20b-d97bfe216030",
+    "name": "TITLE_PARSE_OUTPUT_ERROR",
+    "locale": "en-US",
+    "display": "Parse Output Error",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "87bae2f5-fe14-4ecf-9a1f-0cc21c4cb60d",
+    "name": "PARSE_OUTPUT_ERROR",
+    "locale": "en-US",
+    "display": "Error occured while Output Data converting.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "1cbd252b-c6fd-48ef-ac73-188ccac34ee7",
+    "name": "RUNTIME_ERROR",
+    "locale": "en-US",
+    "display": "Unexpected error occured during at runtime.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2f727c79-07f5-4717-970d-f4c351ffb80f",
+    "name": "SCRIPT_RUNTIME_ERROR",
+    "locale": "en-US",
+    "display": "Error occured while run script.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4a8bd8d2-3edd-41a6-ad20-c4f8d232eb60",
+    "name": "INVALID_STATUS",
+    "locale": "en-US",
+    "display": "Invalid status.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "bbd6a07e-7b8a-4d93-8e97-7ebae657adaa",
+    "name": "VALIDATION_ERROR",
+    "locale": "en-US",
+    "display": "Error occured during validation.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "01788f97-c0d2-4867-905d-90aeb41aea14",
+    "name": "ALREADY_EXIST",
+    "locale": "en-US",
+    "display": "Data aleady exist.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "5825ac44-5d11-4ae0-8f95-88c21012b3e3",
+    "name": "SERVICE_ERROR",
+    "locale": "en-US",
+    "display": "Error occured while run service.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2f46ddce-c1a7-4c2b-829b-b16a8fda56bd",
+    "name": "SERVICE_NOT_FOUND",
+    "locale": "en-US",
+    "display": "Service does not exist.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "80654f99-1898-458c-b86b-a34dd1426948",
+    "name": "DATA_BASE_ERROR",
+    "locale": "en-US",
+    "display": "Error occured during query excuting.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "c64789cd-0599-453e-9469-de7f9da66dab",
+    "name": "COULD_NOT_INSTANTIATE",
+    "locale": "en-US",
+    "display": "{0} Could not instantiate Class. ({1})",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "32d22d60-327e-4032-aff9-e760b15a697b",
+    "name": "FAILED_TO_PROCESS_TEMPLATE",
+    "locale": "en-US",
+    "display": "Failed to Process {0} Template.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "51a4805e-6148-4e68-8068-35d71eec7be7",
+    "name": "KEY_AND_VALUE_MISMATCH",
+    "locale": "en-US",
+    "display": "keys count and values count mismatch.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "022022ea-95c1-4e54-9abe-7116b4135651",
+    "name": "MISMATCH_STATUS",
+    "locale": "en-US",
+    "display": "The {0} ({1}) is not [{2}] Status.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "c4c5604c-5d12-42b3-aa0b-12603e31331a",
+    "name": "IS_NOT_INSTANCE_OF",
+    "locale": "en-US",
+    "display": "Invalid {0} Class ({1}) - Class is not instance of {2}.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "64425561-561b-4363-ba71-7b9dc2ee6a53",
+    "name": "FIELD_NOT_EXIST",
+    "locale": "en-US",
+    "display": "[{0}] Field does not exist.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "bddc0a37-0cdd-452c-b83d-e4e0c33312b2",
+    "name": "NOT_FOUND_KEY",
+    "locale": "en-US",
+    "display": "Empty key found at key parameters.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "35265619-e501-4f9c-8ee2-8bc29f702459",
+    "name": "INVALID_KEYS",
+    "locale": "en-US",
+    "display": "Invalid keys of entity!",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "31b0dbb5-d35f-429e-a40b-cf922ef1e999",
+    "name": "HAS_DETAIL_DATA",
+    "locale": "en-US",
+    "display": "There are detail data in entity ({0}), Please re-try after deleting detail data.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "eeeb6b9a-de97-4ab2-83c1-bb0ede9e4588",
+    "name": "NOT_FOUND_UNIQUE_FIELDS",
+    "locale": "en-US",
+    "display": "Not found uniqueFields in entity ({0})",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "92e1c656-02c1-429d-a123-ab0c9d5b96cb",
+    "name": "EMPTY_CUD_FLAG_VALUE",
+    "locale": "en-US",
+    "display": "Failed to get cudFlag value.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "00aba077-5e53-43cb-9049-0050d4464f7a",
+    "name": "FAILED_META_SETUP",
+    "locale": "en-US",
+    "display": "Failed to setup detail meta.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "33fae48a-ea44-4776-be26-c253f6190e5d",
+    "name": "INVALID_DATA_TYPE",
+    "locale": "en-US",
+    "display": "Data Type[{0}] is not valid.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "9bff38d3-cf39-4dc1-b558-57c95b845af7",
+    "name": "INVALID_FILE",
+    "locale": "en-US",
+    "display": "Invalid file [{0}].",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "b237297f-ef8c-4d9c-987a-83bc3a3eb599",
+    "name": "NOT_CONNECTED",
+    "locale": "en-US",
+    "display": "Not Connected.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "77d2d5b6-2320-406e-a191-9f703d214cfa",
+    "name": "NOT_FOUND_CUD_FLAG",
+    "locale": "en-US",
+    "display": "There is no \u0027cudFlag\u0027 in the entity class [{0}]",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "a1b766d0-2f3f-438f-bc48-b6ce796e0474",
+    "name": "HAS_NO_CONSTRUCTOR",
+    "locale": "en-US",
+    "display": "Entity class has no default constructor.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "828b6141-cd28-4e12-b1fc-8eefa3450e8e",
+    "name": "STREAMING_ERROR",
+    "locale": "en-US",
+    "display": "Streaming error",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "67b57f7c-ade9-4b6c-9333-24c4c33130c8",
+    "name": "FILE_COPY_FAILED",
+    "locale": "en-US",
+    "display": "Failed to copy file!",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "3accc0ef-f0d3-47f7-b1c9-cbcdad0c18d9",
+    "name": "MISMATCH_PARAM_COUNT",
+    "locale": "en-US",
+    "display": "Invalid query - Parameter count mismatch. [{0}:{1}]",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "cea7dd38-cc60-4906-b08e-fad43b2537eb",
+    "name": "GENERATE_FAIL",
+    "locale": "en-US",
+    "display": "Failed to generate service!",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "9d6650cf-82a0-492c-be4b-260ca06eeeff",
+    "name": "NOT_SUPPORTED_METHOD",
+    "locale": "en-US",
+    "display": "Not supported method.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "16eefaa3-d7f8-40f5-954d-7cb74120b362",
+    "name": "MORE_THAN_ONE_ERROR",
+    "locale": "en-US",
+    "display": "There are data more than one.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "95a36b01-bc3a-4799-98b1-2a5d8b321ac2",
+    "name": "NOT_FOUND",
+    "locale": "en-US",
+    "display": "{0}({1}) not found.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4b106e6d-a304-4077-ab39-0a7d8ab953a7",
+    "name": "IS_NOT_IN_USE_LISTENER",
+    "locale": "en-US",
+    "display": "It\u0027s not running listener.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "6c84eb1e-fc85-4a73-8f74-f43476287825",
+    "name": "DOES_NOT_PROCEED",
+    "locale": "en-US",
+    "display": "{0} is not on the process.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "5bc3ee27-6ecd-4372-810d-cf9a3dcca8a6",
+    "name": "IS_NOT_RUNNING",
+    "locale": "en-US",
+    "display": "{0} is not Running.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "30eb8ace-5439-4bb4-8ed2-a859538c9fd9",
+    "name": "ALREADY_PROCEED",
+    "locale": "en-US",
+    "display": "{0} is alread on process.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "dd0c8070-ab64-483c-923f-fbf107b95ebe",
+    "name": "INVALID_SERVICE_URL",
+    "locale": "en-US",
+    "display": "Invalid Restful Service URL({0}).",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4cbd88b4-b632-4719-97d0-d166b70deea1",
+    "name": "NOT_FOUND_URL",
+    "locale": "en-US",
+    "display": "Not found service at URL ({0}).",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "73d50621-909e-4d58-a9a4-bdd7f6d73625",
+    "name": "DATA_BASE_ERROR",
+    "locale": "ko-KR",
+    "display": "Query 실행 중 에러가 발생하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "3a9416a0-04a6-4fdc-8f05-f5082b8e3b9b",
+    "name": "ALREADY_EXIST",
+    "locale": "ko-KR",
+    "display": "데이터가 이미 존재 합니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "8b45e887-920f-43c1-816b-26317832222d",
+    "name": "MISMATCH_STATUS",
+    "locale": "ko-KR",
+    "display": "{0} ({1})은(는) [{2}] 상태가 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e2829169-a4ce-4424-87fe-1365fa17ba68",
+    "name": "EMPTY_CUD_FLAG_VALUE",
+    "locale": "ko-KR",
+    "display": "cudFlag의 값을 가져오는데 실패하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "b4c8a378-d695-49c3-bd69-9c694661f734",
+    "name": "EMPTY_PARAM",
+    "locale": "ko-KR",
+    "display": "{0}의 빈값을 허용할 수 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7dac0070-320a-4e4d-a269-728ff06cb8bb",
+    "name": "DOES_NOT_PROCEED",
+    "locale": "ko-KR",
+    "display": "진행 중인 {0}(이)가 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e8be80f9-236e-4121-8ad9-2e728ebaa452",
+    "name": "HAS_DETAIL_DATA",
+    "locale": "ko-KR",
+    "display": "엔티티 ({0})에 Detail Data가 존재합니다. Detail 데이터 삭제 후 다시 시도해주세요.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "44d3a163-36c4-4c03-8ba4-e17021464c51",
+    "name": "FAILED_TO_PROCESS_TEMPLATE",
+    "locale": "ko-KR",
+    "display": "{0} 템플릿 프로세스를 실패하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7808d383-aa14-44e0-87c6-8600709f58d0",
+    "name": "FIELD_NOT_EXIST",
+    "locale": "ko-KR",
+    "display": "[{0}] 필드가 존재하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "bdc2d8d3-9559-4c42-b39c-97ed7a59ccd7",
+    "name": "FILE_COPY_FAILED",
+    "locale": "ko-KR",
+    "display": "파일 복사에 실패하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "1d5a7ae6-e7ef-4a6d-8498-bf9aa89d8cdf",
+    "name": "INVALID_DATA_TYPE",
+    "locale": "ko-KR",
+    "display": "Data Type[{0}]이 올바르지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "da6b6a06-d4e9-485f-b973-afceb758782d",
+    "name": "INVALID_FILE",
+    "locale": "ko-KR",
+    "display": "[{0}] (은)는 유효한 파일이 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4e709f29-81a4-4e03-8843-30f981a29cf9",
+    "name": "FILE_DEFAULT_PATH_IS_EMPTY",
+    "locale": "ko-KR",
+    "display": "기본 Path가 비어 있습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "ea81da63-c44b-4530-8d5f-cd83684cda3d",
+    "name": "GENERATE_FAIL",
+    "locale": "ko-KR",
+    "display": "서비스 생성에 실패하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "472f5b17-45e2-492a-bf4a-c899c3060a79",
+    "name": "HAS_NO_CONSTRUCTOR",
+    "locale": "ko-KR",
+    "display": "엔티티 클래스에 기본 생성자가 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e5d64a24-8ef5-4d24-b40b-f23a29dbf855",
+    "name": "INVALID_KEYS",
+    "locale": "ko-KR",
+    "display": "엔티티의 키가 올바르지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "dc2ab3cc-fc89-4813-8944-1f25b16e92c0",
+    "name": "INVALID_SERVICE_URL",
+    "locale": "ko-KR",
+    "display": "Restful Service URL({0}) 이 올바르지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "b580f82f-ed8f-44f2-9fd3-2410a7ea8a45",
+    "name": "HAS_ONE_OR_MORE_DATA",
+    "locale": "ko-KR",
+    "display": "한개 이상의 데이터가 포함되어 삭제할 수 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "deae71e7-f08c-405a-a7e4-fe8e7e972bbb",
+    "name": "NOT_FOUND_URL",
+    "locale": "ko-KR",
+    "display": "URL({0})에서 서비스를 찾을 수 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "d9ed62cf-1722-4d5f-979c-0f64fe3d597f",
+    "name": "IS_NOT_INSTANCE_OF",
+    "locale": "ko-KR",
+    "display": "유효하지 않은 {0} 클래스 ({1}) - 클래스가 {2}의 구현체가 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7610f559-da99-403a-8ebc-e59517567aec",
+    "name": "COULD_NOT_INSTANTIATE",
+    "locale": "ko-KR",
+    "display": "{0}은(는) 인스턴스화 할수 없습니다. ({1})",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "be9a918c-4a15-4e68-9c29-032d73894878",
+    "name": "ALREADY_PROCEED",
+    "locale": "ko-KR",
+    "display": "이미 실행 중인 {0}입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fe7392fa-51de-4490-8658-5df7d7728060",
+    "name": "FAILED_META_SETUP",
+    "locale": "ko-KR",
+    "display": "detail meta를 설정에 실패하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2e3e9e54-5936-41cf-b05c-bc405a334e56",
+    "name": "IS_NOT_RUNNING",
+    "locale": "ko-KR",
+    "display": "{0} 이(가) 실행중이지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fe468021-5ca7-4a67-ab24-7b072f545088",
+    "name": "NOT_FOUND",
+    "locale": "ko-KR",
+    "display": "{0}({1}) 을(를) 찾을수 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "b0b9b71c-d744-4feb-b75f-a36be64dac85",
+    "name": "IS_NOT_IN_USE_LISTENER",
+    "locale": "ko-KR",
+    "display": "실행 중인 Listener가 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7843a435-f302-4b81-8fba-c046d458d0fb",
+    "name": "MORE_THAN_ONE_ERROR",
+    "locale": "ko-KR",
+    "display": "하나 이상의 데이터가 존재합니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "d13e6002-1d70-41fd-ad97-3d4b72b8faae",
+    "name": "ALREADY_BEEN_PROCEEDED",
+    "locale": "ko-KR",
+    "display": "이미 처리된 항목입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "666628ab-027d-4059-9008-dd04d461514a",
+    "name": "RUNTIME_ERROR",
+    "locale": "ko-KR",
+    "display": "예상치 못한 에러가 발생하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "46f9e618-2538-449d-8938-3d204b1553e6",
+    "name": "PARSE_OUTPUT_ERROR",
+    "locale": "ko-KR",
+    "display": "Output Data 변환 시, 에러가 발생하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "771348b3-0e75-4747-9922-90217cc80c3a",
+    "name": "SERVICE_NOT_FOUND",
+    "locale": "ko-KR",
+    "display": "서비스가 존재하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "dde27117-2fd4-4204-a2e0-6bf33a188d4a",
+    "name": "TITLE_ALREADY_EXIST",
+    "locale": "ko-KR",
+    "display": "중복된 레코드 에러",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fd313d78-3233-4b3c-bf7a-78d2ff769414",
+    "name": "STREAMING_ERROR",
+    "locale": "ko-KR",
+    "display": "스트리밍 에러",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "8d5f9e0a-08d7-4780-b7bb-3ae766a981f0",
+    "name": "MISMATCH_PARAM_COUNT",
+    "locale": "ko-KR",
+    "display": "잘못된 쿼리 - 파라미터 카운트가 일치하지 않습니다. [{0}:{1}]",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4b803666-9855-4b67-9da8-21eadfb34701",
+    "name": "INVALID_PARAM",
+    "locale": "ko-KR",
+    "display": "파라미터 (이름: {0}, 값: {1})가 올바르지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "30b72720-318e-4c68-ac83-31e6f213f944",
+    "name": "KEY_AND_VALUE_MISMATCH",
+    "locale": "ko-KR",
+    "display": "키 카운트와 벨류 카운트가 일치하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "feb91b00-3bc7-4425-b4ec-32d4ca8464a3",
+    "name": "NOT_FOUND_KEY",
+    "locale": "ko-KR",
+    "display": "키 파라미터에서 빈 키를 발견했습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "b5369fea-115d-455d-8e83-79979e06205f",
+    "name": "INVALID_STATUS",
+    "locale": "ko-KR",
+    "display": "상태가 유효하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "84823949-1d69-4e3a-b6cf-506f3b080f61",
+    "name": "NOT_SUPPORTED_METHOD",
+    "locale": "ko-KR",
+    "display": "지원되지 않는 method입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "6f95bfdf-7488-48cb-b753-af557c987b97",
+    "name": "NOT_CONNECTED",
+    "locale": "ko-KR",
+    "display": "연결되지 않았습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "5849a229-3734-49e6-816a-2c5011ab5335",
+    "name": "RECORD_NOT_FOUND",
+    "locale": "ko-KR",
+    "display": "레코드를 찾을 수 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "22f3cfdd-db80-4af7-8cd1-34d7175de236",
+    "name": "NOT_FOUND_UNIQUE_FIELDS",
+    "locale": "ko-KR",
+    "display": "엔티티 ({0})에 uniqueFields 정보가 존재하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "701a6fcd-78d9-41cb-83a3-551c7315b28f",
+    "name": "NOT_FOUND_CUD_FLAG",
+    "locale": "ko-KR",
+    "display": "Entity[{0}] 중 \u0027cudFlag가 존재하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e3006f6b-1672-48d6-9aa9-d169e5b7c458",
+    "name": "SERVICE_ERROR",
+    "locale": "ko-KR",
+    "display": "기능 실행 중 에러가 발생하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "0546b738-02aa-40b4-ad20-7f0094c163ef",
+    "name": "SCRIPT_RUNTIME_ERROR",
+    "locale": "ko-KR",
+    "display": "Script 실행 중 에러가 발생하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "3d47d22c-aea6-44e3-bfba-3b32772d111a",
+    "name": "PARSE_INPUT_ERROR",
+    "locale": "ko-KR",
+    "display": "Input Data 변환 시, 에러가 발생하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "607a82ac-6b08-447f-8e9c-10dfa4eea7ae",
+    "name": "TITLE_RECORD_NOT_FOUND",
+    "locale": "ko-KR",
+    "display": "존재하지 않는 레코드 에러",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2b338248-09b3-4ee1-96b4-9fc3424177e2",
+    "name": "TITLE_PARSE_INPUT_ERROR",
+    "locale": "ko-KR",
+    "display": "(Input Parameters) 변환 에러",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "1cabfc1b-dcb1-468a-ad1d-ea89d18a384c",
+    "name": "TITLE_DATA_BASE_ERROR",
+    "locale": "ko-KR",
+    "display": "데이터 베이스 에러",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "49f5caf7-5b13-41bf-b11b-054a044e61d0",
+    "name": "TITLE_BAD_REQUEST",
+    "locale": "ko-KR",
+    "display": "잘못된 요청입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7e85ba6c-1e09-448e-b23a-8585f439f60e",
+    "name": "TITLE_INVALID_STATUS",
+    "locale": "ko-KR",
+    "display": "유효하지 않은 상태 에러",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7f430397-6440-4037-a11a-2d8788e2b80a",
+    "name": "TITLE_VALIDATION_ERROR",
+    "locale": "ko-KR",
+    "display": "유효성 에러",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "8f33b692-c06c-41db-92b6-eb7fc02cc10f",
+    "name": "TITLE_INVALID_PARAM",
+    "locale": "ko-KR",
+    "display": "유효하지 않은 파라미터 에러",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "a890fc73-982b-4d9c-ba16-311d44eb5046",
+    "name": "TITLE_SERVICE_ERROR",
+    "locale": "ko-KR",
+    "display": "서비스 에러",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "02d88bae-fbd3-41ab-8116-babc9e2e4a21",
+    "name": "TITLE_SCRIPT_RUNTIME_ERROR",
+    "locale": "ko-KR",
+    "display": "스크립트 에러",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "10f1c704-a84d-4e59-82c4-ff2dc092f679",
+    "name": "TITLE_RUNTIME_ERROR",
+    "locale": "ko-KR",
+    "display": "런타임 에러",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "20f1b903-27c1-4131-bb17-c72d90d46f67",
+    "name": "VALIDATION_ERROR",
+    "locale": "ko-KR",
+    "display": "유효성 검사 중 에러가 발생하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "8a84dadc-778d-40a2-a027-e0fc3bbd0b37",
+    "name": "TITLE_SERVICE_NOT_FOUND",
+    "locale": "ko-KR",
+    "display": "서비스를 찾을 수 없는 에러",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "05559a24-831a-4eb8-b1a9-4406b4fe3082",
+    "name": "TITLE_PARSE_OUTPUT_ERROR",
+    "locale": "ko-KR",
+    "display": "Output 변환 에러",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "32657697-5e91-48c7-b9ee-fb734aa7b63e",
+    "name": "NOT_SUPPORTED_TYPE",
+    "locale": "en-US",
+    "display": "Not supported {0} Type. [{1}]",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "0679da27-abd4-4e6b-8429-ebe1051fd6c8",
+    "name": "USER_APPROVAL",
+    "locale": "en-US",
+    "display": "Account approval request has been accepted.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "8826da91-1a34-4c27-a040-76daeaded323",
+    "name": "NEED_OPTION",
+    "locale": "en-US",
+    "display": "The type should be [{0}] option.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "988cec69-9555-4b23-8661-4ea6b83405d2",
+    "name": "USER_REJECT",
+    "locale": "en-US",
+    "display": "Account approval request has been rejected.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "bb407c14-b2fe-4ed3-b120-34121215f544",
+    "name": "USER_COMPLETE_INIT_PASS",
+    "locale": "en-US",
+    "display": "Completed to reset password.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "ac258368-592e-4d44-9199-d4bdda2d85a1",
+    "name": "USER_REQUEST_INIT_PASS",
+    "locale": "en-US",
+    "display": "Please reset my password.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7fbe727b-50a9-468c-bbf2-62b80b72cdc7",
+    "name": "USER_INVALID_ID_OR_PASS",
+    "locale": "en-US",
+    "display": "ID or Password is not correct.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "1ed96ae5-151b-4f30-9773-1293d8893926",
+    "name": "USER_REQUEST",
+    "locale": "en-US",
+    "display": "System account registering request.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "044d8901-eb64-4750-b9e5-5a705f39780f",
+    "name": "CREATE_FILE_ERROR",
+    "locale": "en-US",
+    "display": "Error occured during file creating.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "ffe8f801-22e0-432d-9a76-31b7c7a60644",
+    "name": "IS_NOT_ENTITY",
+    "locale": "en-US",
+    "display": "Invalid entity name. [{0}]",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "3e18aeef-e354-4a6d-b32c-97c0c775aed5",
+    "name": "NOT_AUTHORIZED_USER",
+    "locale": "en-US",
+    "display": "Unauthorized user.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "c26ea79d-2cda-46c7-a1c4-1406662b4407",
+    "name": "UPLOAD_FILE_SIZE_LIMIT_ERROR",
+    "locale": "en-US",
+    "display": "Excess limit file size.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "14502a67-1cd3-4cb6-ba10-dbc29a77c5cc",
+    "name": "UNKNOWN_TYPE",
+    "locale": "en-US",
+    "display": "Unknown type. [{0}]",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "8c6c1800-5379-4fa6-a329-080b5ae56997",
+    "name": "FILE_DOWNLOAD_ERROR",
+    "locale": "en-US",
+    "display": "Error occured during file download.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "67d02950-ac18-444d-80bc-5744a3b0d3c1",
+    "name": "TABLE_DOES_NOT_EXIST",
+    "locale": "en-US",
+    "display": "Table does not exist.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "78f81766-fada-4b1b-9ff3-1c7fff373cd3",
+    "name": "FILE_ROOT_PATH_NOT_EXIST",
+    "locale": "en-US",
+    "display": "Root path is not valid.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "13679943-d7a4-4a18-ad1f-ef9629234ccb",
+    "name": "DOMAIN_NOT_EXIST",
+    "locale": "en-US",
+    "display": "Cannot find Domain information by request server ({0})",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "134a7e42-2039-4f3a-a729-19e25f642b98",
+    "name": "FAIL_TO_SEND_MAIL",
+    "locale": "en-US",
+    "display": "Failed to send mail!",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "476eaaf9-6c70-4e27-b6db-252a37b166fa",
+    "name": "FAIL_TO_SEND_MAIL",
+    "locale": "ko-KR",
+    "display": "Mail 발송에 실패하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "5d7c629a-c8b2-4373-94a1-62f1aa948b8f",
+    "name": "USER_ALREADY_ACTIVATED",
+    "locale": "ko-KR",
+    "display": "이미 활성화되어 있는 사용자입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "bd0ac141-a65e-4b86-9e1e-2ae9ae67a314",
+    "name": "USER_ALREADY_ACTIVATED",
+    "locale": "en-US",
+    "display": "Already activated account.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "d6109326-4dff-4ef1-8f19-e36fc29b7b52",
+    "name": "USER_REQUEST_ACTIVE_ACCOUNT",
+    "locale": "en-US",
+    "display": "Request account activation.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7b8f4f0f-26f9-4c76-8bc1-f164aafe86ed",
+    "name": "USER_REQUEST_ACTIVE_ACCOUNT",
+    "locale": "ko-KR",
+    "display": "계정 활성화 요청드립니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "3c500af2-c8d8-4b35-a128-aa069a0957ef",
+    "name": "USER_COMPLETE_ACTIVE_ACCOUNT",
+    "locale": "en-US",
+    "display": "Activation request is completed.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "b14b9cb0-b9a6-4249-a37b-1645fc29fd82",
+    "name": "USER_COMPLETE_ACTIVE_ACCOUNT",
+    "locale": "ko-KR",
+    "display": "계정 활성화 요청이 완료되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "8c23c23a-0344-4936-a880-037043cd4f11",
+    "name": "USER_INACTIVE_ACCOUNT",
+    "locale": "en-US",
+    "display": "Inactivation user account.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "471682b5-13df-48cf-a969-302cb0aa6007",
+    "name": "USER_INACTIVE_ACCOUNT",
+    "locale": "ko-KR",
+    "display": "사용자 비활성화.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4b31b58c-6a8b-4910-9bc3-1007cd56d697",
+    "name": "USER_INACTIVATED_ACCOUNT",
+    "locale": "en-US",
+    "display": "Deactivated account.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "cf2896aa-bb16-4b2c-869a-3672a87683bc",
+    "name": "USER_INACTIVATED_ACCOUNT",
+    "locale": "ko-KR",
+    "display": "비활성화된 계정입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "3503e6b5-2eff-4567-a69d-573f064e496f",
+    "name": "ALREADY_BEEN_PROCEEDED",
+    "locale": "en-US",
+    "display": "Already been proceeded.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "d0a9e4af-daf8-4a1c-a3b0-ae23e058545f",
+    "name": "ALREADY_BEEN_PROCEEDED",
+    "locale": "zh-CN",
+    "display": "数据已经处理。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e73f042b-466f-4e40-b219-45fd3c34830a",
+    "name": "ALREADY_EXIST",
+    "locale": "zh-CN",
+    "display": "此数据已存在。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fcc63adc-08b0-4dc2-aeda-a50679141ff1",
+    "name": "ALREADY_PROCEED",
+    "locale": "zh-CN",
+    "display": "{0}正在处理。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "135c1694-a76c-499b-ac12-5c0f15897a91",
+    "name": "BAD_REQUEST",
+    "locale": "zh-CN",
+    "display": "非法请求。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "1a18f6ed-b058-43ab-be6f-93a379843daf",
+    "name": "COULD_NOT_INSTANTIATE",
+    "locale": "zh-CN",
+    "display": "无法实例化{0}， ({1})",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e53815a5-ddcb-44cb-85a1-729f30bfa25c",
+    "name": "CREATE_FILE_ERROR",
+    "locale": "zh-CN",
+    "display": "处理文件时发生错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "b610ac7a-22b4-45c4-b7de-08ed33e3f76e",
+    "name": "DATA_BASE_ERROR",
+    "locale": "zh-CN",
+    "display": "数据库请求发生错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "f1c3d434-9266-46db-9e20-13a7ce0e86e1",
+    "name": "DOES_NOT_PROCEED",
+    "locale": "zh-CN",
+    "display": "{0} 未在执行",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "61e26ce3-706b-46d0-8053-9de3f1d9e0dd",
+    "name": "DOMAIN_NOT_EXIST",
+    "locale": "zh-CN",
+    "display": "요청한 서버 정보 ({0})로 Domain 정보를 찾을 수 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e94b5514-f02d-430e-8ed1-3d688ba19d8d",
+    "name": "EMPTY_CUD_FLAG_VALUE",
+    "locale": "zh-CN",
+    "display": "无法获取cudFlag。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "67495b8d-7495-4ce5-88d4-609b556b3713",
+    "name": "EMPTY_PARAM",
+    "locale": "zh-CN",
+    "display": "{0}不能为空。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "a6af965c-eb88-4fe0-b6f7-cb9d9ab8bb35",
+    "name": "FAIL_TO_SEND_MAIL",
+    "locale": "zh-CN",
+    "display": "邮件发送失败。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "39bc79b7-14c9-4b29-8add-9c56aaf193b6",
+    "name": "FAILED_META_SETUP",
+    "locale": "zh-CN",
+    "display": "配置detail meta失败。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4c6cc3e9-09af-470e-8c5c-095b38b2bd5d",
+    "name": "FAILED_TO_PROCESS_TEMPLATE",
+    "locale": "zh-CN",
+    "display": "无法处理{0}模板。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "a97db2e6-aaab-47e1-9205-4fa8803afa56",
+    "name": "FIELD_NOT_EXIST",
+    "locale": "zh-CN",
+    "display": "[{0}] 列不存在。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "c8949e3b-d655-4c29-a794-3b52a5123e64",
+    "name": "FILE_COPY_FAILED",
+    "locale": "zh-CN",
+    "display": "文件复制失败。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "acfb5323-301b-4718-831d-d0f55f331ce0",
+    "name": "FILE_DEFAULT_PATH_IS_EMPTY",
+    "locale": "zh-CN",
+    "display": "默认路径为空。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "967d2f36-ae61-4bcc-bf01-94e57e7ea792",
+    "name": "FILE_DOWNLOAD_ERROR",
+    "locale": "zh-CN",
+    "display": "文件下载过程中发生错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "5207138d-0a0e-43a5-beaa-46738f2a6eeb",
+    "name": "FILE_NOT_FOUND",
+    "locale": "zh-CN",
+    "display": "无法找到文件({0})。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2c0fe530-e769-4cfc-a540-ab6abc528385",
+    "name": "FILE_ROOT_PATH_NOT_EXIST",
+    "locale": "zh-CN",
+    "display": "根目录地址错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "a6c58199-3244-4433-958c-5bac1348ec27",
+    "name": "GENERATE_FAIL",
+    "locale": "zh-CN",
+    "display": "创建服务失败。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "ccd0f014-96a6-47ab-8c25-1a8ebcdf0a94",
+    "name": "HAS_DETAIL_DATA",
+    "locale": "zh-CN",
+    "display": "엔티티 ({0})에 Detail Data가 존재합니다. Detail 데이터 삭제 후 다시 시도해주세요.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4be8a86a-38ed-4f38-a610-98f13cb6427a",
+    "name": "HAS_NO_CONSTRUCTOR",
+    "locale": "zh-CN",
+    "display": "实体类没有默认构造函数。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "b51aba43-1679-4c4a-904a-aae8fde1beb9",
+    "name": "HAS_ONE_OR_MORE_DATA",
+    "locale": "zh-CN",
+    "display": "含一个或多个数据无法删除。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "379b67f5-28dc-4534-ba62-a8aa29eb0149",
+    "name": "INVALID_DATA_TYPE",
+    "locale": "zh-CN",
+    "display": "Data Type[{0}]类型错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "9e1a05de-ce4f-401f-bda2-b204214561de",
+    "name": "INVALID_FILE",
+    "locale": "zh-CN",
+    "display": "[{0}]是无效的文件。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "5763d5bc-9a4d-480e-81ef-ac4631c9236c",
+    "name": "INVALID_KEYS",
+    "locale": "zh-CN",
+    "display": "包含不存在于实体的无效键值。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2023fa82-a054-49a8-85da-0f6cd30d7561",
+    "name": "INVALID_PARAM",
+    "locale": "zh-CN",
+    "display": "变量(名称：{0}, 值：{1})错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "98e8c912-3605-4fba-9b63-ff08a5be5596",
+    "name": "INVALID_SERVICE_URL",
+    "locale": "zh-CN",
+    "display": "RESTful服务的URL({0})错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "48e7459b-022f-4eac-86a4-125353cbd530",
+    "name": "INVALID_STATUS",
+    "locale": "zh-CN",
+    "display": "无效的状态。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4be78887-5d63-41fe-8008-25a75945c42c",
+    "name": "IS_NOT_ENTITY",
+    "locale": "zh-CN",
+    "display": "实体名称错误。 [{0}]",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "78cb2457-5acc-4f5c-9cb5-826e533ba777",
+    "name": "IS_NOT_IN_USE_LISTENER",
+    "locale": "zh-CN",
+    "display": "监听器当前未运行。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fc92a734-558e-4b00-a6ba-02ee716e726b",
+    "name": "IS_NOT_INSTANCE_OF",
+    "locale": "zh-CN",
+    "display": "错误的{0}类， ({1})－类不是{2}的实例。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "248299d2-1053-4a6b-bf51-b649480acc7e",
+    "name": "IS_NOT_RUNNING",
+    "locale": "zh-CN",
+    "display": "{0}未在执行。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "72a1377e-4021-4ba5-a84c-adff75162837",
+    "name": "KEY_AND_VALUE_MISMATCH",
+    "locale": "zh-CN",
+    "display": "键与值不匹配。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "900365a5-ac05-482f-b9ca-2d55226fcedf",
+    "name": "MISMATCH_PARAM_COUNT",
+    "locale": "zh-CN",
+    "display": "错误SQL - 变量数错误。 [{0}:{1}]",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "18732e45-ec68-46f9-86af-9c58c1c2d088",
+    "name": "MISMATCH_STATUS",
+    "locale": "zh-CN",
+    "display": "{0} ({1})不是[{2}]状态。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "a254ff39-3781-4be2-a613-803283df466e",
+    "name": "MORE_THAN_ONE_ERROR",
+    "locale": "zh-CN",
+    "display": "存在一个以上的数据。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "492f0941-4c17-42d4-a614-5c8c8597e378",
+    "name": "NEED_OPTION",
+    "locale": "zh-CN",
+    "display": "此类型必需使用[{0}]选项。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "3fefaf96-1f20-4f9a-bdd1-076287008cd8",
+    "name": "NOT_AUTHORIZED_USER",
+    "locale": "zh-CN",
+    "display": "未授权用户。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "6b28f351-6063-424b-9619-2f37499aeae6",
+    "name": "NOT_CONNECTED",
+    "locale": "zh-CN",
+    "display": "未连接。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "5a555da6-4a30-40b2-aca3-59491d80b485",
+    "name": "NOT_FOUND",
+    "locale": "zh-CN",
+    "display": "{0}({1})无法查找。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fd478b22-84d2-45a8-8eb5-b08216a3fc89",
+    "name": "NOT_FOUND_CUD_FLAG",
+    "locale": "zh-CN",
+    "display": "实体类[{0}]中不存在\u0027cudFlag\u0027。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "028a2269-dfad-40e2-9b04-e576b1b4fffe",
+    "name": "NOT_FOUND_KEY",
+    "locale": "zh-CN",
+    "display": "在关键参数中发现的空键。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "19087df1-69fe-4481-b789-e6a95ebf2936",
+    "name": "NOT_FOUND_UNIQUE_FIELDS",
+    "locale": "zh-CN",
+    "display": "未找到唯一的索引。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "9ab9ab44-6f2b-4ee8-b9e9-e11c058d3573",
+    "name": "NOT_FOUND_URL",
+    "locale": "zh-CN",
+    "display": "无法在URL({0})中找到服务。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fd896589-9385-4af8-bda1-fdfb36c2b135",
+    "name": "NOT_SUPPORTED_METHOD",
+    "locale": "zh-CN",
+    "display": "不支持的方法。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e933e19a-3179-4f76-b1b8-c68f4f775cbe",
+    "name": "NOT_SUPPORTED_TYPE",
+    "locale": "zh-CN",
+    "display": "类型{0}不支持。[{1}]",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "77f94a03-e349-43ab-9294-9ca872db8e0a",
+    "name": "NOT_SUPPORTED_YET",
+    "locale": "zh-CN",
+    "display": "当前尚未支持的功能！",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "1d36f6d1-d538-4933-9f71-52dbd382ddfa",
+    "name": "PARSE_INPUT_ERROR",
+    "locale": "zh-CN",
+    "display": "转换Input Data时, 发生错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "f196b746-87a2-4418-8acc-5cf2ea4db749",
+    "name": "PARSE_OUTPUT_ERROR",
+    "locale": "zh-CN",
+    "display": "Output Data转换时发生错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7ed2197f-1a9b-4311-ac5b-ee7ae1ae1a3e",
+    "name": "RECORD_NOT_FOUND",
+    "locale": "zh-CN",
+    "display": "无法找到记录。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7053cc8f-d010-4a84-8dd6-7c7240b700aa",
+    "name": "RUNTIME_ERROR",
+    "locale": "zh-CN",
+    "display": "运行过程中发生意外错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e38f8df9-7139-4117-93ae-2c3203fabfa8",
+    "name": "SCRIPT_RUNTIME_ERROR",
+    "locale": "zh-CN",
+    "display": "运行脚本时发生错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "68005f9f-2a90-4d26-a722-60dd2fd23068",
+    "name": "SERVICE_ERROR",
+    "locale": "zh-CN",
+    "display": "服务运行中发生错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "309bbb7c-d6bd-47a3-9672-d0bfee247836",
+    "name": "SERVICE_NOT_FOUND",
+    "locale": "zh-CN",
+    "display": "服务不存在。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "9dc9d8ad-7cf9-4889-8e6a-b36ac4742126",
+    "name": "STREAMING_ERROR",
+    "locale": "zh-CN",
+    "display": "流错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fc098f93-5b02-4463-b281-024ada96ede8",
+    "name": "TABLE_DOES_NOT_EXIST",
+    "locale": "zh-CN",
+    "display": "表不存在。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "8efb2db9-1b16-485d-8589-090aae57eb85",
+    "name": "TITLE_ALREADY_EXIST",
+    "locale": "zh-CN",
+    "display": "重复记录。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "9ba5ff79-f71e-4747-ad30-2c04f9a92ccd",
+    "name": "TITLE_BAD_REQUEST",
+    "locale": "zh-CN",
+    "display": "错误申请。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "535699a6-f8eb-48fe-a50a-5a50301db2e9",
+    "name": "TITLE_DATA_BASE_ERROR",
+    "locale": "zh-CN",
+    "display": "数据库错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "8a2328cb-0fcc-49ab-bc57-b0b83c86a689",
+    "name": "TITLE_INVALID_PARAM",
+    "locale": "zh-CN",
+    "display": "非法变量。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fed4a3d1-47ac-46f7-a511-5360f5adaf1d",
+    "name": "TITLE_INVALID_STATUS",
+    "locale": "zh-CN",
+    "display": "无效状态错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "29fc0f9e-d5ec-4ac5-a090-568014ab6390",
+    "name": "TITLE_PARSE_INPUT_ERROR",
+    "locale": "zh-CN",
+    "display": "(Input Parameters)转换错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "58db5307-5ad0-46aa-9400-75ecbd1004a4",
+    "name": "TITLE_PARSE_OUTPUT_ERROR",
+    "locale": "zh-CN",
+    "display": "Output转换错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "86091d29-614a-4291-b79c-0e828d724d1a",
+    "name": "TITLE_RECORD_NOT_FOUND",
+    "locale": "zh-CN",
+    "display": "记录不存在。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e3227727-6a89-402d-b6a0-91c132184b14",
+    "name": "TITLE_RUNTIME_ERROR",
+    "locale": "zh-CN",
+    "display": "运行错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "6eb5ef18-e859-463f-b819-db9b081ffda2",
+    "name": "TITLE_SCRIPT_RUNTIME_ERROR",
+    "locale": "zh-CN",
+    "display": "脚本错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7f6b7fb7-a296-479a-9595-1f4bdee88e0c",
+    "name": "TITLE_SERVICE_ERROR",
+    "locale": "zh-CN",
+    "display": "服务错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "954a9311-908d-4794-afbc-7d9a57b28c60",
+    "name": "TITLE_SERVICE_NOT_FOUND",
+    "locale": "zh-CN",
+    "display": "服务无法查询。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "09dd25bf-42c1-4e11-9e79-dbd72a4a4615",
+    "name": "TITLE_VALIDATION_ERROR",
+    "locale": "zh-CN",
+    "display": "有效性错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "381cfa8b-129d-4ea9-86ed-d59be08e98c5",
+    "name": "UNKNOWN_TYPE",
+    "locale": "zh-CN",
+    "display": "类型无法识别。[{0}]",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e63906d1-0418-452c-a0cb-4667bf0cf15f",
+    "name": "UPLOAD_FILE_SIZE_LIMIT_ERROR",
+    "locale": "zh-CN",
+    "display": "文件大小，超出上传上限。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "c89c05d7-8083-4607-a99e-c955d7784e12",
+    "name": "USER_ALREADY_ACTIVATED",
+    "locale": "zh-CN",
+    "display": "用户为已激活用户。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "de7fe719-43da-42ca-bfa9-c902dc1e9b16",
+    "name": "USER_APPROVAL",
+    "locale": "zh-CN",
+    "display": "激活请求已接受。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "1c6d4546-aefc-4e5e-9962-c8b8c994789e",
+    "name": "USER_COMPLETE_ACTIVE_ACCOUNT",
+    "locale": "zh-CN",
+    "display": "激活请求完成。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fad9edec-a8b4-4c92-8aa0-15d3458bd13d",
+    "name": "USER_COMPLETE_INIT_PASS",
+    "locale": "zh-CN",
+    "display": "密码重置完毕。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "49e2b1be-46ce-45d1-9dfb-6baec2152b8e",
+    "name": "USER_INACTIVATED_ACCOUNT",
+    "locale": "zh-CN",
+    "display": "未激活用户。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "5fb6e6ad-4ac4-4ea5-a09a-5c27edf12afb",
+    "name": "USER_INACTIVE_ACCOUNT",
+    "locale": "zh-CN",
+    "display": "屏蔽用户。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e58bf292-1015-4a8e-ad3b-9651dae62362",
+    "name": "USER_INVALID_ID_OR_PASS",
+    "locale": "zh-CN",
+    "display": "ID或密码错误。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fd9661ee-0e51-40e2-85d5-5a588f6af912",
+    "name": "USER_NOT_EXIST",
+    "locale": "zh-CN",
+    "display": "用户不存在。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "33b30451-7d5f-48d4-8242-9bd5d71d5d72",
+    "name": "USER_REJECT",
+    "locale": "zh-CN",
+    "display": "账户申请被拒绝。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "01d9057e-7eb4-4c1d-9d8f-32071bf7f055",
+    "name": "USER_REQUEST",
+    "locale": "zh-CN",
+    "display": "账户申请。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "78389e9c-9931-44b1-b12d-910ee8d410b2",
+    "name": "USER_REQUEST_ACTIVE_ACCOUNT",
+    "locale": "zh-CN",
+    "display": "请激活用户。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "80d9d00a-047c-4d3e-beb1-8f0d4627071e",
+    "name": "USER_REQUEST_INIT_PASS",
+    "locale": "zh-CN",
+    "display": "请冲密码。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "67c6722f-fc27-4774-95c3-d151993c20f7",
+    "name": "VALIDATION_ERROR",
+    "locale": "zh-CN",
+    "display": "未通过有效性检查。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7f2900d9-d1e6-45a6-9857-8f2b4b9400b5",
+    "name": "SPC_SPEC_OUT",
+    "locale": "en-US",
+    "display": "{1} Value Spec Out Occurred at SPC Item {0}",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "41da4cb9-14a7-4d83-85a1-a225febc186e",
+    "name": "SPC_SPEC_OUT",
+    "locale": "zh-CN",
+    "display": "{1} Value Spec Out Occurred at SPC Item {0}",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "f081a9b3-dd5d-40ae-ad04-310e17d3fe38",
+    "name": "SPC_SPEC_OUT",
+    "locale": "ko-KR",
+    "display": "SPC 항목 {0}에서 {1} 값 Spec Out이 발생했습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "0fb8dda4-004c-4761-8442-3e93e9f24e5a",
+    "name": "USER_REQUEST_ADD_AUTH",
+    "locale": "ko-KR",
+    "display": "사용자 권한 추가 요청",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4829a359-147d-42ea-92e3-98e4e125a09f",
+    "name": "FAIL_TO_PARSE",
+    "locale": "zh-CN",
+    "display": "{0} 데이터 파싱 중 에러가 발생했습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "676e7997-2de8-4b90-9748-08b11f9408cc",
+    "name": "DOMAIN_ADMIN_NOT_EXIST",
+    "locale": "en-US",
+    "display": "Administrators of the domain does not exist, so you can not send mail to the administrator.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4159cd38-fd9d-4046-9d9a-748a46779a12",
+    "name": "DOMAIN_ADMIN_NOT_EXIST",
+    "locale": "ko-KR",
+    "display": "해당 도메인에 관리자로 지정된 사용자가 없어서 관리자에게 메일을 보낼 수 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "083e703f-118c-45c7-8163-5084e524c166",
+    "name": "WORK_ORDER_OVER_QTY",
+    "locale": "ko-KR",
+    "display": "작업 오더의 계획 수량을 초과했습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "adf1facd-fdcf-4174-853d-467b0cac483a",
+    "name": "WORK_ORDER_OVER_QTY",
+    "locale": "zh-CN",
+    "display": "Work Order Over Quantity!",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "ca8c2da7-773a-4893-a6c6-5966d1dec20d",
+    "name": "WORK_ORDER_OVER_QTY",
+    "locale": "en-US",
+    "display": "Work Order Over Quantity!",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7c08f27d-8a8b-4bd1-888d-7bab6f01b5cc",
+    "name": "FAIL_TO_REFLECT_SET",
+    "locale": "en-US",
+    "display": "Failed to assign value to field({1}) of class ({0})",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2dd22dd0-8a86-401c-9ab6-b2bae249cdf7",
+    "name": "FAIL_TO_REFLECT_SET",
+    "locale": "zh-CN",
+    "display": "Failed to assign value to field({1}) of class ({0})",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "6e9a94e0-cce3-4459-a0da-035832de9918",
+    "name": "FAIL_TO_REFLECT_SET",
+    "locale": "ko-KR",
+    "display": "클래스 ({0})의 필드({1})에 값 설정 실패",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fa6bbd37-6936-422c-b38f-51a48682f8b4",
+    "name": "INVALID_ENTITY_ID_TYPE",
+    "locale": "en-US",
+    "display": "Invalid ID Type ({1}) of entity ({0})",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4459e7fc-0e02-44f8-b589-59dcf4b7f64e",
+    "name": "INVALID_ENTITY_ID_TYPE",
+    "locale": "ko-KR",
+    "display": "엔티티 ({0})의 ID Type ({1})이 유효하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "9c5b73e5-0515-432b-a3f7-93ccc3ca3830",
+    "name": "INVALID_ENTITY_ID_TYPE",
+    "locale": "zh-CN",
+    "display": "Invalid ID Type ({1}) of entity ({0})",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "30625937-01d5-4ebd-8692-03232f6b4093",
+    "name": "INVALID_DATA_TYPE_OF_ENTITY_ID_TYPE",
+    "locale": "ko-KR",
+    "display": "엔티티 ({0})의 ID Type ({1})의 데이터 타입은 반드시 ({2}) 이어야 합니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "a09fa359-705e-45a0-a7ac-4defd9b516cc",
+    "name": "INVALID_DATA_TYPE_OF_ENTITY_ID_TYPE",
+    "locale": "en-US",
+    "display": "Data type must be ({2}) of ID Type ({1}) of entity ({0})",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "a8406a25-f5c5-437f-bfe7-0ef7ec146430",
+    "name": "INVALID_DATA_TYPE_OF_ENTITY_ID_TYPE",
+    "locale": "zh-CN",
+    "display": "Data type must be ({2}) of ID Type ({1}) of entity ({0})",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2e484e4f-5ec0-4da2-affc-8f0aca5385ad",
+    "name": "SYSTEM_DOMAIN_CANNOT_BE_DELETED",
+    "locale": "ko-KR",
+    "display": "도메인 ({0})는 시스템 도메인이므로 삭제할 수 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fb1767ea-2328-4ee3-9764-8a927e9ecfa7",
+    "name": "SYSTEM_DOMAIN_CANNOT_BE_DELETED",
+    "locale": "en-US",
+    "display": "Domain ({0}) is System Domain, so it\u0027s not possible to delete!",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "93e37862-7756-4d96-b59d-e1e0c0c39fc6",
+    "name": "SYSTEM_DOMAIN_CANNOT_BE_DELETED",
+    "locale": "zh-CN",
+    "display": "도메인 ({0})는 시스템 도메인이므로 삭제할 수 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "702b5e0b-4a0c-4a86-b598-dfc7968e1ce2",
+    "name": "DEV_MODE_FUNCTION_NOT_SUPPORTED",
+    "locale": "ko-KR",
+    "display": "개발 모드가 아닌 경우 이 요청은 실행될 수 없습니다. ",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "847a995b-404d-4c12-b9ca-9a6bde22ace9",
+    "name": "DEV_MODE_FUNCTION_NOT_SUPPORTED",
+    "locale": "zh-CN",
+    "display": "개발 모드가 아닌 경우 이 요청은 실행될 수 없습니다. ",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "028e1871-b3b4-4504-b230-3c53c9ef4bfb",
+    "name": "DEV_MODE_FUNCTION_NOT_SUPPORTED",
+    "locale": "en-US",
+    "display": "This request is allowed only Development Mode.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2982bdf0-bfb4-4e5b-a19f-b7a15bff7c1d",
+    "name": "WIP-IS-MISMATCH",
+    "locale": "zh-CN",
+    "display": "{0} 和 {1}失配",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "cb41ca74-13a0-45da-ab90-440d6738a564",
+    "name": "WIP-IS-MISMATCH",
+    "locale": "ko-KR",
+    "display": "{0}와(과) {1}이(가) 맞지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e5e86a31-e4f2-45c2-a0d7-ea2e193982a6",
+    "name": "WIP-NOT-EXIST",
+    "locale": "ko-KR",
+    "display": "{0}이(가) 존재하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2a7330a5-93a3-4da1-899b-6ee9c7aa1e94",
+    "name": "WIP-NOT-EXIST",
+    "locale": "zh-CN",
+    "display": "{0} 不存在。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "136b5857-932f-470c-a59c-474d801f6af1",
+    "name": "USER_REQUEST_ADD_AUTH",
+    "locale": "zh-CN",
+    "display": "System access authorization request.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "eb4084a8-5b56-4338-9c26-212116af13c3",
+    "name": "WIP-IS-NOT-STATE",
+    "locale": "en-US",
+    "display": "{0} is not {1} state.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "af520292-9ddf-413a-9f86-b6acfaaacc4b",
+    "name": "WIP-NOT-EXIST",
+    "locale": "en-US",
+    "display": "{0} does not exist",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fb864e18-7de3-4b13-b030-689274c694bf",
+    "name": "WIP-IS-NOT-STATE",
+    "locale": "zh-CN",
+    "display": "{0} 不是 {1} 状态。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e68a7fc2-f487-40f6-b366-3ff03e0e2a21",
+    "name": "WIP-IS-NOT-STATE",
+    "locale": "ko-KR",
+    "display": "{0}이(가) {1} 상태가 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "08f30e1d-714f-4eca-b669-e09d6a02efaf",
+    "name": "WIP-STATE-IS",
+    "locale": "ko-KR",
+    "display": "{0} 상태가 {1} 입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "695adbfe-68f7-44d6-8f60-4def39d27ca1",
+    "name": "WIP-STATE-IS",
+    "locale": "zh-CN",
+    "display": "{0}的状态是 {1}。",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "37279b40-a507-4884-90c9-782a7cab0f8f",
+    "name": "WIP-STATE-IS",
+    "locale": "en-US",
+    "display": "State of {0} is {1} state.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7c81cfe3-7286-4563-a399-899b3763e338",
+    "name": "WIP-IS-MISMATCH",
+    "locale": "en-US",
+    "display": "Mismatch {0} and {1}.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "0c83e749-93b6-46d5-b532-c0faaa627913",
+    "name": "DATA_DUPLICATED",
+    "locale": "zh-CN",
+    "display": "({0}) 데이터 ({1})은 이미 존재 합니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "bed55749-7319-4931-8e3d-83d9b35f08ab",
+    "name": "DATA_DUPLICATED",
+    "locale": "ko-KR",
+    "display": "({0}) 데이터 ({1})은 이미 존재 합니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "d8bbac50-3078-4b53-a2af-7fff91fcc997",
+    "name": "INVALID_DATA",
+    "locale": "ko-KR",
+    "display": "{0}의 데이터({1})가 유효하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "5c30ffd3-592a-4854-8d6c-a577481808c5",
+    "name": "INVALID_DATA",
+    "locale": "zh-CN",
+    "display": "{0}의 데이터({1})가 유효하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4ab6f617-f95b-4ded-8f94-332584b21cf2",
+    "name": "INVALID_DATA",
+    "locale": "en-US",
+    "display": "Data ({1}) of {0} is invalid.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7b9c7609-413a-48b2-bfa7-6fb6ff242fa5",
+    "name": "FAIL_TO_CLONE_DATA",
+    "locale": "en-US",
+    "display": "Failed to clone data.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "de5637b8-3227-4e10-b442-f0a25453b5b4",
+    "name": "FAIL_TO_CLONE_DATA",
+    "locale": "zh-CN",
+    "display": "Data 복사 하는 중 에러가 발생했습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "569220cd-1e0b-4bfc-977c-8817fe28ea71",
+    "name": "FAIL_TO_CLONE_DATA",
+    "locale": "ko-KR",
+    "display": "Data 복사 하는 중 에러가 발생했습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "cc25bfdd-cf98-4ca2-9b34-e976ce54a1f1",
+    "name": "FAIL_TO_REFLECT_GET",
+    "locale": "ko-KR",
+    "display": "클래스 ({0})의 필드({1})에 값 추출 실패",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "302c8740-b189-4862-8aed-2a14236cd5c7",
+    "name": "FAIL_TO_REFLECT_GET",
+    "locale": "zh-CN",
+    "display": "클래스 ({0})의 필드({1})에 값 추출 실패",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "abe8746d-eccc-448a-9301-eff797c50747",
+    "name": "FAIL_TO_REFLECT_GET",
+    "locale": "en-US",
+    "display": "Failed to get value from field({1}) of class ({0})",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fa054d7e-8620-451a-8eec-57e15dd9e0c4",
+    "name": "FAIL_TO_COMPILE",
+    "locale": "en-US",
+    "display": "Failed to Compile {0} Code",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2c2d6340-14b4-4d15-b578-601192eead22",
+    "name": "FAIL_TO_COMPILE",
+    "locale": "ko-KR",
+    "display": "{0} 코드 컴파일 중 에러가 발생했습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4e302434-3948-4e11-8ba4-099fde6ccb22",
+    "name": "FAIL_TO_COMPILE",
+    "locale": "zh-CN",
+    "display": "Failed to Compile {0} Code",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "49cf3e2e-e048-4741-87d2-cf0c6f07b547",
+    "name": "FAIL_TO_PARSE",
+    "locale": "en-US",
+    "display": "Failed to parse {0} data.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "924869ff-6e2b-4055-9619-d554a7cbaf91",
+    "name": "FAIL_TO_PARSE",
+    "locale": "ko-KR",
+    "display": "{0} 데이터 파싱 중 에러가 발생했습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "e3e4beaf-0d57-4b1c-bb75-01ed7d778739",
+    "name": "ERROR_WHEN_DO_SOMETHING",
+    "locale": "zh-CN",
+    "display": "{0} 도중에 {1} 에러가 발생했습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "11273bb1-c1b3-4d2b-975f-7bf42c6ac42f",
+    "name": "ERROR_WHEN_DO_SOMETHING",
+    "locale": "ko-KR",
+    "display": "{0} 도중에 {1} 에러가 발생했습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2fb0d99d-c4f7-424c-a654-10c3bccd23ba",
+    "name": "ERROR_WHEN_DO_SOMETHING",
+    "locale": "en-US",
+    "display": "{1} Error occurred when doing {0}",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "d1cd24f5-775d-479c-98c8-e1fa47827e15",
+    "name": "REQUEST_SENT_TO_ADMIN",
+    "locale": "en-US",
+    "display": "Your request has been sent to administrator.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "d0905e19-8e72-4611-b119-97c8662caa34",
+    "name": "REQUEST_ALREADY_RECEIVED",
+    "locale": "ko-KR",
+    "display": "이미 접수된 요청입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "ad1611bc-5cbb-4119-956b-b63eb19127f7",
+    "name": "REQUEST_ALREADY_RECEIVED",
+    "locale": "zh-CN",
+    "display": "이미 접수된 요청입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2cbcc52f-36c4-421d-87ad-492cf8c7b0cc",
+    "name": "ALREADY_HAVE_AUTHROIZATION",
+    "locale": "en-US",
+    "display": "You already have the authorization.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7604ed62-6477-4d35-ab6b-25ecc08592c4",
+    "name": "ALREADY_HAVE_AUTHROIZATION",
+    "locale": "ko-KR",
+    "display": "요청하신 권한은 이미 신청자님께서 가지고 있습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "ad9d6b79-f5dc-48d4-b060-fdc006f073eb",
+    "name": "ALREADY_HAVE_AUTHROIZATION",
+    "locale": "zh-CN",
+    "display": "요청하신 권한은 이미 신청자님께서 가지고 있습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "944c276b-a7c6-45bf-81da-23d2cddd96c4",
+    "name": "ALREADY_FINISHED",
+    "locale": "ko-KR",
+    "display": "{0}은 이미 처리되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "20937c4c-7877-4753-a765-abf9acf6665e",
+    "name": "ALREADY_FINISHED",
+    "locale": "zh-CN",
+    "display": "{0}은 이미 처리되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "fce25c4d-5fcc-4b1e-97bb-78513e194b94",
+    "name": "REQUEST_PROCESSED_APPROVED",
+    "locale": "en-US",
+    "display": "Your request has been processed \u0027approved\u0027. ",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "72ec7ab1-16d6-4b3f-90df-60b00f047a81",
+    "name": "REQUEST_PROCESSED_APPROVED",
+    "locale": "ko-KR",
+    "display": "요청하신 내용이 \u0027승인\u0027 처리되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "6c685252-5761-4b67-b2a5-ca9868177312",
+    "name": "REQUEST_PROCESSED_APPROVED",
+    "locale": "zh-CN",
+    "display": "요청하신 내용이 \u0027승인\u0027 처리되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "6924a11b-16c0-4351-a7d0-177b4ae02ee6",
+    "name": "REQUEST_PROCESSED_REJECTED",
+    "locale": "en-US",
+    "display": "Your request has been processed \u0027reject\u0027.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "a9d24f5b-5b3a-40a6-b832-cba0e3e3d1ec",
+    "name": "REQUEST_PROCESSED_REJECTED",
+    "locale": "ko-KR",
+    "display": "요청하신 내용이 \u0027반려\u0027 처리되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4979953f-2299-43ae-950e-5776ae8960f2",
+    "name": "REQUEST_PROCESSED_REJECTED",
+    "locale": "zh-CN",
+    "display": "요청하신 내용이 \u0027반려\u0027 처리되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "36f7d19b-440b-4b77-99ae-ed6846f869e2",
+    "name": "REQUEST_SENT_TO_ADMIN",
+    "locale": "ko-KR",
+    "display": "요청하신 내용이 관리자에게 접수되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "b1b148d5-38e6-4d67-a33c-c087e99678e7",
+    "name": "REQUEST_SENT_TO_ADMIN",
+    "locale": "zh-CN",
+    "display": "요청하신 내용이 관리자에게 접수되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "f7d6dba3-cb2f-4ad2-9564-a7a908b8a1da",
+    "name": "ALREADY_FINISHED",
+    "locale": "en-US",
+    "display": "{0} has been already finished.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "6b4e2532-23fb-4404-b7dd-bbeb16c04e5c",
+    "name": "REQUEST_PROCESSED",
+    "locale": "en-US",
+    "display": "Your request has been processed \u0027{0}\u0027.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "86d87ead-64d2-4652-af79-0deba2957d6c",
+    "name": "REQUEST_PROCESSED",
+    "locale": "ko-KR",
+    "display": "요청하신 내용이 \u0027{0}\u0027 처리되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "d8c9f2e3-d99c-4b29-b64b-3350f163495e",
+    "name": "REQUEST_PROCESSED",
+    "locale": "zh-CN",
+    "display": "요청하신 내용이 \u0027{0}\u0027 처리되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "426b1e04-41d1-4303-8d72-8b2211a9327e",
+    "name": "RESULT_SENT_TO_REQUESTER",
+    "locale": "en-US",
+    "display": "Results of processing your request has been sent.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "eda5f09b-b1fd-404c-95d9-6181a9566903",
+    "name": "RESULT_SENT_TO_REQUESTER",
+    "locale": "ko-KR",
+    "display": "요청하신 내용의 처리 결과 메일이 신청자에게 전송되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7ccbcda9-7ad0-4738-8277-309d02768fb9",
+    "name": "RESULT_SENT_TO_REQUESTER",
+    "locale": "zh-CN",
+    "display": "요청하신 내용의 처리 결과 메일이 신청자에게 전송되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "ee9b76be-8ac0-4d7b-a8b0-1285f69d73f8",
+    "name": "REQUEST_ALREADY_RECEIVED",
+    "locale": "en-US",
+    "display": "This request already has been received.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "a48ea52f-cd8d-4cbf-8ea0-122d6ca436d3",
+    "name": "NOT_A_PASSWORD_INIT_REQUEST",
+    "locale": "zh-CN",
+    "display": "이 요청은 계정 패스워드 초기화 요청이 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "27809e43-922f-4484-be08-5677ab9c5928",
+    "name": "NOT_A_PASSWORD_INIT_REQUEST",
+    "locale": "ko-KR",
+    "display": "이 요청은 계정 패스워드 초기화 요청이 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "a3e0c979-7419-495b-ae75-f89916301552",
+    "name": "NOT_A_ACCOUNT_APPR_REQUEST",
+    "locale": "en-US",
+    "display": "This request is not for a account approval.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "81e51f0d-2b36-43b0-8c0b-8a6e2bab9a93",
+    "name": "NOT_A_ACCOUNT_APPR_REQUEST",
+    "locale": "zh-CN",
+    "display": "이 요청은 계정 승인 요청이 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "93eb85f1-2aec-4375-8ea5-5261a22fd2fd",
+    "name": "NOT_A_AUTHORIZATION_REQUEST",
+    "locale": "ko-KR",
+    "display": "이 요청은 권한 추가 요청이 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "4f4993c6-4b66-41fe-a075-ab3a3e398f30",
+    "name": "NOT_A_AUTHORIZATION_REQUEST",
+    "locale": "zh-CN",
+    "display": "이 요청은 권한 추가 요청이 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "19216ed2-6298-4a1a-a713-1a8003e50ce1",
+    "name": "NOT_A_AUTHORIZATION_REQUEST",
+    "locale": "en-US",
+    "display": "This request is not for a authorization.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "8263fd8b-77d4-4a2b-ba29-051a8470bada",
+    "name": "NOT_A_ACCOUNT_APPR_REQUEST",
+    "locale": "ko-KR",
+    "display": "이 요청은 계정 승인 요청이 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "6602903e-edd8-4991-aa97-b083506242e7",
+    "name": "NOT_A_ACCOUNT_ACTIVATION_REQUEST",
+    "locale": "zh-CN",
+    "display": "이 요청은 계정 활성화 요청이 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "946c2f73-2acc-41c7-a833-1947054ea4e6",
+    "name": "NOT_A_ACCOUNT_ACTIVATION_REQUEST",
+    "locale": "en-US",
+    "display": "This request is not for a account activation.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "917b7af1-d838-425a-ba00-7468b09fb069",
+    "name": "NOT_A_ACCOUNT_ACTIVATION_REQUEST",
+    "locale": "ko-KR",
+    "display": "이 요청은 계정 활성화 요청이 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "5020cdb4-6024-4b8d-89cd-6718343cbbbf",
+    "name": "NOT_A_PASSWORD_INIT_REQUEST",
+    "locale": "en-US",
+    "display": "This request is not for a password initialization.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "a45fd044-8514-47fc-bc55-2aee71a4d8db",
+    "name": "READ_FILE_ERROR",
+    "locale": "ko-KR",
+    "display": "File {0} 읽기 중 에러가 발생하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2d547528-a3a5-4721-a64a-40c21679e50c",
+    "name": "READ_FILE_ERROR",
+    "locale": "en-US",
+    "display": "Failed to read file {0}.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "9c510920-0eea-4706-a75e-86561c27850c",
+    "name": "READ_FILE_ERROR",
+    "locale": "zh-CN",
+    "display": "File {0} 읽기 중 에러가 발생하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "d3b726de-3966-4811-8f16-c02f36445c4b",
+    "name": "A_ALREADY_B_STATUS",
+    "locale": "ko-KR",
+    "display": "{0} 은(는) 이미 {1} 상태입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "0e9197a1-1a76-451c-b817-1c38690cf68c",
+    "name": "A_ALREADY_B_STATUS",
+    "locale": "zh-CN",
+    "display": "{0} 은(는) 이미 {1} 상태입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "5be77417-5720-4f6b-8786-9e138cab58f2",
+    "name": "A_ALREADY_B_STATUS",
+    "locale": "en-US",
+    "display": "The {0} is already {1} status.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "45cbfa7c-7330-4dcb-943e-49fc7ae3bc72",
+    "name": "OVER_QUANTITY",
+    "locale": "en-US",
+    "display": "{1} quantity has exceeded the {2} quantity of {0}.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "47ae0cf6-c9ce-46a0-b99c-bb4820b84e74",
+    "name": "OVER_QUANTITY",
+    "locale": "zh-CN",
+    "display": "{0}의 {1} 수량이 {2} 수량을 초과하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "7208282c-2dcd-47d4-b752-e8a9a3acc7a1",
+    "name": "OVER_QUANTITY",
+    "locale": "ko-KR",
+    "display": "{0}의 {1} 수량이 {2} 수량을 초과하였습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "07f166e3-75b4-467e-99ea-1310851e88d7",
+    "name": "WIP_OPERATION_NOT_STARTED",
+    "locale": "en-US",
+    "display": "Current Operation of the lot has not been started.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "19423c7a-e9d6-49d8-bbb1-27d131af0966",
+    "name": "WIP_OPERATION_NOT_STARTED",
+    "locale": "zh-CN",
+    "display": "Lot의 현재 공정이 아직 시작되지 않았습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "3608c89f-dc74-4a6d-8a67-5ddbfe1bcaec",
+    "name": "WIP_OPERATION_NOT_STARTED",
+    "locale": "ko-KR",
+    "display": "Lot의 현재 공정이 아직 시작되지 않았습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "0a36c3a9-e014-4853-869c-3c130c6da322",
+    "name": "INCORRECT_AUTHENTICATION",
+    "locale": "ko-KR",
+    "display": "인증 정보가 올바르지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "de2447d1-36f1-4354-bd6e-cce0641dbb38",
+    "name": "BAD_SQL_GRAMMAR",
+    "locale": "ko-KR",
+    "display": "SQL이 올바르지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "8b263e7c-ea35-4b51-bee1-2d65baf3bde6",
+    "name": "NETWORK_UNREACHABLE",
+    "locale": "ko-KR",
+    "display": "네트워크에서 해당 호스트를 찾을 수 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "f76b1090-885a-44fd-a134-53cbb1e7a87e",
+    "name": "DATABASE_UNREACHABLE",
+    "locale": "ko-KR",
+    "display": "데이터베이스 호스트를 찾을 수 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "db599c4f-eeae-4151-bd15-546ce37036d0",
+    "name": "TRANSACTION_TIME_OUT",
+    "locale": "ko-KR",
+    "display": "트랜잭션 처리시간이 종료되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "b4648b42-2f08-471f-87aa-0d634a3bbdcb",
+    "name": "NULL_OBJECT_NOT_ALLOWED",
+    "locale": "en-US",
+    "display": "Null Object is not allowed.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "62fe4bca-1d90-40d0-8f78-833309ef133d",
+    "name": "INTEGRITY_VIOLATION",
+    "locale": "ko-KR",
+    "display": "데이터 정합성이 맞지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "2edc6ce3-42b7-424d-b3d6-467ec3120043",
+    "name": "TRANSACTION_TIME_OUT",
+    "locale": "en-US",
+    "display": "Transaction timed out.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "74a2b99a-317d-40ae-9068-cc1cf02038e3",
+    "name": "DATABASE_UNREACHABLE",
+    "locale": "en-US",
+    "display": "Database is unreachable.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "dd3a5d53-0a42-4abe-bcb4-dadbd4c0597b",
+    "name": "NETWORK_UNREACHABLE",
+    "locale": "en-US",
+    "display": "Network is unreachable.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "9df169e5-1faa-4ee9-9cc1-85bbc6fc71b4",
+    "name": "INTEGRITY_VIOLATION",
+    "locale": "en-US",
+    "display": "Data Integrity Violation",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "f3c54157-9de1-4f66-880b-90b433d54008",
+    "name": "BAD_SQL_GRAMMAR",
+    "locale": "en-US",
+    "display": "Bad SQL Grammar",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "ffecb261-7d00-4184-a2d3-fe7c32d68741",
+    "name": "INCORRECT_AUTHENTICATION",
+    "locale": "en-US",
+    "display": "Authentication is incorrect.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "3f95bd5a-d1c6-4ed0-8ce0-d917748230e2",
+    "name": "A_IS_NOT_SET_TO_B",
+    "locale": "en-US",
+    "display": "{1} is not set to {0}.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Jul 19, 2017 8:58:09 PM"
+  },
+  {
+    "id": "83757703-b899-4d0b-b6e9-8fedd792147f",
+    "name": "A_IS_NOT_SET_TO_B",
+    "locale": "ko-KR",
+    "display": "{0}에 {1}이 설정되지 않았습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "bad6d1a6-6b9a-4804-8a94-1591eeaa5707",
+    "name": "A_IS_NOT_SET_TO_B",
+    "locale": "zh-CN",
+    "display": "{0}에 {1}이 설정되지 않았습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "dc7919e6-f409-47ba-bf7a-76c4ec73fbec",
+    "name": "WIP_LABEL_IS_NOT_SET",
+    "locale": "en-US",
+    "display": "Label is not set to ProductModel of this lot ",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "04aae80e-2e45-4af6-8c7e-6a8f43fa805f",
+    "name": "WIP_LABEL_IS_NOT_SET",
+    "locale": "ko-KR",
+    "display": "이 Lot의 ProductModel에 Label이 설정되지 않았습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "36fbc54a-5e0c-43f1-b082-35269478d552",
+    "name": "WIP_LABEL_IS_NOT_SET",
+    "locale": "zh-CN",
+    "display": "이 Lot의 ProductModel에 Label이 설정되지 않았습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "3e4c383c-7ca5-4788-b178-d3c3cc6c74cd",
+    "name": "WIP_SERIAL_IS_NOT_A_PART_OF_BOM",
+    "locale": "en-US",
+    "display": "Scanned serial is not a part of BOM",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "557c9f0c-2aea-42ff-85ac-c8314a959e62",
+    "name": "WIP_SERIAL_IS_NOT_A_PART_OF_BOM",
+    "locale": "ko-KR",
+    "display": "스캔한 Serial이 Lot의 BOM Part에 소속되어 있지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "d46ea6a2-6b58-4747-bfc5-9cdf87ad5a42",
+    "name": "WIP_SERIAL_IS_NOT_A_PART_OF_BOM",
+    "locale": "zh-CN",
+    "display": "스캔한 Serial이 Lot의 BOM Part에 소속되어 있지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "d6f371d2-4a0d-464f-bc27-bab7e58fbe17",
+    "name": "RESOURCE_SHOULD_NOT_BE_DELETED",
+    "locale": "en-US",
+    "display": "{0} ({1}) can\u0027t be deleted because it is referenced by {2}",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "0d6141d8-a2c3-4c45-b26f-6b2560508cca",
+    "name": "RESOURCE_SHOULD_NOT_BE_DELETED",
+    "locale": "zh-CN",
+    "display": "{0} ({1})는 {2}에 참조되어 있기 때문에 삭제될 수 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "23f58412-1cb8-4bbb-b1db-586ab3cd2bb4",
+    "name": "RESOURCE_SHOULD_NOT_BE_DELETED",
+    "locale": "ko-KR",
+    "display": "{0} ({1})는 {2}에 참조되어 있기 때문에 삭제될 수 없습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "16251998-7970-475a-9da0-3e2f9aa9082e",
+    "name": "WIP_LOT_INFO_MISMATCH_WITH_OI",
+    "locale": "zh-CN",
+    "display": "OI 설정의 {0}와 Lot의 {0}가 일치하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "02486eeb-bc85-43ce-944f-7d3f4c1eb9d7",
+    "name": "WIP_LOT_INFO_MISMATCH_WITH_OI",
+    "locale": "ko-KR",
+    "display": "OI 설정의 {0}와 Lot의 {0}가 일치하지 않습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "535917c5-38b9-48f3-b8b9-bf3cd6ca9c93",
+    "name": "WIP_LOT_INFO_MISMATCH_WITH_OI",
+    "locale": "en-US",
+    "display": "The {0} of your OI Setting is different with {0} of lot.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "66243440-601e-4d07-bd6d-a216cb7830a9",
+    "name": "WIP_RESOURCE_HAS_NO_DETAILS",
+    "locale": "ko-KR",
+    "display": "{0} 리소스 \u0027{1}\u0027는 상세 데이터가 없습니다. ",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "05e94d43-8d1f-4fb2-874f-282187d1eaa7",
+    "name": "WIP_RESOURCE_HAS_NO_DETAILS",
+    "locale": "zh-CN",
+    "display": "{0} Resource \u0027{1}\u0027 has no detail data. ",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "4dfdf55d-1cda-406c-8b92-6166c5a97e77",
+    "name": "WIP_RESOURCE_HAS_NO_DETAILS",
+    "locale": "en-US",
+    "display": "{0} Resource \u0027{1}\u0027 has no detail data. ",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "26a33d06-8573-4fce-9d93-99fdb4f9d393",
+    "name": "WIP_RESOURCE_IS_NOT_ACTIVE",
+    "locale": "ko-KR",
+    "display": "{0} 리소스 \u0027{1}\u0027은 Active 상태가 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "d0a17873-85bb-4e80-9a0f-5be6e747f4ae",
+    "name": "WIP_RESOURCE_IS_NOT_ACTIVE",
+    "locale": "zh-CN",
+    "display": "{0} Resource \u0027{1}\u0027 is not active.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "6418d176-1f7a-4408-830f-74e0a17866ac",
+    "name": "WIP_RESOURCE_IS_NOT_ACTIVE",
+    "locale": "en-US",
+    "display": "{0} Resource \u0027{1}\u0027 is not active.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "fcce2b39-b7bd-4a44-b0ee-183e102a3610",
+    "name": "HAS_NO_AUTHORITY",
+    "locale": "zh-CN",
+    "display": "You have no authroity to access {0} ({1})",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "b1e8fe39-f151-4bbf-a373-78495f323cc5",
+    "name": "HAS_NO_AUTHORITY",
+    "locale": "en-US",
+    "display": "You have no authroity to access {0} ({1})",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "b123d0bb-9820-40a2-92b3-4f05b9fa53bf",
+    "name": "HAS_NO_AUTHORITY",
+    "locale": "ko-KR",
+    "display": "사용자께서는 {0} ({1})에 대한 접근 권한이 없습니다. [관리자 메뉴] / [그룹 권한] 메뉴에서 그룹에 대한 권한을 추가하세요.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "dd6f9756-0db7-47b0-bede-b6c8dfd1f0a6",
+    "name": "BAD_SQL_GRAMMAR",
+    "locale": "zh-CN",
+    "display": "Bad SQL Grammar",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "27e0a03c-b999-46b5-aa80-e140a96bdba6",
+    "name": "DATABASE_UNREACHABLE",
+    "locale": "zh-CN",
+    "display": "Database is unreachable.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "257e9fc1-691b-48e0-99e8-0b9d1d86c849",
+    "name": "INCORRECT_AUTHENTICATION",
+    "locale": "zh-CN",
+    "display": "Authentication is incorrect.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "20a66a47-c3d6-45e3-b904-ef6e6b05edbb",
+    "name": "INTEGRITY_VIOLATION",
+    "locale": "zh-CN",
+    "display": "Data Integrity Violation",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "755e079d-153c-43ee-83b0-cdb3b703c9f7",
+    "name": "NETWORK_UNREACHABLE",
+    "locale": "zh-CN",
+    "display": "Network is unreachable.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "5366fc38-7721-41d6-a8b2-1f99eed4b62f",
+    "name": "NULL_OBJECT_NOT_ALLOWED",
+    "locale": "zh-CN",
+    "display": "Null Object is not allowed.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "829bd4fd-4071-4751-9d1e-233338dd8e7c",
+    "name": "TRANSACTION_TIME_OUT",
+    "locale": "zh-CN",
+    "display": "Transaction timed out.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "64868dd4-5e4a-449d-8e4b-e80703e39026",
+    "name": "DATA_DUPLICATED",
+    "locale": "en-US",
+    "display": "({0}) Data ({1}) aleady exist.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "7a8a2121-a092-4497-abda-65368eb9842b",
+    "name": "USER_ALREADY_EXIST",
+    "locale": "zh-CN",
+    "display": "User already exists.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "ae57fca9-53b9-4d92-8578-c80c2b3cfc03",
+    "name": "USER_ALREADY_EXIST",
+    "locale": "en-US",
+    "display": "User already exists.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "bf0ab896-1a7b-45f2-8087-aec19bf3f76a",
+    "name": "USER_ALREADY_EXIST",
+    "locale": "ko-KR",
+    "display": "사용자가 이미 존재합니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "0d344503-cbd4-451e-8358-8863007fcbca",
+    "name": "DOMAIN_ADMIN_NOT_EXIST",
+    "locale": "zh-CN",
+    "display": "Administrators of the domain does not exist, so you can not send mail to the administrator.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "fb65df98-f6a0-4c1c-ab51-4cf467c22305",
+    "name": "USER_REJECT_INIT_PASS",
+    "locale": "en-US",
+    "display": "Rejected to reset password.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "afb927fd-2c28-4bf5-aa74-22da2ac062a3",
+    "name": "USER_REJECT_INIT_PASS",
+    "locale": "ko-KR",
+    "display": "비밀번호 초기화 요청이 반려되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "58db2a82-5843-43a5-b3dd-7c5d9ee8ac1b",
+    "name": "USER_REJECT_INIT_PASS",
+    "locale": "zh-CN",
+    "display": "Rejected to reset password.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "03879b3a-cdcd-4bdb-a27d-abafc8142879",
+    "name": "USER_REQUEST_ADD_AUTH",
+    "locale": "en-US",
+    "display": "System access authorization request.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "652ddce7-6655-435b-997a-3604187a75d2",
+    "name": "USER_COMPLETE_ADD_AUTH",
+    "locale": "en-US",
+    "display": "Approved system access authorization request.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "aa844388-aeef-4634-9a1c-ed4b98a1ce0b",
+    "name": "USER_COMPLETE_ADD_AUTH",
+    "locale": "ko-KR",
+    "display": "사용자 권한 추가 요청이 승인되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "94d205d1-696a-4712-aa1c-39af28d22dfa",
+    "name": "USER_COMPLETE_ADD_AUTH",
+    "locale": "zh-CN",
+    "display": "Approved system access authorization request.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "f3ba9b31-2c31-412e-a19c-37141fcf329a",
+    "name": "USER_REJECT_ADD_AUTH",
+    "locale": "ko-KR",
+    "display": "사용자 권한 추가 요청이 반려되었습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "8e038075-a1e2-4d3d-9dc3-7f76ca8cfe6d",
+    "name": "USER_REJECT_ADD_AUTH",
+    "locale": "en-US",
+    "display": "Rejected system access authorization request.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "6a269b0e-be93-4277-9ebb-b702a4dbcd69",
+    "name": "USER_REJECT_ADD_AUTH",
+    "locale": "zh-CN",
+    "display": "Rejected system access authorization request.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "14590eec-30d1-480f-9de1-9fd151cdaf1b",
+    "name": "A_CONTAINS_B",
+    "locale": "en-US",
+    "display": "Text \u0027{0}\u0027 contains the string \u0027{1}\u0027.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "734ff691-4a81-464d-9779-9f9d642ecb62",
+    "name": "A_CONTAINS_B",
+    "locale": "ko-KR",
+    "display": "문자열 \u0027{0}\u0027은 \u0027{1}\u0027을 포함하고 있습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "194e0714-50cf-425f-83e3-36cfd7953319",
+    "name": "A_CONTAINS_B",
+    "locale": "zh-CN",
+    "display": "Text \u0027{0}\u0027 contains the string \u0027{1}\u0027.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "702898b0-f15c-4bb5-96d1-4a42d79272da",
+    "name": "A_DOES_NOT_CONTAINS_B",
+    "locale": "zh-CN",
+    "display": "Text \u0027{0}\u0027 contains the string \u0027{1}\u0027.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "767a4127-515b-4916-b141-fc939df4b04d",
+    "name": "A_DOES_NOT_CONTAINS_B",
+    "locale": "en-US",
+    "display": "Text \u0027{0}\u0027 contains the string \u0027{1}\u0027.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "cb240ab6-d8f3-406f-8c1b-7f3dc83a579d",
+    "name": "A_DOES_NOT_CONTAINS_B",
+    "locale": "ko-KR",
+    "display": "문자열 \u0027{0}\u0027은 \u0027{1}\u0027을 포함하고 있습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "e2d66a7e-074e-49f7-889d-5d24ccc230d3",
+    "name": "VALUE_IS_EMPTY",
+    "locale": "en-US",
+    "display": "Value of \u0027{0}\u0027 is empty.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "b795279d-a78a-4613-a229-8ccd1f95e906",
+    "name": "VALUE_IS_EMPTY",
+    "locale": "ko-KR",
+    "display": "값 \u0027{0}\u0027이 빈 값 입니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "8fa97432-2bd6-4c07-84c2-549cd8827bac",
+    "name": "VALUE_IS_EMPTY",
+    "locale": "zh-CN",
+    "display": "Value of \u0027{0}\u0027 is empty.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "533aa064-028e-4c09-84f0-72bf6f5dfefd",
+    "name": "VALUE_IS_NOT_EMPTY",
+    "locale": "en-US",
+    "display": "Value of \u0027{0}\u0027 is not empty.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "82b12892-4b99-4d3c-8ccc-99d92f6879dc",
+    "name": "VALUE_IS_NOT_EMPTY",
+    "locale": "ko-KR",
+    "display": "값 \u0027{0}\u0027은 빈 값이 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "1f4849f8-e0bc-4276-ab3a-0ad5b3a843d9",
+    "name": "VALUE_IS_NOT_EMPTY",
+    "locale": "zh-CN",
+    "display": "Value of \u0027{0}\u0027 is not empty.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "9fa007cc-f7ae-4d61-8ea5-99def2ea72b7",
+    "name": "TYPEA_IS_NOT_ASSIGNABLE_OF_TYPEB",
+    "locale": "en-US",
+    "display": "Class \u0027{0}\u0027 is not assignable to Class \u0027{1}\u0027.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "520cbd5b-8965-4442-9c5b-3a0f7c2756c3",
+    "name": "TYPEA_IS_NOT_ASSIGNABLE_OF_TYPEB",
+    "locale": "ko-KR",
+    "display": "Class \u0027{0}\u0027 은 Class \u0027{1}\u0027의 파생 클래스가 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "cd145ae7-d708-48c3-a39f-dd07ed25fee1",
+    "name": "TYPEA_IS_NOT_ASSIGNABLE_OF_TYPEB",
+    "locale": "zh-CN",
+    "display": "Class \u0027{0}\u0027 is not assignable to Class \u0027{1}\u0027.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "7cf0367d-d6d2-48a7-8a4d-d3bf70301b2f",
+    "name": "OBJECT_IS_NOT_INSTANCEOF_CLASS",
+    "locale": "en-US",
+    "display": "Object \u0027{0}\u0027 is not instance of Class \u0027{1}\u0027.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "249cf22b-99a6-40ae-89fc-79be7b8a7a16",
+    "name": "OBJECT_IS_NOT_INSTANCEOF_CLASS",
+    "locale": "ko-KR",
+    "display": "Object \u0027{0}\u0027 은 Class \u0027{1}\u0027 타입이 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "a0ea6754-364a-4cf4-9e51-d929d8edf721",
+    "name": "OBJECT_IS_NOT_INSTANCEOF_CLASS",
+    "locale": "zh-CN",
+    "display": "Object \u0027{0}\u0027 is not instance of Class \u0027{1}\u0027.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "15ed339b-1e2c-498a-87d7-6c698fa64c16",
+    "name": "BOOLEAN_IS_FALSE",
+    "locale": "en-US",
+    "display": "Value \u0027{0}\u0027 is not true.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "db639df1-2e01-4cf3-91ea-30b2b90c48af",
+    "name": "BOOLEAN_IS_FALSE",
+    "locale": "ko-KR",
+    "display": "값\u0027{0}\u0027이 참이 아닙니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "a998c79d-848b-40d4-8df7-798ca81688a5",
+    "name": "BOOLEAN_IS_FALSE",
+    "locale": "zh-CN",
+    "display": "Value \u0027{0}\u0027 is not true.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "cd244eb8-071e-4629-9a53-f006c8cc0bca",
+    "name": "COLLECTION_HAS_NULL_ELEMENT",
+    "locale": "en-US",
+    "display": "Collection contains a null element.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "6ad342d2-25d7-47d9-9677-9f507acd53df",
+    "name": "COLLECTION_HAS_NULL_ELEMENT",
+    "locale": "ko-KR",
+    "display": "컬렉션에 빈 값이 포함되어 있습니다.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "557cf210-3e1b-4861-9bec-98616de3a8d8",
+    "name": "COLLECTION_HAS_NULL_ELEMENT",
+    "locale": "zh-CN",
+    "display": "Collection contains a null element.",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 19, 2017 8:58:10 PM"
+  },
+  {
+    "id": "fbb7251f-7e8c-4d31-8e7f-60385ea9426e",
+    "name": "NULL_OBJECT_NOT_ALLOWED",
+    "locale": "ko-KR",
+    "display": "Null 객체는 허용되지 않습니다.",
+    "domainId": 1,
+    "updaterId": "admin",
+    "createdAt": "Jul 19, 2017 8:58:09 PM",
+    "updatedAt": "Aug 16, 2017 11:17:40 AM"
+  },
+  {
+    "id": "ab73181d-1c1b-44ed-8fce-4adf1851dfa8",
+    "name": "ORDER_CAN_NOT_BE_NULL",
+    "locale": "en-US",
+    "display": "오더값이 있어야 합니다.",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Oct 20, 2017 6:29:22 PM",
+    "updatedAt": "Oct 20, 2017 6:29:22 PM"
+  },
+  {
+    "id": "65b0373f-1c66-4145-a474-09c7a211245c",
+    "name": "ORDER_CAN_NOT_BE_NULL",
+    "locale": "ko-KR",
+    "display": "Order can not be null",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Oct 20, 2017 6:29:22 PM",
+    "updatedAt": "Oct 20, 2017 6:29:22 PM"
+  },
+  {
+    "id": "f7b41149-c560-40d9-872d-fd414957d732",
+    "name": "ORDER_CAN_NOT_BE_NULL",
+    "locale": "zh-CN",
+    "display": "工单不能为空",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Oct 20, 2017 6:29:22 PM",
+    "updatedAt": "Oct 20, 2017 6:29:22 PM"
+  },
+  {
+    "id": "c6ee6b5b-5197-450a-8eab-8a723e2b3df6",
+    "name": "NEED_ONE_PARAMS",
+    "locale": "en-US",
+    "display": "At least input one params.",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Oct 23, 2017 3:42:44 PM",
+    "updatedAt": "Oct 23, 2017 3:42:44 PM"
+  },
+  {
+    "id": "1f102263-e6e0-4c6a-be80-516d8fe4a977",
+    "name": "NEED_ONE_PARAMS",
+    "locale": "ko-KR",
+    "display": "적어도 하나의 조건을 입력해야 합니다.",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Oct 23, 2017 3:42:44 PM",
+    "updatedAt": "Oct 23, 2017 3:42:44 PM"
+  },
+  {
+    "id": "7c0cf0f7-37db-4b90-a3b1-81b0213f00fd",
+    "name": "NEED_ONE_PARAMS",
+    "locale": "zh-CN",
+    "display": "需要输入至少一个参数",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Oct 23, 2017 3:42:44 PM",
+    "updatedAt": "Oct 23, 2017 3:42:44 PM"
+  },
+  {
+    "id": "57469810-c26b-4134-bcbe-482e71cf9ad5",
+    "name": "DOES_NOT_EXIST",
+    "locale": "en-US",
+    "display": "Data {0} does not exist",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Oct 26, 2017 5:45:46 PM",
+    "updatedAt": "Oct 26, 2017 5:45:46 PM"
+  },
+  {
+    "id": "57f573cc-63d2-4572-a8ca-dbd91e11e8ea",
+    "name": "DOES_NOT_EXIST",
+    "locale": "ko-KR",
+    "display": "데이터 {0} 를 찾을수 없습니다.",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Oct 26, 2017 5:45:46 PM",
+    "updatedAt": "Oct 26, 2017 5:45:46 PM"
+  },
+  {
+    "id": "c962e7a9-4bff-40ab-a72b-aeff41cec291",
+    "name": "DOES_NOT_EXIST",
+    "locale": "zh-CN",
+    "display": "找不到数据{0}",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Oct 26, 2017 5:45:46 PM",
+    "updatedAt": "Oct 26, 2017 5:45:46 PM"
+  },
+  {
+    "id": "f713451f-a05a-4bfe-91ed-a6cb0272efe2",
+    "name": "MENU_IS_EMPTY_CAUSE_ROUTING_NOT_CORRECT",
+    "locale": "en-US",
+    "display": "This routing can not find menu.",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Nov 8, 2017 8:33:05 PM",
+    "updatedAt": "Nov 8, 2017 8:33:05 PM"
+  },
+  {
+    "id": "79c2ad80-dee8-4d77-8758-2cf0a11d3352",
+    "name": "MENU_IS_EMPTY_CAUSE_ROUTING_NOT_CORRECT",
+    "locale": "ko-KR",
+    "display": "해당 라우팅정보로 메뉴정보를 찾을수 없습니다.",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Nov 8, 2017 8:33:05 PM",
+    "updatedAt": "Nov 8, 2017 8:33:05 PM"
+  },
+  {
+    "id": "f17fdbc5-8e35-4939-bef9-b960bc70e67f",
+    "name": "MENU_IS_EMPTY_CAUSE_ROUTING_NOT_CORRECT",
+    "locale": "zh-CN",
+    "display": "此地址找不到匹配的菜单",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Nov 8, 2017 8:33:05 PM",
+    "updatedAt": "Nov 8, 2017 8:33:05 PM"
+  }
+]

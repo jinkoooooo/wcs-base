@@ -1,0 +1,94 @@
+// =============================================================================
+// tspg-4way-shuttle 디자인 토큰 — 단일 출처
+// =============================================================================
+// dashboard_2d / cell_state_2d 등 모든 화면이 공유하는 색상/크기 변수.
+// 개별 화면이나 컴포넌트의 SCSS 는 절대 색상 hex 값을 직접 사용하지 말고
+// 반드시 이 파일의 CSS 변수를 사용한다.
+// =============================================================================
+
+:root {
+  // ── 텍스트 / 배경 ──────────────────────────────────────────
+  --tspg-text-primary:   #e5eaf3;
+  --tspg-text-secondary: #c0c4cc;
+  --tspg-text-muted:     #909399;
+  --tspg-text-faint:     #606266;
+
+  --tspg-bg-base:        rgba(30, 34, 45, 0.98);
+  --tspg-bg-panel:       rgba(20, 22, 28, 0.94);
+  --tspg-bg-glass:       rgba(20, 22, 28, 0.95);
+  --tspg-border-strong:  rgba(255, 255, 255, 0.18);
+  --tspg-border-base:    rgba(255, 255, 255, 0.12);
+  --tspg-border-soft:    rgba(255, 255, 255, 0.05);
+
+  // ── 상태 컬러 (모든 화면 공통) ────────────────────────────
+  --tspg-color-info:     #409eff;  // 입고/주행/링크
+  --tspg-color-warning:  #e6a23c;  // 출고/작업중
+  --tspg-color-success:  #67c23a;  // 완료/정상
+  --tspg-color-danger:   #f56c6c;  // 에러/잠금
+  --tspg-color-neutral:  #909399;  // 유휴/대기
+  --tspg-color-accent:   #f5d76e;  // 전환중/주의(노랑)
+
+  // ── 포트 운영 모드 (입고/출고/유휴/전환중) ────────────────
+  // PortModeBadgeVariant 와 1:1 매칭
+  --tspg-port-in-bg:        rgba(64, 158, 255, 0.95);
+  --tspg-port-in-fg:        #ffffff;
+  --tspg-port-out-bg:       rgba(230, 162, 60, 0.95);
+  --tspg-port-out-fg:       #ffffff;
+  --tspg-port-idle-bg:      rgba(144, 147, 153, 0.92);
+  --tspg-port-idle-fg:      #ffffff;
+  --tspg-port-switching-bg: rgba(245, 215, 110, 0.95);
+  --tspg-port-switching-fg: #1a1a1a;
+
+  // ── 셔틀 배터리 단계 ──────────────────────────────────────
+  --tspg-battery-critical: var(--tspg-color-danger);
+  --tspg-battery-low:      var(--tspg-color-warning);
+  --tspg-battery-medium:   var(--tspg-color-accent);
+  --tspg-battery-high:     var(--tspg-color-success);
+
+  // ── 작업/오더 상태 ───────────────────────────────────────
+  --tspg-status-pending:   var(--tspg-color-neutral);
+  --tspg-status-assigned:  var(--tspg-color-info);
+  --tspg-status-running:   var(--tspg-color-warning);
+  --tspg-status-paused:    var(--tspg-color-warning);
+  --tspg-status-completed: var(--tspg-color-success);
+  --tspg-status-cancelled: var(--tspg-color-neutral);
+  --tspg-status-failed:    var(--tspg-color-danger);
+
+  // ── 그림자 ───────────────────────────────────────────────
+  --tspg-shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.25);
+  --tspg-shadow-md: 0 6px 28px rgba(0, 0, 0, 0.35);
+  --tspg-shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+// =============================================================================
+// 공통 유틸리티 클래스 — 컴포넌트마다 색상 클래스를 재정의하지 않도록 단일 출처 제공.
+// 사용처: ShuttleMovementStatusClass / ShuttleBatteryLevelClass / JobUiStatusClass 등의
+//         Records 가 반환하는 클래스명과 1:1 매칭.
+// 각 컴포넌트는 이 클래스명을 :class 바인딩으로 그대로 사용하고
+// 자체 SCSS 에서 동일 색상 클래스를 다시 선언하지 않는다.
+// =============================================================================
+
+// ── 셔틀 / 설비 움직임 상태 ─────────────────────────────────────
+.tspg-status-idle    { color: var(--tspg-color-neutral); }
+.tspg-status-moving  { color: var(--tspg-color-info); }
+.tspg-status-working { color: var(--tspg-color-warning); }
+.tspg-status-charging{ color: var(--tspg-color-success); }
+.tspg-status-error   { color: var(--tspg-color-danger); font-weight: 700; }
+.tspg-status-stopped { color: var(--tspg-color-neutral); font-style: italic; }
+.tspg-status-success { color: var(--tspg-color-success); }
+.tspg-status-warning { color: var(--tspg-color-warning); }
+
+// ── 셔틀 배터리 단계 ──────────────────────────────────────────
+.tspg-battery-critical { color: var(--tspg-battery-critical); font-weight: 700; }
+.tspg-battery-low      { color: var(--tspg-battery-low); }
+.tspg-battery-medium   { color: var(--tspg-battery-medium); }
+.tspg-battery-high     { color: var(--tspg-battery-high); }
+
+// ── 작업/오더 상태 ────────────────────────────────────────────
+.tspg-job-pending    { color: var(--tspg-status-pending); }
+.tspg-job-assigned   { color: var(--tspg-status-assigned); }
+.tspg-job-running    { color: var(--tspg-status-running); }
+.tspg-job-paused     { color: var(--tspg-status-paused); font-style: italic; }
+.tspg-job-completed  { color: var(--tspg-status-completed); }
+.tspg-job-cancelled  { color: var(--tspg-status-cancelled); text-decoration: line-through; }
+.tspg-job-failed     { color: var(--tspg-status-failed); font-weight: 700; }

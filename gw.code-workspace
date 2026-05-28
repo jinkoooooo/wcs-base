@@ -1,0 +1,46 @@
+{
+  "folders": [
+	{
+		"path": "gw"
+	},
+	{
+		"path": "gw-mqbase"
+	},
+	{
+		"path": "logis-base"
+	},
+	{
+		"path": "logis-das"
+	},
+	{
+		"path": "logis-dps"
+	},
+	{
+		"path": "logis-insp"
+	},
+	{
+		"path": "logis-wcs"
+	},
+	{
+		"path": "printing"
+	},
+	{
+		"path": "ui-operator"
+	},
+	{
+		"path": "ui-wcs"
+	},
+	{
+		"path": "wcs-boot"
+	},
+	{
+		"path": "anyware-sec"
+	},
+	{
+		"path": "anyware-sys"
+	},
+	{
+		"path": "comm-rabbitmq"
+	}
+]
+}

@@ -1,0 +1,46 @@
+SELECT 
+    uuid_generate_v4() AS id,
+    c.id AS menu_detail_id,
+    a.name,
+    a.description,
+    a.rank,
+    a.term,
+    a.col_type,
+    a.col_size,
+    a.nullable,
+    a.ref_type,
+    a.ref_name,
+    a.ref_url,
+    a.ref_params,
+    a.ref_related,
+    a.search_rank,
+    a.sort_rank,
+    a.reverse_sort,
+    a.virtual_field,
+    a.search_name,
+    a.search_editor,
+    a.search_oper,
+    a.search_init_val,
+    a.grid_rank,
+    a.grid_editor,
+    a.grid_format,
+    a.grid_validator,
+    a.grid_width,
+    a.grid_align,
+    a.uniq_rank,
+    a.form_editor,
+    a.form_validator,
+    a.form_format,
+    a.def_val,
+    a.range_val,
+    a.ignore_on_save,
+    a.ext_field,
+    c.domain_id
+FROM 
+    menu_detail_columns a,
+    (SELECT * FROM menu_details WHERE domain_id = :sourceDomainId) b,
+    (SELECT * FROM menu_details WHERE domain_id = :targetDomainId) c
+WHERE 
+    a.domain_id = :sourceDomainId
+    AND a.menu_detail_id = b.id
+    AND b.name = c.name;

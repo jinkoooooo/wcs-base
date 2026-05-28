@@ -1,0 +1,308 @@
+.location-grade-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 0;
+  height: 100%;
+}
+
+.location-grade-page__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 18px;
+  min-height: 0;
+}
+
+.location-grade-page__left,
+.location-grade-page__right,
+.location-grade-page__bottom {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.location-grade-toolbar {
+  gap: 14px;
+}
+
+.location-grade-toolbar__fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 12px 16px;
+}
+
+.location-grade-toolbar__bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px 16px;
+  align-items: center;
+}
+
+.location-grade-toolbar__feedback {
+  min-width: 0;
+}
+
+.location-grade-toolbar__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.location-grade-table-panel,
+.location-grade-control-panel,
+.location-grade-result-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 0;
+  padding: 20px;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.location-grade-table-panel,
+.location-grade-control-panel {
+  height: 400px;
+}
+
+.location-grade-result-panel {
+  height: 230px;
+}
+
+.location-grade-table-panel__header,
+.location-grade-control-panel__header,
+.location-grade-result-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.location-grade-table-panel__eyebrow,
+.location-grade-control-panel__eyebrow,
+.location-grade-result-panel__eyebrow {
+  margin: 0 0 6px 0;
+  font-size: 12px;
+  font-weight: 800;
+  color: #2563eb;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.location-grade-table-panel__title,
+.location-grade-control-panel__title,
+.location-grade-result-panel__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 900;
+  color: #122033;
+}
+
+.location-grade-table-panel__count {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #edf3f8;
+  color: #486078;
+  font-size: 12px;
+  font-weight: 800;
+  border: 1px solid #d4e0ea;
+}
+
+.location-grade-table-panel__body,
+.location-grade-control-panel__body,
+.location-grade-result-panel__body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.location-grade-table-panel__empty {
+  text-align: center;
+  color: #7a8898;
+}
+
+.location-grade-table-panel__grade {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  background: #edf3f8;
+  color: #334155;
+  border: 1px solid #d4e0ea;
+}
+
+.location-grade-table-panel__grade--A {
+  background: #eaf2ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+}
+
+.location-grade-table-panel__grade--B {
+  background: #ecfdf3;
+  color: #15803d;
+  border-color: #bbf7d0;
+}
+
+.location-grade-table-panel__grade--C {
+  background: #fff7ed;
+  color: #c2410c;
+  border-color: #fed7aa;
+}
+
+.location-grade-table-panel__grade--D {
+  background: #f8fafc;
+  color: #64748b;
+  border-color: #e2e8f0;
+}
+
+.location-grade-control-panel__body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.location-grade-control-panel__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.location-grade-control-panel__section-title {
+  font-size: 13px;
+  font-weight: 900;
+  color: #1f3b62;
+}
+
+.location-grade-control-panel__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.location-grade-control-panel__guide,
+.location-grade-control-panel__info-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.location-grade-control-panel__guide div,
+.location-grade-control-panel__info-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #f7f9fc;
+  border: 1px solid #dfe7ef;
+}
+
+.location-grade-control-panel__guide span,
+.location-grade-control-panel__info-list span {
+  font-size: 12px;
+  font-weight: 800;
+  color: #64748b;
+}
+
+.location-grade-control-panel__guide strong,
+.location-grade-control-panel__info-list strong {
+  font-size: 13px;
+  font-weight: 900;
+  color: #10233a;
+  text-align: right;
+}
+
+.location-grade-control-panel__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 8px;
+  border-top: 1px solid #e5edf4;
+}
+
+.location-grade-result-panel__summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.location-grade-result-panel__grade-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.location-grade-result-panel__summary-card,
+.location-grade-result-panel__grade-card,
+.location-grade-result-panel__message {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #f7f9fc;
+  border: 1px solid #dfe7ef;
+}
+
+.location-grade-result-panel__summary-card span,
+.location-grade-result-panel__grade-card span,
+.location-grade-result-panel__message span {
+  font-size: 12px;
+  font-weight: 800;
+  color: #64748b;
+}
+
+.location-grade-result-panel__summary-card strong,
+.location-grade-result-panel__grade-card strong,
+.location-grade-result-panel__message strong {
+  font-size: 20px;
+  font-weight: 900;
+  color: #10233a;
+}
+
+.location-grade-result-panel__message strong {
+  font-size: 13px;
+  word-break: break-all;
+}
+
+@media (max-width: 1440px) {
+  .location-grade-page__content {
+    grid-template-columns: 1fr;
+  }
+
+  .location-grade-toolbar__fields {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+
+  .location-grade-toolbar__bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .location-grade-toolbar__actions {
+    justify-content: flex-start;
+  }
+
+  .location-grade-control-panel {
+    height: auto;
+  }
+}
+
+@media (max-width: 960px) {
+  .location-grade-toolbar__fields,
+  .location-grade-result-panel__summary-grid,
+  .location-grade-result-panel__grade-grid {
+    grid-template-columns: 1fr;
+  }
+}

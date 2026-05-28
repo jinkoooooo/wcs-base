@@ -1,0 +1,370 @@
+// ============================================
+// _tokens.scss
+// 대시보드 디자인 토큰 정의
+// ============================================
+// 이 파일은 대시보드 전체에서 일관된 디자인을 유지하기 위한
+// CSS 변수들을 정의합니다. 모든 패널, 카드, 상태 색상 등이
+// 이 토큰을 참조하여 통일성을 유지합니다.
+// ============================================
+
+:root {
+  // ========================================
+  // 패널 공통 토큰
+  // ========================================
+  --panel-bg: rgba(20, 22, 28, 0.92);
+  --panel-bg-solid: #14161c;
+  --panel-bg-hover: rgba(30, 34, 45, 0.95);
+  --panel-bg-active: rgba(40, 44, 55, 0.98);
+  --panel-border: rgba(255, 255, 255, 0.12);
+  --panel-border-hover: rgba(255, 255, 255, 0.18);
+  --panel-border-active: rgba(64, 158, 255, 0.5);
+  --panel-radius: 12px;
+  --panel-radius-sm: 8px;
+  --panel-radius-xs: 6px;
+  --panel-blur: 12px;
+  --panel-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --panel-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+
+  // ========================================
+  // 간격 토큰
+  // ========================================
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+
+  // ========================================
+  // 폰트 토큰
+  // ========================================
+  --font-size-2xs: 9px;
+  --font-size-xs: 10px;
+  --font-size-sm: 11px;
+  --font-size-md: 12px;
+  --font-size-lg: 14px;
+  --font-size-xl: 16px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 28px;
+  --font-size-4xl: 36px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.6;
+
+  // ========================================
+  // 텍스트 색상 토큰
+  // ========================================
+  --text-primary: #e5eaf3;
+  --text-secondary: #c0c4cc;
+  --text-muted: #909399;
+  --text-disabled: #606266;
+  --text-inverse: #1e222d;
+
+  // ========================================
+  // KPI 카드 토큰
+  // ========================================
+  --kpi-card-width: 140px;
+  --kpi-card-height: 72px;
+  --kpi-card-min-width: 56px;
+  --kpi-value-size: var(--font-size-2xl);
+  --kpi-label-size: var(--font-size-xs);
+
+  // ========================================
+  // 상태 색상 토큰 (더 선명하고 구분 명확하게)
+  // ========================================
+
+  // 정상 상태 (녹색)
+  --status-normal: #67c23a;
+  --status-normal-bright: #85ce61;
+  --status-normal-bg: rgba(103, 194, 58, 0.15);
+  --status-normal-bg-solid: #1a2d15;
+  --status-normal-border: rgba(103, 194, 58, 0.4);
+
+  // 작업중/이동중 상태 (파란색)
+  --status-working: #409eff;
+  --status-working-bright: #66b1ff;
+  --status-working-bg: rgba(64, 158, 255, 0.15);
+  --status-working-bg-solid: #152840;
+  --status-working-border: rgba(64, 158, 255, 0.4);
+
+  // 경고 상태 (주황색)
+  --status-warning: #e6a23c;
+  --status-warning-bright: #ebb563;
+  --status-warning-bg: rgba(230, 162, 60, 0.15);
+  --status-warning-bg-solid: #332815;
+  --status-warning-border: rgba(230, 162, 60, 0.4);
+
+  // 에러 상태 (빨간색)
+  --status-error: #f56c6c;
+  --status-error-bright: #f78989;
+  --status-error-bg: rgba(245, 108, 108, 0.15);
+  --status-error-bg-solid: #331a1a;
+  --status-error-border: rgba(245, 108, 108, 0.4);
+
+  // 위험/크리티컬 상태 (더 진한 빨간색)
+  --status-critical: #ff4757;
+  --status-critical-bright: #ff6b7a;
+  --status-critical-bg: rgba(255, 71, 87, 0.2);
+  --status-critical-bg-solid: #401520;
+  --status-critical-border: rgba(255, 71, 87, 0.5);
+
+  // 오프라인/비활성 상태 (회색)
+  --status-offline: #606266;
+  --status-offline-bright: #909399;
+  --status-offline-bg: rgba(96, 98, 102, 0.15);
+  --status-offline-bg-solid: #1a1a1c;
+  --status-offline-border: rgba(96, 98, 102, 0.4);
+
+  // 충전 상태 (보라색)
+  --status-charging: #9b59b6;
+  --status-charging-bright: #b07cc6;
+  --status-charging-bg: rgba(155, 89, 182, 0.15);
+  --status-charging-bg-solid: #251a2d;
+  --status-charging-border: rgba(155, 89, 182, 0.4);
+
+  // ========================================
+  // 트랜지션 토큰
+  // ========================================
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  --transition-very-slow: 0.5s ease;
+
+  // ========================================
+  // z-index 토큰
+  // ========================================
+  --z-equipment: 10;
+  --z-conveyor-cargo: 75;
+  --z-rack-inventory: 80;
+  --z-moving-cargo: 90;
+  --z-lifter: 95;
+  --z-shuttle: 100;
+  --z-shuttle-selected: 150;
+  --z-ui-controls: 600;
+  --z-popup: 700;
+  --z-modal: 800;
+  --z-toast: 900;
+
+  // ========================================
+  // 상태 바 토큰
+  // ========================================
+  --status-bar-height: 56px;
+  --status-bar-bg: var(--panel-bg);
+  --status-bar-border: var(--panel-border);
+
+  // ========================================
+  // 검색 바 토큰
+  // ========================================
+  --search-bar-width: 400px;
+  --search-bar-max-height: 480px;
+  --search-result-height: 48px;
+
+  // ========================================
+  // 버튼 토큰
+  // ========================================
+  --btn-height-sm: 28px;
+  --btn-height-md: 32px;
+  --btn-height-lg: 36px;
+  --btn-padding-sm: 6px 12px;
+  --btn-padding-md: 8px 16px;
+  --btn-padding-lg: 10px 20px;
+  --btn-radius: 6px;
+
+  // ========================================
+  // 배지 토큰
+  // ========================================
+  --badge-height: 20px;
+  --badge-padding: 2px 8px;
+  --badge-radius: 10px;
+  --badge-font-size: var(--font-size-xs);
+
+  // ========================================
+  // 아이콘 토큰
+  // ========================================
+  --icon-size-xs: 12px;
+  --icon-size-sm: 14px;
+  --icon-size-md: 16px;
+  --icon-size-lg: 20px;
+  --icon-size-xl: 24px;
+
+  // ========================================
+  // 운영 상태 공통 semantic 토큰
+  // ========================================
+
+  // 정상
+  --op-state-normal: var(--status-normal);
+  --op-state-normal-glow: rgba(103, 194, 58, 0.35);
+
+  // 작업 있음 / 동작 중
+  --op-state-active: #2f7dff;
+  --op-state-active-bright: #5a9cff;
+  --op-state-active-glow-sm: rgba(47, 125, 255, 0.22);
+  --op-state-active-glow-md: rgba(47, 125, 255, 0.40);
+  --op-state-active-glow-lg: rgba(47, 125, 255, 0.24);
+  --op-state-active-bg: rgba(47, 125, 255, 0.18);
+
+  // 화물 있음
+  --op-state-loaded: var(--status-normal);
+  --op-state-loaded-glow: rgba(103, 194, 58, 0.35);
+
+  // 경고
+  --op-state-warning: var(--status-warning);
+  --op-state-warning-glow: rgba(230, 162, 60, 0.35);
+
+  // 에러
+  --op-state-error: var(--status-error);
+  --op-state-error-glow: rgba(245, 108, 108, 0.35);
+
+  // 충전
+  --op-state-charging: var(--status-charging);
+  --op-state-charging-glow: rgba(155, 89, 182, 0.35);
+}
+
+// ============================================
+// 유틸리티 믹스인
+// ============================================
+
+// 패널 기본 스타일 믹스인
+@mixin panel-base {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--panel-radius);
+  backdrop-filter: blur(var(--panel-blur));
+  box-shadow: var(--panel-shadow);
+}
+
+// 패널 호버 스타일 믹스인
+@mixin panel-interactive {
+  transition: border-color var(--transition-normal),
+              box-shadow var(--transition-normal);
+
+  &:hover {
+    border-color: var(--panel-border-hover);
+  }
+
+  &.active,
+  &:focus-within {
+    border-color: var(--panel-border-active);
+    box-shadow: var(--panel-shadow), 0 0 0 1px var(--panel-border-active);
+  }
+}
+
+// 상태 배지 믹스인
+@mixin status-badge($color-var) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--badge-height);
+  padding: var(--badge-padding);
+  border-radius: var(--badge-radius);
+  font-size: var(--badge-font-size);
+  font-weight: var(--font-weight-semibold);
+  background: var(#{$color-var}-bg);
+  color: var(#{$color-var});
+  border: 1px solid var(#{$color-var}-border);
+}
+
+// 상태 카드 믹스인
+@mixin status-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs) var(--spacing-md);
+  min-width: var(--kpi-card-min-width);
+  border-radius: var(--panel-radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &.active {
+    background: var(--status-working-bg);
+    border-color: var(--status-working);
+  }
+}
+
+// 에러 펄스 애니메이션
+@mixin error-pulse {
+  animation: error-pulse 2s infinite;
+}
+
+@keyframes error-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+// 에러 글로우 애니메이션
+@mixin error-glow {
+  animation: error-glow 1.5s infinite;
+}
+
+@keyframes error-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(245, 108, 108, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 12px 2px rgba(245, 108, 108, 0.6);
+  }
+}
+
+// 에러 링 펄스 애니메이션
+@keyframes error-ring-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.5;
+  }
+}
+
+// 슬라이드 다운 애니메이션
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// 페이드 인 애니메이션
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// 스케일 인 애니메이션
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,2 @@
+include ':next-dev', ':next-base', ':next-core', ':next-msg',
+        ':next-sec', ':next-sys', ':next-orm', ':next-util', ':next-exception', ':next-dbist'

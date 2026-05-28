@@ -1,0 +1,54 @@
+{
+  "functionName": "ZWM_WES_SIRIAL_SEND",
+  "isSend": false,
+  "importParams": {
+    "I_WERKS": "2009",
+    "I_ERDAT": null
+  },
+  "exportParams": {
+    "O_MSGTY": "",
+    "O_MSGLIN": "",
+    "E_XC_E_TIME": ""
+  },
+  "tableDataMap": {
+    "GT_TAB": []
+  },
+  "fieldsMap": {
+    "GT_TAB": [
+      "COM_CD",
+      "SKU_CD",
+      "SERIAL_NO",
+      "MOVE_TYPE",
+      "STORAGE_LOC",
+      "ZERDAT",
+      "ZERZET",
+      "ERROR_CODE",
+      "ERROR_REASON"
+    ]
+  },
+  "mappingMap": {
+    "GT_TAB": {
+      "COM_CD": "ZWERKS",
+      "SKU_CD": "MATNR",
+      "SERIAL_NO": "SERNR",
+      "MOVE_TYPE": "ZBWART",
+      "STORAGE_LOC": "LGORT",
+      "ERROR_CODE": "ERROR_CODE",
+      "ERROR_REASON": "ERROR_REASON"
+    }
+  },
+  "typeMap": {
+    "GT_TAB": {
+      "ZWERKS": "CHAR",
+      "MATNR": "CHAR",
+      "SERNR": "CHAR",
+      "ZBWART": "CHAR",
+      "LGORT": "CHAR",
+      "ZERDAT": "DATS",
+      "ZERZET": "TIMS",
+      "ERROR_CODE": "CHAR",
+      "ERROR_REASON": "CHAR"
+    }
+  },
+  "enDecryptFields": []
+}

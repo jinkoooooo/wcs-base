@@ -1,0 +1,14 @@
+==== [17:30:12] ====
+{
+  "requestedAt" : null,
+  "parcelId" : null,
+  "plcSeqNo" : null,
+  "resultType" : null,
+  "lineId" : null,
+  "equipId" : "EQUIP01",
+  "commandId" : "CMD-001",
+  "executedAt" : null,
+  "result" : null,
+  "message" : null
+}
+

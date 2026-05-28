@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>$title</title>
+		<style></style>
+	</head>
+
+	<body>
+		<div style="border:5px solid #40ba54;margin:10px;padding:10px;">
+	 		<div style="font-size:28px;font-weight:bold;color:#40ba54;text-transform:capitalize">
+				$domain.brandName
+				<span style="color:#4a5253">Mailing Service</span>
+			</div>
+			<div style="background:#f4f4f4;margin-bottom:5px;padding:3px 10px;color:#666;line-height:1.5;">
+				<h2>$title</h2>
+
+				<ul>
+					<li>Domain : $domain.brandName</li>
+					<li>Requester ID : $account.login</li>
+					<li>Requester Name : $account.name</li>
+					<li>Requester Email : $account.email</li>
+					<li>Approver Name : $approver.name</li>
+					<li>Requested At : $processedAt</li>
+				</ul>
+			</div>
+	
+			<div style="border-top:1px solid #ccc;padding:10px 5px 30px 5px;font-size:12px">
+			    <a href="$link">$domain.brandName URL</a>
+			</div>
+	 	</div>
+	</body>
+
+</html>

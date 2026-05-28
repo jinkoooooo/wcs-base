@@ -1,0 +1,2498 @@
+[
+  {
+    "id": 1,
+    "name": "NULL_OBJECT_NOT_ALLOWED",
+    "locale": "ko-KR",
+    "display": "Null 객체는 허용되는 않습니다."
+  },
+  {
+    "id": 2,
+    "name": "USER_REQUEST",
+    "locale": "ko-KR",
+    "display": "시스템 계정 등록 요청."
+  },
+  {
+    "id": 3,
+    "name": "CREATE_FILE_ERROR",
+    "locale": "ko-KR",
+    "display": "File 생성 중 에러가 발생하였습니다."
+  },
+  {
+    "id": 4,
+    "name": "FILE_ROOT_PATH_NOT_EXIST",
+    "locale": "ko-KR",
+    "display": "Root path가 올바르지 않습니다."
+  },
+  {
+    "id": 5,
+    "name": "UPLOAD_FILE_SIZE_LIMIT_ERROR",
+    "locale": "ko-KR",
+    "display": "업로드 가능한 파일 용량을 초과하였습니다."
+  },
+  {
+    "id": 6,
+    "name": "TABLE_DOES_NOT_EXIST",
+    "locale": "ko-KR",
+    "display": "Table이 존재하지 않습니다."
+  },
+  {
+    "id": 7,
+    "name": "USER_REJECT",
+    "locale": "ko-KR",
+    "display": "계정 신청이 반려되었습니다."
+  },
+  {
+    "id": 8,
+    "name": "NOT_AUTHORIZED_USER",
+    "locale": "ko-KR",
+    "display": "인증되지 않은 사용자 입니다."
+  },
+  {
+    "id": 9,
+    "name": "USER_APPROVAL",
+    "locale": "ko-KR",
+    "display": "계정 신청이 승인되었습니다."
+  },
+  {
+    "id": 10,
+    "name": "USER_COMPLETE_INIT_PASS",
+    "locale": "ko-KR",
+    "display": "비밀번호 초기화가 완료되었습니다."
+  },
+  {
+    "id": 11,
+    "name": "USER_REQUEST_INIT_PASS",
+    "locale": "ko-KR",
+    "display": "비밀번호 초기화 요청드립니다."
+  },
+  {
+    "id": 12,
+    "name": "FILE_DOWNLOAD_ERROR",
+    "locale": "ko-KR",
+    "display": "File Download 실행 중, 에러가 발생하였습니다."
+  },
+  {
+    "id": 13,
+    "name": "NOT_SUPPORTED_TYPE",
+    "locale": "ko-KR",
+    "display": "지원되지 않는 {0} Type입니다. [{1}]"
+  },
+  {
+    "id": 14,
+    "name": "UNKNOWN_TYPE",
+    "locale": "ko-KR",
+    "display": "알 수 없는 타입 형식입니다. [{0}]"
+  },
+  {
+    "id": 15,
+    "name": "IS_NOT_ENTITY",
+    "locale": "ko-KR",
+    "display": "엔티티 이름이 올바르지 않습니다. [{0}]"
+  },
+  {
+    "id": 16,
+    "name": "USER_NOT_EXIST",
+    "locale": "ko-KR",
+    "display": "사용자가 존재하지 않습니다."
+  },
+  {
+    "id": 17,
+    "name": "USER_INVALID_ID_OR_PASS",
+    "locale": "ko-KR",
+    "display": "ID 또는 비밀번호가 올바르지 않습니다."
+  },
+  {
+    "id": 18,
+    "name": "DOMAIN_NOT_EXIST",
+    "locale": "ko-KR",
+    "display": "요청한 서버 정보 ({0})로 Domain 정보를 찾을 수 없습니다."
+  },
+  {
+    "id": 19,
+    "name": "FILE_DEFAULT_PATH_IS_EMPTY",
+    "locale": "en-US",
+    "display": "Default Path is empty."
+  },
+  {
+    "id": 20,
+    "name": "NOT_SUPPORTED_YET",
+    "locale": "en-US",
+    "display": "Not Supported Yet!"
+  },
+  {
+    "id": 21,
+    "name": "HAS_ONE_OR_MORE_DATA",
+    "locale": "en-US",
+    "display": "Can not delete it, It Has one or more data."
+  },
+  {
+    "id": 22,
+    "name": "FILE_NOT_FOUND",
+    "locale": "en-US",
+    "display": "File({0}) Not Found."
+  },
+  {
+    "id": 23,
+    "name": "USER_NOT_EXIST",
+    "locale": "en-US",
+    "display": "User does not exist"
+  },
+  {
+    "id": 24,
+    "name": "NEED_OPTION",
+    "locale": "ko-KR",
+    "display": "이 타입은 반드시 [{0}] 옵션이 필요합니다."
+  },
+  {
+    "id": 25,
+    "name": "FILE_NOT_FOUND",
+    "locale": "ko-KR",
+    "display": "파일({0})을 찾을수가 없습니다."
+  },
+  {
+    "id": 26,
+    "name": "NOT_SUPPORTED_YET",
+    "locale": "ko-KR",
+    "display": "아직 지원되지 않는 기능입니다."
+  },
+  {
+    "id": 27,
+    "name": "TC-WIP-001",
+    "locale": "ko-KR",
+    "display": "{0}이(가) 존재하지 않습니다."
+  },
+  {
+    "id": 28,
+    "name": "TC-WIP-001",
+    "locale": "zh-CN",
+    "display": "{0} 不存在。"
+  },
+  {
+    "id": 29,
+    "name": "TC-WIP-001",
+    "locale": "en-US",
+    "display": "{0} does not exist"
+  },
+  {
+    "id": 30,
+    "name": "TC-WIP-002",
+    "locale": "en-US",
+    "display": "{0} is not {1} state."
+  },
+  {
+    "id": 31,
+    "name": "TC-WIP-002",
+    "locale": "ko-KR",
+    "display": "{0}이(가) {1} 상태가 아닙니다."
+  },
+  {
+    "id": 32,
+    "name": "TC-WIP-002",
+    "locale": "zh-CN",
+    "display": "{0} 不是 {1} 状态。"
+  },
+  {
+    "id": 33,
+    "name": "TC-WIP-003",
+    "locale": "ko-KR",
+    "display": "{0} 상태가 {1} 입니다."
+  },
+  {
+    "id": 34,
+    "name": "TC-WIP-003",
+    "locale": "zh-CN",
+    "display": "{0}的状态是 {1}。"
+  },
+  {
+    "id": 35,
+    "name": "TC-WIP-003",
+    "locale": "en-US",
+    "display": "State of {0} is {1} state."
+  },
+  {
+    "id": 36,
+    "name": "TC-WIP-004",
+    "locale": "zh-CN",
+    "display": "{0} 和 {1}失配"
+  },
+  {
+    "id": 37,
+    "name": "TC-WIP-004",
+    "locale": "ko-KR",
+    "display": "{0}와(과) {1}이(가) 맞지 않습니다."
+  },
+  {
+    "id": 38,
+    "name": "TC-WIP-004",
+    "locale": "en-US",
+    "display": "Mismatch {0} and {1}."
+  },
+  {
+    "id": 39,
+    "name": "BAD_REQUEST",
+    "locale": "en-US",
+    "display": "Bad Request."
+  },
+  {
+    "id": 40,
+    "name": "BAD_REQUEST",
+    "locale": "ko-KR",
+    "display": "잘못된 요청입니다."
+  },
+  {
+    "id": 41,
+    "name": "TITLE_INVALID_PARAM",
+    "locale": "en-US",
+    "display": "Invalid Parameter Error"
+  },
+  {
+    "id": 42,
+    "name": "TITLE_DATA_BASE_ERROR",
+    "locale": "en-US",
+    "display": "Database Error"
+  },
+  {
+    "id": 43,
+    "name": "RECORD_NOT_FOUND",
+    "locale": "en-US",
+    "display": "Record not found."
+  },
+  {
+    "id": 44,
+    "name": "PARSE_INPUT_ERROR",
+    "locale": "en-US",
+    "display": "Error occured at converting input Data."
+  },
+  {
+    "id": 45,
+    "name": "INVALID_PARAM",
+    "locale": "en-US",
+    "display": "Parameter (name : {0}, value : {1}) is not valid."
+  },
+  {
+    "id": 46,
+    "name": "EMPTY_PARAM",
+    "locale": "en-US",
+    "display": "Empty {0} is not allowed!"
+  },
+  {
+    "id": 47,
+    "name": "TITLE_VALIDATION_ERROR",
+    "locale": "en-US",
+    "display": "Validation Error"
+  },
+  {
+    "id": 48,
+    "name": "TITLE_SERVICE_ERROR",
+    "locale": "en-US",
+    "display": "Service Error"
+  },
+  {
+    "id": 49,
+    "name": "TITLE_SCRIPT_RUNTIME_ERROR",
+    "locale": "en-US",
+    "display": "Script Error"
+  },
+  {
+    "id": 50,
+    "name": "TITLE_RUNTIME_ERROR",
+    "locale": "en-US",
+    "display": "Runtime Error"
+  },
+  {
+    "id": 51,
+    "name": "TITLE_INVALID_STATUS",
+    "locale": "en-US",
+    "display": "Service Invalid Status Error"
+  },
+  {
+    "id": 52,
+    "name": "TITLE_ALREADY_EXIST",
+    "locale": "en-US",
+    "display": "Record Already Exist Error"
+  },
+  {
+    "id": 53,
+    "name": "TITLE_SERVICE_NOT_FOUND",
+    "locale": "en-US",
+    "display": "Service Not Found Error"
+  },
+  {
+    "id": 54,
+    "name": "TITLE_RECORD_NOT_FOUND",
+    "locale": "en-US",
+    "display": "Record Not Found Error"
+  },
+  {
+    "id": 55,
+    "name": "TITLE_PARSE_INPUT_ERROR",
+    "locale": "en-US",
+    "display": "Converting (Input Parameters) Error"
+  },
+  {
+    "id": 56,
+    "name": "TITLE_BAD_REQUEST",
+    "locale": "en-US",
+    "display": "Bad Request"
+  },
+  {
+    "id": 57,
+    "name": "TITLE_PARSE_OUTPUT_ERROR",
+    "locale": "en-US",
+    "display": "Parse Output Error"
+  },
+  {
+    "id": 58,
+    "name": "PARSE_OUTPUT_ERROR",
+    "locale": "en-US",
+    "display": "Error occured while Output Data converting."
+  },
+  {
+    "id": 59,
+    "name": "RUNTIME_ERROR",
+    "locale": "en-US",
+    "display": "Unexpected error occured during at runtime."
+  },
+  {
+    "id": 60,
+    "name": "SCRIPT_RUNTIME_ERROR",
+    "locale": "en-US",
+    "display": "Error occured while run script."
+  },
+  {
+    "id": 61,
+    "name": "INVALID_STATUS",
+    "locale": "en-US",
+    "display": "Invalid status."
+  },
+  {
+    "id": 62,
+    "name": "VALIDATION_ERROR",
+    "locale": "en-US",
+    "display": "Error occured during validation."
+  },
+  {
+    "id": 63,
+    "name": "ALREADY_EXIST",
+    "locale": "en-US",
+    "display": "Data aleady exist."
+  },
+  {
+    "id": 64,
+    "name": "SERVICE_ERROR",
+    "locale": "en-US",
+    "display": "Error occured while run service."
+  },
+  {
+    "id": 65,
+    "name": "SERVICE_NOT_FOUND",
+    "locale": "en-US",
+    "display": "Service does not exist."
+  },
+  {
+    "id": 66,
+    "name": "DATA_BASE_ERROR",
+    "locale": "en-US",
+    "display": "Error occured during query excuting."
+  },
+  {
+    "id": 67,
+    "name": "COULD_NOT_INSTANTIATE",
+    "locale": "en-US",
+    "display": "{0} Could not instantiate Class. ({1})"
+  },
+  {
+    "id": 68,
+    "name": "FAILED_TO_PROCESS_TEMPLATE",
+    "locale": "en-US",
+    "display": "Failed to Process {0} Template."
+  },
+  {
+    "id": 69,
+    "name": "KEY_AND_VALUE_MISMATCH",
+    "locale": "en-US",
+    "display": "keys count and values count mismatch."
+  },
+  {
+    "id": 70,
+    "name": "MISMATCH_STATUS",
+    "locale": "en-US",
+    "display": "The {0} ({1}) is not [{2}] Status."
+  },
+  {
+    "id": 71,
+    "name": "IS_NOT_INSTANCE_OF",
+    "locale": "en-US",
+    "display": "Invalid {0} Class ({1}) - Class is not instance of {2}."
+  },
+  {
+    "id": 72,
+    "name": "FIELD_NOT_EXIST",
+    "locale": "en-US",
+    "display": "[{0}] Field does not exist."
+  },
+  {
+    "id": 73,
+    "name": "NOT_FOUND_KEY",
+    "locale": "en-US",
+    "display": "Empty key found at key parameters."
+  },
+  {
+    "id": 74,
+    "name": "INVALID_KEYS",
+    "locale": "en-US",
+    "display": "Invalid keys of entity!"
+  },
+  {
+    "id": 75,
+    "name": "HAS_DETAIL_DATA",
+    "locale": "en-US",
+    "display": "There are detail data in entity ({0}), Please re-try after deleting detail data."
+  },
+  {
+    "id": 76,
+    "name": "NOT_FOUND_UNIQUE_FIELDS",
+    "locale": "en-US",
+    "display": "Not found uniqueFields in entity ({0})"
+  },
+  {
+    "id": 77,
+    "name": "EMPTY_CUD_FLAG_VALUE",
+    "locale": "en-US",
+    "display": "Failed to get cudFlag value."
+  },
+  {
+    "id": 78,
+    "name": "FAILED_META_SETUP",
+    "locale": "en-US",
+    "display": "Failed to setup detail meta."
+  },
+  {
+    "id": 79,
+    "name": "INVALID_DATA_TYPE",
+    "locale": "en-US",
+    "display": "Data Type[{0}] is not valid."
+  },
+  {
+    "id": 80,
+    "name": "INVALID_FILE",
+    "locale": "en-US",
+    "display": "Invalid file [{0}]."
+  },
+  {
+    "id": 81,
+    "name": "NOT_CONNECTED",
+    "locale": "en-US",
+    "display": "Not Connected."
+  },
+  {
+    "id": 82,
+    "name": "NOT_FOUND_CUD_FLAG",
+    "locale": "en-US",
+    "display": "There is no \u0027cudFlag\u0027 in the entity class [{0}]"
+  },
+  {
+    "id": 83,
+    "name": "HAS_NO_CONSTRUCTOR",
+    "locale": "en-US",
+    "display": "Entity class has no default constructor."
+  },
+  {
+    "id": 84,
+    "name": "STREAMING_ERROR",
+    "locale": "en-US",
+    "display": "Streaming error"
+  },
+  {
+    "id": 85,
+    "name": "FILE_COPY_FAILED",
+    "locale": "en-US",
+    "display": "Failed to copy file!"
+  },
+  {
+    "id": 86,
+    "name": "MISMATCH_PARAM_COUNT",
+    "locale": "en-US",
+    "display": "Invalid query - Parameter count mismatch. [{0}:{1}]"
+  },
+  {
+    "id": 87,
+    "name": "GENERATE_FAIL",
+    "locale": "en-US",
+    "display": "Failed to generate service!"
+  },
+  {
+    "id": 88,
+    "name": "NOT_SUPPORTED_METHOD",
+    "locale": "en-US",
+    "display": "Not supported method."
+  },
+  {
+    "id": 89,
+    "name": "MORE_THAN_ONE_ERROR",
+    "locale": "en-US",
+    "display": "There are data more than one."
+  },
+  {
+    "id": 90,
+    "name": "NOT_FOUND",
+    "locale": "en-US",
+    "display": "{0}({1}) not found."
+  },
+  {
+    "id": 91,
+    "name": "IS_NOT_IN_USE_LISTENER",
+    "locale": "en-US",
+    "display": "It\u0027s not running listener."
+  },
+  {
+    "id": 92,
+    "name": "DOES_NOT_PROCEED",
+    "locale": "en-US",
+    "display": "{0} is not on the process."
+  },
+  {
+    "id": 93,
+    "name": "IS_NOT_RUNNING",
+    "locale": "en-US",
+    "display": "{0} is not Running."
+  },
+  {
+    "id": 94,
+    "name": "ALREADY_PROCEED",
+    "locale": "en-US",
+    "display": "{0} is alread on process."
+  },
+  {
+    "id": 95,
+    "name": "INVALID_SERVICE_URL",
+    "locale": "en-US",
+    "display": "Invalid Restful Service URL({0})."
+  },
+  {
+    "id": 96,
+    "name": "NOT_FOUND_URL",
+    "locale": "en-US",
+    "display": "Not found service at URL ({0})."
+  },
+  {
+    "id": 97,
+    "name": "DATA_BASE_ERROR",
+    "locale": "ko-KR",
+    "display": "Query 실행 중 에러가 발생하였습니다."
+  },
+  {
+    "id": 98,
+    "name": "ALREADY_EXIST",
+    "locale": "ko-KR",
+    "display": "데이터가 이미 존재 합니다."
+  },
+  {
+    "id": 99,
+    "name": "MISMATCH_STATUS",
+    "locale": "ko-KR",
+    "display": "{0} ({1})은(는) [{2}] 상태가 아닙니다."
+  },
+  {
+    "id": 100,
+    "name": "EMPTY_CUD_FLAG_VALUE",
+    "locale": "ko-KR",
+    "display": "cudFlag의 값을 가져오는데 실패하였습니다."
+  },
+  {
+    "id": 101,
+    "name": "EMPTY_PARAM",
+    "locale": "ko-KR",
+    "display": "{0}의 빈값을 허용할 수 없습니다."
+  },
+  {
+    "id": 102,
+    "name": "DOES_NOT_PROCEED",
+    "locale": "ko-KR",
+    "display": "진행 중인 {0}(이)가 아닙니다."
+  },
+  {
+    "id": 103,
+    "name": "HAS_DETAIL_DATA",
+    "locale": "ko-KR",
+    "display": "엔티티 ({0})에 Detail Data가 존재합니다. Detail 데이터 삭제 후 다시 시도해주세요."
+  },
+  {
+    "id": 104,
+    "name": "FAILED_TO_PROCESS_TEMPLATE",
+    "locale": "ko-KR",
+    "display": "{0} 템플릿 프로세스를 실패하였습니다."
+  },
+  {
+    "id": 105,
+    "name": "FIELD_NOT_EXIST",
+    "locale": "ko-KR",
+    "display": "[{0}] 필드가 존재하지 않습니다."
+  },
+  {
+    "id": 106,
+    "name": "FILE_COPY_FAILED",
+    "locale": "ko-KR",
+    "display": "파일 복사에 실패하였습니다."
+  },
+  {
+    "id": 107,
+    "name": "INVALID_DATA_TYPE",
+    "locale": "ko-KR",
+    "display": "Data Type[{0}]이 올바르지 않습니다."
+  },
+  {
+    "id": 108,
+    "name": "INVALID_FILE",
+    "locale": "ko-KR",
+    "display": "[{0}] (은)는 유효한 파일이 아닙니다."
+  },
+  {
+    "id": 109,
+    "name": "FILE_DEFAULT_PATH_IS_EMPTY",
+    "locale": "ko-KR",
+    "display": "기본 Path가 비어 있습니다."
+  },
+  {
+    "id": 110,
+    "name": "GENERATE_FAIL",
+    "locale": "ko-KR",
+    "display": "서비스 생성에 실패하였습니다."
+  },
+  {
+    "id": 111,
+    "name": "HAS_NO_CONSTRUCTOR",
+    "locale": "ko-KR",
+    "display": "엔티티 클래스에 기본 생성자가 없습니다."
+  },
+  {
+    "id": 112,
+    "name": "INVALID_KEYS",
+    "locale": "ko-KR",
+    "display": "엔티티의 키가 올바르지 않습니다."
+  },
+  {
+    "id": 113,
+    "name": "INVALID_SERVICE_URL",
+    "locale": "ko-KR",
+    "display": "Restful Service URL({0}) 이 올바르지 않습니다."
+  },
+  {
+    "id": 114,
+    "name": "HAS_ONE_OR_MORE_DATA",
+    "locale": "ko-KR",
+    "display": "한개 이상의 데이터가 포함되어 삭제할 수 없습니다."
+  },
+  {
+    "id": 115,
+    "name": "NOT_FOUND_URL",
+    "locale": "ko-KR",
+    "display": "URL({0})에서 서비스를 찾을 수 없습니다."
+  },
+  {
+    "id": 116,
+    "name": "IS_NOT_INSTANCE_OF",
+    "locale": "ko-KR",
+    "display": "유효하지 않은 {0} 클래스 ({1}) - 클래스가 {2}의 구현체가 아닙니다."
+  },
+  {
+    "id": 117,
+    "name": "COULD_NOT_INSTANTIATE",
+    "locale": "ko-KR",
+    "display": "{0}은(는) 인스턴스화 할수 없습니다. ({1})"
+  },
+  {
+    "id": 118,
+    "name": "ALREADY_PROCEED",
+    "locale": "ko-KR",
+    "display": "이미 실행 중인 {0}입니다."
+  },
+  {
+    "id": 119,
+    "name": "FAILED_META_SETUP",
+    "locale": "ko-KR",
+    "display": "detail meta를 설정에 실패하였습니다."
+  },
+  {
+    "id": 120,
+    "name": "IS_NOT_RUNNING",
+    "locale": "ko-KR",
+    "display": "{0} 이(가) 실행중이지 않습니다."
+  },
+  {
+    "id": 121,
+    "name": "NOT_FOUND",
+    "locale": "ko-KR",
+    "display": "{0}({1}) 을(를) 찾을수 없습니다."
+  },
+  {
+    "id": 122,
+    "name": "IS_NOT_IN_USE_LISTENER",
+    "locale": "ko-KR",
+    "display": "실행 중인 Listener가 아닙니다."
+  },
+  {
+    "id": 123,
+    "name": "MORE_THAN_ONE_ERROR",
+    "locale": "ko-KR",
+    "display": "하나 이상의 데이터가 존재합니다."
+  },
+  {
+    "id": 124,
+    "name": "ALREADY_BEEN_PROCEEDED",
+    "locale": "ko-KR",
+    "display": "이미 처리된 항목입니다."
+  },
+  {
+    "id": 125,
+    "name": "RUNTIME_ERROR",
+    "locale": "ko-KR",
+    "display": "예상치 못한 에러가 발생하였습니다."
+  },
+  {
+    "id": 126,
+    "name": "PARSE_OUTPUT_ERROR",
+    "locale": "ko-KR",
+    "display": "Output Data 변환 시, 에러가 발생하였습니다."
+  },
+  {
+    "id": 127,
+    "name": "SERVICE_NOT_FOUND",
+    "locale": "ko-KR",
+    "display": "서비스가 존재하지 않습니다."
+  },
+  {
+    "id": 128,
+    "name": "TITLE_ALREADY_EXIST",
+    "locale": "ko-KR",
+    "display": "중복된 레코드 에러"
+  },
+  {
+    "id": 129,
+    "name": "STREAMING_ERROR",
+    "locale": "ko-KR",
+    "display": "스트리밍 에러"
+  },
+  {
+    "id": 130,
+    "name": "MISMATCH_PARAM_COUNT",
+    "locale": "ko-KR",
+    "display": "잘못된 쿼리 - 파라미터 카운트가 일치하지 않습니다. [{0}:{1}]"
+  },
+  {
+    "id": 131,
+    "name": "INVALID_PARAM",
+    "locale": "ko-KR",
+    "display": "파라미터 (이름: {0}, 값: {1})가 올바르지 않습니다."
+  },
+  {
+    "id": 132,
+    "name": "KEY_AND_VALUE_MISMATCH",
+    "locale": "ko-KR",
+    "display": "키 카운트와 벨류 카운트가 일치하지 않습니다."
+  },
+  {
+    "id": 133,
+    "name": "NOT_FOUND_KEY",
+    "locale": "ko-KR",
+    "display": "키 파라미터에서 빈 키를 발견했습니다."
+  },
+  {
+    "id": 134,
+    "name": "INVALID_STATUS",
+    "locale": "ko-KR",
+    "display": "상태가 유효하지 않습니다."
+  },
+  {
+    "id": 135,
+    "name": "NOT_SUPPORTED_METHOD",
+    "locale": "ko-KR",
+    "display": "지원되지 않는 method입니다."
+  },
+  {
+    "id": 136,
+    "name": "NOT_CONNECTED",
+    "locale": "ko-KR",
+    "display": "연결되지 않았습니다."
+  },
+  {
+    "id": 137,
+    "name": "RECORD_NOT_FOUND",
+    "locale": "ko-KR",
+    "display": "레코드를 찾을 수 없습니다."
+  },
+  {
+    "id": 138,
+    "name": "NOT_FOUND_UNIQUE_FIELDS",
+    "locale": "ko-KR",
+    "display": "엔티티 ({0})에 uniqueFields 정보가 존재하지 않습니다."
+  },
+  {
+    "id": 139,
+    "name": "NOT_FOUND_CUD_FLAG",
+    "locale": "ko-KR",
+    "display": "Entity[{0}] 중 \u0027cudFlag가 존재하지 않습니다."
+  },
+  {
+    "id": 140,
+    "name": "SERVICE_ERROR",
+    "locale": "ko-KR",
+    "display": "기능 실행 중 에러가 발생하였습니다."
+  },
+  {
+    "id": 141,
+    "name": "SCRIPT_RUNTIME_ERROR",
+    "locale": "ko-KR",
+    "display": "Script 실행 중 에러가 발생하였습니다."
+  },
+  {
+    "id": 142,
+    "name": "PARSE_INPUT_ERROR",
+    "locale": "ko-KR",
+    "display": "Input Data 변환 시, 에러가 발생하였습니다."
+  },
+  {
+    "id": 143,
+    "name": "TITLE_RECORD_NOT_FOUND",
+    "locale": "ko-KR",
+    "display": "존재하지 않는 레코드 에러"
+  },
+  {
+    "id": 144,
+    "name": "TITLE_PARSE_INPUT_ERROR",
+    "locale": "ko-KR",
+    "display": "(Input Parameters) 변환 에러"
+  },
+  {
+    "id": 145,
+    "name": "TITLE_DATA_BASE_ERROR",
+    "locale": "ko-KR",
+    "display": "데이터 베이스 에러"
+  },
+  {
+    "id": 146,
+    "name": "TITLE_BAD_REQUEST",
+    "locale": "ko-KR",
+    "display": "잘못된 요청입니다."
+  },
+  {
+    "id": 147,
+    "name": "TITLE_INVALID_STATUS",
+    "locale": "ko-KR",
+    "display": "유효하지 않은 상태 에러"
+  },
+  {
+    "id": 148,
+    "name": "TITLE_VALIDATION_ERROR",
+    "locale": "ko-KR",
+    "display": "유효성 에러"
+  },
+  {
+    "id": 149,
+    "name": "TITLE_INVALID_PARAM",
+    "locale": "ko-KR",
+    "display": "유효하지 않은 파라미터 에러"
+  },
+  {
+    "id": 150,
+    "name": "TITLE_SERVICE_ERROR",
+    "locale": "ko-KR",
+    "display": "서비스 에러"
+  },
+  {
+    "id": 151,
+    "name": "TITLE_SCRIPT_RUNTIME_ERROR",
+    "locale": "ko-KR",
+    "display": "스크립트 에러"
+  },
+  {
+    "id": 152,
+    "name": "TITLE_RUNTIME_ERROR",
+    "locale": "ko-KR",
+    "display": "런타임 에러"
+  },
+  {
+    "id": 153,
+    "name": "VALIDATION_ERROR",
+    "locale": "ko-KR",
+    "display": "유효성 검사 중 에러가 발생하였습니다."
+  },
+  {
+    "id": 154,
+    "name": "TITLE_SERVICE_NOT_FOUND",
+    "locale": "ko-KR",
+    "display": "서비스를 찾을 수 없는 에러"
+  },
+  {
+    "id": 155,
+    "name": "TITLE_PARSE_OUTPUT_ERROR",
+    "locale": "ko-KR",
+    "display": "Output 변환 에러"
+  },
+  {
+    "id": 156,
+    "name": "NOT_SUPPORTED_TYPE",
+    "locale": "en-US",
+    "display": "Not supported {0} Type. [{1}]"
+  },
+  {
+    "id": 157,
+    "name": "USER_APPROVAL",
+    "locale": "en-US",
+    "display": "Account approval request has been accepted."
+  },
+  {
+    "id": 158,
+    "name": "NEED_OPTION",
+    "locale": "en-US",
+    "display": "The type should be [{0}] option."
+  },
+  {
+    "id": 159,
+    "name": "USER_REJECT",
+    "locale": "en-US",
+    "display": "Account approval request has been rejected."
+  },
+  {
+    "id": 160,
+    "name": "USER_COMPLETE_INIT_PASS",
+    "locale": "en-US",
+    "display": "Completed to reset password."
+  },
+  {
+    "id": 161,
+    "name": "USER_REQUEST_INIT_PASS",
+    "locale": "en-US",
+    "display": "Please reset my password."
+  },
+  {
+    "id": 162,
+    "name": "USER_INVALID_ID_OR_PASS",
+    "locale": "en-US",
+    "display": "ID or Password is not correct."
+  },
+  {
+    "id": 163,
+    "name": "USER_REQUEST",
+    "locale": "en-US",
+    "display": "System account registering request."
+  },
+  {
+    "id": 164,
+    "name": "CREATE_FILE_ERROR",
+    "locale": "en-US",
+    "display": "Error occured during file creating."
+  },
+  {
+    "id": 165,
+    "name": "IS_NOT_ENTITY",
+    "locale": "en-US",
+    "display": "Invalid entity name. [{0}]"
+  },
+  {
+    "id": 166,
+    "name": "NOT_AUTHORIZED_USER",
+    "locale": "en-US",
+    "display": "Unauthorized user."
+  },
+  {
+    "id": 167,
+    "name": "UPLOAD_FILE_SIZE_LIMIT_ERROR",
+    "locale": "en-US",
+    "display": "Excess limit file size."
+  },
+  {
+    "id": 168,
+    "name": "UNKNOWN_TYPE",
+    "locale": "en-US",
+    "display": "Unknown type. [{0}]"
+  },
+  {
+    "id": 169,
+    "name": "FILE_DOWNLOAD_ERROR",
+    "locale": "en-US",
+    "display": "Error occured during file download."
+  },
+  {
+    "id": 170,
+    "name": "TABLE_DOES_NOT_EXIST",
+    "locale": "en-US",
+    "display": "Table does not exist."
+  },
+  {
+    "id": 171,
+    "name": "FILE_ROOT_PATH_NOT_EXIST",
+    "locale": "en-US",
+    "display": "Root path is not valid."
+  },
+  {
+    "id": 172,
+    "name": "DOMAIN_NOT_EXIST",
+    "locale": "en-US",
+    "display": "Cannot find Domain information by request server ({0})"
+  },
+  {
+    "id": 173,
+    "name": "FAIL_TO_SEND_MAIL",
+    "locale": "en-US",
+    "display": "Failed to send mail!"
+  },
+  {
+    "id": 174,
+    "name": "FAIL_TO_SEND_MAIL",
+    "locale": "ko-KR",
+    "display": "Mail 발송에 실패하였습니다."
+  },
+  {
+    "id": 175,
+    "name": "USER_ALREADY_ACTIVATED",
+    "locale": "ko-KR",
+    "display": "이미 활성화되어 있는 사용자입니다."
+  },
+  {
+    "id": 176,
+    "name": "USER_ALREADY_ACTIVATED",
+    "locale": "en-US",
+    "display": "Already activated account."
+  },
+  {
+    "id": 177,
+    "name": "USER_REQUEST_ACTIVE_ACCOUNT",
+    "locale": "en-US",
+    "display": "Request account activation."
+  },
+  {
+    "id": 178,
+    "name": "USER_REQUEST_ACTIVE_ACCOUNT",
+    "locale": "ko-KR",
+    "display": "계정 활성화 요청드립니다."
+  },
+  {
+    "id": 179,
+    "name": "USER_COMPLETE_ACTIVE_ACCOUNT",
+    "locale": "en-US",
+    "display": "Activation request is completed."
+  },
+  {
+    "id": 180,
+    "name": "USER_COMPLETE_ACTIVE_ACCOUNT",
+    "locale": "ko-KR",
+    "display": "계정 활성화 요청이 완료되었습니다."
+  },
+  {
+    "id": 181,
+    "name": "USER_INACTIVE_ACCOUNT",
+    "locale": "en-US",
+    "display": "Inactivation user account."
+  },
+  {
+    "id": 182,
+    "name": "USER_INACTIVE_ACCOUNT",
+    "locale": "ko-KR",
+    "display": "사용자 비활성화."
+  },
+  {
+    "id": 183,
+    "name": "USER_INACTIVATED_ACCOUNT",
+    "locale": "en-US",
+    "display": "Deactivated account."
+  },
+  {
+    "id": 184,
+    "name": "USER_INACTIVATED_ACCOUNT",
+    "locale": "ko-KR",
+    "display": "비활성화된 계정입니다."
+  },
+  {
+    "id": 185,
+    "name": "ALREADY_BEEN_PROCEEDED",
+    "locale": "en-US",
+    "display": "Already been proceeded."
+  },
+  {
+    "id": 186,
+    "name": "ALREADY_BEEN_PROCEEDED",
+    "locale": "zh-CN",
+    "display": "数据已经处理。"
+  },
+  {
+    "id": 187,
+    "name": "ALREADY_EXIST",
+    "locale": "zh-CN",
+    "display": "此数据已存在。"
+  },
+  {
+    "id": 188,
+    "name": "ALREADY_PROCEED",
+    "locale": "zh-CN",
+    "display": "{0}正在处理。"
+  },
+  {
+    "id": 189,
+    "name": "BAD_REQUEST",
+    "locale": "zh-CN",
+    "display": "非法请求。"
+  },
+  {
+    "id": 190,
+    "name": "COULD_NOT_INSTANTIATE",
+    "locale": "zh-CN",
+    "display": "无法实例化{0}， ({1})"
+  },
+  {
+    "id": 191,
+    "name": "CREATE_FILE_ERROR",
+    "locale": "zh-CN",
+    "display": "处理文件时发生错误。"
+  },
+  {
+    "id": 192,
+    "name": "DATA_BASE_ERROR",
+    "locale": "zh-CN",
+    "display": "数据库请求发生错误。"
+  },
+  {
+    "id": 193,
+    "name": "DOES_NOT_PROCEED",
+    "locale": "zh-CN",
+    "display": "{0} 未在执行"
+  },
+  {
+    "id": 194,
+    "name": "DOMAIN_NOT_EXIST",
+    "locale": "zh-CN",
+    "display": "요청한 서버 정보 ({0})로 Domain 정보를 찾을 수 없습니다."
+  },
+  {
+    "id": 195,
+    "name": "EMPTY_CUD_FLAG_VALUE",
+    "locale": "zh-CN",
+    "display": "无法获取cudFlag。"
+  },
+  {
+    "id": 196,
+    "name": "EMPTY_PARAM",
+    "locale": "zh-CN",
+    "display": "{0}不能为空。"
+  },
+  {
+    "id": 197,
+    "name": "FAIL_TO_SEND_MAIL",
+    "locale": "zh-CN",
+    "display": "邮件发送失败。"
+  },
+  {
+    "id": 198,
+    "name": "FAILED_META_SETUP",
+    "locale": "zh-CN",
+    "display": "配置detail meta失败。"
+  },
+  {
+    "id": 199,
+    "name": "FAILED_TO_PROCESS_TEMPLATE",
+    "locale": "zh-CN",
+    "display": "无法处理{0}模板。"
+  },
+  {
+    "id": 200,
+    "name": "FIELD_NOT_EXIST",
+    "locale": "zh-CN",
+    "display": "[{0}] 列不存在。"
+  },
+  {
+    "id": 201,
+    "name": "FILE_COPY_FAILED",
+    "locale": "zh-CN",
+    "display": "文件复制失败。"
+  },
+  {
+    "id": 202,
+    "name": "FILE_DEFAULT_PATH_IS_EMPTY",
+    "locale": "zh-CN",
+    "display": "默认路径为空。"
+  },
+  {
+    "id": 203,
+    "name": "FILE_DOWNLOAD_ERROR",
+    "locale": "zh-CN",
+    "display": "文件下载过程中发生错误。"
+  },
+  {
+    "id": 204,
+    "name": "FILE_NOT_FOUND",
+    "locale": "zh-CN",
+    "display": "无法找到文件({0})。"
+  },
+  {
+    "id": 205,
+    "name": "FILE_ROOT_PATH_NOT_EXIST",
+    "locale": "zh-CN",
+    "display": "根目录地址错误。"
+  },
+  {
+    "id": 206,
+    "name": "GENERATE_FAIL",
+    "locale": "zh-CN",
+    "display": "创建服务失败。"
+  },
+  {
+    "id": 207,
+    "name": "HAS_DETAIL_DATA",
+    "locale": "zh-CN",
+    "display": "엔티티 ({0})에 Detail Data가 존재합니다. Detail 데이터 삭제 후 다시 시도해주세요."
+  },
+  {
+    "id": 208,
+    "name": "HAS_NO_CONSTRUCTOR",
+    "locale": "zh-CN",
+    "display": "实体类没有默认构造函数。"
+  },
+  {
+    "id": 209,
+    "name": "HAS_ONE_OR_MORE_DATA",
+    "locale": "zh-CN",
+    "display": "含一个或多个数据无法删除。"
+  },
+  {
+    "id": 210,
+    "name": "INVALID_DATA_TYPE",
+    "locale": "zh-CN",
+    "display": "Data Type[{0}]类型错误。"
+  },
+  {
+    "id": 211,
+    "name": "INVALID_FILE",
+    "locale": "zh-CN",
+    "display": "[{0}]是无效的文件。"
+  },
+  {
+    "id": 212,
+    "name": "INVALID_KEYS",
+    "locale": "zh-CN",
+    "display": "包含不存在于实体的无效键值。"
+  },
+  {
+    "id": 213,
+    "name": "INVALID_PARAM",
+    "locale": "zh-CN",
+    "display": "变量(名称：{0}, 值：{1})错误。"
+  },
+  {
+    "id": 214,
+    "name": "INVALID_SERVICE_URL",
+    "locale": "zh-CN",
+    "display": "RESTful服务的URL({0})错误。"
+  },
+  {
+    "id": 215,
+    "name": "INVALID_STATUS",
+    "locale": "zh-CN",
+    "display": "无效的状态。"
+  },
+  {
+    "id": 216,
+    "name": "IS_NOT_ENTITY",
+    "locale": "zh-CN",
+    "display": "实体名称错误。 [{0}]"
+  },
+  {
+    "id": 217,
+    "name": "IS_NOT_IN_USE_LISTENER",
+    "locale": "zh-CN",
+    "display": "监听器当前未运行。"
+  },
+  {
+    "id": 218,
+    "name": "IS_NOT_INSTANCE_OF",
+    "locale": "zh-CN",
+    "display": "错误的{0}类， ({1})－类不是{2}的实例。"
+  },
+  {
+    "id": 219,
+    "name": "IS_NOT_RUNNING",
+    "locale": "zh-CN",
+    "display": "{0}未在执行。"
+  },
+  {
+    "id": 220,
+    "name": "KEY_AND_VALUE_MISMATCH",
+    "locale": "zh-CN",
+    "display": "键与值不匹配。"
+  },
+  {
+    "id": 221,
+    "name": "MISMATCH_PARAM_COUNT",
+    "locale": "zh-CN",
+    "display": "错误SQL - 变量数错误。 [{0}:{1}]"
+  },
+  {
+    "id": 222,
+    "name": "MISMATCH_STATUS",
+    "locale": "zh-CN",
+    "display": "{0} ({1})不是[{2}]状态。"
+  },
+  {
+    "id": 223,
+    "name": "MORE_THAN_ONE_ERROR",
+    "locale": "zh-CN",
+    "display": "存在一个以上的数据。"
+  },
+  {
+    "id": 224,
+    "name": "NEED_OPTION",
+    "locale": "zh-CN",
+    "display": "此类型必需使用[{0}]选项。"
+  },
+  {
+    "id": 225,
+    "name": "NOT_AUTHORIZED_USER",
+    "locale": "zh-CN",
+    "display": "未授权用户。"
+  },
+  {
+    "id": 226,
+    "name": "NOT_CONNECTED",
+    "locale": "zh-CN",
+    "display": "未连接。"
+  },
+  {
+    "id": 227,
+    "name": "NOT_FOUND",
+    "locale": "zh-CN",
+    "display": "{0}({1})无法查找。"
+  },
+  {
+    "id": 228,
+    "name": "NOT_FOUND_CUD_FLAG",
+    "locale": "zh-CN",
+    "display": "实体类[{0}]中不存在\u0027cudFlag\u0027。"
+  },
+  {
+    "id": 229,
+    "name": "NOT_FOUND_KEY",
+    "locale": "zh-CN",
+    "display": "在关键参数中发现的空键。"
+  },
+  {
+    "id": 230,
+    "name": "NOT_FOUND_UNIQUE_FIELDS",
+    "locale": "zh-CN",
+    "display": "未找到唯一的索引。"
+  },
+  {
+    "id": 231,
+    "name": "NOT_FOUND_URL",
+    "locale": "zh-CN",
+    "display": "无法在URL({0})中找到服务。"
+  },
+  {
+    "id": 232,
+    "name": "NOT_SUPPORTED_METHOD",
+    "locale": "zh-CN",
+    "display": "不支持的方法。"
+  },
+  {
+    "id": 233,
+    "name": "NOT_SUPPORTED_TYPE",
+    "locale": "zh-CN",
+    "display": "类型{0}不支持。[{1}]"
+  },
+  {
+    "id": 234,
+    "name": "NOT_SUPPORTED_YET",
+    "locale": "zh-CN",
+    "display": "当前尚未支持的功能！"
+  },
+  {
+    "id": 235,
+    "name": "PARSE_INPUT_ERROR",
+    "locale": "zh-CN",
+    "display": "转换Input Data时, 发生错误。"
+  },
+  {
+    "id": 236,
+    "name": "PARSE_OUTPUT_ERROR",
+    "locale": "zh-CN",
+    "display": "Output Data转换时发生错误。"
+  },
+  {
+    "id": 237,
+    "name": "RECORD_NOT_FOUND",
+    "locale": "zh-CN",
+    "display": "无法找到记录。"
+  },
+  {
+    "id": 238,
+    "name": "RUNTIME_ERROR",
+    "locale": "zh-CN",
+    "display": "运行过程中发生意外错误。"
+  },
+  {
+    "id": 239,
+    "name": "SCRIPT_RUNTIME_ERROR",
+    "locale": "zh-CN",
+    "display": "运行脚本时发生错误。"
+  },
+  {
+    "id": 240,
+    "name": "SERVICE_ERROR",
+    "locale": "zh-CN",
+    "display": "服务运行中发生错误。"
+  },
+  {
+    "id": 241,
+    "name": "SERVICE_NOT_FOUND",
+    "locale": "zh-CN",
+    "display": "服务不存在。"
+  },
+  {
+    "id": 242,
+    "name": "STREAMING_ERROR",
+    "locale": "zh-CN",
+    "display": "流错误。"
+  },
+  {
+    "id": 243,
+    "name": "TABLE_DOES_NOT_EXIST",
+    "locale": "zh-CN",
+    "display": "表不存在。"
+  },
+  {
+    "id": 244,
+    "name": "TITLE_ALREADY_EXIST",
+    "locale": "zh-CN",
+    "display": "重复记录。"
+  },
+  {
+    "id": 245,
+    "name": "TITLE_BAD_REQUEST",
+    "locale": "zh-CN",
+    "display": "错误申请。"
+  },
+  {
+    "id": 246,
+    "name": "TITLE_DATA_BASE_ERROR",
+    "locale": "zh-CN",
+    "display": "数据库错误。"
+  },
+  {
+    "id": 247,
+    "name": "TITLE_INVALID_PARAM",
+    "locale": "zh-CN",
+    "display": "非法变量。"
+  },
+  {
+    "id": 248,
+    "name": "TITLE_INVALID_STATUS",
+    "locale": "zh-CN",
+    "display": "无效状态错误。"
+  },
+  {
+    "id": 249,
+    "name": "TITLE_PARSE_INPUT_ERROR",
+    "locale": "zh-CN",
+    "display": "(Input Parameters)转换错误。"
+  },
+  {
+    "id": 250,
+    "name": "TITLE_PARSE_OUTPUT_ERROR",
+    "locale": "zh-CN",
+    "display": "Output转换错误。"
+  },
+  {
+    "id": 251,
+    "name": "TITLE_RECORD_NOT_FOUND",
+    "locale": "zh-CN",
+    "display": "记录不存在。"
+  },
+  {
+    "id": 252,
+    "name": "TITLE_RUNTIME_ERROR",
+    "locale": "zh-CN",
+    "display": "运行错误。"
+  },
+  {
+    "id": 253,
+    "name": "TITLE_SCRIPT_RUNTIME_ERROR",
+    "locale": "zh-CN",
+    "display": "脚本错误。"
+  },
+  {
+    "id": 254,
+    "name": "TITLE_SERVICE_ERROR",
+    "locale": "zh-CN",
+    "display": "服务错误。"
+  },
+  {
+    "id": 255,
+    "name": "TITLE_SERVICE_NOT_FOUND",
+    "locale": "zh-CN",
+    "display": "服务无法查询。"
+  },
+  {
+    "id": 256,
+    "name": "TITLE_VALIDATION_ERROR",
+    "locale": "zh-CN",
+    "display": "有效性错误。"
+  },
+  {
+    "id": 257,
+    "name": "UNKNOWN_TYPE",
+    "locale": "zh-CN",
+    "display": "类型无法识别。[{0}]"
+  },
+  {
+    "id": 258,
+    "name": "UPLOAD_FILE_SIZE_LIMIT_ERROR",
+    "locale": "zh-CN",
+    "display": "文件大小，超出上传上限。"
+  },
+  {
+    "id": 259,
+    "name": "USER_ALREADY_ACTIVATED",
+    "locale": "zh-CN",
+    "display": "用户为已激活用户。"
+  },
+  {
+    "id": 260,
+    "name": "USER_APPROVAL",
+    "locale": "zh-CN",
+    "display": "激活请求已接受。"
+  },
+  {
+    "id": 261,
+    "name": "USER_COMPLETE_ACTIVE_ACCOUNT",
+    "locale": "zh-CN",
+    "display": "激活请求完成。"
+  },
+  {
+    "id": 262,
+    "name": "USER_COMPLETE_INIT_PASS",
+    "locale": "zh-CN",
+    "display": "密码重置完毕。"
+  },
+  {
+    "id": 263,
+    "name": "USER_INACTIVATED_ACCOUNT",
+    "locale": "zh-CN",
+    "display": "未激活用户。"
+  },
+  {
+    "id": 264,
+    "name": "USER_INACTIVE_ACCOUNT",
+    "locale": "zh-CN",
+    "display": "屏蔽用户。"
+  },
+  {
+    "id": 265,
+    "name": "USER_INVALID_ID_OR_PASS",
+    "locale": "zh-CN",
+    "display": "ID或密码错误。"
+  },
+  {
+    "id": 266,
+    "name": "USER_NOT_EXIST",
+    "locale": "zh-CN",
+    "display": "用户不存在。"
+  },
+  {
+    "id": 267,
+    "name": "USER_REJECT",
+    "locale": "zh-CN",
+    "display": "账户申请被拒绝。"
+  },
+  {
+    "id": 268,
+    "name": "USER_REQUEST",
+    "locale": "zh-CN",
+    "display": "账户申请。"
+  },
+  {
+    "id": 269,
+    "name": "USER_REQUEST_ACTIVE_ACCOUNT",
+    "locale": "zh-CN",
+    "display": "请激活用户。"
+  },
+  {
+    "id": 270,
+    "name": "USER_REQUEST_INIT_PASS",
+    "locale": "zh-CN",
+    "display": "请冲密码。"
+  },
+  {
+    "id": 271,
+    "name": "VALIDATION_ERROR",
+    "locale": "zh-CN",
+    "display": "未通过有效性检查。"
+  },
+  {
+    "id": 272,
+    "name": "SPC_SPEC_OUT",
+    "locale": "en-US",
+    "display": "{1} Value Spec Out Occurred at SPC Item {0}"
+  },
+  {
+    "id": 273,
+    "name": "SPC_SPEC_OUT",
+    "locale": "zh-CN",
+    "display": "{1} Value Spec Out Occurred at SPC Item {0}"
+  },
+  {
+    "id": 274,
+    "name": "SPC_SPEC_OUT",
+    "locale": "ko-KR",
+    "display": "SPC 항목 {0}에서 {1} 값 Spec Out이 발생했습니다."
+  },
+  {
+    "id": 275,
+    "name": "USER_REQUEST_ADD_AUTH",
+    "locale": "en-US",
+    "display": "Request additional authorization"
+  },
+  {
+    "id": 276,
+    "name": "USER_REQUEST_ADD_AUTH",
+    "locale": "zh-CN",
+    "display": "사용자 권한 추가 요청"
+  },
+  {
+    "id": 277,
+    "name": "USER_REQUEST_ADD_AUTH",
+    "locale": "ko-KR",
+    "display": "사용자 권한 추가 요청"
+  },
+  {
+    "id": 328,
+    "name": "FAIL_TO_PARSE",
+    "locale": "zh-CN",
+    "display": "{0} 데이터 파싱 중 에러가 발생했습니다."
+  },
+  {
+    "id": 278,
+    "name": "DOMAIN_ADMIN_NOT_EXIST",
+    "locale": "zh-CN",
+    "display": "해당 도메인에 관리자로 지정된 사용자가 없어서 관리자에게 메일을 보낼 수 없습니다."
+  },
+  {
+    "id": 279,
+    "name": "DOMAIN_ADMIN_NOT_EXIST",
+    "locale": "en-US",
+    "display": "Administrators of the domain does not exist, so you can not send mail to the administrator."
+  },
+  {
+    "id": 280,
+    "name": "DOMAIN_ADMIN_NOT_EXIST",
+    "locale": "ko-KR",
+    "display": "해당 도메인에 관리자로 지정된 사용자가 없어서 관리자에게 메일을 보낼 수 없습니다."
+  },
+  {
+    "id": 281,
+    "name": "WORK_ORDER_OVER_QTY",
+    "locale": "ko-KR",
+    "display": "작업 오더의 계획 수량을 초과했습니다."
+  },
+  {
+    "id": 282,
+    "name": "WORK_ORDER_OVER_QTY",
+    "locale": "zh-CN",
+    "display": "Work Order Over Quantity!"
+  },
+  {
+    "id": 283,
+    "name": "WORK_ORDER_OVER_QTY",
+    "locale": "en-US",
+    "display": "Work Order Over Quantity!"
+  },
+  {
+    "id": 284,
+    "name": "FAIL_TO_REFLECT_SET",
+    "locale": "en-US",
+    "display": "Failed to assign value to field({1}) of class ({0})"
+  },
+  {
+    "id": 285,
+    "name": "FAIL_TO_REFLECT_SET",
+    "locale": "zh-CN",
+    "display": "Failed to assign value to field({1}) of class ({0})"
+  },
+  {
+    "id": 286,
+    "name": "FAIL_TO_REFLECT_SET",
+    "locale": "ko-KR",
+    "display": "클래스 ({0})의 필드({1})에 값 설정 실패"
+  },
+  {
+    "id": 287,
+    "name": "INVALID_ENTITY_ID_TYPE",
+    "locale": "en-US",
+    "display": "Invalid ID Type ({1}) of entity ({0})"
+  },
+  {
+    "id": 288,
+    "name": "INVALID_ENTITY_ID_TYPE",
+    "locale": "ko-KR",
+    "display": "엔티티 ({0})의 ID Type ({1})이 유효하지 않습니다."
+  },
+  {
+    "id": 289,
+    "name": "INVALID_ENTITY_ID_TYPE",
+    "locale": "zh-CN",
+    "display": "Invalid ID Type ({1}) of entity ({0})"
+  },
+  {
+    "id": 290,
+    "name": "INVALID_DATA_TYPE_OF_ENTITY_ID_TYPE",
+    "locale": "ko-KR",
+    "display": "엔티티 ({0})의 ID Type ({1})의 데이터 타입은 반드시 ({2}) 이어야 합니다."
+  },
+  {
+    "id": 291,
+    "name": "INVALID_DATA_TYPE_OF_ENTITY_ID_TYPE",
+    "locale": "en-US",
+    "display": "Data type must be ({2}) of ID Type ({1}) of entity ({0})"
+  },
+  {
+    "id": 292,
+    "name": "INVALID_DATA_TYPE_OF_ENTITY_ID_TYPE",
+    "locale": "zh-CN",
+    "display": "Data type must be ({2}) of ID Type ({1}) of entity ({0})"
+  },
+  {
+    "id": 293,
+    "name": "SYSTEM_DOMAIN_CANNOT_BE_DELETED",
+    "locale": "ko-KR",
+    "display": "도메인 ({0})는 시스템 도메인이므로 삭제할 수 없습니다."
+  },
+  {
+    "id": 294,
+    "name": "SYSTEM_DOMAIN_CANNOT_BE_DELETED",
+    "locale": "en-US",
+    "display": "Domain ({0}) is System Domain, so it\u0027s not possible to delete!"
+  },
+  {
+    "id": 295,
+    "name": "SYSTEM_DOMAIN_CANNOT_BE_DELETED",
+    "locale": "zh-CN",
+    "display": "도메인 ({0})는 시스템 도메인이므로 삭제할 수 없습니다."
+  },
+  {
+    "id": 296,
+    "name": "DEV_MODE_FUNCTION_NOT_SUPPORTED",
+    "locale": "ko-KR",
+    "display": "개발 모드가 아닌 경우 이 요청은 실행될 수 없습니다. "
+  },
+  {
+    "id": 297,
+    "name": "DEV_MODE_FUNCTION_NOT_SUPPORTED",
+    "locale": "zh-CN",
+    "display": "개발 모드가 아닌 경우 이 요청은 실행될 수 없습니다. "
+  },
+  {
+    "id": 298,
+    "name": "DEV_MODE_FUNCTION_NOT_SUPPORTED",
+    "locale": "en-US",
+    "display": "This request is allowed only Development Mode."
+  },
+  {
+    "id": 299,
+    "name": "WIP-IS-MISMATCH",
+    "locale": "zh-CN",
+    "display": "{0} 和 {1}失配"
+  },
+  {
+    "id": 300,
+    "name": "WIP-IS-MISMATCH",
+    "locale": "ko-KR",
+    "display": "{0}와(과) {1}이(가) 맞지 않습니다."
+  },
+  {
+    "id": 301,
+    "name": "WIP-NOT-EXIST",
+    "locale": "ko-KR",
+    "display": "{0}이(가) 존재하지 않습니다."
+  },
+  {
+    "id": 302,
+    "name": "WIP-NOT-EXIST",
+    "locale": "zh-CN",
+    "display": "{0} 不存在。"
+  },
+  {
+    "id": 303,
+    "name": "WIP-IS-NOT-STATE",
+    "locale": "en-US",
+    "display": "{0} is not {1} state."
+  },
+  {
+    "id": 304,
+    "name": "WIP-NOT-EXIST",
+    "locale": "en-US",
+    "display": "{0} does not exist"
+  },
+  {
+    "id": 305,
+    "name": "WIP-IS-NOT-STATE",
+    "locale": "zh-CN",
+    "display": "{0} 不是 {1} 状态。"
+  },
+  {
+    "id": 306,
+    "name": "WIP-IS-NOT-STATE",
+    "locale": "ko-KR",
+    "display": "{0}이(가) {1} 상태가 아닙니다."
+  },
+  {
+    "id": 307,
+    "name": "WIP-STATE-IS",
+    "locale": "ko-KR",
+    "display": "{0} 상태가 {1} 입니다."
+  },
+  {
+    "id": 308,
+    "name": "WIP-STATE-IS",
+    "locale": "zh-CN",
+    "display": "{0}的状态是 {1}。"
+  },
+  {
+    "id": 309,
+    "name": "WIP-STATE-IS",
+    "locale": "en-US",
+    "display": "State of {0} is {1} state."
+  },
+  {
+    "id": 310,
+    "name": "WIP-IS-MISMATCH",
+    "locale": "en-US",
+    "display": "Mismatch {0} and {1}."
+  },
+  {
+    "id": 311,
+    "name": "DATA_DUPLICATED",
+    "locale": "zh-CN",
+    "display": "({0}) 데이터 ({1})은 이미 존재 합니다."
+  },
+  {
+    "id": 312,
+    "name": "DATA_DUPLICATED",
+    "locale": "ko-KR",
+    "display": "({0}) 데이터 ({1})은 이미 존재 합니다."
+  },
+  {
+    "id": 313,
+    "name": "DATA_DUPLICATED",
+    "locale": "en-US",
+    "display": "({0)) Data ({1}) aleady exist."
+  },
+  {
+    "id": 314,
+    "name": "INVALID_DATA",
+    "locale": "ko-KR",
+    "display": "{0}의 데이터({1})가 유효하지 않습니다."
+  },
+  {
+    "id": 315,
+    "name": "INVALID_DATA",
+    "locale": "zh-CN",
+    "display": "{0}의 데이터({1})가 유효하지 않습니다."
+  },
+  {
+    "id": 316,
+    "name": "INVALID_DATA",
+    "locale": "en-US",
+    "display": "Data ({1}) of {0} is invalid."
+  },
+  {
+    "id": 317,
+    "name": "FAIL_TO_CLONE_DATA",
+    "locale": "en-US",
+    "display": "Failed to clone data."
+  },
+  {
+    "id": 318,
+    "name": "FAIL_TO_CLONE_DATA",
+    "locale": "zh-CN",
+    "display": "Data 복사 하는 중 에러가 발생했습니다."
+  },
+  {
+    "id": 319,
+    "name": "FAIL_TO_CLONE_DATA",
+    "locale": "ko-KR",
+    "display": "Data 복사 하는 중 에러가 발생했습니다."
+  },
+  {
+    "id": 320,
+    "name": "FAIL_TO_REFLECT_GET",
+    "locale": "ko-KR",
+    "display": "클래스 ({0})의 필드({1})에 값 추출 실패"
+  },
+  {
+    "id": 321,
+    "name": "FAIL_TO_REFLECT_GET",
+    "locale": "zh-CN",
+    "display": "클래스 ({0})의 필드({1})에 값 추출 실패"
+  },
+  {
+    "id": 322,
+    "name": "FAIL_TO_REFLECT_GET",
+    "locale": "en-US",
+    "display": "Failed to get value from field({1}) of class ({0})"
+  },
+  {
+    "id": 323,
+    "name": "FAIL_TO_COMPILE",
+    "locale": "en-US",
+    "display": "Failed to Compile {0} Code"
+  },
+  {
+    "id": 324,
+    "name": "FAIL_TO_COMPILE",
+    "locale": "ko-KR",
+    "display": "{0} 코드 컴파일 중 에러가 발생했습니다."
+  },
+  {
+    "id": 325,
+    "name": "FAIL_TO_COMPILE",
+    "locale": "zh-CN",
+    "display": "Failed to Compile {0} Code"
+  },
+  {
+    "id": 326,
+    "name": "FAIL_TO_PARSE",
+    "locale": "en-US",
+    "display": "Failed to parse {0} data."
+  },
+  {
+    "id": 327,
+    "name": "FAIL_TO_PARSE",
+    "locale": "ko-KR",
+    "display": "{0} 데이터 파싱 중 에러가 발생했습니다."
+  },
+  {
+    "id": 329,
+    "name": "ERROR_WHEN_DO_SOMETHING",
+    "locale": "zh-CN",
+    "display": "{0} 도중에 {1} 에러가 발생했습니다."
+  },
+  {
+    "id": 330,
+    "name": "ERROR_WHEN_DO_SOMETHING",
+    "locale": "ko-KR",
+    "display": "{0} 도중에 {1} 에러가 발생했습니다."
+  },
+  {
+    "id": 331,
+    "name": "ERROR_WHEN_DO_SOMETHING",
+    "locale": "en-US",
+    "display": "{1} Error occurred when doing {0}"
+  },
+  {
+    "id": 332,
+    "name": "REQUEST_SENT_TO_ADMIN",
+    "locale": "en-US",
+    "display": "Your request has been sent to administrator."
+  },
+  {
+    "id": 333,
+    "name": "REQUEST_ALREADY_RECEIVED",
+    "locale": "ko-KR",
+    "display": "이미 접수된 요청입니다."
+  },
+  {
+    "id": 334,
+    "name": "REQUEST_ALREADY_RECEIVED",
+    "locale": "zh-CN",
+    "display": "이미 접수된 요청입니다."
+  },
+  {
+    "id": 335,
+    "name": "ALREADY_HAVE_AUTHROIZATION",
+    "locale": "en-US",
+    "display": "You already have the authorization."
+  },
+  {
+    "id": 336,
+    "name": "ALREADY_HAVE_AUTHROIZATION",
+    "locale": "ko-KR",
+    "display": "요청하신 권한은 이미 신청자님께서 가지고 있습니다."
+  },
+  {
+    "id": 337,
+    "name": "ALREADY_HAVE_AUTHROIZATION",
+    "locale": "zh-CN",
+    "display": "요청하신 권한은 이미 신청자님께서 가지고 있습니다."
+  },
+  {
+    "id": 338,
+    "name": "ALREADY_FINISHED",
+    "locale": "ko-KR",
+    "display": "{0}은 이미 처리되었습니다."
+  },
+  {
+    "id": 339,
+    "name": "ALREADY_FINISHED",
+    "locale": "zh-CN",
+    "display": "{0}은 이미 처리되었습니다."
+  },
+  {
+    "id": 340,
+    "name": "REQUEST_PROCESSED_APPROVED",
+    "locale": "en-US",
+    "display": "Your request has been processed \u0027approved\u0027. "
+  },
+  {
+    "id": 341,
+    "name": "REQUEST_PROCESSED_APPROVED",
+    "locale": "ko-KR",
+    "display": "요청하신 내용이 \u0027승인\u0027 처리되었습니다."
+  },
+  {
+    "id": 342,
+    "name": "REQUEST_PROCESSED_APPROVED",
+    "locale": "zh-CN",
+    "display": "요청하신 내용이 \u0027승인\u0027 처리되었습니다."
+  },
+  {
+    "id": 343,
+    "name": "REQUEST_PROCESSED_REJECTED",
+    "locale": "en-US",
+    "display": "Your request has been processed \u0027reject\u0027."
+  },
+  {
+    "id": 344,
+    "name": "REQUEST_PROCESSED_REJECTED",
+    "locale": "ko-KR",
+    "display": "요청하신 내용이 \u0027반려\u0027 처리되었습니다."
+  },
+  {
+    "id": 345,
+    "name": "REQUEST_PROCESSED_REJECTED",
+    "locale": "zh-CN",
+    "display": "요청하신 내용이 \u0027반려\u0027 처리되었습니다."
+  },
+  {
+    "id": 346,
+    "name": "REQUEST_SENT_TO_ADMIN",
+    "locale": "ko-KR",
+    "display": "요청하신 내용이 관리자에게 접수되었습니다."
+  },
+  {
+    "id": 347,
+    "name": "REQUEST_SENT_TO_ADMIN",
+    "locale": "zh-CN",
+    "display": "요청하신 내용이 관리자에게 접수되었습니다."
+  },
+  {
+    "id": 348,
+    "name": "ALREADY_FINISHED",
+    "locale": "en-US",
+    "display": "{0} has been already finished."
+  },
+  {
+    "id": 349,
+    "name": "REQUEST_PROCESSED",
+    "locale": "en-US",
+    "display": "Your request has been processed \u0027{0}\u0027."
+  },
+  {
+    "id": 350,
+    "name": "REQUEST_PROCESSED",
+    "locale": "ko-KR",
+    "display": "요청하신 내용이 \u0027{0}\u0027 처리되었습니다."
+  },
+  {
+    "id": 351,
+    "name": "REQUEST_PROCESSED",
+    "locale": "zh-CN",
+    "display": "요청하신 내용이 \u0027{0}\u0027 처리되었습니다."
+  },
+  {
+    "id": 352,
+    "name": "RESULT_SENT_TO_REQUESTER",
+    "locale": "en-US",
+    "display": "Results of processing your request has been sent."
+  },
+  {
+    "id": 353,
+    "name": "RESULT_SENT_TO_REQUESTER",
+    "locale": "ko-KR",
+    "display": "요청하신 내용의 처리 결과 메일이 신청자에게 전송되었습니다."
+  },
+  {
+    "id": 354,
+    "name": "RESULT_SENT_TO_REQUESTER",
+    "locale": "zh-CN",
+    "display": "요청하신 내용의 처리 결과 메일이 신청자에게 전송되었습니다."
+  },
+  {
+    "id": 355,
+    "name": "REQUEST_ALREADY_RECEIVED",
+    "locale": "en-US",
+    "display": "This request already has been received."
+  },
+  {
+    "id": 356,
+    "name": "NOT_A_PASSWORD_INIT_REQUEST",
+    "locale": "zh-CN",
+    "display": "이 요청은 계정 패스워드 초기화 요청이 아닙니다."
+  },
+  {
+    "id": 357,
+    "name": "NOT_A_PASSWORD_INIT_REQUEST",
+    "locale": "ko-KR",
+    "display": "이 요청은 계정 패스워드 초기화 요청이 아닙니다."
+  },
+  {
+    "id": 358,
+    "name": "NOT_A_ACCOUNT_APPR_REQUEST",
+    "locale": "en-US",
+    "display": "This request is not for a account approval."
+  },
+  {
+    "id": 359,
+    "name": "NOT_A_ACCOUNT_APPR_REQUEST",
+    "locale": "zh-CN",
+    "display": "이 요청은 계정 승인 요청이 아닙니다."
+  },
+  {
+    "id": 360,
+    "name": "NOT_A_AUTHORIZATION_REQUEST",
+    "locale": "ko-KR",
+    "display": "이 요청은 권한 추가 요청이 아닙니다."
+  },
+  {
+    "id": 361,
+    "name": "NOT_A_AUTHORIZATION_REQUEST",
+    "locale": "zh-CN",
+    "display": "이 요청은 권한 추가 요청이 아닙니다."
+  },
+  {
+    "id": 362,
+    "name": "NOT_A_AUTHORIZATION_REQUEST",
+    "locale": "en-US",
+    "display": "This request is not for a authorization."
+  },
+  {
+    "id": 363,
+    "name": "NOT_A_ACCOUNT_APPR_REQUEST",
+    "locale": "ko-KR",
+    "display": "이 요청은 계정 승인 요청이 아닙니다."
+  },
+  {
+    "id": 364,
+    "name": "NOT_A_ACCOUNT_ACTIVATION_REQUEST",
+    "locale": "zh-CN",
+    "display": "이 요청은 계정 활성화 요청이 아닙니다."
+  },
+  {
+    "id": 365,
+    "name": "NOT_A_ACCOUNT_ACTIVATION_REQUEST",
+    "locale": "en-US",
+    "display": "This request is not for a account activation."
+  },
+  {
+    "id": 366,
+    "name": "NOT_A_ACCOUNT_ACTIVATION_REQUEST",
+    "locale": "ko-KR",
+    "display": "이 요청은 계정 활성화 요청이 아닙니다."
+  },
+  {
+    "id": 367,
+    "name": "NOT_A_PASSWORD_INIT_REQUEST",
+    "locale": "en-US",
+    "display": "This request is not for a password initialization."
+  },
+  {
+    "id": 368,
+    "name": "READ_FILE_ERROR",
+    "locale": "ko-KR",
+    "display": "File {0} 읽기 중 에러가 발생하였습니다."
+  },
+  {
+    "id": 369,
+    "name": "READ_FILE_ERROR",
+    "locale": "en-US",
+    "display": "Failed to read file {0}."
+  },
+  {
+    "id": 370,
+    "name": "READ_FILE_ERROR",
+    "locale": "zh-CN",
+    "display": "File {0} 읽기 중 에러가 발생하였습니다."
+  },
+  {
+    "id": 371,
+    "name": "A_ALREADY_B_STATUS",
+    "locale": "ko-KR",
+    "display": "{0} 은(는) 이미 {1} 상태입니다."
+  },
+  {
+    "id": 372,
+    "name": "A_ALREADY_B_STATUS",
+    "locale": "zh-CN",
+    "display": "{0} 은(는) 이미 {1} 상태입니다."
+  },
+  {
+    "id": 373,
+    "name": "A_ALREADY_B_STATUS",
+    "locale": "en-US",
+    "display": "The {0} is already {1} status."
+  },
+  {
+    "id": 374,
+    "name": "OVER_QUANTITY",
+    "locale": "en-US",
+    "display": "{1} quantity has exceeded the {2} quantity of {0}."
+  },
+  {
+    "id": 375,
+    "name": "OVER_QUANTITY",
+    "locale": "zh-CN",
+    "display": "{0}의 {1} 수량이 {2} 수량을 초과하였습니다."
+  },
+  {
+    "id": 376,
+    "name": "OVER_QUANTITY",
+    "locale": "ko-KR",
+    "display": "{0}의 {1} 수량이 {2} 수량을 초과하였습니다."
+  },
+  {
+    "id": 377,
+    "name": "WIP_OPERATION_NOT_STARTED",
+    "locale": "en-US",
+    "display": "Current Operation of the lot has not been started."
+  },
+  {
+    "id": 378,
+    "name": "WIP_OPERATION_NOT_STARTED",
+    "locale": "zh-CN",
+    "display": "Lot의 현재 공정이 아직 시작되지 않았습니다."
+  },
+  {
+    "id": 379,
+    "name": "WIP_OPERATION_NOT_STARTED",
+    "locale": "ko-KR",
+    "display": "Lot의 현재 공정이 아직 시작되지 않았습니다."
+  },
+  {
+    "id": 380,
+    "name": "INCORRECT_AUTHENTICATION",
+    "locale": "ko-KR",
+    "display": "인증 정보가 올바르지 않습니다."
+  },
+  {
+    "id": 381,
+    "name": "BAD_SQL_GRAMMAR",
+    "locale": "ko-KR",
+    "display": "SQL이 올바르지 않습니다."
+  },
+  {
+    "id": 382,
+    "name": "NETWORK_UNREACHABLE",
+    "locale": "ko-KR",
+    "display": "네트워크에서 해당 호스트를 찾을 수 없습니다."
+  },
+  {
+    "id": 383,
+    "name": "DATABASE_UNREACHABLE",
+    "locale": "ko-KR",
+    "display": "데이터베이스 호스트를 찾을 수 없습니다."
+  },
+  {
+    "id": 384,
+    "name": "TRANSACTION_TIME_OUT",
+    "locale": "ko-KR",
+    "display": "트랜잭션 처리시간이 종료되었습니다."
+  },
+  {
+    "id": 385,
+    "name": "NULL_OBJECT_NOT_ALLOWED",
+    "locale": "en-US",
+    "display": "Null Object is not allowed."
+  },
+  {
+    "id": 386,
+    "name": "INTEGRITY_VIOLATION",
+    "locale": "ko-KR",
+    "display": "데이터 정합성이 맞지 않습니다."
+  },
+  {
+    "id": 387,
+    "name": "TRANSACTION_TIME_OUT",
+    "locale": "en-US",
+    "display": "Transaction timed out."
+  },
+  {
+    "id": 388,
+    "name": "DATABASE_UNREACHABLE",
+    "locale": "en-US",
+    "display": "Database is unreachable."
+  },
+  {
+    "id": 389,
+    "name": "NETWORK_UNREACHABLE",
+    "locale": "en-US",
+    "display": "Network is unreachable."
+  },
+  {
+    "id": 390,
+    "name": "INTEGRITY_VIOLATION",
+    "locale": "en-US",
+    "display": "Data Integrity Violation"
+  },
+  {
+    "id": 391,
+    "name": "BAD_SQL_GRAMMAR",
+    "locale": "en-US",
+    "display": "Bad SQL Grammar"
+  },
+  {
+    "id": 392,
+    "name": "INCORRECT_AUTHENTICATION",
+    "locale": "en-US",
+    "display": "Authentication is incorrect."
+  },
+  {
+    "id": 393,
+    "name": "A_IS_NOT_SET_TO_B",
+    "locale": "en-US",
+    "display": "{1} is not set to {0}."
+  },
+  {
+    "id": 394,
+    "name": "A_IS_NOT_SET_TO_B",
+    "locale": "ko-KR",
+    "display": "{0}에 {1}이 설정되지 않았습니다."
+  },
+  {
+    "id": 395,
+    "name": "A_IS_NOT_SET_TO_B",
+    "locale": "zh-CN",
+    "display": "{0}에 {1}이 설정되지 않았습니다."
+  },
+  {
+    "id": 396,
+    "name": "WIP_LABEL_IS_NOT_SET",
+    "locale": "en-US",
+    "display": "Label is not set to ProductModel of this lot "
+  },
+  {
+    "id": 397,
+    "name": "WIP_LABEL_IS_NOT_SET",
+    "locale": "ko-KR",
+    "display": "이 Lot의 ProductModel에 Label이 설정되지 않았습니다."
+  },
+  {
+    "id": 398,
+    "name": "WIP_LABEL_IS_NOT_SET",
+    "locale": "zh-CN",
+    "display": "이 Lot의 ProductModel에 Label이 설정되지 않았습니다."
+  },
+  {
+    "id": 399,
+    "name": "WIP_SERIAL_IS_NOT_A_PART_OF_BOM",
+    "locale": "en-US",
+    "display": "Scanned serial is not a part of BOM"
+  },
+  {
+    "id": 400,
+    "name": "WIP_SERIAL_IS_NOT_A_PART_OF_BOM",
+    "locale": "ko-KR",
+    "display": "스캔한 Serial이 Lot의 BOM Part에 소속되어 있지 않습니다."
+  },
+  {
+    "id": 401,
+    "name": "WIP_SERIAL_IS_NOT_A_PART_OF_BOM",
+    "locale": "zh-CN",
+    "display": "스캔한 Serial이 Lot의 BOM Part에 소속되어 있지 않습니다."
+  },
+  {
+    "id": 402,
+    "name": "RESOURCE_SHOULD_NOT_BE_DELETED",
+    "locale": "en-US",
+    "display": "{0} ({1}) can\u0027t be deleted because it is referenced by {2}"
+  },
+  {
+    "id": 403,
+    "name": "RESOURCE_SHOULD_NOT_BE_DELETED",
+    "locale": "zh-CN",
+    "display": "{0} ({1})는 {2}에 참조되어 있기 때문에 삭제될 수 없습니다."
+  },
+  {
+    "id": 404,
+    "name": "RESOURCE_SHOULD_NOT_BE_DELETED",
+    "locale": "ko-KR",
+    "display": "{0} ({1})는 {2}에 참조되어 있기 때문에 삭제될 수 없습니다."
+  },
+  {
+    "id": 405,
+    "name": "WIP_LOT_INFO_MISMATCH_WITH_OI",
+    "locale": "zh-CN",
+    "display": "OI 설정의 {0}와 Lot의 {0}가 일치하지 않습니다."
+  },
+  {
+    "id": 406,
+    "name": "WIP_LOT_INFO_MISMATCH_WITH_OI",
+    "locale": "ko-KR",
+    "display": "OI 설정의 {0}와 Lot의 {0}가 일치하지 않습니다."
+  },
+  {
+    "id": 407,
+    "name": "WIP_LOT_INFO_MISMATCH_WITH_OI",
+    "locale": "en-US",
+    "display": "The {0} of your OI Setting is different with {0} of lot."
+  },
+  {
+    "id": 408,
+    "name": "WIP_RESOURCE_HAS_NO_DETAILS",
+    "locale": "ko-KR",
+    "display": "{0} 리소스 \u0027{1}\u0027는 상세 데이터가 없습니다. "
+  },
+  {
+    "id": 409,
+    "name": "WIP_RESOURCE_HAS_NO_DETAILS",
+    "locale": "zh-CN",
+    "display": "{0} Resource \u0027{1}\u0027 has no detail data. "
+  },
+  {
+    "id": 410,
+    "name": "WIP_RESOURCE_HAS_NO_DETAILS",
+    "locale": "en-US",
+    "display": "{0} Resource \u0027{1}\u0027 has no detail data. "
+  },
+  {
+    "id": 411,
+    "name": "WIP_RESOURCE_IS_NOT_ACTIVE",
+    "locale": "ko-KR",
+    "display": "{0} 리소스 \u0027{1}\u0027은 Active 상태가 아닙니다."
+  },
+  {
+    "id": 412,
+    "name": "WIP_RESOURCE_IS_NOT_ACTIVE",
+    "locale": "zh-CN",
+    "display": "{0} Resource \u0027{1}\u0027 is not active."
+  },
+  {
+    "id": 413,
+    "name": "WIP_RESOURCE_IS_NOT_ACTIVE",
+    "locale": "en-US",
+    "display": "{0} Resource \u0027{1}\u0027 is not active."
+  },
+  {
+    "id": 414,
+    "name": "HAS_NO_AUTHORITY",
+    "locale": "zh-CN",
+    "display": "You have no authroity to access {0} ({1})"
+  },
+  {
+    "id": 415,
+    "name": "HAS_NO_AUTHORITY",
+    "locale": "en-US",
+    "display": "You have no authroity to access {0} ({1})"
+  },
+  {
+    "id": 416,
+    "name": "HAS_NO_AUTHORITY",
+    "locale": "ko-KR",
+    "display": "사용자께서는 {0} ({1})에 대한 접근 권한이 없습니다. [관리자 메뉴] / [그룹 권한] 메뉴에서 그룹에 대한 권한을 추가하세요."
+  }
+]

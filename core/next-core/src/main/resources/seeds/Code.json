@@ -1,0 +1,589 @@
+[
+  {
+    "id": "bccc74de-6de1-4425-aebb-d0a9463cb5ac",
+    "name": "ENTITY_ID_TYPE",
+    "description": "Entity ID Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:48 PM",
+    "updatedAt": "Dec 6, 2016 4:14:48 PM"
+  },
+  {
+    "id": "149c7421-0b3b-4d75-ad1d-13a27084975c",
+    "name": "CUSTOM_CATEGORY",
+    "description": "Custom Service Category",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:48 PM",
+    "updatedAt": "Dec 6, 2016 4:14:48 PM"
+  },
+  {
+    "id": "fca7a1d8-f490-4942-ba11-97915c095490",
+    "name": "BUNDLE",
+    "description": "All Bundles",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:48 PM",
+    "updatedAt": "Dec 6, 2016 4:14:48 PM"
+  },
+  {
+    "id": "a09a7efe-a7d9-40a0-816e-6da0714987c1",
+    "name": "COLUMN_REF_TYPE",
+    "description": "Column Reference Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:48 PM",
+    "updatedAt": "Dec 6, 2016 4:14:48 PM"
+  },
+  {
+    "id": "c285a912-c496-4594-adea-60b3d740c3ce",
+    "name": "COUNTRY",
+    "description": "Countries",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:48 PM",
+    "updatedAt": "Dec 6, 2016 4:14:48 PM"
+  },
+  {
+    "id": "25b9058d-3d22-4df5-8825-85fe2192b596",
+    "name": "CURRENCY",
+    "description": "Currencies",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "92bf7432-90ad-4112-ba42-7c647e80cbde",
+    "name": "ENTITY_FIELD_TYPE",
+    "description": "Entity Field Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "3bde931d-6b1c-47c2-94ff-c662e851d7b3",
+    "name": "ENTITY_REF_TYPE",
+    "description": "Entity Reference Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "c48595d4-3678-4826-81b5-a2520870f6cc",
+    "name": "FORM_FIELD_EDITOR",
+    "description": "Form Field Editor",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "298dbce0-855b-4bdb-af3b-106150269e5c",
+    "name": "GRID_COLUMN_EDITOR",
+    "description": "Column Editor",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "cadd6964-eb36-42f8-b32f-8fff353a7f7e",
+    "name": "ASSOCIATION",
+    "description": "Accosiation Between Master \u0026 Details",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "a4cc21b1-79c1-432e-b035-997f160b4c84",
+    "name": "LOCALE",
+    "description": "Locale code",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "8c7f55e8-b923-4674-bcbb-eb40ba2b34bb",
+    "name": "MENU_CATEGORY",
+    "description": "STANDARD OR TERMINAL",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "038f0037-8e0c-4065-850d-151efc48157e",
+    "name": "MENU_REF_TYPE",
+    "description": "Menu Reference Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "e8e2eb9a-db77-486d-bb01-495579368a0f",
+    "name": "MENU_TYPE",
+    "description": "Menu type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "6e04391d-08a0-4f1a-ba8b-7f5aca649a96",
+    "name": "PRINTER_TYPE",
+    "description": "Printer Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "a455966c-f1ee-406b-b745-12210c09bf98",
+    "name": "QUERY_OPERATOR",
+    "description": "Query Operator",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "51edfb0f-3ca7-4b9c-8645-a9897b775a43",
+    "name": "ROUTING_TYPE",
+    "description": "Menu Routing Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "0f8ccae9-ae8e-438a-9ae9-ebaed660e8ae",
+    "name": "SCRIPT_ENGINE",
+    "description": "Script Engine",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "5a7be23d-bd8e-4967-85fd-dbb1e025e176",
+    "name": "SCRIPT_TYPE",
+    "description": "Script type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "f9a3e854-3e45-4b7e-89eb-729065dec490",
+    "name": "STORAGE_CATEGORY",
+    "description": "Storage Category",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "8784e5b5-1bfc-4cbc-8284-08297b190db4",
+    "name": "TERMS_CATEGORY",
+    "description": "Terminology categories",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "b87970b0-4de4-46f7-98cb-e7153b19080e",
+    "name": "UPLOAD_FOLDER_RULE",
+    "description": "Upload Folder Rule",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:54 PM",
+    "updatedAt": "Dec 6, 2016 4:14:54 PM"
+  },
+  {
+    "id": "6d2e78a1-25d0-4f9e-b1dc-b1b3243ede27",
+    "name": "VARIABLE_CATEGORY",
+    "description": "Variable Category",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:55 PM",
+    "updatedAt": "Dec 6, 2016 4:14:55 PM"
+  },
+  {
+    "id": "d0b77f69-9463-451d-b81b-e5d0ed74ce82",
+    "name": "RULE_TYPE",
+    "description": "ID Rule Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:59 PM",
+    "updatedAt": "Dec 6, 2016 4:14:59 PM"
+  },
+  {
+    "id": "043ca000-7032-406b-8c9a-3587c21e4075",
+    "name": "ALARM_CATEGORY",
+    "description": "Alarm Category",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:59 PM",
+    "updatedAt": "Dec 6, 2016 4:14:59 PM"
+  },
+  {
+    "id": "2b63098b-8fd3-44cc-88c0-2174cfa13193",
+    "name": "ALARM_TYPE",
+    "description": "Alarm Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:59 PM",
+    "updatedAt": "Dec 6, 2016 4:14:59 PM"
+  },
+  {
+    "id": "ca38179f-7ca2-473d-8d64-59570ac331b1",
+    "name": "ALIGNMENT",
+    "description": "Entity Column Alignment",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:59 PM",
+    "updatedAt": "Dec 6, 2016 4:14:59 PM"
+  },
+  {
+    "id": "0a1c509f-a375-40a3-ac52-b02ddc8dbb79",
+    "name": "DELETE_STRATEGY",
+    "description": "Entity Delete Strategy",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:59 PM",
+    "updatedAt": "Dec 6, 2016 4:14:59 PM"
+  },
+  {
+    "id": "20177e15-d4ca-43cc-85cd-9bc017d9bd49",
+    "name": "MONTH",
+    "description": "1M ~ 12M code",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:14:59 PM",
+    "updatedAt": "Dec 6, 2016 4:14:59 PM"
+  },
+  {
+    "id": "c2aca7c1-6c7e-410e-a0bb-a1a8560da33a",
+    "name": "CHANNEL_TYPE",
+    "description": "Channel Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:00 PM",
+    "updatedAt": "Dec 6, 2016 4:15:00 PM"
+  },
+  {
+    "id": "41f004d1-022c-4d2f-a908-bdd6f54b9433",
+    "name": "HANDLER_TYPE",
+    "description": "Handler Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:00 PM",
+    "updatedAt": "Dec 6, 2016 4:15:00 PM"
+  },
+  {
+    "id": "7969c2a2-8285-4ce1-8dc2-10931492e491",
+    "name": "APPROVER_TYPE",
+    "description": "Approver Type (ApprLineStep)",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:00 PM",
+    "updatedAt": "Dec 6, 2016 4:15:00 PM"
+  },
+  {
+    "id": "d3e23a4c-003a-4bda-8886-a517adbe9e89",
+    "name": "APPR_STATUS",
+    "description": "Approval Status (ApprDoc)",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:00 PM",
+    "updatedAt": "Dec 6, 2016 4:15:00 PM"
+  },
+  {
+    "id": "0905b1d3-f31d-43f7-8b76-2718707ab99e",
+    "name": "DATA_FORMAT",
+    "description": "Data Format",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:00 PM",
+    "updatedAt": "Dec 6, 2016 4:15:00 PM"
+  },
+  {
+    "id": "f67b6277-78aa-417d-b27d-b88828604746",
+    "name": "SCENE_CATEGORY",
+    "description": "Scene Category",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:00 PM",
+    "updatedAt": "Dec 6, 2016 4:15:00 PM"
+  },
+  {
+    "id": "bc0a943c-34cc-4a0a-accf-e5e58b7d7500",
+    "name": "GRID_TYPE",
+    "description": "Grid Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:00 PM",
+    "updatedAt": "Dec 6, 2016 4:15:00 PM"
+  },
+  {
+    "id": "c4115e49-7049-475e-a295-0604412b2746",
+    "name": "YEAR",
+    "description": "Year",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:00 PM",
+    "updatedAt": "Dec 6, 2016 4:15:00 PM"
+  },
+  {
+    "id": "a9ce4fce-3efb-4901-a622-759473869b8b",
+    "name": "SCENE_STATUS",
+    "description": "Scene Status",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:00 PM",
+    "updatedAt": "Dec 6, 2016 4:15:00 PM"
+  },
+  {
+    "id": "1497cc3c-1369-4939-9a65-046deed691b8",
+    "name": "LABEL_VAR_TYPE",
+    "description": "Data Type Of Label Variable",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:00 PM",
+    "updatedAt": "Dec 6, 2016 4:15:00 PM"
+  },
+  {
+    "id": "d051ca23-5f2b-41fb-ad7b-5d8be5c9f661",
+    "name": "SYSTEM",
+    "description": "System Category",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:00 PM",
+    "updatedAt": "Dec 6, 2016 4:15:00 PM"
+  },
+  {
+    "id": "bb04570c-4c14-49c6-9769-0d88aa5acb22",
+    "name": "PRINT_LANGUAGE",
+    "description": "Print Language",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:00 PM",
+    "updatedAt": "Dec 6, 2016 4:15:00 PM"
+  },
+  {
+    "id": "a8a8e1e0-7274-41f5-8d96-6190f4eff491",
+    "name": "DATA_SOURCE_TYPE",
+    "description": "Data Source Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:00 PM",
+    "updatedAt": "Dec 6, 2016 4:15:00 PM"
+  },
+  {
+    "id": "1045792e-0867-4d0f-bc20-a8b14374128e",
+    "name": "APPLICATION_THEME",
+    "description": "Application themes",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:04 PM",
+    "updatedAt": "Dec 6, 2016 4:15:04 PM"
+  },
+  {
+    "id": "4eb6f997-f66a-435a-8acb-3bc31f05a943",
+    "name": "STOCK_REQUEST_TYPE",
+    "description": "Stock Request Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:04 PM",
+    "updatedAt": "Dec 6, 2016 4:15:04 PM"
+  },
+  {
+    "id": "7dd7b860-292c-46e4-a514-3a6dd3fdd9df",
+    "name": "REQUEST_AUTH_TYPE",
+    "description": "User Authorization Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:04 PM",
+    "updatedAt": "Dec 6, 2016 4:15:04 PM"
+  },
+  {
+    "id": "189877f7-0ee6-44f0-b1ca-af117326a2bf",
+    "name": "MODBUS_TYPE",
+    "description": "Modbus protocol type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:04 PM",
+    "updatedAt": "Dec 6, 2016 4:15:04 PM"
+  },
+  {
+    "id": "0711ccb5-ad89-48a4-8259-5a002a3cac93",
+    "name": "REQUEST_STATUS",
+    "description": "Request - Receive - Finish - Cancel Status",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:04 PM",
+    "updatedAt": "Dec 6, 2016 4:15:04 PM"
+  },
+  {
+    "id": "45a662b2-b534-46fd-b57c-487553837061",
+    "name": "ISSUE_TYPE",
+    "description": "Issue type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:04 PM",
+    "updatedAt": "Dec 6, 2016 4:15:04 PM"
+  },
+  {
+    "id": "03e9899a-8dc3-41ed-bca3-8b50a3919611",
+    "name": "ISSUE_CATEGORY",
+    "description": "Issue categories",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:04 PM",
+    "updatedAt": "Dec 6, 2016 4:15:04 PM"
+  },
+  {
+    "id": "2b8d4d7f-e8c3-4e51-bef4-43957e65898d",
+    "name": "ISSUE_STATUS",
+    "description": "Issue status",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "1",
+    "createdAt": "Dec 6, 2016 4:15:04 PM",
+    "updatedAt": "Dec 6, 2016 4:15:04 PM"
+  },
+  {
+    "id": "346c4e27-d191-4934-926d-3f3e8b8311f5",
+    "name": "DOMAIN_APPS",
+    "description": "Domain Applications",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "4",
+    "updaterId": "4",
+    "createdAt": "Dec 13, 2016 11:19:08 AM",
+    "updatedAt": "Dec 13, 2016 11:19:08 AM"
+  },
+  {
+    "id": "868ac8a2-cf80-4574-b855-006e8772f752",
+    "name": "EXCLUSIVE_ROLE",
+    "description": "Exclusive Role",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "4",
+    "updaterId": "4",
+    "createdAt": "Jan 12, 2017 10:59:00 AM",
+    "updatedAt": "Jan 12, 2017 10:59:00 AM"
+  },
+  {
+    "id": "b3c32c9d-5eb7-4f24-8da0-389de6a3af19",
+    "name": "QUERY_RETURN_TYPE",
+    "description": "Query Return Type",
+    "bundle": "base",
+    "domainId": 1,
+    "creatorId": "2",
+    "updaterId": "2",
+    "createdAt": "Jan 20, 2017 11:55:09 AM",
+    "updatedAt": "Jan 20, 2017 11:55:19 AM"
+  },
+  {
+    "id": "7cc8a439-1a9b-4b01-9fad-53684544dafc",
+    "name": "DEPARTMENT",
+    "description": "부서",
+    "bundle": "sys",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Oct 31, 2017 12:11:51 PM",
+    "updatedAt": "Oct 31, 2017 12:18:18 PM"
+  },
+  {
+    "id": "6c72ca99-e95e-42a8-8256-8f9590da4fb4",
+    "name": "PERMIT_URL_TYPE",
+    "description": "인증 URL 타입",
+    "bundle": "sec",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Jan 30, 2018 5:49:00 PM",
+    "updatedAt": "Jan 30, 2018 5:49:00 PM"
+  },
+  {
+    "id": "9e636b59-d793-45c1-b413-6657c1260631",
+    "name": "USER_HISTORY_STATUS",
+    "description": "사용자 이력 상태 코드",
+    "bundle": "sec",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Feb 12, 2018 4:15:51 PM",
+    "updatedAt": "Feb 12, 2018 4:15:51 PM"
+  },
+  {
+    "id": "fbc214db-d727-429c-a8ab-9c83d9587b79",
+    "name": "USER_ROLE_HISTORY_STATUS",
+    "description": "사용자 권한 이력 상태 코드",
+    "bundle": "sec",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Feb 12, 2018 4:15:51 PM",
+    "updatedAt": "Feb 12, 2018 4:15:51 PM"
+  }
+]

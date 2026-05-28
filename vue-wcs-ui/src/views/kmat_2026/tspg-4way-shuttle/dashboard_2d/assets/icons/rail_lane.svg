@@ -1,0 +1,30 @@
+<!-- rail_lane.svg : 셔틀 주행(레일) 전용 셀 - 굵은 레일, 중앙 오브젝트 제거 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" shape-rendering="geometricPrecision">
+  <!-- Outer frame: FULL (0~100) -->
+  <rect x="0" y="0" width="100" height="100" rx="4"
+        fill="none" stroke="#5E6F85" stroke-width="2" opacity="0.35"
+        stroke-linecap="round" stroke-linejoin="round"
+        vector-effect="non-scaling-stroke"/>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="100" height="100" rx="4"
+        fill="#2F3947" opacity="0.20"/>
+
+  <!-- Lane band (center) -->
+  <rect x="30" y="0" width="40" height="100" rx="2"
+        fill="#8FA3BA" opacity="0.16"/>
+
+  <!-- Thick rails -->
+  <line x1="38" y1="6" x2="38" y2="94"
+        stroke="#5C6F88" stroke-width="6" opacity="0.75"
+        stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+  <line x1="62" y1="6" x2="62" y2="94"
+        stroke="#5C6F88" stroke-width="6" opacity="0.75"
+        stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+
+  <!-- Center dashed guide -->
+  <line x1="50" y1="10" x2="50" y2="90"
+        stroke="#D6E0EC" stroke-width="3" opacity="0.35"
+        stroke-linecap="round" stroke-dasharray="6 7"
+        vector-effect="non-scaling-stroke"/>
+</svg>

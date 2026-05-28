@@ -1,0 +1,3 @@
+UPDATE USERS
+SET ACTIVE_FLAG = 1
+WHERE id = :userId AND DOMAIN_ID = :domainId

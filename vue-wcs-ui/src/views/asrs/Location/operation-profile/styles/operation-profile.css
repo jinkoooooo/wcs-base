@@ -1,0 +1,209 @@
+.operation-profile-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 0;
+  height: 100%;
+}
+
+.operation-profile-page__summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 220px));
+  gap: 16px;
+}
+
+.operation-profile-summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #dbe4ee;
+}
+
+.operation-profile-summary-card span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.operation-profile-summary-card strong {
+  font-size: 32px;
+  font-weight: 900;
+  color: #10233a;
+}
+
+.operation-profile-page__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 18px;
+  min-height: 0;
+  flex: 1;
+}
+
+.operation-profile-page__left,
+.operation-profile-page__right {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.operation-profile-toolbar {
+  gap: 14px;
+}
+
+.operation-profile-toolbar__fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 12px 16px;
+}
+
+.operation-profile-toolbar__bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px 16px;
+  align-items: center;
+}
+
+.operation-profile-toolbar__feedback {
+  min-width: 0;
+}
+
+.operation-profile-toolbar__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.operation-profile-table-panel,
+.operation-profile-detail-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 0;
+  padding: 20px;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.operation-profile-table-panel,
+.operation-profile-detail-panel {
+  height: 650px;
+}
+
+.operation-profile-table-panel__header,
+.operation-profile-detail-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.operation-profile-table-panel__eyebrow,
+.operation-profile-detail-panel__eyebrow {
+  margin: 0 0 6px 0;
+  font-size: 12px;
+  font-weight: 800;
+  color: #2563eb;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.operation-profile-table-panel__title,
+.operation-profile-detail-panel__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 900;
+  color: #122033;
+}
+
+.operation-profile-table-panel__count {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #edf3f8;
+  color: #486078;
+  font-size: 12px;
+  font-weight: 800;
+  border: 1px solid #d4e0ea;
+}
+
+.operation-profile-table-panel__body,
+.operation-profile-detail-panel__body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.operation-profile-table-panel__empty {
+  text-align: center;
+  color: #7a8898;
+}
+
+.operation-profile-detail-panel__body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.operation-profile-detail-panel__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #f7f9fc;
+  border: 1px solid #dfe7ef;
+}
+
+.operation-profile-detail-panel__meta span {
+  font-size: 12px;
+  font-weight: 800;
+  color: #64748b;
+}
+
+.operation-profile-detail-panel__meta strong {
+  font-size: 16px;
+  font-weight: 900;
+  color: #10233a;
+}
+
+.operation-profile-detail-panel__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 8px;
+  border-top: 1px solid #e5edf4;
+}
+
+@media (max-width: 1400px) {
+  .operation-profile-page__content {
+    grid-template-columns: 1fr;
+  }
+
+  .operation-profile-toolbar__fields {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+
+  .operation-profile-toolbar__bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .operation-profile-toolbar__actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 960px) {
+  .operation-profile-page__summary,
+  .operation-profile-toolbar__fields {
+    grid-template-columns: 1fr;
+  }
+}

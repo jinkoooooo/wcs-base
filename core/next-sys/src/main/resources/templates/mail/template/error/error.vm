@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Things System Error Notification</title>
+		<style></style>
+	</head>
+
+	<body>
+		<div style="border:5px solid #40ba54;margin:10px;padding:10px;">
+	 		<div style="font-size:28px;font-weight:bold;color:#40ba54;text-transform:capitalize">
+				Error
+				<span style="color:#4a5253">Mailing Service</span>
+			</div>
+			<div style="background:#f4f4f4;margin-bottom:5px;padding:3px 10px;color:#666;line-height:1.5;">
+				<h2>$errorLog.errorType</h2>
+				<h3>ID : $errorLog.id</h3>
+				<h3>Message : $errorLog.message</h3>
+				<h3>Status : $errorLog.status</h3>
+				<h3>URI : $errorLog.uri</h3>
+				<h3>Method : $errorLog.method</h3>
+				<h3>Occurred at : $createdAt</h3>
+				
+				<br/>
+				
+				#if($errorLog.header)
+				<div>Header : $errorLog.header</div>
+				#end
+				
+				<br/>
+				
+				#if($errorLog.stackTrace)
+				<div>Stack Trace : $errorLog.stackTrace</div>
+				#end
+			</div>
+			
+			<div style="border-top:1px solid #ccc;padding:10px 5px 30px 5px;font-size:12px">
+			    <a href="$link">Detail</a>
+			</div>
+	 	</div>
+	</body>
+</html>

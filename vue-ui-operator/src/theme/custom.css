@@ -1,0 +1,225 @@
+ion-content {
+  --overflow: auto;
+}
+.alert-wrapper {
+  .alert-button.danger {
+    color: var(--ion-color-danger);
+  }
+  .alert-button.cancel {
+    color: var(--ion-color-danger);
+  }
+  .alert-button.primary {
+    color: var(--ion-color-primary);
+  }
+}
+
+.default-btn {
+  background: #626262;
+  border: none;
+  border-radius: 12px;
+  margin: 0;
+  padding: 0.3rem 1rem;
+  min-width: 100px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: "Noto Sans KR";
+  outline: none;
+  margin-right: 2px;
+}
+
+.border-radius-clear {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.tablet-body-padding {
+  padding: 25px 35px 20px 35px;
+}
+
+.warn-btn {
+  background: #e54646;
+  border-radius: 12px;
+  margin: 0;
+  padding: 0.3rem 1rem;
+  min-width: 100px;
+  color: #fff;
+  text-shadow: 0px 0.03rem 0.03rem rgba(0, 0, 0, 0.4);
+  font-size: 0.8rem;
+  font-family: "Noto Sans KR";
+  outline: none;
+}
+
+.warn-btn-active {
+  background: #d13939;
+  text-shadow: 0.03rem 0rem 0.03rem rgba(0, 0, 0, 0.4);
+}
+ion-toast {
+  --start: "right-to-left";
+  --width: "600px";
+}
+ion-toast.success {
+  --background: var(--ion-color-success-shade);
+  --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+  --color: var(--ion-color-success-contrast);
+}
+
+ion-toast.success::part(message) {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+ion-toast.success::part(icon) {
+  border: none;
+  color: var(--ion-color-success-contrast);
+  font-size: 0.8rem;
+}
+
+ion-toast.info {
+  --background: var(--ion-color-tertiary);
+  --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+  --color: var(--ion-color-tertiary-contrast);
+}
+
+ion-toast.info::part(message) {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+ion-toast.info::part(icon) {
+  border: none;
+  color: var(--ion-color-tertiary-contrast);
+  font-size: 0.8rem;
+}
+
+ion-toast.warning {
+  --background: var(--ion-color-warning-shade);
+  --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+  --color: var(--ion-color-warning-contrast);
+}
+
+ion-toast.warning::part(message) {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+ion-toast.warning::part(icon) {
+  border: none;
+  color: var(--ion-color-warning-contrast);
+  font-size: 0.8rem;
+}
+
+ion-toast.danger {
+  --background: var(--ion-color-danger-shade);
+  --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+  --color: var(--ion-color-danger-contrast);
+}
+
+ion-toast.danger::part(message) {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+ion-toast.danger::part(icon) {
+  border: none;
+  color: var(--ion-color-danger-contrast);
+  font-size: 0.8rem;
+}
+
+ion-split-pane {
+  --side-max-width: 140px;
+  --side-min-width: 140px;
+}
+
+ion-menu ion-content {
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --background: var(
+    --ion-item-background,
+    var(--ion-background-color, #ffffff)
+  );
+  --max-width: 140px;
+}
+
+/* Remove background transitions for switching themes */
+ion-menu ion-item {
+  --transition: none;
+}
+
+ion-item.selected {
+  --color: var(--ion-color-primary);
+}
+
+/*
+   * Material Design Menu
+  */
+ion-menu.md ion-list {
+  padding: 20px 0;
+}
+
+ion-menu.md ion-list-header {
+  padding-right: 18px;
+  padding-left: 18px;
+
+  font-weight: 450;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+ion-menu.md ion-item {
+  --padding-start: 18px;
+
+  margin-right: 10px;
+
+  border-radius: 0 50px 50px 0;
+
+  font-weight: 500;
+}
+
+ion-menu.md ion-item.selected {
+  --background: rgb(var(--ion-color-primary-rgb) 0.14);
+}
+
+ion-menu.md ion-item.selected ion-icon {
+  color: var(--ion-color-primary);
+}
+
+ion-menu.md ion-list-header,
+ion-menu.md ion-item ion-icon {
+  color: var(--ion-color-step-650, #5f6368);
+}
+
+ion-menu.md ion-list:not(:last-of-type) {
+  border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
+}
+
+/*
+   * iOS Menu
+  */
+ion-menu.ios ion-list-header {
+  margin-bottom: 8px;
+
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+ion-menu.ios ion-list {
+  padding: 20px 0 0;
+}
+
+ion-menu.ios ion-item {
+  --padding-start: 16px;
+  --min-height: 50px;
+}
+
+ion-menu.ios ion-item ion-icon {
+  color: #73849a;
+
+  font-size: 24px;
+}
+
+ion-menu.ios ion-item.selected ion-icon {
+  color: var(--ion-color-primary);
+}

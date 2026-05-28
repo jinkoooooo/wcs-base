@@ -1,0 +1,69 @@
+### 오더 crate/comp 스케쥴 스타트
+GET http://localhost:9500/api/tspg/test/start/order-manager-scheduler
+Content-Type: application/json
+### 오더 crate/comp 스케쥴 스탑
+GET http://localhost:9500/api/tspg/test/stop/order-manager-scheduler
+Content-Type: application/json
+### PLC read 스케쥴 스타트
+GET http://localhost:9500/api/tspg/test/start/plc-read-scheduler
+Content-Type: application/json
+### PLC read 스케쥴 스탑
+GET http://localhost:9500/api/tspg/test/stop/plc-read-scheduler
+Content-Type: application/json
+### 오더 스케쥴 스타트
+GET http://localhost:9500/api/tspg/test/start/cv-order-manager-scheduler
+Content-Type: application/json
+### 오더 스케쥴 스탑
+GET http://localhost:9500/api/tspg/test/stop/cv-order-manager-scheduler
+Content-Type: application/json
+### 오더 스케쥴 스탑
+GET http://192.168.10.4:9500/api/tspg/test/boot
+Content-Type: application/json
+
+### 셔틀 수동 이동
+POST http://localhost:9500/api/tspg/test/shuttle/write/command?
+    shuttleCarId=SHUTTLE_CAR_1
+    &workId=1019
+    &workType=0
+    &resetOption=0
+    &toCellId=201
+    &floor=1
+Content-Type: application/json
+
+### 셔틀카 경로 초기화
+POST http://localhost:9500/api/tspg/test/shuttle/service/path-reset?
+    shuttleCarId=SHUTTLE_CAR_1
+Content-Type: application/json
+
+
+### WCS 시나리오
+POST http://localhost:9500/rest/kmat2026/scenario/start
+Content-Type: application/json
+
+### AGF 601 신호 수동
+POST http://localhost:9500/rest/ecs/sineva/facade-test/order/create-initial
+Content-Type: application/json
+
+{
+  "fromSide" : "TSPG_CONV_OUT_01",
+  "toSide" : "TSPG_CONV_IN_01",
+  "commandType" : "K_MAT_TSPG_CONVEYOR_INBOUND",
+  "equipType" : "1"
+}
+
+### AGF 602 신호 수동
+POST http://localhost:9500/rest/ecs/sineva/facade-test/order/create-initial
+Content-Type: application/json
+
+{
+  "fromSide" : "TSPG_CONV_OUT_02",
+  "toSide" : "TSPG_CONV_IN_01",
+  "commandType" : "K_MAT_TSPG_CONVEYOR_INBOUND",
+  "equipType" : "1"
+}
+
+
+### AGF a
+POST http://192.168.10.4:9500/rest/tbecsamhstask/7/robot/callback
+Content-Type: application/json
+

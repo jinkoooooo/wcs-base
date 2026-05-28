@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+<!-- Buffer zone -->
+<rect x="20" y="20" width="60" height="60" rx="8" fill="#2F3947"/>
+<!-- compartments -->
+<rect x="26" y="28" width="22" height="18" rx="5" fill="#C7D0DB" opacity="0.50"/>
+<rect x="52" y="28" width="22" height="18" rx="5" fill="#C7D0DB" opacity="0.34"/>
+<rect x="26" y="50" width="48" height="24" rx="6" fill="#C7D0DB" opacity="0.22"/>
+<!-- queue divider -->
+<rect x="24" y="78" width="52" height="2" rx="1" fill="#58667A" opacity="0.45"/>
+</svg>

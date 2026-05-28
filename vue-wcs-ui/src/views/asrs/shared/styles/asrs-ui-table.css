@@ -1,0 +1,56 @@
+.asrs-ui-table-wrap {
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+  overflow: auto;
+  border: 1px solid #dbe3ec;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.asrs-ui-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.asrs-ui-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #eef3f8;
+  color: #556579;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: left;
+  padding: 13px 14px;
+  border-bottom: 1px solid #d8e1ea;
+}
+
+.asrs-ui-table td {
+  padding: 13px 14px;
+  font-size: 13px;
+  color: #314255;
+  border-bottom: 1px solid #edf1f5;
+  white-space: nowrap;
+  background: #fff;
+}
+
+.asrs-ui-table tbody tr {
+  cursor: pointer;
+  transition: background 0.14s ease;
+}
+
+.asrs-ui-table tbody tr:hover td {
+  background: #f5f9fc;
+}
+
+.asrs-ui-table__row--selected td {
+  background: #eef4fb;
+}
+
+.asrs-ui-table__key {
+  font-weight: 800;
+  color: #122033;
+}

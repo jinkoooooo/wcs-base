@@ -1,0 +1,27 @@
+plugins {
+    id 'java-library'
+}
+
+jar {
+	manifest {
+		attributes(
+				'Implementation-Title': 'Nearsolution System',
+				'Implementation-Version': '3.0.0'
+		)
+	}
+}
+
+
+repositories {
+    mavenCentral() // Maven 중앙 저장소 사용
+    // 필요시 사설 Nexus 리포지토리 추가
+    maven {
+        url "http://repo.hatiolab.com/nexus/content/groups/elidom-repository/"
+        allowInsecureProtocol = true
+    }
+}
+
+
+dependencies {
+	api(project(':anyware-sys'))
+}

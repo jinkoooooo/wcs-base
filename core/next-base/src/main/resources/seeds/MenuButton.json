@@ -1,0 +1,1153 @@
+[
+  {
+    "id": "80654bd1-79e9-4a8d-b05c-1a4fd601c028",
+    "menuId": "b9df91a2-b218-4877-a8d4-03379dd7a7e4",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "9b28f021-a594-4922-87b2-eacfffa42f7a",
+    "menuId": "b9df91a2-b218-4877-a8d4-03379dd7a7e4",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "bd65c6c0-6f37-4ae1-bc4e-1dfa3f24be41",
+    "menuId": "b9df91a2-b218-4877-a8d4-03379dd7a7e4",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "d2d41a20-a568-40a6-8109-360cfe259942",
+    "menuId": "2a8793f7-c671-41e3-ad10-8ec21c3d9d01",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "d0da18fe-3498-4965-9c72-7c8c0f367a45",
+    "menuId": "2a8793f7-c671-41e3-ad10-8ec21c3d9d01",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "a3797b11-209e-4175-9f33-611878b043d7",
+    "menuId": "2a8793f7-c671-41e3-ad10-8ec21c3d9d01",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "e2c65e26-9df0-4124-a28c-74fd7b61124e",
+    "menuId": "09c7fdbf-a7c5-4830-a9e4-0c2f0833d2ad",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "fa1b7f18-59bf-4677-9906-6c4630ccaca7",
+    "menuId": "09c7fdbf-a7c5-4830-a9e4-0c2f0833d2ad",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "08bc8644-fbc2-4ada-b7c7-07aa044ed2a3",
+    "menuId": "09c7fdbf-a7c5-4830-a9e4-0c2f0833d2ad",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "343f590a-0b44-4dae-92dd-31504393d5a0",
+    "menuId": "09c7fdbf-a7c5-4830-a9e4-0c2f0833d2ad",
+    "rank": 0,
+    "icon": "icons:refresh",
+    "text": "clear-cache",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "5aba9522-9468-404b-b653-5b28590b950f",
+    "menuId": "f7e52fa0-d465-4835-ae37-fe44d19efa0d",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "e6db5d1b-c4a8-42be-9ba1-03522bece843",
+    "menuId": "f7e52fa0-d465-4835-ae37-fe44d19efa0d",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "c3dccab8-20d3-4af4-bdfd-2d27cb34a220",
+    "menuId": "f7e52fa0-d465-4835-ae37-fe44d19efa0d",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "e6f38c86-8a90-4675-9743-8d1783c56c48",
+    "menuId": "f7e52fa0-d465-4835-ae37-fe44d19efa0d",
+    "rank": 0,
+    "icon": "icons:refresh",
+    "text": "clear-cache",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "e9c56ef8-b167-49ae-a64a-d1284a6d4140",
+    "menuId": "05c53443-33ab-4781-9a82-080a0cc4fdd5",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "ee622301-d7c5-45bb-8fa3-0b4124c25f3c",
+    "menuId": "05c53443-33ab-4781-9a82-080a0cc4fdd5",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "8148cb1f-b5bc-464e-b863-9984048adad5",
+    "menuId": "05c53443-33ab-4781-9a82-080a0cc4fdd5",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "15d41e9c-caac-40df-ae24-7629f6355738",
+    "menuId": "05c53443-33ab-4781-9a82-080a0cc4fdd5",
+    "rank": 0,
+    "icon": "icons:description",
+    "text": "detail",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "e0a53d55-6a08-41fb-a8f7-89c1cea7d725",
+    "menuId": "9da38866-8247-426f-b543-25ffe52e1742",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "fca6a4c2-1e13-4938-920e-949cc2e0dde2",
+    "menuId": "9da38866-8247-426f-b543-25ffe52e1742",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "2fb2742f-8a3f-4694-b870-f2b144e12c8f",
+    "menuId": "9da38866-8247-426f-b543-25ffe52e1742",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "1b5bbe2a-8626-46a1-a0a1-e8ad3d0563ef",
+    "menuId": "9da38866-8247-426f-b543-25ffe52e1742",
+    "rank": 0,
+    "icon": "icons:refresh",
+    "text": "clear-cache",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "fbef5b60-557e-46cc-8050-edb22ae7792c",
+    "menuId": "93af6d84-036d-4277-bb3e-24f73e9dd9d7",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "5779fe02-1961-4f36-969f-5d790bfd6e69",
+    "menuId": "93af6d84-036d-4277-bb3e-24f73e9dd9d7",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "db450091-9e77-4eec-be00-edea47f38250",
+    "menuId": "93af6d84-036d-4277-bb3e-24f73e9dd9d7",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "c3cb4939-d3cb-45a1-b38c-962c009d5a78",
+    "menuId": "93af6d84-036d-4277-bb3e-24f73e9dd9d7",
+    "rank": 0,
+    "icon": "icons:refresh",
+    "text": "clear-cache",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "bf8130a6-6c21-49b7-89df-047f6807c78d",
+    "menuId": "2a59d7bd-15e0-4d4c-94f8-0004c5fc4a63",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "9015f5db-5f91-45f0-a39b-49d48a46caab",
+    "menuId": "2a59d7bd-15e0-4d4c-94f8-0004c5fc4a63",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "c7263cd2-2358-4ef6-a876-506002860e1b",
+    "menuId": "2a59d7bd-15e0-4d4c-94f8-0004c5fc4a63",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "8de7db9f-89cf-41e7-b69e-219257be0f26",
+    "menuId": "9624d05f-0891-4675-9850-77416a2a7120",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "af69d68e-cd6e-47d2-be20-d285f5cc61bf",
+    "menuId": "9624d05f-0891-4675-9850-77416a2a7120",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "432c3853-5f1b-445b-8574-c898d5be70d6",
+    "menuId": "9624d05f-0891-4675-9850-77416a2a7120",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "3cf5dc47-1268-49ad-816e-fd88e21bfb1b",
+    "menuId": "ed2a5f11-2510-4ab9-aa17-3448a6212430",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "92f948fb-a0ce-4097-9a93-91b2c5ef9470",
+    "menuId": "ed2a5f11-2510-4ab9-aa17-3448a6212430",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "8be937c7-be2c-4f0a-8174-7a6943e71dd8",
+    "menuId": "ed2a5f11-2510-4ab9-aa17-3448a6212430",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "7e7a05c3-437c-4264-a93e-f030d09777a6",
+    "menuId": "4a889781-7cdf-4079-9756-44766505a978",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "4ed52f1c-84ed-46f9-b365-3107232dd94b",
+    "menuId": "4a889781-7cdf-4079-9756-44766505a978",
+    "rank": 0,
+    "icon": "icons:assignment-returned",
+    "text": "export",
+    "auth": "show",
+    "domainId": 1
+  },
+  {
+    "id": "069ad950-8988-4148-97ed-f7be5980ff43",
+    "menuId": "4a889781-7cdf-4079-9756-44766505a978",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "e954930f-abb8-43f5-aaa7-f11ca10dd3d9",
+    "menuId": "62074d95-7eab-4030-a106-d8916640d3ca",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "8bf1af70-a54a-43c7-a7f3-741d4fed4eeb",
+    "menuId": "62074d95-7eab-4030-a106-d8916640d3ca",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "f1ae47d0-f50d-4338-8c13-03b8dda86096",
+    "menuId": "62074d95-7eab-4030-a106-d8916640d3ca",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "945a9273-56e2-41ad-a245-f802aab9cb96",
+    "menuId": "08d52028-e080-4af5-8a63-e9fee3378d3f",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "38175755-f235-482a-844b-fa1a7b6b740a",
+    "menuId": "08d52028-e080-4af5-8a63-e9fee3378d3f",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "5bd910bb-903a-4019-ba8c-5e1d8e8d3aea",
+    "menuId": "bc3e4eeb-d7f8-4328-8c37-ef67c6c03d8a",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "1bb92a0a-5ee4-4ea5-9ae5-3116b2f8798f",
+    "menuId": "bc3e4eeb-d7f8-4328-8c37-ef67c6c03d8a",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "34aac6cf-6b4b-4c56-a5ce-787914ca27f4",
+    "menuId": "bc3e4eeb-d7f8-4328-8c37-ef67c6c03d8a",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "4b16476e-b919-4284-b609-b7cc20bbbab4",
+    "menuId": "d41921ab-36d1-41f6-aca3-9afff8c29190",
+    "rank": 0,
+    "text": "sync",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "3161c2b8-5532-4bff-8d9d-6957f0f39757",
+    "menuId": "1ae0ca2d-3719-4c9d-92d2-774c03cd4ef2",
+    "rank": 0,
+    "text": "import",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "6306b5d8-822b-4274-b63e-bcc50c67133d",
+    "menuId": "1ae0ca2d-3719-4c9d-92d2-774c03cd4ef2",
+    "rank": 0,
+    "text": "export",
+    "auth": "show",
+    "domainId": 1
+  },
+  {
+    "id": "db182256-2841-4aba-a4fe-880631250437",
+    "menuId": "1ae0ca2d-3719-4c9d-92d2-774c03cd4ef2",
+    "rank": 0,
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "87554edd-bf73-4b57-bb1e-04659fc36845",
+    "menuId": "1ae0ca2d-3719-4c9d-92d2-774c03cd4ef2",
+    "rank": 0,
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "952cd3d8-b40b-4eb9-9880-be4da5f983a5",
+    "menuId": "1ae0ca2d-3719-4c9d-92d2-774c03cd4ef2",
+    "rank": 0,
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "0ee8292b-c210-473c-abf4-8859c08dbb21",
+    "menuId": "900c3423-61ce-429c-a4a3-dd984af6d541",
+    "rank": 0,
+    "text": "import",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "0972a36f-b751-4afe-a273-b20e3dc378f6",
+    "menuId": "900c3423-61ce-429c-a4a3-dd984af6d541",
+    "rank": 0,
+    "text": "export",
+    "auth": "show",
+    "domainId": 1
+  },
+  {
+    "id": "fba32477-30b8-41c4-ae58-ae69770313eb",
+    "menuId": "900c3423-61ce-429c-a4a3-dd984af6d541",
+    "rank": 0,
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "bbae8643-a361-4175-814c-f9b141fea5e2",
+    "menuId": "900c3423-61ce-429c-a4a3-dd984af6d541",
+    "rank": 0,
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "14d606d4-b032-4046-89ab-117902f31d0e",
+    "menuId": "900c3423-61ce-429c-a4a3-dd984af6d541",
+    "rank": 0,
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "51bcd325-cbf5-4ea1-8554-300ddd8c4607",
+    "menuId": "8de575dd-a7f0-4539-b727-15e9bde4c45a",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "e7417609-41e1-4bd3-8ffd-b36d69e57209",
+    "menuId": "8de575dd-a7f0-4539-b727-15e9bde4c45a",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "6c9545ef-a06a-4cee-a743-bd78b840a6c3",
+    "menuId": "8de575dd-a7f0-4539-b727-15e9bde4c45a",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "f243d855-cdad-4d9e-a1f4-73b23db89c7d",
+    "menuId": "8de575dd-a7f0-4539-b727-15e9bde4c45a",
+    "rank": 0,
+    "text": "legend",
+    "auth": "show",
+    "domainId": 1
+  },
+  {
+    "id": "f69deafe-6adc-437b-9fc2-b78f56df0e68",
+    "menuId": "a49bcc1e-086b-4025-b701-57fbc5cf0f6a",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "959f3cb4-fc53-4253-99a5-811938883752",
+    "menuId": "a49bcc1e-086b-4025-b701-57fbc5cf0f6a",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "5ad29322-54a4-435a-8791-91d047d895e8",
+    "menuId": "a49bcc1e-086b-4025-b701-57fbc5cf0f6a",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "0b84c270-3817-4318-8436-4e3b11dcedfa",
+    "menuId": "98e1241f-c807-44d5-b77f-a70f110fd007",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "ad416ea1-df55-450d-ad43-ed3741ab4f79",
+    "menuId": "98e1241f-c807-44d5-b77f-a70f110fd007",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "cf368a01-5415-46de-9136-a1e8e5b16868",
+    "menuId": "98e1241f-c807-44d5-b77f-a70f110fd007",
+    "rank": 0,
+    "icon": "icons:assignment-returned",
+    "text": "export",
+    "auth": "show",
+    "domainId": 1
+  },
+  {
+    "id": "c11ec75d-5131-4b90-949a-81b86ce5461d",
+    "menuId": "98e1241f-c807-44d5-b77f-a70f110fd007",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "3c4a9dfd-2d24-4274-afc5-85b04eaafd51",
+    "menuId": "139253ea-7a5b-4cb5-a96f-3f9d7a1463a6",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "62b95908-b35f-4df8-90b8-1476238d268b",
+    "menuId": "139253ea-7a5b-4cb5-a96f-3f9d7a1463a6",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "d0695971-8ae5-4a8e-ae0e-c22d0e27553d",
+    "menuId": "139253ea-7a5b-4cb5-a96f-3f9d7a1463a6",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "33a4f9e7-0900-4b60-b1df-334eee26ef85",
+    "menuId": "139253ea-7a5b-4cb5-a96f-3f9d7a1463a6",
+    "rank": 0,
+    "icon": "icons:refresh",
+    "text": "clear-cache",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "9d6e20b2-432f-4111-a45e-ecb0e5c04ac8",
+    "menuId": "139253ea-7a5b-4cb5-a96f-3f9d7a1463a6",
+    "rank": 0,
+    "text": "export",
+    "auth": "show",
+    "domainId": 1
+  },
+  {
+    "id": "b6036295-5c0a-4393-a5e4-9f12364e829e",
+    "menuId": "95d5b79f-743d-4658-b7aa-8741f68f7a28",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "c7897dfd-d274-4d62-973a-074340d215bf",
+    "menuId": "95d5b79f-743d-4658-b7aa-8741f68f7a28",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "5b9f7baf-d353-422d-954d-c3478d4560b6",
+    "menuId": "95d5b79f-743d-4658-b7aa-8741f68f7a28",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "a2968ee5-08a2-4e21-9b69-9598654631f7",
+    "menuId": "6b7e37a9-0371-46b6-ba68-be182696af35",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "fd9662fe-18c8-49d5-9e27-38e6e8d6ba2d",
+    "menuId": "6b7e37a9-0371-46b6-ba68-be182696af35",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "95565016-9d97-4342-8ac1-2864fca7d384",
+    "menuId": "c2126fc5-d31b-4d56-83f2-609f57829c82",
+    "rank": 0,
+    "icon": "icons:assignment-returned",
+    "text": "export",
+    "auth": "show",
+    "domainId": 1
+  },
+  {
+    "id": "2519f13b-cdd7-4ab7-8872-a1f4e43a2165",
+    "menuId": "c2126fc5-d31b-4d56-83f2-609f57829c82",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "08307bcb-0dd1-40c1-9ede-f7510161e36a",
+    "menuId": "c2126fc5-d31b-4d56-83f2-609f57829c82",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "c153c2bd-bec2-4bcc-80dc-59d061dd287d",
+    "menuId": "c2126fc5-d31b-4d56-83f2-609f57829c82",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "8887ced2-b5c3-44ee-8e98-0d6c2375dd06",
+    "menuId": "ae64a7d4-4f92-4a87-b672-25376236460b",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "bf45907a-4d41-4094-9520-8a7898e05704",
+    "menuId": "ae64a7d4-4f92-4a87-b672-25376236460b",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "213327ac-937a-4879-9f91-cbac50eaf496",
+    "menuId": "ae64a7d4-4f92-4a87-b672-25376236460b",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "82bc4558-7272-4bf9-a6fc-355d38ac69f6",
+    "menuId": "63c35b8b-6c94-4a6c-97b9-30d2eb383f0c",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "5ac4954f-b62c-436a-a09b-3f1b1fe05690",
+    "menuId": "63c35b8b-6c94-4a6c-97b9-30d2eb383f0c",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "19d3b2b0-369f-455d-97ab-56a3b251b5fc",
+    "menuId": "63c35b8b-6c94-4a6c-97b9-30d2eb383f0c",
+    "rank": 0,
+    "icon": "icons:add",
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "6190831a-75bd-4632-ae87-12648d8bc0da",
+    "menuId": "ff3dbfd6-314e-4a45-801e-cb499b989506",
+    "rank": 0,
+    "icon": "icons:assignment-returned",
+    "text": "export",
+    "auth": "show",
+    "domainId": 1
+  },
+  {
+    "id": "5b21800b-828b-4d85-b8e7-0015ba004f0c",
+    "menuId": "066e8f0a-35bc-407c-923a-8e8f87e32706",
+    "rank": 0,
+    "text": "import",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "d7724364-f7b5-4469-b4c8-45f6b8362fe5",
+    "menuId": "066e8f0a-35bc-407c-923a-8e8f87e32706",
+    "rank": 0,
+    "text": "export",
+    "auth": "show",
+    "domainId": 1
+  },
+  {
+    "id": "13d2319d-1b2f-4e4a-be0e-84b1503f61be",
+    "menuId": "066e8f0a-35bc-407c-923a-8e8f87e32706",
+    "rank": 0,
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "e4183512-df84-4ad0-861b-ef185cfc7724",
+    "menuId": "066e8f0a-35bc-407c-923a-8e8f87e32706",
+    "rank": 0,
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "323d1b71-f19c-4843-b2f0-23d35bbaec08",
+    "menuId": "066e8f0a-35bc-407c-923a-8e8f87e32706",
+    "rank": 0,
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "2a1cd479-ef78-4020-88e0-39c398a0cc99",
+    "menuId": "c75495d7-dda2-4be8-b9b3-7679483de9c0",
+    "rank": 0,
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "25a18d24-51f6-4125-9216-9e6f8e197959",
+    "menuId": "c75495d7-dda2-4be8-b9b3-7679483de9c0",
+    "rank": 0,
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "8c8fc96d-f0ef-475e-9032-dc0513a1b2ae",
+    "menuId": "c75495d7-dda2-4be8-b9b3-7679483de9c0",
+    "rank": 0,
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "c2622d15-5eb6-40c1-8e13-12dc7547e1ea",
+    "menuId": "c9ba5b34-b6b7-4962-b1ec-6b72d2d3a296",
+    "rank": 0,
+    "text": "import",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "f18ca44d-8363-4ed6-b2a8-124788d64dc2",
+    "menuId": "c9ba5b34-b6b7-4962-b1ec-6b72d2d3a296",
+    "rank": 0,
+    "text": "export",
+    "auth": "show",
+    "domainId": 1
+  },
+  {
+    "id": "42d81f1b-4066-4b5f-a0d1-f7534f160afb",
+    "menuId": "c9ba5b34-b6b7-4962-b1ec-6b72d2d3a296",
+    "rank": 0,
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "6826bf19-2ac5-4a6e-b425-545c9c78dbad",
+    "menuId": "c9ba5b34-b6b7-4962-b1ec-6b72d2d3a296",
+    "rank": 0,
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "7e8e3bec-8227-4c28-b702-923c6ae2fe5d",
+    "menuId": "c9ba5b34-b6b7-4962-b1ec-6b72d2d3a296",
+    "rank": 0,
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "b08d451b-e091-4840-8c7e-b0eb702af4eb",
+    "menuId": "9e58d384-00c9-4f28-883d-438053c77e05",
+    "rank": 0,
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "0953894d-0d76-4296-9a32-a8284e76ab8f",
+    "menuId": "9e58d384-00c9-4f28-883d-438053c77e05",
+    "rank": 0,
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "bcfeadcb-908f-4962-b9b7-aadf707acba9",
+    "menuId": "9e58d384-00c9-4f28-883d-438053c77e05",
+    "rank": 0,
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "e08c341c-7e61-4456-9ee2-abb531c6c19f",
+    "menuId": "4cdcf243-d1a7-493c-930a-8f99282238ab",
+    "rank": 0,
+    "icon": "icons:delete",
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "401f3883-e5a8-4032-9933-a3f5076e9a42",
+    "menuId": "4cdcf243-d1a7-493c-930a-8f99282238ab",
+    "rank": 0,
+    "icon": "icons:save",
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "2ef72df0-da22-4384-985a-328b122212f0",
+    "menuId": "4cdcf243-d1a7-493c-930a-8f99282238ab",
+    "rank": 0,
+    "icon": "icons:file-upload",
+    "text": "upload",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "8429ce73-668a-4a61-b17a-a60ed390c3fe",
+    "menuId": "7aa237ce-6b33-42ae-a748-94701d325bde",
+    "rank": 0,
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "cb2ee2f8-f188-4af7-8a3b-a3b98cdd41ae",
+    "menuId": "7aa237ce-6b33-42ae-a748-94701d325bde",
+    "rank": 0,
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "85702ceb-cada-49b7-9d51-faa9882254e9",
+    "menuId": "7aa237ce-6b33-42ae-a748-94701d325bde",
+    "rank": 0,
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "b661047c-d2c7-43e4-b17d-8dc419ebb606",
+    "menuId": "a05c44ee-4c6d-4547-91e6-d698b6f610c4",
+    "rank": 0,
+    "text": "import",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "734d8805-e5ff-413a-b425-641ec5950fcd",
+    "menuId": "a05c44ee-4c6d-4547-91e6-d698b6f610c4",
+    "rank": 0,
+    "text": "export",
+    "auth": "show",
+    "domainId": 1
+  },
+  {
+    "id": "2e5a4b0a-39e5-4214-b9ae-f5eb4ee2ddf4",
+    "menuId": "a05c44ee-4c6d-4547-91e6-d698b6f610c4",
+    "rank": 0,
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "0ac4ec8b-c117-4d91-a78b-23250d9b5328",
+    "menuId": "a05c44ee-4c6d-4547-91e6-d698b6f610c4",
+    "rank": 0,
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "792bd5de-8596-433d-b50e-81cf0ac2f194",
+    "menuId": "a05c44ee-4c6d-4547-91e6-d698b6f610c4",
+    "rank": 0,
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "f904ad9a-f140-4593-a8b9-712765925218",
+    "menuId": "662c7052-2527-4b8a-bb24-bc5481b7fc41",
+    "rank": 0,
+    "text": "import",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "13f9f2bd-2aee-4c28-bbe7-41bbd4247508",
+    "menuId": "662c7052-2527-4b8a-bb24-bc5481b7fc41",
+    "rank": 0,
+    "text": "export",
+    "auth": "show",
+    "domainId": 1
+  },
+  {
+    "id": "c9dff372-7b81-4ca8-82eb-e0bb6ff6e238",
+    "menuId": "662c7052-2527-4b8a-bb24-bc5481b7fc41",
+    "rank": 0,
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "864500d1-7969-4822-b5c9-853278e276fb",
+    "menuId": "662c7052-2527-4b8a-bb24-bc5481b7fc41",
+    "rank": 0,
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "0ad85166-1f1b-4c70-ade3-c1ae035e033c",
+    "menuId": "662c7052-2527-4b8a-bb24-bc5481b7fc41",
+    "rank": 0,
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "31ab1ec1-37b3-4b30-b63f-68ab9f1082f5",
+    "menuId": "03e8e6bf-f4b9-470d-a00f-cd12e731fabb",
+    "rank": 0,
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "11f8fa30-d838-4bf2-b895-962dfbf4ab62",
+    "menuId": "03e8e6bf-f4b9-470d-a00f-cd12e731fabb",
+    "rank": 0,
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "47dc9a6e-de6f-4d52-98c9-eafe84ea97dc",
+    "menuId": "03e8e6bf-f4b9-470d-a00f-cd12e731fabb",
+    "rank": 0,
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "7dd23b76-a333-4a82-a9da-2720870c6929",
+    "menuId": "35a7119a-4bad-4c6b-9ac1-f793ee150fa6",
+    "rank": 0,
+    "text": "import",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "287ce72f-1898-455b-8436-3f9f5541aea3",
+    "menuId": "35a7119a-4bad-4c6b-9ac1-f793ee150fa6",
+    "rank": 0,
+    "text": "export",
+    "auth": "show",
+    "domainId": 1
+  },
+  {
+    "id": "2ff2007c-a57f-4e85-8cf0-014952a598c7",
+    "menuId": "35a7119a-4bad-4c6b-9ac1-f793ee150fa6",
+    "rank": 0,
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "4982d7ab-0722-409b-8e5d-b4f2431f3dae",
+    "menuId": "35a7119a-4bad-4c6b-9ac1-f793ee150fa6",
+    "rank": 0,
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "33a875da-4ed1-443b-ba2d-72015b50be30",
+    "menuId": "35a7119a-4bad-4c6b-9ac1-f793ee150fa6",
+    "rank": 0,
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  },
+  {
+    "id": "912c6e44-df42-4e66-ba2f-5eda57ef768b",
+    "menuId": "3a4aa71d-9ef8-45f0-897b-b8b0d5ee2c3d",
+    "rank": 0,
+    "text": "import",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "3c8c9ed9-cd8c-4807-8433-38b0f2d599e8",
+    "menuId": "3a4aa71d-9ef8-45f0-897b-b8b0d5ee2c3d",
+    "rank": 0,
+    "text": "export",
+    "auth": "show",
+    "domainId": 1
+  },
+  {
+    "id": "1ac185f3-d535-4ac8-abad-787b32ecc5cb",
+    "menuId": "3a4aa71d-9ef8-45f0-897b-b8b0d5ee2c3d",
+    "rank": 0,
+    "text": "add",
+    "auth": "create",
+    "domainId": 1
+  },
+  {
+    "id": "eb50c101-7319-49a0-8156-5c3497ee7604",
+    "menuId": "3a4aa71d-9ef8-45f0-897b-b8b0d5ee2c3d",
+    "rank": 0,
+    "text": "delete",
+    "auth": "delete",
+    "domainId": 1
+  },
+  {
+    "id": "aa68f5f7-6bcc-4e70-8b03-688a6b58b297",
+    "menuId": "3a4aa71d-9ef8-45f0-897b-b8b0d5ee2c3d",
+    "rank": 0,
+    "text": "save",
+    "auth": "update",
+    "domainId": 1
+  }
+]

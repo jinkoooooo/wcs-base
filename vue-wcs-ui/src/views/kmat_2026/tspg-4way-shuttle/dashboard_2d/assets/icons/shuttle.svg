@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Shuttle (uses currentColor for CSS styling) -->
+
+  <!-- Main body -->
+  <path d="M34 28h32c9 0 16 7 16 16v12c0 9-7 16-16 16H34c-9 0-16-7-16-16V44c0-9 7-16 16-16z"
+        fill="currentColor"/>
+
+  <!-- Inner cabin -->
+  <rect x="34" y="38" width="32" height="24" rx="10"
+        fill="#000000" opacity="0.15"/>
+
+  <!-- Payload window -->
+  <rect x="38" y="42" width="24" height="16" rx="8"
+        fill="#ffffff" opacity="0.35"/>
+
+  <!-- Nose / orientation notch -->
+  <rect x="78" y="42" width="6" height="16" rx="3"
+        fill="#ffffff" opacity="0.25"/>
+
+  <!-- Side sensors -->
+  <circle cx="28" cy="50" r="2.4" fill="#ffffff" opacity="0.3"/>
+  <circle cx="72" cy="50" r="2.4" fill="#ffffff" opacity="0.25"/>
+</svg>

@@ -1,0 +1,94 @@
+package operato.logis.changwon.web.initializer;
+
+import operato.logis.changwon.config.ModuleProperties;
+import operato.logis.changwon.query.store.InventoryQueryStore;
+import operato.logis.changwon.query.store.LocationQueryStore;
+import operato.logis.changwon.query.store.TaskQueryStore;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.context.event.EventListener;
+import org.springframework.stereotype.Component;
+import xyz.elidom.orm.IQueryManager;
+import xyz.elidom.sys.config.ModuleConfigSet;
+import xyz.elidom.sys.system.service.api.IEntityFieldCache;
+import xyz.elidom.sys.system.service.api.IServiceFinder;
+
+/**
+ * Operato Logis WCS Startup시 Framework 초기화 클래스
+ *
+ * @author yang
+ */
+@Component
+public class LogisChangwonInitializer {
+
+    /**
+     * Logger
+     */
+    private Logger logger = LoggerFactory.getLogger(LogisChangwonInitializer.class);
+
+    @Autowired
+    @Qualifier("rest")
+    private IServiceFinder restFinder;
+
+    @Autowired
+    private IEntityFieldCache entityFieldCache;
+
+    @Autowired
+    private ModuleProperties module;
+
+    @Autowired
+    private ModuleConfigSet configSet;
+
+    @Autowired
+    private IQueryManager queryManager;
+
+    @Autowired
+    private InventoryQueryStore inventoryQueryStore;
+
+    @Autowired
+    private LocationQueryStore locationQueryStore;
+
+    @Autowired
+    private TaskQueryStore taskQueryStore;
+
+    @EventListener({ ContextRefreshedEvent.class })
+    public void refresh(ContextRefreshedEvent event) {
+        this.logger.info("Logistics Changwon module refreshing...");
+
+        this.configSet.addConfig(this.module.getName(), this.module);
+        this.scanServices();
+
+        this.logger.info("Logistics Changwon module refreshed!");
+    }
+
+    @EventListener({ApplicationReadyEvent.class})
+    void ready(ApplicationReadyEvent event) {
+        this.logger.info("Logistics Changwon module initializing...");
+
+        this.initQueryStores();
+
+        this.logger.info("Logistics Changwon module initialized!");
+    }
+
+    /**
+     * 모듈 서비스 스캔
+     */
+    private void scanServices() {
+        this.entityFieldCache.scanEntityFieldsByBasePackage(this.module.getBasePackage());
+        this.restFinder.scanServicesByPackage(this.module.getName(), this.module.getBasePackage());
+    }
+
+    /**
+     * 쿼리 스토어 초기화
+     */
+    private void initQueryStores() {
+        String dbType = this.queryManager.getDbType();
+        this.inventoryQueryStore.initQueryStore(dbType);
+        this.locationQueryStore.initQueryStore(dbType);
+        this.taskQueryStore.initQueryStore(dbType);
+    }
+}

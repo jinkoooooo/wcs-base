@@ -1,0 +1,135 @@
+### XYZ BCR 이벤트
+POST http://localhost:9500/rest/xyz/test/bcr
+Content-Type: application/json
+
+{
+  "bcr_no": "BCR-01",
+  "item_code": "c"
+}
+
+### XYZ Conveyor 이벤트
+POST http://localhost:9500/rest/xyz/test/conveyor
+Content-Type: application/json
+
+{
+  "box_conveyor_cd": "BC01",
+  "box_list": [
+    {
+      "index": 0,
+      "item_code": "a",
+      "serial_no": "a5",
+      "pid": "aaa5"
+    }
+  ]
+}
+
+### XYZ Pallet 배출 완료
+POST http://192.168.100.101:9500/rest/xyz/pallet/emission
+Content-Type: application/json
+
+{
+  "pallet_id": "PC01",
+  "pallet_sequence": "PC01-20251118-0003"
+}
+
+### XYZ Pallet 교체 완료
+POST http://localhost:9500/rest/xyz/pallet/exchange
+Content-Type: application/json
+
+{
+  "pallet_id": "PC01",
+  "pallet_sequence": "PC01-20251118-0003"
+}
+
+### XYZ Cycle 완료
+POST http://192.168.100.101:9500/rest/xyz/receive/cycle
+Content-Type: application/json
+
+{
+  "cycle_id": "20251118-00001_000003",
+  "pick_num": 1,
+  "pallet_id": "PC01"
+}
+
+### XYZ 에러 수신
+POST http://localhost:9500/rest/xyz/status/exception
+Content-Type: application/json
+
+{
+  "error_code": 1,
+  "error_msg": "그냥 에러임 ㅅㄱㅇ"
+}
+
+### BCR , VISION HeartBeat 시작
+POST http://192.168.100.101:9500/api/heartbeat/start
+Content-Type: application/json
+
+{
+}
+
+### 삼성전자 생기연 GTR LOGIN
+POST http://192.168.100.101:9500/api/client/login
+Content-Type: application/json
+
+{
+}
+
+### 삼성전자 생기연 GTR refreshToken
+POST http://192.168.100.101:9500/api/client/refresh
+Content-Type: application/json
+
+{
+}
+
+### 삼성전자 생기연 GTR - 검수 요청
+POST http://192.168.100.101:9500/api/client/inspections
+Content-Type: application/json
+
+{
+  "transactionId": "1778",
+  "zoneId": "Zone1",
+  "timestamp": ""
+}
+
+
+### XYZ 로봇 상태 확인
+GET http://192.168.100.101:9500/rest/xyz/devanning/devanning_status
+Content-Type: application/json
+
+{
+}
+
+### XYZ 오더 내역 전송
+POST http://192.168.100.101:9500/rest/xyz/devanning/devanning_order
+Content-Type: application/json
+
+{
+  "cntr_no": "SKHU6442446",
+  "bl_no": "HASLS21260302218"
+}
+
+### XYZ 디베이닝 오더 삭제
+DELETE http://192.168.100.101:9500/rest/xyz/devanning/devanning_delete
+Content-Type: application/json
+
+{
+}
+
+### XYZ 디베이닝 취소
+POST http://192.168.100.101:9500/rest/xyz/devanning/devanning_cancel
+Content-Type: application/json
+
+{
+}
+
+### XYZ 디베이닝 오더 완료 처리 테스트
+POST http://localhost:9500/rest/xyz/devanning/orders/result
+Content-Type: application/json
+
+{
+  "order_key": "ORD-20260420-0001",
+  "result_time": "2026-04-20 14:30:00",
+  "result_code": 1,
+  "result_msg": "COMPLETE"
+
+}

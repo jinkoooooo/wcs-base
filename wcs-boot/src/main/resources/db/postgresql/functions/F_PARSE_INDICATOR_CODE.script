@@ -1,0 +1,18 @@
+-- FUNCTION: public.f_parse_indicator_code(bigint, text, text)
+
+-- DROP FUNCTION public.f_parse_indicator_code(bigint, text, text);
+
+CREATE OR REPLACE FUNCTION public.f_parse_indicator_code(
+	bigint,
+	text,
+	text)
+    RETURNS text
+    LANGUAGE 'sql'
+
+    COST 100
+    VOLATILE 
+    
+AS $BODY$select substring($3, 3, 6);$BODY$;
+
+ALTER FUNCTION public.f_parse_indicator_code(bigint, text, text)
+    OWNER TO postgres;

@@ -1,0 +1,337 @@
+{"properties": [
+  {
+    "name": "dbist.base.entity.path",
+    "type": "java.lang.String",
+    "description": "A description for 'dbist.base.entity.path'"
+  },
+  {
+    "name": "dml.domain",
+    "type": "java.lang.String",
+    "description": "A description for 'dml.domain'"
+  },
+  {
+    "name": "elidom.initial.admin.email",
+    "type": "java.lang.String",
+    "description": "A description for 'elidom.initial.admin.email'"
+  },
+  {
+    "name": "elidom.initial.admin.id",
+    "type": "java.lang.String",
+    "description": "A description for 'elidom.initial.admin.id'"
+  },
+  {
+    "name": "elidom.initial.admin.passwd",
+    "type": "java.lang.String",
+    "description": "A description for 'elidom.initial.admin.passwd'"
+  },
+  {
+    "name": "elidom.initial.admin.name",
+    "type": "java.lang.String",
+    "description": "A description for 'elidom.initial.admin.name'"
+  },
+  {
+    "name": "elidom.initial.domain.brand_name",
+    "type": "java.lang.String",
+    "description": "A description for 'elidom.initial.domain.brand_name'"
+  },
+  {
+    "name": "elidom.initial.domain.id",
+    "type": "java.lang.String",
+    "description": "A description for 'elidom.initial.domain.id'"
+  },
+  {
+    "name": "elidom.initial.domain.name",
+    "type": "java.lang.String",
+    "description": "A description for 'elidom.initial.domain.name'"
+  },
+  {
+    "name": "elidom.initial.domain.url",
+    "type": "java.lang.String",
+    "description": "A description for 'elidom.initial.domain.url'"
+  },
+  {
+    "name": "elidom.initial.seed.base_url",
+    "type": "java.lang.String",
+    "description": "A description for 'elidom.initial.seed.base_url'"
+  },
+  {
+    "name": "elidom.initial.seed.id",
+    "type": "java.lang.String",
+    "description": "A description for 'elidom.initial.seed.id'"
+  },
+  {
+    "name": "elidom.initial.seed.source",
+    "type": "java.lang.String",
+    "description": "A description for 'elidom.initial.seed.source'"
+  },
+  {
+    "name": "elidom.initial.setup",
+    "type": "java.lang.String",
+    "description": "A description for 'elidom.initial.setup'"
+  },
+  {
+    "name": "elidom.initial.storage.root",
+    "type": "java.lang.String",
+    "description": "A description for 'elidom.initial.storage.root'"
+  },
+  {
+    "name": "info.id",
+    "type": "java.lang.String",
+    "description": "A description for 'info.id'"
+  },
+  {
+    "name": "mail.smtp.auth",
+    "type": "java.lang.String",
+    "description": "A description for 'mail.smtp.auth'"
+  },
+  {
+    "name": "mail.smtp.host",
+    "type": "java.lang.String",
+    "description": "A description for 'mail.smtp.host'"
+  },
+  {
+    "name": "mail.smtp.password",
+    "type": "java.lang.String",
+    "description": "A description for 'mail.smtp.password'"
+  },
+  {
+    "name": "mail.smtp.port",
+    "type": "java.lang.String",
+    "description": "A description for 'mail.smtp.port'"
+  },
+  {
+    "name": "mail.smtp.protocol",
+    "type": "java.lang.String",
+    "description": "A description for 'mail.smtp.protocol'"
+  },
+  {
+    "name": "mail.smtp.starttls.enable",
+    "type": "java.lang.String",
+    "description": "A description for 'mail.smtp.starttls.enable'"
+  },
+  {
+    "name": "mail.smtp.user",
+    "type": "java.lang.String",
+    "description": "A description for 'mail.smtp.user'"
+  },
+  {
+    "name": "management.security.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'management.security.enabled'"
+  },
+  {
+    "name": "mq.broker.address",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.broker.address'"
+  },
+  {
+    "name": "mq.broker.exchange.default",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.broker.exchange.default'"
+  },
+  {
+    "name": "mq.broker.api.port",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.broker.api.port'"
+  },
+  {
+    "name": "mq.broker.port",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.broker.port'"
+  },
+  {
+    "name": "mq.broker.user.id",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.broker.user.id'"
+  },
+  {
+    "name": "mq.broker.user.pw",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.broker.user.pw'"
+  },
+  {
+    "name": "mq.module.use",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.module.use'"
+  },
+  {
+    "name": "mq.system.receive.queue.consume.count",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.system.receive.queue.consume.count'"
+  },
+  {
+    "name": "mq.trace.consume.count",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.trace.consume.count'"
+  },
+  {
+    "name": "mq.trace.elastic.address",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.trace.elastic.address'"
+  },
+  {
+    "name": "mq.trace.delete.time",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.trace.delete.time'"
+  },
+  {
+    "name": "mq.trace.elastic.port",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.trace.elastic.port'"
+  },
+  {
+    "name": "mq.trace.keep.date",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.trace.keep.date'"
+  },
+  {
+    "name": "mq.trace.type",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.trace.type'"
+  },
+  {
+    "name": "mq.trace.use",
+    "type": "java.lang.String",
+    "description": "A description for 'mq.trace.use'"
+  },
+  {
+    "name": "redis.was.urls",
+    "type": "java.lang.String",
+    "description": "A description for 'redis.was.urls'"
+  },
+  {
+    "name": "security.all.permit.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'security.all.permit.uri'"
+  },
+  {
+    "name": "security.password.encoder.algorithm",
+    "type": "java.lang.String",
+    "description": "A description for 'security.password.encoder.algorithm'"
+  },
+  {
+    "name": "security.read.only.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'security.read.only.uri'"
+  },
+  {
+    "name": "spring.jackson.serialization-inclusion",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jackson.serialization-inclusion'"
+  },
+  {
+    "name": "spring.session.store-type",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.session.store-type'"
+  },
+  {
+    "name": "sqlAspect.combinedPrint",
+    "type": "java.lang.String",
+    "description": "A description for 'sqlAspect.combinedPrint'"
+  },
+  {
+    "name": "sqlAspect.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'sqlAspect.enabled'"
+  },
+  {
+    "name": "sqlAspect.includeElapsedTime",
+    "type": "java.lang.String",
+    "description": "A description for 'sqlAspect.includeElapsedTime'"
+  },
+  {
+    "name": "sqlAspect.prettyPrint",
+    "type": "java.lang.String",
+    "description": "A description for 'sqlAspect.prettyPrint'"
+  },
+  {
+    "name": "stomp.client.url",
+    "type": "java.lang.String",
+    "description": "A description for 'stomp.client.url'"
+  },
+  {
+    "name": "stomp.server.host",
+    "type": "java.lang.String",
+    "description": "A description for 'stomp.server.host'"
+  },
+  {
+    "name": "transactionManager.defaultTimeout",
+    "type": "java.lang.String",
+    "description": "A description for 'transactionManager.defaultTimeout'"
+  },
+  {
+    "name": "upload.file.limit.size",
+    "type": "java.lang.String",
+    "description": "A description for 'upload.file.limit.size'"
+  },
+  {
+    "name": "dbist.ddl.enable",
+    "type": "java.lang.String",
+    "description": "A description for 'dbist.ddl.enable'"
+  },
+  {
+    "name": "dbist.entity.validate-before-save",
+    "type": "java.lang.String",
+    "description": "A description for 'dbist.entity.validate-before-save'"
+  },
+  {
+    "name": "dbist.ddl.tablespace.data",
+    "type": "java.lang.String",
+    "description": "A description for 'dbist.ddl.tablespace.data'"
+  },
+  {
+    "name": "dbist.ddl.tablespace.idx",
+    "type": "java.lang.String",
+    "description": "A description for 'dbist.ddl.tablespace.idx'"
+  },
+  {
+    "name": "spring.datasource.write.driver-class-name",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.write.driver-class-name'"
+  },
+  {
+    "name": "spring.datasource.write.url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.write.url'"
+  },
+  {
+    "name": "spring.datasource.write.username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.write.username'"
+  },
+  {
+    "name": "spring.datasource.write.password",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.write.password'"
+  },
+  {
+    "name": "spring.datasource.read.driver-class-name",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.read.driver-class-name'"
+  },
+  {
+    "name": "spring.datasource.read.url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.read.url'"
+  },
+  {
+    "name": "spring.datasource.read.username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.read.username'"
+  },
+  {
+    "name": "spring.datasource.read.password",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.read.password'"
+  },
+  {
+    "name": "transactionManager.readonly-exclude-pattern",
+    "type": "java.lang.String",
+    "description": "A description for 'transactionManager.readonly-exclude-pattern'"
+  },
+  {
+    "name": "transactionManager.use-readonly-replica",
+    "type": "java.lang.String",
+    "description": "A description for 'transactionManager.use-readonly-replica'"
+  }
+]}

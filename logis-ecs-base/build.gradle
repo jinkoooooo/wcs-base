@@ -1,0 +1,47 @@
+plugins {
+    id 'java-library' // java 대신 java-library 사용
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    from('src/main/java') {
+        include '/**/*.sql'
+    }
+
+    manifest {
+        attributes(
+                'Implementation-Title': 'Nearsolution System',
+                'Implementation-Version': '3.0.0'
+        )
+    }
+}
+
+repositories {
+    mavenCentral() // Maven 중앙 저장소 사용
+    // 필요시 사설 Nexus 리포지토리 추가
+    maven {
+        url "http://repo.hatiolab.com/nexus/content/groups/elidom-repository/"
+        allowInsecureProtocol = true
+    }
+}
+
+dependencies {
+    api('logis-lib:anyware-sec')
+    implementation project(':logis-connector')
+    implementation project(':logis-inventory')
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+    // Spring Boot Test
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    implementation 'org.springframework:spring-messaging:6.1.6'
+    implementation 'org.springframework:spring-websocket:6.1.6'
+
+    // postgre
+    implementation 'org.postgresql:postgresql:42.5.0'
+}

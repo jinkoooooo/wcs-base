@@ -1,0 +1,38 @@
+[
+  {
+    "id": "4c232f9c-17b4-46c9-b825-1afbd0526f2a",
+    "name": "MES",
+    "description": "Things Factory",
+    "brandName": "Things Factory",
+    "brandImage": "ee63a63c-2454-45d6-af2f-067e7cea22c6",
+    "theme": "things-xmes-theme",
+    "domainId": 1,
+    "updaterId": "admin",
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 21, 2017 1:24:39 PM"
+  },
+  {
+    "id": "8f388931-f205-470f-97f1-6999d4ce99d7",
+    "name": "UNREAL",
+    "description": "Things Board",
+    "brandName": "Things Board",
+    "brandImage": "a28040d7-339d-49f9-80ed-7af2c4084995",
+    "theme": "things-point-theme",
+    "domainId": 1,
+    "updaterId": "admin",
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jul 21, 2017 1:24:39 PM"
+  },
+  {
+    "id": "3645ac32-c1bc-4d3b-b9de-6ca8317ce5bd",
+    "name": "LABEL",
+    "description": "Things Label",
+    "brandName": "Things Label",
+    "brandImage": "95b3add6-6294-499c-8952-0a5429b27f04",
+    "theme": "things-label-theme",
+    "domainId": 1,
+    "updaterId": "admin",
+    "createdAt": "Jul 19, 2017 8:58:10 PM",
+    "updatedAt": "Jan 10, 2018 5:32:41 PM"
+  }
+]

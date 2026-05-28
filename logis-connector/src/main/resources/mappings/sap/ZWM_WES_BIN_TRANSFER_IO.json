@@ -1,0 +1,121 @@
+{
+  "functionName": "ZWM_WES_BIN_TRANSFER_IO",
+  "isSend": true,
+  "importParams": {
+    "I_MODE": "R",
+    "I_ZWERKS": "2009",
+    "I_RSDAT": "2025-02-12"
+  },
+  "exportParams": {
+    "O_MSGTY": "",
+    "O_MSGLIN": "",
+    "E_XC_E_TIME": ""
+  },
+  "tableDataMap": {
+    "GT_TAB": [
+      {
+        "COM_CD": "2009",
+        "MANDT": "100",
+        "INOUT_MODE": "1",
+        "REQ_DATE": "2025-02-12",
+        "REQ_NO": "W002025020700001",
+        "SKU_CD": "SKU12345",
+        "TO_BIN": "A01-01",
+        "WM_BIN": "B01-01",
+        "TO_STATION": "R001",
+        "REQ_QTY": "10",
+        "MOVE_QTY": "10",
+        "UNIT": "EA",
+        "BOX_CNT": "2",
+        "PLT_CNT": "1",
+        "IS_CONFIRMED": "Y",
+        "MSG": "",
+        "ERDAT": "2025-02-12",
+        "ERZET": "10:00:00",
+        "AEDAT": "",
+        "AEZET": "",
+        "RFCDATE": "",
+        "RFCTIME": ""
+      }
+    ]
+  },
+  "fieldsMap": {
+    "GT_TAB": [
+      "COM_CD",
+      "MANDT",
+      "INOUT_MODE",
+      "REQ_DATE",
+      "REQ_NO",
+      "SKU_CD",
+      "TO_BIN",
+      "WM_BIN",
+      "WM_BIN_2",
+      "TO_STATION",
+      "REQ_QTY",
+      "MOVE_QTY",
+      "UNIT",
+      "BOX_CNT",
+      "IS_CONFIRMED",
+      "MSG",
+      "ERDAT",
+      "ERZET",
+      "AEDAT",
+      "AEZET",
+      "RFCDATE",
+      "RFCTIME"
+    ]
+  },
+  "mappingMap": {
+    "GT_TAB": {
+      "COM_CD": "ZWERKS",
+      "MANDT": "MANDT",
+      "INOUT_MODE": "GUBUN",
+      "REQ_DATE": "RSDAT",
+      "REQ_NO": "RENUM",
+      "SKU_CD": "MATNR",
+      "TO_BIN": "LGPLA",
+      "WM_BIN": "VLPLA",
+      "WM_BIN_2": "NLPLA",
+      "TO_STATION": "RPPLA",
+      "REQ_QTY": "VSOLM",
+      "MOVE_QTY": "VISTM",
+      "UNIT": "ERFME",
+      "BOX_CNT": "BOX_PCS",
+      "IS_CONFIRMED": "MSGTY",
+      "MSG": "MSGLIN",
+      "ERDAT": "ERDAT",
+      "ERZET": "ERZET",
+      "AEDAT": "AEDAT",
+      "AEZET": "AEZET",
+      "RFCDATE": "RFCDATE",
+      "RFCTIME": "RFCTIME"
+    }
+  },
+  "typeMap": {
+    "GT_TAB": {
+      "ZWERKS": "CHAR",
+      "MANDT": "CHAR",
+      "GUBUN": "CHAR",
+      "RSDAT": "DATS",
+      "RENUM": "CHAR",
+      "MATNR": "CHAR",
+      "LGPLA": "CHAR",
+      "VLPLA": "CHAR",
+      "NLPLA": "CHAR",
+      "RPPLA": "CHAR",
+      "VSOLM": "INTEGER",
+      "VISTM": "INTEGER",
+      "ERFME": "UNIT",
+      "BOX_PCS": "DEC",
+      "MSGTY": "CHAR",
+      "MSGLIN": "CHAR",
+      "ERDAT": "DATS",
+      "ERZET": "TIMS",
+      "AEDAT": "DATS",
+      "AEZET": "TIMS",
+      "RFCDATE": "DATS",
+      "RFCTIME": "TIMS"
+    }
+  },
+  "enDecryptFields": []
+}

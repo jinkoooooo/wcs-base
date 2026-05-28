@@ -1,0 +1,489 @@
+// ============================================
+// cell-state.scss
+// 셀 상태 2D 화면 공통 스타일 (단일 소스)
+// ============================================
+//
+// 색상/그림자 변수는 ../../styles/tokens.scss 에서 단일 출처로 관리.
+@import '../../styles/tokens.scss';
+//
+// 이 파일은 다음 컴포넌트에서 공유됩니다:
+//   - CellState2D.vue               (메인 캔버스)
+//   - components/CellStateLegend.vue (범례 패널)
+//
+// 색상/배지/오버레이 스타일을 여기서 한 번만 정의하여
+// 범례 프리뷰와 실제 셀 표시가 자동으로 일관되게 유지됩니다.
+//
+// ============================================
+// 설계 원칙 — 두 축 독립 표현
+// ============================================
+//
+//   [A. 재고 축 — state_code 반투명 틴트]
+//     EMPTY / PRODUCT / EMPTY_BOX / INBOUND / OUTBOUND /
+//     DOUBLE_IN / EMPTY_OUT / CONFIRM
+//     (※ DRIVE 는 재고 축에서 제거. 주행전용은 dashboard.scss 의
+//        .rack-drive-only / .rack-drive-overlay 빗금으로만 표현)
+//
+//   [B. 금지 축 — 플래그 기반 배지/오버레이]
+//     LOCK          → 셀 전체 빗금 오버레이
+//     FORBID_IN     → 좌상단 [⊘ IN] 배지
+//     FORBID_OUT    → 좌하단 [⊘ OUT] 배지
+//
+// 두 축은 동시 성립 가능 (예: "PRODUCT + 출고 금지")
+//
+// ============================================
+// Z-ORDER (가장 뒤 → 가장 앞)
+// ============================================
+//   rack-drive-overlay        z:0  (dashboard.scss)
+//   rack-state-tint           z:1  ← 재고 축 틴트
+//   object-content                 (일반 흐름, 아이콘)
+//   rack-type-badge           z:2  (dashboard.scss, 포트배지)
+//   rack-item-group-stripe    z:4  ← 분류 축: item_group 우측 색띠
+//   rack-locked-overlay       z:5  ← LOCK 빗금
+//   rack-forbid-badge         z:6  ← ⊘ IN / ⊘ OUT
+//   rack-item-type-badge      z:6  ← 분류 축: item_type 우상단 mono 배지
+//   rack-inventory-indicator  z:80 (dashboard.scss)
+//
+// 분류 제약(max_weight / max_height) 은 캔버스 시각화 X — 호버 툴팁 전용.
+// (셀이 너무 빽빽해지는 것을 막기 위해 의도적으로 제거)
+
+// --------------------------------------------
+// 1. CSS 변수 (색상 토큰)
+// --------------------------------------------
+//
+// 의미별 색역 분리 전략:
+//   정적 보관 (PRODUCT/EMPTY_BOX)        → 파랑 계열
+//   입고 진행 (INBOUND/INBOUND_READY)    → 초록 계열
+//   출고 진행 (OUTBOUND)                  → 청록 계열
+//   정렬·확정 (RELOCATION/CONFIRM)        → 보라 계열
+//   검사 상태 (QC_PENDING/QC_FAIL)        → 노랑·주황 계열
+//   이상 감지 (DOUBLE_IN/EMPTY_OUT)       → 핑크·빨강 계열
+//
+// ※ 같은 카테고리 안에서는 진하기로 우선순위 표현
+//   (예: INBOUND 진초록 / INBOUND_READY 연초록)
+
+:root {
+  // ─ 기본 ────────────────────────────────────────
+  --cs-empty-color:         #FFFFFF;
+  --cs-empty-border:        #999999;
+  --cs-none-color:          #9E9E9E;
+  --cs-none-border:         #757575;
+
+  // ─ 정적 보관 — 파랑 계열 ─────────────────────────
+  --cs-product-color:       #1E88E5;
+  --cs-product-border:      #1565C0;
+  --cs-emptybox-color:      #90CAF9;
+  --cs-emptybox-border:     #64B5F6;
+
+  // ─ 입고 진행 — 초록 계열 ─────────────────────────
+  --cs-inbound-color:       #43A047;
+  --cs-inbound-border:      #2E7D32;
+  --cs-inboundready-color:  #A5D6A7;
+  --cs-inboundready-border: #81C784;
+
+  // ─ 출고 진행 — 청록 계열 ─────────────────────────
+  --cs-outbound-color:      #00ACC1;
+  --cs-outbound-border:     #00838F;
+
+  // ─ 정렬·확정 — 보라 계열 ─────────────────────────
+  --cs-relocation-color:    #8E24AA;
+  --cs-relocation-border:   #6A1B9A;
+  --cs-confirm-color:       #CE93D8;
+  --cs-confirm-border:      #BA68C8;
+
+  // - Host 대기
+  --cs-hostpending-color: #3B82F6;        // 파란색 (예약 = 잠정 차단)
+  --cs-hostpending-border: #1E6FE6;
+  --cs-hostpending-tint: rgba(59, 130, 246, 0.16);
+
+  // ─ 검사 상태 — 노랑·주황 계열 (stock_type=QC_PENDING/QC_FAIL) ─
+  --cs-qcpending-color:     #FBC02D;
+  --cs-qcpending-border:    #F9A825;
+  --cs-qcfail-color:        #F4511E;
+  --cs-qcfail-border:       #D84315;
+
+  // ─ 이상 (부적합·사용기한 만료 통합) — 진빨강 계열 ────
+  //   QC 부적합 또는 사용기한 만료된 stock 을 단일 색으로 표시.
+  //   상세 패널에서 어떤 사유인지(부적합 / 만료) 분리 표시.
+  --cs-abnormal-color:      #DC2626;
+  --cs-abnormal-border:     #991B1B;
+
+  // ─ 국검·반품·폐기 (stock_type 신규 카테고리) ──────
+  //   보라(#8E24AA) RELOCATION, 빨강(#C62828) EMPTYOUT 와 시각적 충돌 회피
+  --cs-niapending-color:    #00838F;   // 청록 — 국가 검열 대기 (stock_type=NIA_PENDING)
+  --cs-niapending-border:   #006064;
+  --cs-return-color:        #5D4037;   // 갈색 — 반품존
+  --cs-return-border:       #3E2723;
+  --cs-disposal-color:      #424242;   // 짙은 회색 — 폐기
+  --cs-disposal-border:     #212121;
+
+  // ─ 유통기한 만료 오버레이 ─────────────────────────
+  --cs-expired-border:      rgba(117, 117, 117, 0.85);
+
+  // ─ 이상 감지 — 핑크·빨강 계열 ─────────────────────
+  --cs-doublein-color:      #EC407A;
+  --cs-doublein-border:     #C2185B;
+  --cs-emptyout-color:      #C62828;
+  --cs-emptyout-border:     #B71C1C;
+
+  // 금지 축 배지 색상
+  --cs-forbid-in-bg:    rgba(220, 53, 69, 0.92);  // 빨강 — 입고 금지
+  --cs-forbid-in-text:  #FFFFFF;
+  --cs-forbid-out-bg:   rgba(255, 193, 7, 0.92);  // 황금 — 출고 금지
+  --cs-forbid-out-text: #1A1D24;
+
+  // LOCK 오버레이
+  --cs-locked-tint:     rgba(20, 22, 28, 0.55);
+  --cs-locked-stripe:   rgba(245, 108, 108, 0.55);
+  --cs-locked-border:   rgba(245, 108, 108, 0.8);
+
+  // 선택 / 드래그 프리뷰
+  // - 어떤 재고 축 색 위에서도 확실히 구분되도록 "네온" 계열 선택.
+  // - selected: 선명한 빨강 (PRODUCT 파랑·INBOUND 녹색과 보색)
+  // - drag:     네온 주황 (파랑/녹색/노랑/분홍 어디서든 튐)
+  --cs-selected-color:  #FF3B3B;
+  --cs-drag-color:      #FFAA00;
+}
+
+
+// --------------------------------------------
+// 2. 재고 축 — 상태 틴트 레이어
+// --------------------------------------------
+
+.rack-state-tint {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 1;
+}
+
+
+// --------------------------------------------
+// 3. 금지 축 — 사용 금지 (LOCK) 오버레이
+// --------------------------------------------
+// 셀 전체를 어두운 빗금 패턴으로 덮음 → "이 셀은 못 씁니다" 강한 표시
+
+.rack-locked-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 5;
+  background:
+    linear-gradient(var(--cs-locked-tint), var(--cs-locked-tint)),
+    repeating-linear-gradient(
+        45deg,
+        transparent 0,
+        transparent 4px,
+        var(--cs-locked-stripe) 4px,
+        var(--cs-locked-stripe) 6px
+    );
+  box-shadow: inset 0 0 0 2px var(--cs-locked-border);
+}
+
+// 유통기한 만료 — 회색 점선 테두리만 오버레이 (배경 없음)
+// legend-spec.ts RACK_FLAGS 의 { code:'EXPIRED', pattern:'expired' } 와 1:1.
+// 셀 컨테이너(.equipment-object 등) 에 .expired 클래스를 토글하면 ::after 로 점선 테두리만 그린다.
+.cell-state.expired,
+.equipment-object.expired,
+.rack-expired-overlay {
+  position: relative;
+}
+
+.cell-state.expired::after,
+.equipment-object.expired::after,
+.rack-expired-overlay {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 6;
+  outline: 2px dashed var(--cs-expired-border);
+  outline-offset: -2px;
+}
+
+
+// --------------------------------------------
+// 4. 금지 축 — 입고/출고 금지 배지 (⊘ IN / ⊘ OUT)
+// --------------------------------------------
+// 이모지 대신 텍스트 라벨로 방향을 명확히 표현한다.
+
+.rack-forbid-badge {
+  position: absolute;
+  z-index: 6;
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-family: 'Roboto Mono', Consolas, monospace;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  user-select: none;
+  white-space: nowrap;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(0, 0, 0, 0.35);
+
+  .forbid-slash {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    display: inline-block;
+    transform: translateY(-0.5px);
+  }
+
+  .forbid-text {
+    font-size: 9px;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  // 입고 금지 → 좌상단 + 빨강
+  &.rack-forbid-in {
+    top: 2px;
+    left: 2px;
+    color: var(--cs-forbid-in-text);
+    background: var(--cs-forbid-in-bg);
+  }
+
+  // 출고 금지 → 좌하단 + 황금
+  &.rack-forbid-out {
+    bottom: 2px;
+    left: 2px;
+    color: var(--cs-forbid-out-text);
+    background: var(--cs-forbid-out-bg);
+  }
+}
+
+
+// --------------------------------------------
+// 5. 선택 / 드래그 프리뷰 outline
+// --------------------------------------------
+//
+// 색 있는 셀 (PRODUCT/INBOUND/OUTBOUND 등 틴트가 덮인 셀) 위에서도 선택
+// 표시가 또렷하게 보여야 하므로:
+//   - 두꺼운 outline (3px)
+//   - outline 바깥으로 glow (box-shadow)
+//   - 반투명 흰색 레이어(::after) 로 셀 전체 밝게 띄움
+// 을 조합해서 "이 셀 선택 중" 이 한눈에 들어오게 한다.
+
+.equipment-object.cell-state-selected {
+  outline: 3px solid var(--cs-selected-color) !important;
+  outline-offset: -3px;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.35),
+    0 0 14px 2px rgba(255, 59, 59, 0.7) !important;   // 빨강 glow
+  z-index: 50 !important;
+
+  // 틴트 위에 "밝게 떠오른" 느낌을 주는 반투명 흰색 레이어
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.18);
+    pointer-events: none;
+    z-index: 7;   // 틴트(1)/오버레이(5)/배지(6) 위, 재고인디케이터(80) 아래
+  }
+
+  .rack-state-tint {
+    filter: saturate(1.4) brightness(1.15);
+  }
+}
+
+.equipment-object.cell-state-drag-preview {
+  outline: 3px dashed var(--cs-drag-color) !important;
+  outline-offset: -3px;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.3),
+    0 0 12px 2px rgba(255, 170, 0, 0.65) !important;   // 네온 주황 glow
+  z-index: 40 !important;
+
+  // 드래그 프리뷰도 흰색 레이어로 띄움 (선택보다 약간 약하게)
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.14);
+    pointer-events: none;
+    z-index: 7;
+  }
+
+  .rack-state-tint {
+    filter: saturate(1.25) brightness(1.1);
+  }
+}
+
+.equipment-object.cell-state-unselectable {
+  cursor: not-allowed;
+}
+
+
+// --------------------------------------------
+// 6. 범례 패널 — 미니 프리뷰용
+// --------------------------------------------
+// CellStateLegend.vue 의 "실제 셀에서 보일 모습" 축약 프리뷰.
+// 색상은 위 변수를 그대로 재사용 → 실제 셀과 자동 동기화.
+
+// 6-1. 재고 색 샘플 (큰 컬러칩)
+.cs-legend-color-chip {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  flex: 0 0 16px;
+  display: inline-block;
+}
+
+// 6-2. 금지 프리뷰 박스 (가상 셀 썸네일)
+.cs-legend-forbid-preview {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  background: #2d333f;
+  border: 1px solid #444a55;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+}
+
+// 6-3. 프리뷰 내부의 작은 금지 배지
+.cs-preview-forbid-badge {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  padding: 1px 3px;
+  border-radius: 2px;
+  font-family: 'Roboto Mono', Consolas, monospace;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.2px;
+  user-select: none;
+  white-space: nowrap;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(0, 0, 0, 0.35);
+
+  .forbid-slash {
+    font-size: 9px;
+    line-height: 1;
+  }
+  .forbid-text {
+    font-size: 7px;
+    line-height: 1;
+  }
+
+  &.badge-in {
+    top: 1px;
+    left: 1px;
+    color: var(--cs-forbid-in-text);
+    background: var(--cs-forbid-in-bg);
+  }
+  &.badge-out {
+    bottom: 1px;
+    left: 1px;
+    color: var(--cs-forbid-out-text);
+    background: var(--cs-forbid-out-bg);
+  }
+}
+
+// --------------------------------------------
+// 7. 분류·제약 축 — item_type 배지 / item_group 색띠
+// --------------------------------------------
+// 두 표시는 줌 임계치 이하에서 자동 숨김 — 셀에 .cs-hide-classify
+// 클래스가 토글되면 가독성 보호용으로 사라진다.
+
+.rack-item-type-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 6;
+  pointer-events: none;
+  max-width: 70%;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-family: 'Roboto Mono', Consolas, monospace;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  background: rgba(20, 22, 28, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.rack-item-group-stripe {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  z-index: 4;
+  pointer-events: none;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  // background-color 는 인라인 style 로 주입 (group → HSL hash)
+  box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.35);
+}
+
+// 줌 임계치 이하 — 분류 축 표시 일괄 숨김
+.cs-hide-classify {
+  .rack-item-type-badge,
+  .rack-item-group-stripe {
+    display: none !important;
+  }
+}
+
+
+// --------------------------------------------
+// 8. 셀 분류 패널 — 미니 컬러 칩 (Legend 공유)
+// --------------------------------------------
+
+.cs-group-chip {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  vertical-align: middle;
+  flex: 0 0 14px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  // background-color 는 인라인 style 로 주입
+}
+
+
+// 6-4. LOCK 프리뷰 (빗금 패턴)
+.cs-preview-locked {
+  background: #1a1d24;
+  border-color: #555;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background:
+      linear-gradient(var(--cs-locked-tint), var(--cs-locked-tint)),
+      repeating-linear-gradient(
+          45deg,
+          transparent 0,
+          transparent 3px,
+          var(--cs-locked-stripe) 3px,
+          var(--cs-locked-stripe) 5px
+      );
+    box-shadow: inset 0 0 0 1px var(--cs-locked-border);
+  }
+}

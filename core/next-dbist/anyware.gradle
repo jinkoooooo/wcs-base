@@ -1,0 +1,286 @@
+import java.net.URL
+import java.net.URLConnection
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.util.Base64
+import java.text.SimpleDateFormat
+import javax.xml.parsers.DocumentBuilderFactory
+import org.w3c.dom.Document
+import org.w3c.dom.Node
+import org.w3c.dom.NodeList
+
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+apply plugin: 'eclipse'
+
+version = '2.0.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+ext {
+    groupId = "com.nearsolution"
+    artifactId = project.name
+
+    userName = "admin"
+    password = "nearsol_123"
+
+    majorVersion = 0
+    minorVersion = 0
+    patchVersion = 0
+    buildVersion = 0
+}
+
+/**
+ * Check Task
+ */
+ext.isTask = { taskNames ->
+    def checkTaskNames = taskNames.split(",")
+    def exeTasks = project.gradle.startParameter.taskNames
+
+    checkTaskNames.any { checkTask -> exeTasks.any { exeTask -> exeTask.equalsIgnoreCase(checkTask.trim()) } }
+}
+
+/**
+ * Get Dependency Last Version
+ */
+ext.getLastVersion = { name ->
+    def nearWcsVersion
+    def info = name.split(":")
+
+    if (!isTask("fix") && !isTask("build") && isTask("upload")) {
+        nearWcsVersion = 'latest.release'
+    } else {
+        def lastVersion = getDependencyVersion(info[0])
+        nearWcsVersion = info.length == 1 ? lastVersion : lastVersion + "-" + info[1]
+    }
+
+    println("${info[0]} Version : $nearWcsVersion")
+    return nearWcsVersion
+}
+
+tasks.register('sourcesJar', Jar) {
+    dependsOn classes
+    archiveClassifier.set('sources')
+    from sourceSets.main.allSource
+}
+
+// tasks.register('javadocJar', Jar) {
+//     dependsOn javadoc
+//     archiveClassifier.set('javadoc')
+//     from javadoc.destinationDir
+// }
+
+artifacts {
+    if (!isTask("fix")) {
+        archives tasks.named('sourcesJar').get()
+        // archives tasks.named('javadocJar').get()
+    }
+}
+
+tasks.register('initTask') {
+    doLast {
+        project.version = getCurrentModuleVersion(artifactId)
+    }
+}
+
+tasks.register('major') {
+    doLast {
+        if (isTask("major")) {
+            majorVersion++
+            minorVersion = 0
+            patchVersion = 0
+            buildVersion = 0
+            updateVersionInfo()
+        }
+    }
+}
+
+tasks.register('minor') {
+    doLast {
+        if (isTask("minor")) {
+            minorVersion++
+            patchVersion = 0
+            buildVersion++
+            updateVersionInfo()
+        }
+    }
+}
+
+tasks.register('patch') {
+    doLast {
+        if (isTask("patch")) {
+            patchVersion++
+            buildVersion++
+            updateVersionInfo()
+        }
+    }
+}
+
+tasks.register('release') {
+    doLast {
+        if (isTask("release")) {
+            buildVersion++
+            updateVersionInfo()
+        }
+    }
+}
+
+tasks.register('snapshot') {
+    doLast {
+        if (isTask("snapshot")) {
+            buildVersion = "$buildVersion-SNAPSHOT"
+        }
+    }
+}
+
+tasks.register('fix')
+
+publishing {
+    repositories {
+        maven {
+            name = "hatiolab"
+            url = uri(baseUrl + (isTask("snapshot") ? "/repositories/snapshots/" : isTask("build") ? "/repositories/jar_deployed/" : "/repositories/hatiolab/"))
+            allowInsecureProtocol = true
+            credentials {
+                username = userName
+                password = password
+            }
+        }
+    }
+    publications {
+        if (!publications.findByName('mavenJava')) {
+            register('mavenJava', MavenPublication) {
+                groupId = project.groupId
+                artifactId = project.artifactId
+                version = generateVersion()
+                from components.java
+                artifact tasks.sourcesJar
+                // artifact tasks.javadocJar // Uncomment if javadocJar task is defined
+            }
+        }
+    }
+}
+
+/*********************************************
+ * Function
+ *********************************************/
+
+/**
+ * Get Current Module Version
+ */
+def getCurrentModuleVersion(artifactId) {
+    String currentVersion = getVersion(artifactId)
+    String[] versionInfo = currentVersion != null ? currentVersion.split("\\.") : version.split("\\.")
+
+    majorVersion = Integer.parseInt(versionInfo[0])
+    minorVersion = Integer.parseInt(versionInfo[1])
+    patchVersion = Integer.parseInt(versionInfo[2])
+
+    if (versionInfo.length == 4)
+        buildVersion = Integer.parseInt(versionInfo[3])
+
+    return generateVersion()
+}
+
+/**
+ * Generate Version
+ */
+def generateVersion() {
+    return "$majorVersion.$minorVersion.$patchVersion.$buildVersion"
+}
+
+/**
+ * Get Dependency Version
+ */
+def getDependencyVersion(artifactId) {
+    return getVersion(artifactId)
+}
+
+/**
+ * Get Version
+ */
+def getVersion(artifactId) {
+    try {
+        String groupId = this.groupId
+        String rootPath = baseUrl + "/repositories"
+        String repositoryName = "hatiolab"
+        String metaFileName = "maven-metadata.xml"
+
+        // http://repo.hatiolab.com/nexus/content/repositories/jar_deployed/com/hatiolab/next-scene/maven-metadata.xml
+        String path = [rootPath, repositoryName, groupId.replace(".", "/"), artifactId, metaFileName].join("/")
+
+        URL url = new URL(path)
+        URLConnection connection = url.openConnection()
+
+        String userpass = "$userName:$password"
+        String basicAuth = "Basic " + Base64.getEncoder().encodeToString(userpass.getBytes())
+
+        connection.setRequestProperty("Authorization", basicAuth)
+        connection.setRequestProperty("X-Requested-With", "Curl")
+
+        Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(connection.getInputStream())
+        NodeList descNodes = doc.getElementsByTagName("versioning")
+
+        for (int i = 0; i < descNodes.getLength(); i++) {
+            Node node = descNodes.item(i).getFirstChild()
+            while (node != null) {
+                if (node.getNodeName().equals("release")) {
+                    return node.getTextContent()
+                }
+                node = node.getNextSibling()
+            }
+        }
+    } catch (Exception e) {
+        e.printStackTrace()
+    }
+    return null
+}
+
+/**
+ * Property File에 Version 정보 Update
+ */
+def updateVersionInfo() {
+    def projectName = rootProject.projectDir.getName()
+    def projectPath = rootProject.projectDir.getPath().replaceAll("\\\\", "/")
+    def propertyDirPath = "$projectPath/src/main/resources/properties"
+    def moduleName = projectName.split('-')[1]
+    def fileName = projectName.substring(projectName.indexOf("-") + 1) + ".properties"
+    def versionPropertyName = "elings.$moduleName.version:"
+    def timePropertyName = "elings.$moduleName.built.at:"
+
+    // File 정보 추출
+    File file = new File(propertyDirPath, fileName)
+    if (!file.exists()) return
+
+    def contents = new String(Files.readAllBytes(Paths.get(file.toString())), 'UTF-8')
+
+    def rows = contents.split('\n')
+    def sj = rows.collect { row ->
+        if (row.startsWith(versionPropertyName)) {
+            def thisVersion = generateVersion()
+            if (isTask('snapshot') && !version.endsWith('-SNAPSHOT')) {
+                thisVersion += '-SNAPSHOT'
+            }
+            "$versionPropertyName $thisVersion"
+        } else if (isTask("release,snapshot") && row.startsWith(timePropertyName)) {
+            SimpleDateFormat sdf = new SimpleDateFormat('yyyy-MM-dd HH:mm:ss')
+            "$timePropertyName ${sdf.format(new Date())}"
+        } else {
+            row
+        }
+    }.join('\n')
+
+    // File 변경 내용 저장
+    try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))) {
+        bufferedWriter.write(sj)
+    } catch (Exception e) {
+        e.printStackTrace()
+    }
+}

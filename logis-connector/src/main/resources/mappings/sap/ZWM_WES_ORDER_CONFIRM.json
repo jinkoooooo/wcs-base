@@ -1,0 +1,19 @@
+{
+  "functionName": "ZWM_WES_ORDER_CONFIRM",
+  "isSend": true,
+  "importParams": {
+    "I_ZWERKS": "2009",
+    "I_RSDAT": "",
+    "I_SEQ": ""
+  },
+  "exportParams": {
+    "O_MSGTY": "",
+    "O_MSGLIN": "",
+    "E_XC_E_TIME": ""
+  },
+  "tableDataMap": {},
+  "fieldsMap": {},
+  "mappingMap": {},
+  "typeMap": {},
+  "enDecryptFields": []
+}

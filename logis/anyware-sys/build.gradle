@@ -1,0 +1,36 @@
+plugins {
+	id 'java-library' // java 대신 java-library 사용
+}
+
+jar {
+	manifest {
+		attributes(
+				'Implementation-Title': 'Nearsolution System',
+				'Implementation-Version': '3.0.0'
+		)
+	}
+}
+
+
+repositories {
+    mavenCentral() // Maven 중앙 저장소 사용
+    // 필요시 사설 Nexus 리포지토리 추가
+    maven {
+        url "http://repo.hatiolab.com/nexus/content/groups/elidom-repository/"
+        allowInsecureProtocol = true
+    }
+  /*  
+    flatDir {
+        dirs 'libs', '../core/next-job/build/libs','../core/next-dev/build/libs','../core/next-rabbitmq/build/libs',
+              '../core/next-base/build/libs','../core/next-core/build/libs','../core/next-msg/build/libs','../core/next-sec/build/libs',
+              '../core/next-sys/build/libs','../core/next-orm/build/libs','../core/next-util/build/libs',
+              '../core/next-exception/build/libs','../core/next-dbist/build/libs','../near-anyware/build/libs'
+    }
+    */
+}
+
+
+dependencies {
+    api('core-lib:next-base')
+	api('core-lib:next-dev')
+}

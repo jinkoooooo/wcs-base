@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+<!-- Gate posts -->
+<rect x="26" y="30" width="10" height="40" rx="4" fill="#2F3947"/>
+<rect x="64" y="30" width="10" height="40" rx="4" fill="#2F3947"/>
+<!-- arm -->
+<rect x="36" y="46" width="28" height="6" rx="3" fill="#C7D0DB" opacity="0.55"/>
+<!-- hinge -->
+<rect x="34" y="43" width="6" height="12" rx="3" fill="#58667A" opacity="0.35"/>
+<!-- lane marker -->
+<rect x="24" y="74" width="52" height="3" rx="1.5" fill="#58667A" opacity="0.22"/>
+</svg>

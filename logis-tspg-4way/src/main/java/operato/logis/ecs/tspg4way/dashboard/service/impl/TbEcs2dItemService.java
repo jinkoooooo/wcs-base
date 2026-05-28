@@ -1,0 +1,376 @@
+package operato.logis.ecs.tspg4way.dashboard.service.impl;
+
+import java.util.List;
+import java.util.Map;
+
+import operato.logis.wcs.service.impl.query.inventory.CellStateClassifier;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import operato.logis.ecs.tspg4way.dashboard.entity.TbEcs2dItem;
+import xyz.elidom.orm.IQueryManager;
+import xyz.elidom.sys.system.service.AbstractQueryService;
+import xyz.elidom.util.BeanUtil;
+import xyz.elidom.util.ValueUtil;
+
+/**
+ * 4-Way Shuttle 설비 레이아웃 Service
+ */
+@Service
+public class TbEcs2dItemService extends AbstractQueryService {
+
+    private static final Logger logger = LoggerFactory.getLogger(TbEcs2dItemService.class);
+
+    private IQueryManager queryManager;
+
+    private IQueryManager getQueryManager() {
+        if (this.queryManager == null) {
+            this.queryManager = BeanUtil.get(IQueryManager.class);
+        }
+        return this.queryManager;
+    }
+
+    /**
+     * 페이지별 레이아웃 목록 조회
+     */
+    @Transactional(readOnly = true)
+    public List<TbEcs2dItem> getLayoutsByPageId(String lcId, String pageId) {
+        String sql = "SELECT * FROM tb_ecs_2d_item WHERE lc_id = :lcId AND page_id = :pageId ORDER BY z_index ASC";
+        Map<String, Object> params = ValueUtil.newMap("lcId,pageId", lcId, pageId);
+        return this.getQueryManager().selectListBySql(sql, params, TbEcs2dItem.class, 0, 0);
+    }
+
+    /**
+     * 설비별 레이아웃 조회
+     */
+    @Transactional(readOnly = true)
+    public TbEcs2dItem getLayoutByEquipmentId(String pageId, String equipmentId) {
+        Map<String, Object> params = ValueUtil.newMap("pageId,equipmentId", pageId, equipmentId);
+        return this.getQueryManager().selectByCondition(TbEcs2dItem.class, params);
+    }
+
+    /**
+     * 레이아웃 단건 조회
+     */
+    @Transactional(readOnly = true)
+    public TbEcs2dItem getLayout(String id) {
+        return this.getQueryManager().select(TbEcs2dItem.class, id);
+    }
+
+    /**
+     * 레이아웃 생성 (설비 배치)
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public TbEcs2dItem createLayout(TbEcs2dItem layout) {
+        if (layout.getPosX() != null) layout.setPosX((double) Math.round(layout.getPosX()));
+        if (layout.getPosY() != null) layout.setPosY((double) Math.round(layout.getPosY()));
+        this.getQueryManager().insert(layout);
+        return layout;
+    }
+
+    /**
+     * 레이아웃 수정
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public TbEcs2dItem updateLayout(TbEcs2dItem layout) {
+        this.getQueryManager().update(layout);
+        return layout;
+    }
+
+    /**
+     * 레이아웃 위치 수정 (드래그)
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public TbEcs2dItem updateLayoutPosition(String id, Double posX, Double posY) {
+        TbEcs2dItem layout = this.getLayout(id);
+        if (layout != null) {
+            if (posX != null) layout.setPosX((double) Math.round(posX));
+            if (posY != null) layout.setPosY((double) Math.round(posY));
+
+            this.getQueryManager().update(layout, "posX", "posY");
+        }
+        return layout;
+    }
+
+    /**
+     * 레이아웃 크기 수정
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public TbEcs2dItem updateLayoutSize(String id, Double width, Double height) {
+        TbEcs2dItem layout = this.getLayout(id);
+        if (layout != null) {
+            layout.setWidth(width);
+            layout.setHeight(height);
+            this.getQueryManager().update(layout, "width", "height");
+        }
+        return layout;
+    }
+
+    /**
+     * 레이아웃 변형 수정 (회전, 스케일, 플립)
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public TbEcs2dItem updateLayoutTransform(String id, Double rotation, Double scaleX, Double scaleY, Boolean flipH, Boolean flipV) {
+        TbEcs2dItem layout = this.getLayout(id);
+        if (layout != null) {
+            if (rotation != null) layout.setRotation(rotation);
+            if (scaleX != null) layout.setScaleX(scaleX);
+            if (scaleY != null) layout.setScaleY(scaleY);
+            if (flipH != null) layout.setFlipH(flipH);
+            if (flipV != null) layout.setFlipV(flipV);
+            this.getQueryManager().update(layout, "rotation", "scaleX", "scaleY", "flipH", "flipV");
+        }
+        return layout;
+    }
+
+    /**
+     * 레이아웃 삭제
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public void deleteLayout(String id) {
+        TbEcs2dItem layout = this.getLayout(id);
+        if (layout != null) {
+            this.getQueryManager().delete(layout);
+        }
+    }
+
+    /**
+     * 페이지의 전체 레이아웃 삭제
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public void deleteLayoutsByPageId(String pageId) {
+        String sql = "DELETE FROM tb_ecs_2d_item WHERE page_id = :pageId";
+        Map<String, Object> params = ValueUtil.newMap("pageId", pageId);
+        this.getQueryManager().executeBySql(sql, params);
+    }
+
+    /**
+     * 레이아웃 일괄 저장 (페이지 전체 저장)
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public void saveLayouts(String lcId, String pageId, List<TbEcs2dItem> layouts) {
+        this.deleteLayoutsByPageId(pageId);
+
+        for (TbEcs2dItem layout : layouts) {
+            layout.setLcId(lcId);
+            layout.setPageId(pageId);
+            if (layout.getPosX() != null) layout.setPosX((double) Math.round(layout.getPosX()));
+            if (layout.getPosY() != null) layout.setPosY((double) Math.round(layout.getPosY()));
+            this.getQueryManager().insert(layout);
+        }
+
+        logger.info("[ Dashboard ][ Item ] layouts saved: count={}, lcId={}, pageId={}", layouts.size(), lcId, pageId);
+    }
+
+    /**
+     * 레이아웃 일괄 업데이트
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public void batchUpdateLayouts(List<TbEcs2dItem> layouts) {
+        for (TbEcs2dItem layout : layouts) {
+            if (layout.getPosX() != null) layout.setPosX((double) Math.round(layout.getPosX()));
+            if (layout.getPosY() != null) layout.setPosY((double) Math.round(layout.getPosY()));
+
+            if (layout.getId() != null) {
+                this.getQueryManager().update(layout);
+            } else {
+                this.getQueryManager().insert(layout);
+            }
+        }
+    }
+
+    /**
+     * 레이아웃에 실운영 설비 ID 매핑
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public TbEcs2dItem updateRealEqMapping(String layoutId, String realEqId, String realEqType) {
+        TbEcs2dItem layout = this.getLayout(layoutId);
+        if (layout != null) {
+            layout.setRealEqId(realEqId);
+            layout.setRealEqType(realEqType);
+            this.getQueryManager().update(layout, "realEqId", "realEqType");
+            logger.info("[ Dashboard ][ Item ] real-eq mapping updated: layoutId={}, realEqId={}, realEqType={}",
+                    layoutId, realEqId, realEqType);
+        }
+        return layout;
+    }
+
+    /**
+     * 레이아웃에 실운영 설비 ID 매핑 해제
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public TbEcs2dItem clearRealEqMapping(String layoutId) {
+        return this.updateRealEqMapping(layoutId, null, null);
+    }
+
+    /**
+     * 대시보드용 레이아웃 조회 (실시간 상태 결합).
+     * state_code 결정은 CellStateClassifier 로 일원화 — CellStateService.getCellsByGroup() 와 동일 SQL 을 공유해 두 화면 색이 항상 동기화.
+     * pageId/lcId 로 page 1건 확정 → page.eq_group_id 의 tb_eq_mst 로 rack/cv/car 제한(타 페이지 유입 방지). 같은 stock_id 는 LATERAL 우선순위 1위만 사용.
+     */
+    @Transactional(readOnly = true)
+    public List<Map> getLayoutsWithRealStatus(String lcId, String pageId) {
+
+        // state_code 결정 SQL 동적 생성 (CellStateClassifier SSOT)
+        //  - rackAlias       : "rack"     (tb_eq_rack_mst)
+        //  - locAlias        : "wcs_loc"  (tb_inventory_location)
+        //  - stkAlias        : "stk"      (LATERAL 결과)
+        //  - prefixCondition : RACK 이외 타입은 NULL 처리
+        final String stateCodeSql = CellStateClassifier.stateCodeCaseSql(
+                "rack", "wcs_loc", "stk", "el.equipment_type_code <> 'RACK'");
+        final String lateralSql   = CellStateClassifier.lateralStockSubquerySql("wcs_loc", "stk");
+
+        String sql = """
+        WITH target_page AS (
+            SELECT p.id, p.lc_id, p.eq_group_id
+              FROM tb_ecs_2d_page p
+             WHERE p.id    = :pageId
+               AND p.lc_id = :lcId
+        ),
+        target_eq AS (
+            SELECT e.id, e.eq_group_id, e.type, e.name
+              FROM tb_eq_mst e
+              INNER JOIN target_page tp
+                      ON tp.eq_group_id = e.eq_group_id
+        )
+
+        SELECT
+            el.*,
+            tp.eq_group_id AS page_eq_group_id,
+
+            /* 공통 eq mst */
+            COALESCE(eq_rack.id, eq_cv.id, eq_car.id)                            AS real_eq_mst_id,
+            COALESCE(eq_rack.eq_group_id, eq_cv.eq_group_id, eq_car.eq_group_id) AS real_eq_group_id,
+            COALESCE(eq_rack.type, eq_cv.type, eq_car.type)                      AS real_eq_mst_type,
+            COALESCE(eq_rack.name, eq_cv.name, eq_car.name)                      AS real_eq_mst_name,
+
+            /* CAR realtime */
+            car.id              AS real_car_id,
+            car.eq_id           AS real_car_eq_id,
+            car.type            AS real_car_type,
+            car.row             AS real_car_row,
+            car.bay             AS real_car_bay,
+            car.level           AS real_car_level,
+            car.status          AS real_car_status,
+            car.battery_status  AS real_car_battery_status,
+            car.cargo_yn        AS real_car_cargo_yn,
+            car.error_id        AS real_car_error_id,
+            car.error_desc      AS real_car_error_desc,
+
+            /* RACK realtime */
+            rack.rack_id        AS real_rack_id,
+            rack.eq_id          AS real_rack_eq_id,
+            rack.type           AS real_rack_type,
+            rack.row            AS real_rack_row,
+            rack.bay            AS real_rack_bay,
+            rack.level          AS real_rack_level,
+            rack.sku_id         AS real_rack_sku_id,
+            rack.sku_qty        AS real_rack_sku_qty,
+            rack.status         AS real_rack_status,
+            rack.error_id       AS real_rack_error_id,
+            rack.error_desc     AS real_rack_error_desc,
+            rack.cargo_yn       AS real_rack_cargo_yn,
+            rack.drive_only_yn  AS real_rack_drive_only_yn,
+
+            /* CONVEYOR / LIFTER realtime */
+            cv.id               AS real_cv_id,
+            cv.eq_id            AS real_cv_eq_id,
+            cv.type             AS real_cv_type,
+            cv.level            AS real_cv_level,
+            cv.cargo_yn         AS real_cv_cargo_yn,
+            cv.status           AS real_cv_status,
+            cv.error_id         AS real_cv_error_id,
+            cv.error_desc       AS real_cv_error_desc,
+
+            /* WCS 로케이션 원본 컬럼 (RACK/CONVEYOR 포트 공통) */
+            wcs_loc.task_id     AS wcs_loc_task_id,
+            wcs_loc.stock_id    AS wcs_loc_stock_id,
+            wcs_loc.is_enabled  AS wcs_loc_is_enabled,
+            wcs_loc.loc_type    AS wcs_loc_type,
+            wcs_loc.port_mode   AS wcs_port_mode,
+
+            /* LATERAL stock 컬럼 — stock_type/expired_datetime 노출 */
+            stk.stock_type        AS wcs_stock_type,
+            stk.expired_datetime  AS wcs_expired_datetime,
+
+            /* WCS 로케이션 상태 코드 — CellStateClassifier 단일 출처 */
+            %s AS wcs_loc_state_code
+
+        FROM target_page tp
+        INNER JOIN tb_ecs_2d_item el
+                ON el.page_id = tp.id
+               AND el.lc_id   = tp.lc_id
+
+        /* =========================
+           RACK
+           ========================= */
+        LEFT JOIN tb_eq_rack_mst rack
+               ON el.equipment_type_code = 'RACK'
+              AND rack.rack_id = el.real_eq_id
+              AND rack.eq_id IN (SELECT id FROM target_eq)
+        LEFT JOIN target_eq eq_rack
+               ON eq_rack.id = rack.eq_id
+
+        /* =========================
+           CONVEYOR / LIFTER
+           ========================= */
+        LEFT JOIN tb_eq_cv_mst cv
+               ON el.equipment_type_code IN ('CONVEYOR', 'LIFTER')
+              AND cv.id = el.real_eq_id
+              AND cv.eq_id IN (SELECT id FROM target_eq)
+        LEFT JOIN target_eq eq_cv
+               ON eq_cv.id = cv.eq_id
+
+        /* =========================
+           SHUTTLE_CAR
+           ========================= */
+        LEFT JOIN tb_eq_car_mst car
+               ON el.equipment_type_code = 'SHUTTLE_CAR'
+              AND car.id = el.real_eq_id
+              AND car.eq_id IN (SELECT id FROM target_eq)
+        LEFT JOIN target_eq eq_car
+               ON eq_car.id = car.eq_id
+
+        /* =========================
+           WCS 로케이션 (RACK 셀 + 포트 컨베이어 공통)
+           ========================= */
+        LEFT JOIN tb_inventory_location wcs_loc
+               ON wcs_loc.loc_id    = el.real_eq_id
+              AND wcs_loc.loc_group = tp.eq_group_id
+
+        /* =========================
+           LATERAL — 우선순위 1위 stock row
+           (CellStateClassifier SSOT)
+           ========================= */
+        %s
+
+        WHERE el.is_visible = true
+        ORDER BY el.z_index ASC, el.real_eq_id ASC
+        """.formatted(stateCodeSql, lateralSql);
+
+        Map<String, Object> params = ValueUtil.newMap("lcId,pageId", lcId, pageId);
+        return this.getQueryManager().selectListBySql(sql, params, Map.class, 0, 0);
+    }
+
+    /**
+     * realEqId로 레이아웃 조회
+     */
+    @Transactional(readOnly = true)
+    public TbEcs2dItem getLayoutByRealEqId(String lcId, String pageId, String realEqId) {
+        String sql = "SELECT * FROM tb_ecs_2d_item WHERE lc_id = :lcId AND page_id = :pageId AND real_eq_id = :realEqId";
+        Map<String, Object> params = ValueUtil.newMap("lcId,pageId,realEqId", lcId, pageId, realEqId);
+        return this.getQueryManager().selectByCondition(TbEcs2dItem.class, params);
+    }
+
+    /**
+     * 특정 페이지에서 realEqId가 매핑된 레이아웃 목록 조회
+     */
+    @Transactional(readOnly = true)
+    public List<TbEcs2dItem> getMappedLayouts(String lcId, String pageId) {
+        String sql = "SELECT * FROM tb_ecs_2d_item WHERE lc_id = :lcId AND page_id = :pageId AND real_eq_id IS NOT NULL ORDER BY z_index ASC";
+        Map<String, Object> params = ValueUtil.newMap("lcId,pageId", lcId, pageId);
+        return this.getQueryManager().selectListBySql(sql, params, TbEcs2dItem.class, 0, 0);
+    }
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+  <!-- BCR (top-down) : scanner head + beam + barcode target -->
+  <!-- scanner head -->
+  <rect x="22" y="30" width="24" height="40" rx="8" fill="#2F3947"/>
+  <rect x="27" y="38" width="14" height="24" rx="6" fill="#C7D0DB" opacity="0.45"/>
+  <!-- small status lens -->
+  <circle cx="34" cy="34" r="2.2" fill="#E3E8EF" opacity="0.55"/>
+
+  <!-- beam (subtle) -->
+  <rect x="48" y="48" width="26" height="4" rx="2" fill="#C7D0DB" opacity="0.35"/>
+  <circle cx="76" cy="50" r="3" fill="#58667A" opacity="0.35"/>
+
+  <!-- barcode target area -->
+  <rect x="76" y="40" width="12" height="20" rx="4" fill="#3A4556" opacity="0.95"/>
+  <!-- barcode stripes -->
+  <rect x="79" y="44" width="1.5" height="12" rx="0.75" fill="#E3E8EF" opacity="0.75"/>
+  <rect x="82" y="44" width="2.5" height="12" rx="1.25" fill="#E3E8EF" opacity="0.65"/>
+  <rect x="86" y="44" width="1.5" height="12" rx="0.75" fill="#E3E8EF" opacity="0.75"/>
+
+  <!-- corner brackets to hint "scan zone" -->
+  <path d="M74 38h6v2h-4v4h-2v-6z" fill="#58667A" opacity="0.35"/>
+  <path d="M88 38h-6v2h4v4h2v-6z" fill="#58667A" opacity="0.35"/>
+  <path d="M74 62h6v-2h-4v-4h-2v6z" fill="#58667A" opacity="0.35"/>
+  <path d="M88 62h-6v-2h4v-4h2v6z" fill="#58667A" opacity="0.35"/>
+</svg>

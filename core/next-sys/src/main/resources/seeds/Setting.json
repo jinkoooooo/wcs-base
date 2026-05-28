@@ -1,0 +1,211 @@
+[
+  {
+    "id": "2400c561-2ef3-4efc-9939-019a6563c7fb",
+    "name": "locale.default",
+    "description": "기본 로케일",
+    "value": "ko-KR",
+    "category": "common",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jul 19, 2017 8:58:05 PM"
+  },
+  {
+    "id": "c8e9b5d8-2154-4862-ad4b-46a856d3424e",
+    "name": "error.unwritable.exception.types",
+    "description": "Error Log를 저장하지 않을 Exception 설정",
+    "value": "",
+    "category": "common",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jul 19, 2017 8:58:05 PM"
+  },
+  {
+    "id": "46c35e54-dee1-4d84-a467-7d1a1fb71b50",
+    "name": "screen.pagination.page.limit",
+    "description": "그리드 페이지네이션을 위한 페이지 당 표시할 레코드 수 ",
+    "value": "50",
+    "category": "common",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jul 19, 2017 8:58:05 PM"
+  },
+  {
+    "id": "997d5b6c-6aca-48ce-a881-6fecd8d84f9c",
+    "name": "error.save.status.list",
+    "description": "DB에 저장하고자 하는 Error Status 목록.(ex : 500,401,403...) 값이 지정되어 있지 않으면, 모든 Status에 대하여 Log를 저장.",
+    "value": "",
+    "category": "common",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jul 19, 2017 8:58:05 PM"
+  },
+  {
+    "id": "226b968a-0e34-4ba4-981d-b8be0b698032",
+    "name": "notice.default.subject",
+    "description": "알림에서 Publish할 기본 채널",
+    "value": "/elidom/stomp/topic/notice",
+    "category": "common",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jul 19, 2017 8:58:05 PM"
+  },
+  {
+    "id": "0c3cd06d-cda8-4cfa-bf83-5fc96f571cf2",
+    "name": "upload.file.limit.size",
+    "description": "업로드 최대 사이즈 (MB)",
+    "value": "500",
+    "category": "common",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jul 19, 2017 8:58:05 PM"
+  },
+  {
+    "id": "baf8cba1-7b36-43c3-a2a9-67f7215826c5",
+    "name": "error.print.stack.trace",
+    "description": "에러 발생시 Stack Trace를 프린트할 것인지 여부",
+    "value": "true",
+    "category": "common",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jul 19, 2017 8:58:05 PM"
+  },
+  {
+    "id": "e1d510b2-25af-4e8e-ba8a-b61c75bfb158",
+    "name": "attach.file.delete",
+    "description": "Attachment 삭제시 물리적 파일도 삭제 여부",
+    "value": "true",
+    "category": "common",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jul 19, 2017 8:58:05 PM"
+  },
+  {
+    "id": "1e2496f7-108b-4e61-b30e-6038bf9c3538",
+    "name": "module.not.modifiable.list",
+    "description": "개발시 변경 되어서는 안되는 모듈 리스트",
+    "value": "base",
+    "category": "common",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jul 19, 2017 8:58:05 PM"
+  },
+  {
+    "id": "9bb09532-e30f-4857-9aac-94b2dcb2905d",
+    "name": "client.context.path",
+    "description": "메일 전송시 화면에 접속하기 위한 URL Link를 위한 화면 접속 정보",
+    "value": "http://boot.hatiolab.com",
+    "category": "common",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jul 19, 2017 8:58:05 PM"
+  },
+  {
+    "id": "8644eaeb-3c06-4bb9-a397-5c1f63649187",
+    "name": "security.read.only.uri",
+    "description": "읽기 전용 URI 설정 (GET Method)",
+    "value": "/rest/fonts,/rest/download/public,/rest/publishers",
+    "category": "common",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jul 19, 2017 8:58:05 PM"
+  },
+  {
+    "id": "d7da7058-1542-425d-be7e-47e11f0a4f57",
+    "name": "server.contrext.path",
+    "description": "Server Context Path",
+    "value": "http://boot.hatiolab.com",
+    "category": "common",
+    "domainId": 1,
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jul 19, 2017 8:58:05 PM"
+  },
+  {
+    "id": "505780ff-613e-419c-9431-252c608e00c1",
+    "name": "file.context.path",
+    "description": "File Context Path",
+    "value": "http://mes.hatiolab.com:8000/mes",
+    "category": "common",
+    "domainId": 1,
+    "updaterId": "admin",
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jul 31, 2017 5:12:01 PM"
+  },
+  {
+    "id": "52f025bd-247a-41f3-afab-bddc6282af52",
+    "name": "file.root.path",
+    "description": "File Storage Root Path",
+    "value": "/home/hatiolab/things-framework/storages/mes",
+    "category": "common",
+    "domainId": 1,
+    "updaterId": "admin",
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jul 31, 2017 5:12:01 PM"
+  },
+  {
+    "id": "b0162108-5099-4231-8010-cf6a834479f1",
+    "name": "user.password.expire.enable",
+    "description": "비밀번호 만료 설정",
+    "value": "true",
+    "category": "common",
+    "domainId": 1,
+    "updaterId": "admin",
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Sep 20, 2017 11:51:27 AM"
+  },
+  {
+    "id": "a9c908fe-bf0c-43cf-9da7-a5dd7481cd66",
+    "name": "security.init.pass",
+    "description": "초기 패스워드 정보",
+    "value": "hatiolab",
+    "category": "common",
+    "domainId": 1,
+    "updaterId": "admin",
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jun 5, 2018 3:21:48 PM"
+  },
+  {
+    "id": "3162fdb7-1bf8-4f94-a043-5bfd3e9cc17e",
+    "name": "security.use.random.init.pass",
+    "description": "패스워드 초기화시 랜덤 사용",
+    "value": "false",
+    "category": "common",
+    "domainId": 1,
+    "updaterId": "admin",
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jun 5, 2018 3:22:03 PM"
+  },
+  {
+    "id": "5b4abce0-1a9b-4aa0-b45e-9c4054b0f314",
+    "name": "user.password.validation.enable",
+    "description": "비밀번호 유효성 체크",
+    "value": "true",
+    "domainId": 1,
+    "creatorId": "aaaa",
+    "updaterId": "aaaa",
+    "createdAt": "Jun 5, 2018 4:01:52 PM",
+    "updatedAt": "Jun 5, 2018 4:01:52 PM"
+  },
+  {
+    "id": "0325977c-82fc-4fb3-bda8-eef337a66b40",
+    "name": "user.password.change.period.day",
+    "description": "비밀번호 변경 주기",
+    "value": "180",
+    "category": "common",
+    "domainId": 1,
+    "updaterId": "aaaa",
+    "createdAt": "Jul 19, 2017 8:58:05 PM",
+    "updatedAt": "Jun 5, 2018 4:04:50 PM"
+  },
+  {
+    "id": "6b9c12a5-ebe8-40c9-9dfc-3ef52d61abc2",
+    "name": "user.recent.used.pass.count",
+    "description": "사용 불가한 최근 비밀번호 갯 수",
+    "value": "3",
+    "category": "common",
+    "domainId": 1,
+    "creatorId": "admin",
+    "updaterId": "admin",
+    "createdAt": "Jun 7, 2018 12:03:43 PM",
+    "updatedAt": "Jun 7, 2018 12:03:43 PM"
+  }
+]

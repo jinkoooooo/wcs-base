@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+<!-- Aisle rails -->
+<rect x="22" y="28" width="56" height="6" rx="3" fill="#58667A" opacity="0.40"/>
+<rect x="22" y="66" width="56" height="6" rx="3" fill="#58667A" opacity="0.40"/>
+<!-- chassis -->
+<rect x="38" y="34" width="24" height="32" rx="7" fill="#2F3947"/>
+<!-- carriage -->
+<rect x="44" y="40" width="12" height="20" rx="5" fill="#C7D0DB" opacity="0.32"/>
+<!-- center guide -->
+<rect x="49" y="34" width="2" height="32" rx="1" fill="#E3E8EF" opacity="0.22"/>
+</svg>

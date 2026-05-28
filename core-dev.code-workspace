@@ -1,0 +1,53 @@
+{
+  "folders": [
+	{
+		"path": "next-dev"
+	},
+	{
+		"path": "next-receiver"
+	},
+	{
+		"path": "next-redis"
+	},
+	{
+		"path": "next-sender"
+	},
+	{
+		"path": "next-screen"
+	},
+	{
+		"path": "next-starter-boot"
+	},
+	{
+		"path": "next-msg"
+	},
+	{
+		"path": "next-sec"
+	},
+	{
+		"path": "next-core"
+	},
+	{
+		"path": "next-sys"
+	},
+	{
+		"path": "next-dev-boot"
+	},
+	{
+		"path": "next-base"
+	},
+	{
+		"path": "next-dbist"
+	},
+	{
+		"path": "next-util"
+	},
+	{
+		"path": "next-exception"
+	},
+	{
+		"path": "next-orm"
+	}
+],
+  "settings": {}
+}

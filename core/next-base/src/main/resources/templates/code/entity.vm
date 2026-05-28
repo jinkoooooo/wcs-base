@@ -1,0 +1,74 @@
+#if(${isRef})
+package ${module}.entity.relation;
+#else
+package ${module}.entity;
+#end
+
+#if($timestamp) 
+import java.sql.Timestamp; 
+#end
+#if($date)
+import java.util.Date; 
+#end
+#if((!${parentsEntity}) || ${isExtEntity})
+import java.io.Serializable;
+#end
+#if(${addIndex})
+import xyz.elidom.dbist.annotation.Index;
+#end
+import xyz.elidom.dbist.annotation.Column;
+import xyz.elidom.dbist.annotation.PrimaryKey;
+import xyz.elidom.dbist.annotation.GenerationRule;
+#if(${idSequence})
+import xyz.elidom.dbist.annotation.Sequence;
+#end
+#if(${ignore})
+import xyz.elidom.dbist.annotation.Ignore;
+#end
+import xyz.elidom.dbist.annotation.Table;
+#if(${refPackagePath})
+import xyz.elidom.dbist.annotation.Relation;
+#foreach( ${packagePath} in ${refPackagePath} )
+import ${packagePath};
+#end
+#end
+
+#if(${isRef})
+@Table(name = "${tableName}"${idType}, isRef=true)
+#if(${idSequence} && ${hasUniqueFields})
+public class ${entity} extends ${parentsEntity} {
+${fieldCont}
+  
+${getterSetterCont}	
+}
+#else
+public class ${entity} implements Serializable {
+	/**
+	 * SerialVersion UID
+	 */
+	private static final long serialVersionUID = ${uid}L;
+	
+${fieldCont}
+  
+${getterSetterCont}	
+}
+#end
+
+#else
+#if(${isExtEntity})
+@Table(name = "${tableName}"${idType}${uniqueFields}${meaningfulFields}${index}
+public class ${entity} implements Serializable {
+#else
+@Table(name = "${tableName}"${idType}${uniqueFields}${meaningfulFields}${index}
+public class ${entity} extends ${parentsEntity} {
+#end
+	/**
+	 * SerialVersion UID
+	 */
+	private static final long serialVersionUID = ${uid}L;
+
+${fieldCont}
+  
+${getterSetterCont}	
+}
+#end

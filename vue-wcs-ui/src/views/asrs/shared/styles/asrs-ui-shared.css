@@ -1,0 +1,91 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.18s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 공통 버튼 */
+.asrs-ui-btn {
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  white-space: nowrap;
+}
+
+.asrs-ui-btn--primary {
+  border: 1px solid #143b6b;
+  background: linear-gradient(180deg, #1f4f87 0%, #143b6b 100%);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(20, 59, 107, 0.18);
+}
+
+.asrs-ui-btn--secondary {
+  border: 1px solid #88a9cf;
+  background: #edf4fb;
+  color: #1f4f87;
+}
+
+.asrs-ui-btn--ghost {
+  border: 1px solid #d3dbe5;
+  background: #fff;
+  color: #334155;
+}
+
+.asrs-ui-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  box-shadow: none;
+}
+
+/* feedback */
+.asrs-ui-feedback {
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 800;
+  border: 1px solid transparent;
+}
+
+.asrs-ui-feedback--info {
+  background: #eef5fc;
+  border-color: #c7d9ef;
+  color: #21558f;
+}
+
+.asrs-ui-feedback--success {
+  background: #edf8f1;
+  border-color: #cfe8d7;
+  color: #23724a;
+}
+
+.asrs-ui-feedback--warning {
+  background: #fff6ea;
+  border-color: #f2d9b2;
+  color: #9a5a12;
+}
+
+.asrs-ui-feedback--error {
+  background: #fdf0f0;
+  border-color: #f1c8c8;
+  color: #a12d2d;
+}
+
+/* empty */
+.asrs-ui-empty {
+  padding: 18px;
+  border-radius: 14px;
+  background: #f5f8fb;
+  color: #6c7a89;
+  font-size: 13px;
+  line-height: 1.6;
+  border: 1px dashed #d7e1eb;
+}

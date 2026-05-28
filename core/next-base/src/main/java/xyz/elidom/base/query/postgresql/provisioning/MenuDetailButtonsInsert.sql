@@ -1,0 +1,12 @@
+INSERT INTO MENU_DETAIL_BUTTONS (
+    ID, MENU_DETAIL_ID, NAME, ICON, STYLE, LOGIC, DOMAIN_ID
+)
+SELECT
+    uuid_generate_v4() AS ID, B.ID AS MENU_DETAIL_ID, C.NAME, C.ICON, C.STYLE, C.LOGIC,
+    b.DOMAIN_ID AS DOMAIN_ID
+FROM
+    (SELECT * FROM MENU_DETAILS WHERE domain_id = :sourceDomainId) a,
+    (SELECT * FROM MENU_DETAILS WHERE domain_id = :targetDomainId) b,
+    (SELECT * FROM MENU_DETAIL_BUTTONS WHERE domain_id = :sourceDomainId) C
+WHERE
+    a.name = b.name AND a.id = c.MENU_DETAIL_ID

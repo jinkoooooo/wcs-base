@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+<!-- Workstation footprint -->
+<rect x="20" y="24" width="60" height="44" rx="8" fill="#2F3947"/>
+<!-- screen / panel -->
+<rect x="26" y="30" width="48" height="22" rx="6" fill="#C7D0DB" opacity="0.42"/>
+<!-- io tray -->
+<rect x="30" y="56" width="40" height="10" rx="5" fill="#58667A" opacity="0.30"/>
+<!-- base pad -->
+<rect x="26" y="72" width="48" height="6" rx="3" fill="#3A4556" opacity="0.85"/>
+</svg>

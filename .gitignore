@@ -1,0 +1,65 @@
+# === IDE / Build ===
+.idea/
+.settings/
+.gradle/
+out/
+bin/
+build/
+
+# === Node.js ===
+node_modules/
+dist/
+bower_components/
+*.tsbuildinfo
+
+# === Logs / Temp ===
+*.log
+*.log.*
+logs/
+tmp/
+hs_err_pid*
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+.project
+
+# === Archives / Packages ===
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# === Coverage / Tools ===
+coverage/
+lib-cov/
+.grunt/
+
+# === Type Definitions ===
+*.scss.d.ts
+*.graphql.d.ts
+
+# === Custom Project Paths ===
+ui-wcs/packages/**/dist/
+ui-wcs/packages/**/dist-client/
+ui-wcs/packages/**/dist-server/
+vue-wcs-ui/internal/**/dist/
+outsources/**/
+
+# === Config Files ===
+config.*.js
+config.*.
+*.timestamp-*.mjs
+!**/config/config.*.js
+!**/installer/config.*.js
+**/installer/postgres_data/**
+wcs-boot/src/main/resources/application-dev.properties
+wcs-boot/build.gradle
+wcs-boot/settings.gradle
+vue-wcs-ui/.env
+
+__pycache__/
+*.pyc
+

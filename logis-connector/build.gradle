@@ -1,0 +1,96 @@
+plugins {
+	id 'java-library'
+	id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+jar {
+	from('src/main/java') {
+		include '/**/*.sql'
+	}
+	manifest {
+		attributes(
+				'Implementation-Title': 'Nearsolution System',
+				'Implementation-Version': '3.0.0'
+		)
+	}
+}
+
+repositories {
+    mavenCentral() // Maven 중앙 저장소 사용
+    // 필요시 사설 Nexus 리포지토리 추가
+    maven {
+        url "http://repo.hatiolab.com/nexus/content/groups/elidom-repository/"
+        allowInsecureProtocol = true
+    }
+}
+
+dependencies {
+	implementation fileTree(dir: 'libs', include: ['sapjco3.jar'])
+    api('logis-lib:anyware-sec')
+	implementation 'org.springframework.boot:spring-boot-starter-webflux:3.4.0'
+	implementation 'io.projectreactor:reactor-core:3.6.5'
+	implementation 'io.netty:netty-resolver-dns'
+
+	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor:3.4.0"
+	implementation "org.springframework.boot:spring-boot-configuration-processor:3.4.0"
+
+	// Lombok (컴파일시에만 필요, 런타임 미포함)
+	compileOnly 'org.projectlombok:lombok:1.18.32'
+	annotationProcessor 'org.projectlombok:lombok:1.18.32'
+	testCompileOnly 'org.projectlombok:lombok:1.18.32'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.32'
+
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.0'
+
+	// s7 metrics-core,guava
+	implementation("io.dropwizard.metrics:metrics-core:4.2.37")
+	implementation("com.google.guava:guava:33.4.8-jre")
+
+    // Gson
+    implementation 'com.google.code.gson:gson:2.8.7'
+
+    // org.apache.httpcomponents.client5-httpclient5
+    implementation 'org.apache.httpcomponents.client5:httpclient5:5.4.1'
+    implementation 'org.apache.httpcomponents.core5:httpcore5:5.3.3'
+
+    // Netty
+    implementation 'io.netty:netty-all:4.1.107.Final'
+
+    // httpclient
+    implementation 'org.apache.httpcomponents.client5:httpclient5:5.4.1'
+    implementation 'org.apache.httpcomponents.core5:httpcore5:5.3.3'
+
+
+    // s7 metrics-core,guava
+    implementation("io.dropwizard.metrics:metrics-core:4.2.37")
+    implementation("com.google.guava:guava:33.4.8-jre")
+
+}
+
+shadowJar {
+	archiveClassifier.set('all')
+	from('libs') {
+        include 'sapjco3.jar'
+    }
+	from('libs/linux') {
+		into 'libs/linux'
+	}
+	from('libs/mac') {
+		into 'libs/mac'
+	}
+	from('libs/windows') {
+		into 'libs/windows'
+	}
+}
+
+sourceSets {
+	main {
+		resources {
+			srcDir 'libs'
+		}
+	}
+}
+
+tasks.withType(JavaExec).configureEach {
+	jvmArgs "-Djava.library.path=libs/mac"
+}

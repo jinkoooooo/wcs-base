@@ -1,0 +1,121 @@
+{
+  "functionName": "ZWM_WES_TO_CONFIRM_RECEIVE",
+  "isSend": true,
+  "importParams": {
+    "I_ZWERKS": "2009",
+    "I_RSDAT": "20250212"
+  },
+  "exportParams": {
+    "O_MSGTY": "",
+    "O_MSGLIN": "",
+    "E_XC_E_TIME": ""
+  },
+  "tableDataMap": {
+    "T_HEADER": [
+      {
+        "COM_CD": "2009",
+        "ORDER_DATE": "2025-02-12",
+        "WMS_BATCH_NO": "SEQ001",
+        "CUST_ORDER_NO": "18366286",
+        "ORDERER_ID": "20477881"
+      }
+    ],
+    "T_ITEM": [
+      {
+        "CUST_ORDER_NO": "18366286",
+        "CUST_ORDER_LINE_NO": "0001",
+        "ORDER_NO": "RS100001",
+        "ORDER_LINE_NO": "0001",
+        "SKU_CD": "SKU001",
+        "ORDER_QTY": "10",
+        "PICKED_QTY": "10",
+        "SERIAL_REQUIRED": "Y",
+        "ZONE_CD": "Z1"
+      }
+    ],
+    "T_SIRIAL": [
+      {
+        "CUST_ORDER_NO": "1",
+        "CUST_ORDER_LINE_NO": "0001",
+        "ORDER_NO": "RS100001",
+        "ORDER_LINE_NO": "0001",
+        "SKU_CD": "SKU001",
+        "SERIAL_NO": "SN202404010001"
+      }
+    ]
+  },
+  "fieldsMap": {
+    "T_HEADER": [
+      "COM_CD", "ORDER_DATE",
+      "WMS_BATCH_NO", "CUST_ORDER_NO", "ORDERER_ID"
+    ],
+    "T_ITEM": [
+      "CUST_ORDER_NO", "CUST_ORDER_LINE_NO",
+      "ORDER_NO", "ORDER_LINE_NO", "SKU_CD", "ORDER_QTY",
+      "PICKED_QTY", "SERIAL_REQUIRED", "ZONE_CD"
+    ],
+    "T_SIRIAL": [
+      "CUST_ORDER_NO", "CUST_ORDER_LINE_NO", "ORDER_NO",
+      "ORDER_LINE_NO", "SKU_CD", "SERIAL_NO"
+    ]
+  },
+  "mappingMap": {
+    "T_HEADER": {
+      "COM_CD": "ZWERKS",
+      "ORDER_DATE": "RSDAT",
+      "WMS_BATCH_NO": "SEQ",
+      "CUST_ORDER_NO": "TANUM",
+      "ORDERER_ID": "WEMPF"
+    },
+    "T_ITEM": {
+      "CUST_ORDER_NO": "TANUM",
+      "CUST_ORDER_LINE_NO": "TAPOS",
+      "ORDER_NO": "RSNUM",
+      "ORDER_LINE_NO": "RSPOS",
+      "SKU_CD": "MATNR",
+      "ORDER_QTY": "ERFMG",
+      "PICKED_QTY": "DIFMG",
+      "SERIAL_REQUIRED": "SERNP",
+      "ZONE_CD": "USERN"
+    },
+    "T_SIRIAL": {
+      "CUST_ORDER_NO": "TANUM",
+      "CUST_ORDER_LINE_NO": "TAPOS",
+      "ORDER_NO": "RSNUM",
+      "ORDER_LINE_NO": "RSPOS",
+      "SKU_CD": "MATNR",
+      "SERIAL_NO": "SERNR"
+    }
+  },
+  "typeMap": {
+    "T_HEADER": {
+      "ZWERKS": "CHAR",
+      "RSDAT": "CHAR",
+      "SEQ": "NUMC",
+      "TANUM": "NUMC",
+      "WEMPF": "CHAR"
+    },
+    "T_ITEM": {
+      "TANUM": "NUMC",
+      "TAPOS": "NUMC",
+      "RSNUM": "NUMC",
+      "RSPOS": "NUMC",
+      "MATNR": "CHAR",
+      "ERFMG": "QUAN",
+      "DIFMG": "QUAN",
+      "SERNP": "CHAR",
+      "USERN": "CHAR"
+    },
+    "T_SIRIAL": {
+      "TANUM": "NUMC",
+      "TAPOS": "NUMC",
+      "RSNUM": "NUMC",
+      "RSPOS": "NUMC",
+      "MATNR": "CHAR",
+      "SERNR": "CHAR"
+    }
+  },
+  "enDecryptFields": [
+    "COM_CD", "SKU_CD", "ORDERER_ID"
+  ]
+}

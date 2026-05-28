@@ -1,0 +1,97 @@
+// ============================================
+// _sim-tokens.scss
+// WCS 시뮬레이터 전용 디자인 토큰
+// ============================================
+// 기존 Dashboard2D 의 _tokens.scss 와는 독립적으로 운영한다.
+//
+// 모든 시뮬레이터 컴포넌트는 이 파일을 @use 하여
+// 색상/간격/폰트를 통일된 토큰으로 사용한다.
+// ============================================
+
+// ===== 배경 =====
+$sim-bg-page:        #1a1f2e;
+$sim-bg-card:        #232938;
+$sim-bg-card-hover:  #2a3142;
+$sim-bg-elevated:    #2f3648;
+
+// ===== 텍스트 =====
+$sim-text-primary:   #f1f5f9;
+$sim-text-secondary: #cbd5e1;
+$sim-text-muted:     #94a3b8;
+$sim-text-subtle:    #64748b;
+
+// ===== 보더 =====
+$sim-border-default: rgba(255, 255, 255, 0.08);
+$sim-border-strong:  rgba(255, 255, 255, 0.16);
+
+// ===== 영역별 강조색 =====
+$sim-color-host:     #3b82f6;   // 주문 투입 — 파랑
+$sim-color-plc:      #10b981;   // 작업 처리 — 초록
+$sim-color-portmode: #f59e0b;   // 포트 모드 — 주황
+$sim-color-rack:     #8b5cf6;   // 랙 현황 — 보라
+
+// ===== 상태색 =====
+$sim-state-running:  #22c55e;
+$sim-state-stopped:  #ef4444;
+$sim-state-idle:     #6b7280;
+$sim-state-warning:  #f59e0b;
+
+// ===== 주문 타입색 =====
+$sim-type-inbound:   #3b82f6;   // 입고 — 파랑
+$sim-type-outbound:  #f59e0b;   // 출고 — 주황
+$sim-type-move:      #8b5cf6;   // 이동 — 보라
+$sim-type-putback:   #14b8a6;   // 재입고 — 청록
+$sim-type-error:     #ef4444;   // 오류 — 빨강
+
+// ===== 간격 (Dashboard2D 토큰과 동일 스케일) =====
+$sim-space-xs: 4px;
+$sim-space-sm: 8px;
+$sim-space-md: 12px;
+$sim-space-lg: 16px;
+$sim-space-xl: 24px;
+$sim-space-2xl: 32px;
+
+// ===== 형태 =====
+$sim-radius-sm: 6px;
+$sim-radius-md: 8px;
+$sim-radius-lg: 12px;
+$sim-radius-pill: 999px;
+
+// ===== 트랜지션 =====
+$sim-transition-fast:   0.15s ease;
+$sim-transition-normal: 0.2s ease;
+
+// ============================================
+// 공통 mixin
+// ============================================
+
+@mixin sim-card {
+  background: $sim-bg-card;
+  border: 1px solid $sim-border-default;
+  border-radius: $sim-radius-lg;
+  padding: $sim-space-lg $sim-space-xl;
+  transition: background $sim-transition-normal,
+              transform $sim-transition-normal,
+              border-color $sim-transition-normal;
+}
+
+@mixin sim-card-hover {
+  &:hover {
+    background: $sim-bg-card-hover;
+    border-color: $sim-border-strong;
+    transform: translateY(-1px);
+  }
+}
+
+@mixin sim-pill($bg, $fg) {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: $sim-radius-pill;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba($bg, 0.18);
+  color: $fg;
+  border: 1px solid rgba($bg, 0.4);
+}

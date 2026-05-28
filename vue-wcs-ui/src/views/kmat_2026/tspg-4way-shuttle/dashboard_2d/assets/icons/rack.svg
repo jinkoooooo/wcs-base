@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" shape-rendering="geometricPrecision">
+  <!-- Rack cell (top-down) - no extra corner decorations -->
+
+  <!-- Outer frame: inset so stroke won't get clipped -->
+  <rect x="2" y="2" width="96" height="96" rx="4"
+        fill="none" stroke="#5E6F85" stroke-width="2" opacity="0.35"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Inner cell area (cargo area) -->
+  <rect x="8" y="8" width="84" height="84" rx="2"
+        fill="#2F3947" opacity="0.15"/>
+
+  <!-- Center guide mark -->
+  <circle cx="50" cy="50" r="2" fill="#8FA3BA" opacity="0.15"/>
+</svg>

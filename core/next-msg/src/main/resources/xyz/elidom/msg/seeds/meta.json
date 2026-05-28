@@ -1,0 +1,7 @@
+{
+	"dependencyModule" : "",
+	"entityOrders" : [
+		{"entity": "xyz.elidom.msg.entity.Terminology"},
+		{"entity": "xyz.elidom.msg.entity.Message"}
+	]
+}

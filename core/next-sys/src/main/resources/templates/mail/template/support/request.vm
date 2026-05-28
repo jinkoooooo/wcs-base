@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유지보수 요청 알림</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .outer-border {
+            border: 2px solid #002c5f;
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .inner-content {
+            padding: 10px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .logo {
+            height: 20px;
+            vertical-align: middle;
+        }
+
+        .title {
+            color: #002c5f;
+            font-size: 22px;
+            font-weight: bold;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
+        .status-badge {
+            background-color: #002c5f;
+            color: #ffffff;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+            table-left: fixed;
+        }
+
+        .info-table th {
+            background-color: #f4f7fa;
+            border: 1px solid #dce2e8;
+            padding: 12px;
+            text-align: left;
+            color: #333;
+            width: 25%;
+        }
+
+        .info-table td {
+            border: 1px solid #dce2e8;
+            padding: 12px;
+            color: #666;
+            word-wrap: break-word;
+        }
+
+        .content-box {
+            background-color: #f9f9f9;
+            /*border: 1px solid #eee;*/
+            padding: 15px;
+            /*min-height: 100px;*/
+            /*margin-top: 10px;*/
+            line-height: 1.8;
+            vertical-align: top;
+            word-break: break-all;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            line-height: 1.6;
+        }
+
+        .btn-area {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .btn {
+            background-color: #002c5f;
+            color: #ffffff !important;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+        }</style>
+</head>
+
+<body>
+<div class="outer-border">
+    <div class="inner-content">
+        <div class="header">
+            <img class="logo" src="https://systems.logisall.com/upload/g_image/logo-systems.svg"
+                 alt="Company Logo"></br>
+            <span class="title">유지보수 요청 알림</span>
+        </div>
+
+        <p style="margin-left: 4px;">유지보수 신규 요청이 등록되었습니다.</p>
+
+        <table class="info-table">
+            <tr>
+                <th>요청 번호</th>
+                <td>$supportId</td>
+            </tr>
+            <tr>
+                <th>요청 제목</th>
+                <td>$supportTitle</td>
+            </tr>
+            <tr>
+                <th>센터 정보</th>
+                <td>$lcNm ($lcId)</td>
+            </tr>
+            <tr>
+                <th>내용</th>
+                <td class="content-box">$requestContent</td>
+            </tr>
+        </table>
+
+        <div class="btn-area">
+            <a href="$link" class="btn">시스템에서 확인하기</a>
+        </div>
+
+        <div class="footer">
+            <p>본 메일은 시스템에 의해 자동 발송되었습니다. 문의사항은 관리자에게 연락 바랍니다.</p>
+            <p>© 2025 LOGISALL SYSTEMS. All rights reserved.</p>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

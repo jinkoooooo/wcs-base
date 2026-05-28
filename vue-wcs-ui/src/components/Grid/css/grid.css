@@ -1,0 +1,23 @@
+.tui-grid-cell.updated {
+  background-color: rgba(0, 169, 255, 0.15);
+}
+
+.tui-grid-container * {
+  box-sizing: border-box;
+}
+.tui-grid-content-area {
+  width: 100%;
+}
+
+.tui-grid-rside-area {
+  width: 100%;
+}
+
+.tui-grid-cell-boolean {
+  text-align: center;
+}
+
+.tui-grid-container ::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  background-clip: content-box;
+}

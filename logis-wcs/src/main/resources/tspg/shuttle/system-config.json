@@ -1,0 +1,19 @@
+{
+  "snapshot": {
+    "enabled": false,
+    "interval": 30000,
+    "filePath": "test-snapshots"
+  },
+  "monitoring": {
+    "statusPollingInterval": 1000,
+    "healthCheckInterval": 5000
+  },
+  "pathfinding": {
+    "algorithm": "MANHATTAN_ONLY",
+    "collisionDetection": true
+  },
+  "recovery": {
+    "maxRetryAttempts": 3,
+    "autoRecovery": true
+  }
+}

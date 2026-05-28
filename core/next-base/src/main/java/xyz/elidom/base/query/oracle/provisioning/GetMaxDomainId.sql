@@ -1,0 +1,1 @@
+select max(id)+1 from domains

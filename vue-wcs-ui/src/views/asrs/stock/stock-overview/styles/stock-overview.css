@@ -1,0 +1,263 @@
+.stock-overview-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.stock-overview-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  flex-shrink: 0;
+}
+
+.stock-overview-content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 20px;
+  min-height: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.stock-overview-content-grid__left,
+.stock-overview-content-grid__right {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.stock-overview-content-grid__left > *,
+.stock-overview-content-grid__right > * {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.stock-overview-toolbar {
+  gap: 12px;
+}
+
+.stock-overview-toolbar__top {
+  display: grid;
+  grid-template-columns: auto minmax(280px, 420px);
+  align-items: start;
+  gap: 12px 16px;
+  min-height: 42px;
+}
+
+.stock-overview-toolbar__mode {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.stock-overview-toolbar__feedback-slot {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.stock-overview-toolbar__feedback {
+  width: min(420px, 100%);
+  margin-left: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stock-overview-toolbar__fields {
+  display: grid;
+  gap: 14px 16px;
+  align-items: end;
+  justify-content: start;
+}
+
+.stock-overview-toolbar__fields--single {
+  grid-template-columns: minmax(280px, 420px);
+}
+
+.stock-overview-toolbar__fields--multi {
+  grid-template-columns: repeat(2, minmax(260px, 420px));
+}
+
+.stock-overview-toolbar__mode-button {
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: #fff;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.stock-overview-toolbar__mode-button--active {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: rgba(37, 99, 235, 0.22);
+}
+
+.stock-overview-count-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #edf3f8;
+  color: #486078;
+  font-size: 12px;
+  font-weight: 800;
+  border: 1px solid #d4e0ea;
+}
+
+.stock-overview-status-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.stock-overview-status-badge--on {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.stock-overview-status-badge--off {
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.stock-overview-table__empty-cell {
+  text-align: center;
+  color: #7a8898;
+}
+
+.stock-overview-tab-group {
+  display: inline-flex;
+  gap: 6px;
+  padding: 4px;
+  border-radius: 999px;
+  background: #edf2f7;
+  border: 1px solid #d8e1ea;
+}
+
+.stock-overview-tab-button {
+  height: 32px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.stock-overview-tab-button--active {
+  background: #1f4f87;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(31, 79, 135, 0.18);
+}
+
+.stock-overview-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.stock-overview-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px;
+  border-radius: 14px;
+  background: #f7f9fc;
+  border: 1px solid #dfe7ef;
+}
+
+.stock-overview-info-item__label {
+  font-size: 12px;
+  font-weight: 800;
+  color: #64748b;
+}
+
+.stock-overview-info-item strong {
+  font-size: 15px;
+  font-weight: 800;
+  color: #122033;
+  word-break: break-word;
+}
+
+/* 핵심: 좌측 목록 내부 스크롤 */
+.stock-overview-table-wrap {
+  max-height: calc(92vh - 460px);
+  overflow: auto;
+}
+
+/* 핵심: 우측 상세 내부 스크롤 */
+.stock-overview-detail__scroll--fixed {
+  max-height: calc(92vh - 460px);
+  overflow: auto;
+  padding-right: 4px;
+}
+
+/* 핵심: 우측 이력 내부 스크롤 */
+.stock-overview-history-wrap {
+  max-height: calc(92vh - 360px);
+  overflow: auto;
+}
+
+/* 좁은 화면 대응 */
+@media (max-width: 1280px) {
+  .stock-overview-toolbar__top {
+    grid-template-columns: 1fr;
+  }
+
+  .stock-overview-toolbar__feedback-slot {
+    justify-content: flex-start;
+  }
+
+  .stock-overview-toolbar__feedback {
+    width: 100%;
+    margin-left: 0;
+    white-space: normal;
+  }
+
+  .stock-overview-toolbar__fields--multi,
+  .stock-overview-toolbar__fields--single {
+    grid-template-columns: 1fr;
+  }
+
+  .stock-overview-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stock-overview-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stock-overview-table-wrap,
+  .stock-overview-detail__scroll--fixed,
+  .stock-overview-history-wrap {
+    max-height: 420px;
+  }
+}
+
+@media (max-width: 960px) {
+  .stock-overview-summary,
+  .stock-overview-info-grid {
+    grid-template-columns: 1fr;
+  }
+}

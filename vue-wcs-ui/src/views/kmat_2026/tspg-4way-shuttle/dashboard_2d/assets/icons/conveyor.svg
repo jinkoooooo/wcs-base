@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+  <!-- Conveyor (top-down) - rack과 동일한 1:1 viewBox, 컨텐츠가 전체 영역을 채움 -->
+
+  <defs>
+    <clipPath id="convBodyClip">
+      <rect x="2" y="2" width="96" height="96" rx="4"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer frame: rack과 동일한 inset 프레임 -->
+  <rect x="2" y="2" width="96" height="96" rx="4"
+        fill="none" stroke="#5E6F85" stroke-width="2" opacity="0.35"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Body: 전체 안쪽 영역 채우기 -->
+  <rect x="8" y="8" width="84" height="84" rx="2"
+        fill="#2F3947" opacity="0.15"/>
+
+  <g clip-path="url(#convBodyClip)">
+    <!-- Side rails (top / bottom) -->
+    <rect x="8" y="8" width="84" height="6" rx="2" fill="#5E6F85" opacity="0.30"/>
+    <rect x="8" y="86" width="84" height="6" rx="2" fill="#5E6F85" opacity="0.30"/>
+
+    <!-- Rollers: 전체 폭 균등 분배 (8개, railW=5)
+         inner span x=10..90 (width=80), gap=(80-8*5)/9 ≈ 4.444 -->
+    <g fill="#5E6F85" opacity="0.36">
+      <rect x="14.444" y="16" width="5" height="68" rx="2"/>
+      <rect x="23.889" y="16" width="5" height="68" rx="2"/>
+      <rect x="33.333" y="16" width="5" height="68" rx="2"/>
+      <rect x="42.778" y="16" width="5" height="68" rx="2"/>
+      <rect x="52.222" y="16" width="5" height="68" rx="2"/>
+      <rect x="61.667" y="16" width="5" height="68" rx="2"/>
+      <rect x="71.111" y="16" width="5" height="68" rx="2"/>
+      <rect x="80.556" y="16" width="5" height="68" rx="2"/>
+    </g>
+
+    <!-- Inner shadow: 살짝 눌린 느낌 -->
+    <g fill="#121826" opacity="0.08">
+      <rect x="15.444" y="17" width="3" height="66" rx="1.5"/>
+      <rect x="24.889" y="17" width="3" height="66" rx="1.5"/>
+      <rect x="34.333" y="17" width="3" height="66" rx="1.5"/>
+      <rect x="43.778" y="17" width="3" height="66" rx="1.5"/>
+      <rect x="53.222" y="17" width="3" height="66" rx="1.5"/>
+      <rect x="62.667" y="17" width="3" height="66" rx="1.5"/>
+      <rect x="72.111" y="17" width="3" height="66" rx="1.5"/>
+      <rect x="81.556" y="17" width="3" height="66" rx="1.5"/>
+    </g>
+  </g>
+</svg>

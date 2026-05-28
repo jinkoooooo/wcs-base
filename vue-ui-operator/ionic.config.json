@@ -1,0 +1,7 @@
+{
+  "name": "vue-ui-operator",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}

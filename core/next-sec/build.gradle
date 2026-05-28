@@ -1,0 +1,33 @@
+plugins {
+    id 'java-library'
+}
+
+
+
+jar {
+    manifest {
+        attributes(
+            'Implementation-Title': 'Next-Sec',
+            'Implementation-Version': '3.0.0' 
+        )
+    }
+}
+
+repositories {
+    mavenCentral() // Maven 중앙 저장소 사용
+}
+
+dependencies {
+    api 'jakarta.servlet:jakarta.servlet-api:5.0.0'
+    api 'org.springframework:spring-context-support:6.1.15' // 최신 Spring 버전
+    api "org.springframework.boot:spring-boot-starter-security:3.4.0"
+    api 'org.springframework.session:spring-session-core:3.4.0'
+	// JWT 의존성 추가
+	api ("io.jsonwebtoken:jjwt-api:0.11.2")
+
+	// runtimeOnly 사용
+	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.11.2")
+	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.2")
+	
+    api project(':next-sys')
+}

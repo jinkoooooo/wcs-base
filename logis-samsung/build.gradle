@@ -1,0 +1,37 @@
+plugins {
+	id 'java-library' // java 대신 java-library 사용
+}
+
+jar {
+	from('src/main/java') {
+		include '/**/*.sql'
+	}
+
+	manifest {
+		attributes(
+				'Implementation-Title': 'ANYWARE System',
+				'Implementation-Version': '3.0.0'
+		)
+	}
+}
+
+
+repositories {
+    mavenCentral() // Maven 중앙 저장소 사용
+    // 필요시 사설 Nexus 리포지토리 추가
+    maven {
+        url "http://repo.hatiolab.com/nexus/content/groups/elidom-repository/"
+        allowInsecureProtocol = true
+    }
+}
+
+dependencies {
+	api('logis-lib:anyware-sec')
+	api project(':logis-connector')
+	implementation 'org.springframework.boot:spring-boot-starter-webflux:3.4.0'
+	implementation 'io.netty:netty-resolver-dns'
+	implementation 'io.projectreactor:reactor-core:3.6.5'
+	compileOnly 'org.projectlombok:lombok:1.18.34'
+	annotationProcessor 'org.projectlombok:lombok:1.18.34'
+	implementation 'eu.agno3.jcifs:jcifs-ng:2.1.10'
+}

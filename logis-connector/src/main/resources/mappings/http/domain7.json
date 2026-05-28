@@ -1,0 +1,22 @@
+{
+  "system": "ECS",
+  "domainId": 7,
+  "baseUrl": "http://ecs-brandA-host",
+  "mappings": [
+    {
+      "mappingId": "ecs:/box/bucket_arrive:6",
+      "eventPath": "/bucket_arrive",
+      "endpoint": "/bucket_arrive",
+      "direction": "RECEIVE",
+      "jobType": "DPS",
+      "fieldMappings": [
+        { "source": "batchId", "target": "batchId" },
+        { "source": "container", "target": "bucketCd" },
+        { "source": "stateCode", "target": "status" },
+        { "source": "stationCd", "target": "stationCd" },
+        { "source": "equipType", "target": "equipType" },
+        { "source": "equipCd", "target": "equipCd" }
+      ]
+    }
+  ]
+}
